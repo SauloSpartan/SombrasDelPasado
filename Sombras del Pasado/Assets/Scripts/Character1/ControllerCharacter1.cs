@@ -7,25 +7,29 @@ public class ControllerCharacter1 : MonoBehaviour
     //Variables
     private float moveSpeed;
     private float walkSpeed;
+    private float rotationSpeed;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
     private Vector3 moveVector;
+    private Vector3 moveRotation;
 
-    //Reference
+    //References
     private CharacterController controller;
     private Animator anim;
+
     void Start()
     {
-        //Getting the character controller reference
+        //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        //Always updating movement
+        //Always updating
         Move();
+        Rotate();
         Gravity();
     }
 
@@ -51,6 +55,27 @@ public class ControllerCharacter1 : MonoBehaviour
         walkSpeed = 5;
 
         controller.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void Rotate()
+    {
+        //Direction it rotates
+        float rotateX = Input.GetAxis("Horizontal");
+
+        //Apply varibles of rotation
+        moveRotation = new Vector3(rotateX, 0, 0);
+        moveRotation.Normalize();
+
+        transform.Translate(moveRotation * moveSpeed * Time.deltaTime, Space.World);
+        rotationSpeed = 900;
+
+        //If character is moving it rotates
+        if (moveRotation != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(moveRotation, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void Idle()
