@@ -9,6 +9,7 @@ public class ControllerCharacter1 : MonoBehaviour
     public float walkSpeed;
     public float rotationSpeed;
     private float attack;
+    public float health = 100f;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
