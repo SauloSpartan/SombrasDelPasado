@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 857126143}
-  m_IndirectSpecularColor: {r: 0.20410049, g: 0.55831754, b: 0.7230865, a: 1}
+  m_IndirectSpecularColor: {r: 0.20650318, g: 0.55858684, b: 0.72387296, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &13709131 stripped
@@ -255,6 +259,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -330,6 +338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &23622638 stripped
@@ -392,6 +404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
 --- !u!4 &27814503 stripped
@@ -453,6 +469,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -528,6 +548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &41068068 stripped
@@ -598,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &44858098 stripped
@@ -659,6 +687,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -734,6 +766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &53620377 stripped
@@ -808,6 +844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &58257408 stripped
@@ -869,6 +909,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -944,6 +988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &81217636 stripped
@@ -1014,6 +1062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &83953238 stripped
@@ -1079,6 +1131,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -1154,6 +1210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &101401257 stripped
@@ -1215,6 +1275,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -1290,6 +1354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &112855180 stripped
@@ -1364,6 +1432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol9
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69e9d939f79745543b4c660cf2f6c523, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69e9d939f79745543b4c660cf2f6c523, type: 3}
 --- !u!4 &122861092 stripped
@@ -1425,6 +1497,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -1496,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &134853680 stripped
@@ -1565,6 +1645,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -1640,6 +1724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &135934049 stripped
@@ -1705,6 +1793,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -1780,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &155184896 stripped
@@ -1850,6 +1946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &161822397 stripped
@@ -1919,6 +2019,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -1994,6 +2098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &185197329 stripped
@@ -2060,6 +2168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &194392512 stripped
@@ -2125,6 +2237,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -2200,6 +2316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &195879418 stripped
@@ -2273,6 +2393,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
       propertyPath: m_Name
       value: Arbol1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
@@ -2348,6 +2472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &230840464 stripped
@@ -2417,6 +2545,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -2492,6 +2624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &247916073 stripped
@@ -2558,6 +2694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &252142705 stripped
@@ -2619,6 +2759,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -2685,6 +2829,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -2835,6 +2983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto4 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
 --- !u!4 &259710290 stripped
@@ -2908,6 +3060,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
       propertyPath: m_Name
       value: Arbol7 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
@@ -2983,6 +3139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &275500919 stripped
@@ -3057,6 +3217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &275674458 stripped
@@ -3122,6 +3286,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -3189,6 +3357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &286255798 stripped
@@ -3250,6 +3422,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -3321,6 +3497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &289728949 stripped
@@ -3382,6 +3562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -3457,6 +3641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &294088087 stripped
@@ -3522,6 +3710,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -3597,6 +3789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &300222443 stripped
@@ -3671,6 +3867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &304889198 stripped
@@ -3736,6 +3936,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -3803,6 +4007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &314525042 stripped
@@ -3869,6 +4077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &315472458 stripped
@@ -3930,6 +4142,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -4081,6 +4297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &332149626 stripped
@@ -4142,6 +4362,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -4205,6 +4429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &338492071 stripped
@@ -4267,6 +4495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
 --- !u!4 &356529634 stripped
@@ -4328,6 +4560,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -4403,6 +4639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &359005450 stripped
@@ -4469,6 +4709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &372982459 stripped
@@ -4530,6 +4774,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -4597,6 +4845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &382234458 stripped
@@ -4663,6 +4915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &388467369 stripped
@@ -4725,6 +4981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &398536545 stripped
@@ -4786,6 +5046,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -4861,6 +5125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &411007946 stripped
@@ -4935,6 +5203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &413176717 stripped
@@ -5001,6 +5273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &414814787 stripped
@@ -5063,6 +5339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &415575602 stripped
@@ -5124,6 +5404,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -5199,6 +5483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &435608943 stripped
@@ -5268,6 +5556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -5343,6 +5635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &447151661 stripped
@@ -5405,6 +5701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &449404899 stripped
@@ -5466,6 +5766,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -5633,6 +5937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &459724680 stripped
@@ -5699,6 +6007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &469726569 stripped
@@ -5761,6 +6073,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &472091348 stripped
@@ -5822,6 +6138,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -5888,6 +6208,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -5963,6 +6287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &481926073 stripped
@@ -6025,6 +6353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &486539630 stripped
@@ -6086,6 +6418,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -6161,6 +6497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &496133465 stripped
@@ -6235,6 +6575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &512420452 stripped
@@ -6296,6 +6640,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -6359,6 +6707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &517262647 stripped
@@ -6421,6 +6773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &520401282 stripped
@@ -6482,6 +6838,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -6548,6 +6908,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -6747,6 +7111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &530966773 stripped
@@ -6821,6 +7189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &534357899 stripped
@@ -6886,6 +7258,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -6961,6 +7337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &545870313 stripped
@@ -7035,6 +7415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &552428956 stripped
@@ -7101,6 +7485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &559156716 stripped
@@ -7163,6 +7551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol3 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
 --- !u!4 &569822158 stripped
@@ -7224,6 +7616,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -7295,6 +7691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &577612546 stripped
@@ -7361,6 +7761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &581427784 stripped
@@ -7422,6 +7826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -7492,6 +7900,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -7567,6 +7979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &621007997 stripped
@@ -7628,6 +8044,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -7703,6 +8123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &625687386 stripped
@@ -7768,6 +8192,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -7843,6 +8271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &630184736 stripped
@@ -7908,6 +8340,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -7975,6 +8411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &643099814 stripped
@@ -8041,6 +8481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &647019106 stripped
@@ -8103,6 +8547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &649983155 stripped
@@ -8164,6 +8612,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -8235,6 +8687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &663475621 stripped
@@ -8296,6 +8752,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -8366,6 +8826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -8440,6 +8904,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
       propertyPath: m_Name
       value: Arbol2 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
@@ -8739,6 +9207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &681033139 stripped
@@ -8800,6 +9272,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -8875,6 +9351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &688380357 stripped
@@ -8949,6 +9429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &705455013 stripped
@@ -9014,6 +9498,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -9089,6 +9577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &714972512 stripped
@@ -9154,6 +9646,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -9229,6 +9725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &728883873 stripped
@@ -9303,6 +9803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &732308495 stripped
@@ -9364,6 +9868,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -9431,6 +9939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
 --- !u!4 &742910925 stripped
@@ -9497,6 +10009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &748172339 stripped
@@ -9558,6 +10074,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -9629,6 +10149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &761718166 stripped
@@ -9695,6 +10219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto4 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
 --- !u!4 &765996569 stripped
@@ -9756,6 +10284,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -9831,6 +10363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &792035206 stripped
@@ -9896,6 +10432,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -9963,6 +10503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &807614222 stripped
@@ -10024,6 +10568,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -10099,6 +10647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &810733679 stripped
@@ -10164,6 +10716,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -10231,6 +10787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &818535897 stripped
@@ -10292,6 +10852,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -10367,6 +10931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &819896728 stripped
@@ -10428,6 +10996,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -10495,6 +11067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &826507407 stripped
@@ -10556,6 +11132,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -10622,6 +11202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -10697,6 +11281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &832706973 stripped
@@ -10762,6 +11350,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -10837,6 +11429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &841291417 stripped
@@ -10902,6 +11498,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -11058,6 +11658,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &859546703 stripped
@@ -11132,6 +11736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &867835670 stripped
@@ -11193,6 +11801,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -11268,6 +11880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &875827128 stripped
@@ -11334,6 +11950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &886045143 stripped
@@ -11396,6 +12016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &889636092 stripped
@@ -11457,6 +12081,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -11532,6 +12160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &891782102 stripped
@@ -11594,6 +12226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
 --- !u!4 &893232119 stripped
@@ -11655,6 +12291,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -11721,6 +12361,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -11796,6 +12440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &911164377 stripped
@@ -11861,6 +12509,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -11928,6 +12580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &917704876 stripped
@@ -11989,6 +12645,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -12064,6 +12724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &934992348 stripped
@@ -12138,6 +12802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &938275572 stripped
@@ -12199,6 +12867,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -12274,6 +12946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &940028148 stripped
@@ -12343,6 +13019,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -12418,6 +13098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &957790580 stripped
@@ -12488,6 +13172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &985341667 stripped
@@ -12554,6 +13242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &992881170 stripped
@@ -12615,6 +13307,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -12690,6 +13386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1018964519 stripped
@@ -12752,6 +13452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol3 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
 --- !u!4 &1025284527 stripped
@@ -12813,6 +13517,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -12888,6 +13596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1053118456 stripped
@@ -12953,6 +13665,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -13020,6 +13736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
 --- !u!4 &1083322621 stripped
@@ -13086,6 +13806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1085327870 stripped
@@ -13147,6 +13871,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -13222,6 +13950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1098889092 stripped
@@ -13296,6 +14028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1105556591 stripped
@@ -13361,6 +14097,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
       propertyPath: m_Name
       value: Arbusto4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
@@ -13436,6 +14176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1125234346 stripped
@@ -13510,6 +14254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1130122509 stripped
@@ -13566,13 +14314,13 @@ Transform:
   - {fileID: 449404899}
   - {fileID: 1616648298}
   - {fileID: 62776621}
-  - {fileID: 1362912884}
   - {fileID: 1795875270}
   - {fileID: 328477081}
   - {fileID: 1362988965}
   - {fileID: 357056599}
   - {fileID: 1538554754}
   - {fileID: 649983155}
+  - {fileID: 1362912884}
   - {fileID: 49350735}
   - {fileID: 1242252312}
   - {fileID: 1682592954}
@@ -13666,6 +14414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1145464887 stripped
@@ -13732,6 +14484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1178133441 stripped
@@ -13793,6 +14549,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -13868,6 +14628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1189786573 stripped
@@ -13934,6 +14698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1190333080 stripped
@@ -13995,6 +14763,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -14070,6 +14842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1211456011 stripped
@@ -14135,6 +14911,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -14210,6 +14990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1215133473 stripped
@@ -14271,6 +15055,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -14337,6 +15125,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -14412,6 +15204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1232282516 stripped
@@ -14473,6 +15269,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -14540,6 +15340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &1241235109 stripped
@@ -14601,6 +15405,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -14668,6 +15476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1247657268 stripped
@@ -14729,6 +15541,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -14804,6 +15620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1248787169 stripped
@@ -14878,6 +15698,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1260225669 stripped
@@ -14940,6 +15764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &1271318962 stripped
@@ -15001,6 +15829,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -15068,6 +15900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &1276378235 stripped
@@ -15133,6 +15969,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -15208,6 +16048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1289695049 stripped
@@ -15282,6 +16126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1291500367 stripped
@@ -15343,6 +16191,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -15418,6 +16270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1332237261 stripped
@@ -15483,6 +16339,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
       propertyPath: m_Name
       value: Arbusto4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
@@ -15558,6 +16418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1342816651 stripped
@@ -15628,6 +16492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1350125636 stripped
@@ -15689,6 +16557,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -15760,6 +16632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1354157882 stripped
@@ -15830,6 +16706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1356914384 stripped
@@ -15891,6 +16771,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -15958,6 +16842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1358728813 stripped
@@ -16019,6 +16907,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -16082,6 +16974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &1362988965 stripped
@@ -16143,6 +17039,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -16209,6 +17109,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -16284,6 +17188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1372092464 stripped
@@ -16346,6 +17254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &1373190723 stripped
@@ -16407,6 +17319,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -16482,6 +17398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1388410061 stripped
@@ -16548,6 +17468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &1393318305 stripped
@@ -16613,6 +17537,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
       propertyPath: m_Name
       value: Arbusto4 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
@@ -16688,6 +17616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1394690687 stripped
@@ -16761,6 +17693,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
       propertyPath: m_Name
       value: Roca3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
@@ -16836,6 +17772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1404332359 stripped
@@ -16906,6 +17846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1406471330 stripped
@@ -16967,6 +17911,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -17042,6 +17990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1412477866 stripped
@@ -17107,6 +18059,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -17177,6 +18133,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
       propertyPath: m_Name
       value: Arbusto5 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
@@ -17252,6 +18212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1484519185 stripped
@@ -17314,6 +18278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
 --- !u!4 &1490647613 stripped
@@ -17375,6 +18343,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -17450,6 +18422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1496421026 stripped
@@ -17511,6 +18487,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -17586,6 +18566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1505497883 stripped
@@ -17647,6 +18631,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -17714,6 +18702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &1532160476 stripped
@@ -17776,6 +18768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &1538554754 stripped
@@ -17837,6 +18833,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -17912,6 +18912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1550383151 stripped
@@ -17974,6 +18978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto3 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
 --- !u!4 &1559008560 stripped
@@ -18035,6 +19043,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -18101,6 +19113,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -18176,6 +19192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1570733596 stripped
@@ -18250,6 +19270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1571276761 stripped
@@ -18315,6 +19339,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -18390,6 +19418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1575420487 stripped
@@ -18455,6 +19487,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -18530,6 +19566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1578762686 stripped
@@ -18604,6 +19644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1588481619 stripped
@@ -18665,6 +19709,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6adc6d2efa43db34a942c67197a7e7c2, type: 3}
       propertyPath: m_Name
       value: Tronco
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6adc6d2efa43db34a942c67197a7e7c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6adc6d2efa43db34a942c67197a7e7c2, type: 3}
@@ -18735,6 +19783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1602218853 stripped
@@ -18796,6 +19848,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -18871,6 +19927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1616870035 stripped
@@ -18941,6 +20001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1617781498 stripped
@@ -19003,6 +20067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
 --- !u!4 &1621668572 stripped
@@ -19064,6 +20132,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -19139,6 +20211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1628925981 stripped
@@ -19213,6 +20289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1638575415 stripped
@@ -19282,6 +20362,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
       propertyPath: m_Name
       value: Roca1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
@@ -19353,6 +20437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1648609484 stripped
@@ -19414,6 +20502,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -19481,6 +20573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &1652048056 stripped
@@ -19543,6 +20639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &1654982950 stripped
@@ -19604,6 +20704,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -19679,6 +20783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1669507038 stripped
@@ -19740,6 +20848,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -19803,6 +20915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &1682592954 stripped
@@ -19864,6 +20980,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -19939,6 +21059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1685804947 stripped
@@ -20000,6 +21124,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -20063,6 +21191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &1693105545 stripped
@@ -20125,6 +21257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol3 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
 --- !u!4 &1698326931 stripped
@@ -20186,6 +21322,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -20261,6 +21401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1707774990 stripped
@@ -20326,6 +21470,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
       propertyPath: m_Name
       value: Arbusto4 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
@@ -20401,6 +21549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1716188327 stripped
@@ -20462,6 +21614,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -20528,6 +21684,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -20599,6 +21759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &1724387666 stripped
@@ -20665,6 +21829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &1727155023 stripped
@@ -20727,6 +21895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
 --- !u!4 &1731783800 stripped
@@ -20788,6 +21960,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -20855,6 +22031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &1743929142 stripped
@@ -20920,6 +22100,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -20995,6 +22179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &1748451129 stripped
@@ -21056,6 +22244,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -21127,6 +22319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1792925158 stripped
@@ -21188,6 +22384,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -21251,6 +22451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
 --- !u!4 &1800945638 stripped
@@ -21313,6 +22517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol8 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
 --- !u!4 &1813847719 stripped
@@ -21374,6 +22582,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -21441,6 +22653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1821974468 stripped
@@ -21507,6 +22723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &1822203570 stripped
@@ -21568,6 +22788,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -21643,6 +22867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol7 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4fe87a6135f1084db06915628a75315, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fe87a6135f1084db06915628a75315, type: 3}
 --- !u!4 &1828700583 stripped
@@ -21716,6 +22944,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
       propertyPath: m_Name
       value: Arbol5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
@@ -21791,6 +23023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1853931978 stripped
@@ -21856,6 +23092,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -21931,6 +23171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1860162999 stripped
@@ -21997,6 +23241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol6 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
 --- !u!4 &1865631890 stripped
@@ -22062,6 +23310,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
       propertyPath: m_Name
       value: Arbusto4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824b01d2c591d5e43a34123beff830ca, type: 3}
@@ -22137,6 +23389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1876276198 stripped
@@ -22202,6 +23458,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
       propertyPath: m_Name
       value: Arbusto1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
@@ -22273,6 +23533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1f191ed53e9a546a8d687fd8b7d849, type: 3}
 --- !u!4 &1880784995 stripped
@@ -22339,6 +23603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d90bcf2b312254d8d59a84a27c17ce, type: 3}
 --- !u!4 &1886113337 stripped
@@ -22400,6 +23668,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -22470,6 +23742,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
       propertyPath: m_Name
       value: Arbusto5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
@@ -22545,6 +23821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1898885237 stripped
@@ -22606,6 +23886,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -22681,6 +23965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &1918265444 stripped
@@ -22742,6 +24030,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -22817,6 +24109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &1933660409 stripped
@@ -22879,6 +24175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &1934305718 stripped
@@ -22940,6 +24240,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
       propertyPath: m_Name
       value: Arbusto3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
@@ -23015,6 +24319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol5 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
 --- !u!4 &1951009651 stripped
@@ -23076,6 +24384,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -23143,6 +24455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
 --- !u!4 &1962362852 stripped
@@ -23208,6 +24524,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -23279,6 +24599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto5 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7f41411c4b2b14f85a880f8a5a2875, type: 3}
 --- !u!4 &1975033043 stripped
@@ -23340,6 +24664,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
       propertyPath: m_Name
       value: Arbol4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
@@ -23403,6 +24731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbusto3 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ca9c17de3470424b985bff1596caeee, type: 3}
 --- !u!4 &1990549855 stripped
@@ -23464,6 +24796,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
       propertyPath: m_Name
       value: Roca2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d4822f4f8ccb40b562e81d064a0ca, type: 3}
@@ -23530,6 +24866,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -23605,6 +24945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &2000922476 stripped
@@ -23670,6 +25014,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
       propertyPath: m_Name
       value: Arbol6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7339ee3b2dae55d48b0931359ec9033e, type: 3}
@@ -23745,6 +25093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &2003443190 stripped
@@ -23818,6 +25170,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
       propertyPath: m_Name
       value: Arbol2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
@@ -23893,6 +25249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &2017108164 stripped
@@ -23958,6 +25318,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
       propertyPath: m_Name
       value: Arbusto2 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e89dd12bf45da50409cd190f29300038, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89dd12bf45da50409cd190f29300038, type: 3}
@@ -24033,6 +25397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roca3 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
 --- !u!4 &2022325310 stripped
@@ -24107,6 +25475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &2035242499 stripped
@@ -24169,6 +25541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f592d307b52cea943b88b9288e7f4b7c, type: 3}
 --- !u!4 &2056517533 stripped
@@ -24230,6 +25606,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -24305,6 +25685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &2065654725 stripped
@@ -24366,6 +25750,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
       propertyPath: m_Name
       value: Arbol8 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c46d84862b32574a96e78e6c26f165e, type: 3}
@@ -24537,6 +25925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &2105969975 stripped
@@ -24610,6 +26002,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
       propertyPath: m_Name
       value: Roca3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5a6576824183a54ba12844fadc90bda, type: 3}
@@ -24685,6 +26081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83186062127a97446b1f5f3e99bdb07e, type: 3}
 --- !u!4 &2118214496 stripped
@@ -24746,6 +26146,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
       propertyPath: m_Name
       value: Arbol3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2965cb8bc4f41074a9af06c0d3ba176d, type: 3}
@@ -24821,6 +26225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arbol1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e81adb86ffa07e9438feb54481ad3268, type: 3}
 --- !u!4 &2139976446 stripped
@@ -24894,6 +26302,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
       propertyPath: m_Name
       value: Arbol5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1259c02f76cee9c469be1043664204f3, type: 3}
