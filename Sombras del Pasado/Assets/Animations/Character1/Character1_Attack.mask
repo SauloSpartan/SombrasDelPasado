@@ -8,4 +8,114 @@ AvatarMask:
   m_PrefabAsset: {fileID: 0}
   m_Name: Character1_Attack
   m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-  m_Elements: []
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Abdomera
+    m_Weight: 1
+  - m_Path: Antebrazo
+    m_Weight: 1
+  - m_Path: Botas
+    m_Weight: 0
+  - m_Path: Brazo
+    m_Weight: 0
+  - m_Path: Casco
+    m_Weight: 1
+  - m_Path: Cuerpo
+    m_Weight: 0
+  - m_Path: Hombreras
+    m_Weight: 1
+  - m_Path: metarig
+    m_Weight: 1
+  - m_Path: metarig/ControlFoot.L
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.L/foot.L
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.L/foot.L/toe.L
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.L/LegK.L
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.R
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.R/foot.R
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.R/foot.R/toe.R
+    m_Weight: 0
+  - m_Path: metarig/ControlFoot.R/LegK.R
+    m_Weight: 0
+  - m_Path: metarig/ControlHand.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.L/hand.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.L/hand.L/finger.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.L/hand.L/finger.L/fingerput.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.L/hand.L/thumb.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.L/hand.L/thumb.L/thumbput.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.L/HandK.L
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R/hand.R
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R/hand.R/finger.R
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R/hand.R/finger.R/fingerput.R
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R/hand.R/thumb.R
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R/hand.R/thumb.R/thumbput.R
+    m_Weight: 1
+  - m_Path: metarig/ControlHand.R/HandK.R
+    m_Weight: 1
+  - m_Path: metarig/ElbowController.L
+    m_Weight: 1
+  - m_Path: metarig/ElbowController.R
+    m_Weight: 1
+  - m_Path: metarig/KneeController.L
+    m_Weight: 0
+  - m_Path: metarig/KneeController.R
+    m_Weight: 0
+  - m_Path: metarig/spine
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/Cuello
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/Cuello/Cabeza
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/shoulder.L
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/shoulder.L/upper_arm.L
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/shoulder.L/upper_arm.L/forearm.L
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/shoulder.R
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/shoulder.R/upper_arm.R
+    m_Weight: 1
+  - m_Path: metarig/spine/Abdomen.I/Abdomen.S/Pecho/shoulder.R/upper_arm.R/forearm.R
+    m_Weight: 1
+  - m_Path: metarig/spine/thigh.L
+    m_Weight: 0
+  - m_Path: metarig/spine/thigh.L/shin.L
+    m_Weight: 0
+  - m_Path: metarig/spine/thigh.R
+    m_Weight: 0
+  - m_Path: metarig/spine/thigh.R/shin.R
+    m_Weight: 0
+  - m_Path: metarig/Sword.R
+    m_Weight: 1
+  - m_Path: metarig/Sword.R/Espada
+    m_Weight: 1
+  - m_Path: Pechera
+    m_Weight: 1
+  - m_Path: Rodillera
+    m_Weight: 0
