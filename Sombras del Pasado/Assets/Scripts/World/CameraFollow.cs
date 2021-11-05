@@ -22,5 +22,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 playerPos = new Vector3(GameObject.Find("Main Camera").transform.position.x, 
             gameObject.transform.position.y + 3.5f, gameObject.transform.position.z - 4.5f);
         gameObject.transform.position = playerPos;
+
+        //To change camera distance just write trasnform.position.? +/- c
     }
 }

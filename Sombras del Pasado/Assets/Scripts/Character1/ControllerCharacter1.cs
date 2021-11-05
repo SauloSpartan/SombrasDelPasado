@@ -31,6 +31,11 @@ public class ControllerCharacter1 : MonoBehaviour
         Move();
         Rotate();
         Gravity();
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Attack();
+        }
     }
 
     private void Move()
@@ -101,5 +106,10 @@ public class ControllerCharacter1 : MonoBehaviour
 
         //Apply our move Vector , remeber to multiply by Time.delta
         controller.Move(moveVector * Time.deltaTime);
+    }
+
+    private void Attack()
+    {
+        anim.SetTrigger("Attack1");
     }
 }
