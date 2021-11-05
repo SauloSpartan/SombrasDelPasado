@@ -6,8 +6,9 @@ public class ControllerCharacter1 : MonoBehaviour
 {
     //Variables
     private float moveSpeed;
-    private float walkSpeed;
-    private float rotationSpeed;
+    public float walkSpeed;
+    public float rotationSpeed;
+    private float attack;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
@@ -23,6 +24,7 @@ public class ControllerCharacter1 : MonoBehaviour
         //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+        attack = 0;
     }
 
     void Update()
@@ -57,7 +59,6 @@ public class ControllerCharacter1 : MonoBehaviour
         }
 
         moveDirection *= walkSpeed;
-        walkSpeed = 5;
 
         controller.Move(moveDirection * Time.deltaTime);
     }
@@ -72,7 +73,6 @@ public class ControllerCharacter1 : MonoBehaviour
         moveRotation.Normalize();
 
         transform.Translate(moveRotation * moveSpeed * Time.deltaTime, Space.World);
-        rotationSpeed = 900;
 
         //If character is moving it rotates
         if (moveRotation != Vector3.zero)
