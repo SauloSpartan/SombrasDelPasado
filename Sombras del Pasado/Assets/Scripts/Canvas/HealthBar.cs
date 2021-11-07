@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    //Variables
     private Image healthBar;
     public float currentHealth;
     private float maxHealth = 100f;
     private float lerpSpeed;
+
+    //Uses the Characters Script of health
     ControllerCharacter1 Player;
 
     private void Start()
     {
+        //It optains the information of...
         healthBar = GetComponent<Image>();
         Player = FindObjectOfType<ControllerCharacter1>();
     }
