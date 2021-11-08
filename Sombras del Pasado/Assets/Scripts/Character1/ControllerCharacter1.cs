@@ -34,12 +34,8 @@ public class ControllerCharacter1 : MonoBehaviour
         Move();
         Rotate();
         Gravity();
+        Attack();
         Death();
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Attack();
-        }
     }
 
     private void Move()
@@ -112,7 +108,10 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void Attack()
     {
-        anim.SetTrigger("Attack1");
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            anim.SetTrigger("Attack1");
+        }
     }
 
     private void Death()
