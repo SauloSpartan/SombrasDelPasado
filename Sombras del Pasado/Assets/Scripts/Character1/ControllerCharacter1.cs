@@ -117,7 +117,7 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void Death()
     {
-        if (health == 0)
+        if (health <= 0)
         {
             anim.SetTrigger("Death");
             GetComponent<ControllerCharacter1>().enabled = false;
