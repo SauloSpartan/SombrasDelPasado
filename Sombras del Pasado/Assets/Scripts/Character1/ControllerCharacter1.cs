@@ -8,7 +8,6 @@ public class ControllerCharacter1 : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float rotationSpeed;
-    private float attack;
     public float health = 100f;
 
     //3D Direction & Gravity
@@ -25,7 +24,6 @@ public class ControllerCharacter1 : MonoBehaviour
         //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        attack = 0;
     }
 
     void Update()

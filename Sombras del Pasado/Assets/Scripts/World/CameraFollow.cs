@@ -9,11 +9,12 @@ public class CameraFollow : MonoBehaviour
     {
         
     }
+
     //Variable for offset
     public Vector3 offset;
+
     void Update()
     {
-
         gameObject.transform.position = GameObject.Find("Character1").transform.position + offset;
 
         Vector3 cameraPos = GameObject.Find("Main Camera").transform.position;
