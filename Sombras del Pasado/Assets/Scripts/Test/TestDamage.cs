@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TestDamage : MonoBehaviour
 {
+    public int damage;
     ControllerCharacter1 Player;
 
     void Start()
@@ -18,6 +19,6 @@ public class TestDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Player.health = Player.health - 20;
+        Player.health = Player.health - damage;
     }
 }
