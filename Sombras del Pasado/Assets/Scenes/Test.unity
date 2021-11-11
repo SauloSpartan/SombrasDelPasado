@@ -1056,6 +1056,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
   m_PrefabInstance: {fileID: 1820554665}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1820554669
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820554666}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!143 &1820554671
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1089,6 +1185,15 @@ MonoBehaviour:
   walkSpeed: 3
   rotationSpeed: 1080
   health: 100
+  stepClips:
+  - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
+  - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}
+  - {fileID: 8300000, guid: 688fe91373c6b694a8c47158d103b1f4, type: 3}
+  - {fileID: 8300000, guid: 614169efa848e6a41bfd91025de5cc49, type: 3}
+  - {fileID: 8300000, guid: f24781319bbca5c42812b18a331e223c, type: 3}
+  - {fileID: 8300000, guid: 8c77a59f837445d4f8db1118b8cf8c26, type: 3}
+  - {fileID: 8300000, guid: 23fdbca20688f3547b509052172fc481, type: 3}
+  - {fileID: 8300000, guid: 2bde8e554d440e64ca6b75623715d77c, type: 3}
 --- !u!1 &1857322806
 GameObject:
   m_ObjectHideFlags: 0
