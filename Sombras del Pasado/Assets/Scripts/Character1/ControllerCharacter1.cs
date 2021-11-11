@@ -19,11 +19,17 @@ public class ControllerCharacter1 : MonoBehaviour
     private CharacterController controller;
     private Animator anim;
 
+    [SerializeField]
+    private AudioClip[] stepClips;
+    private AudioSource audioSource;
+
     void Start()
     {
         //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -119,5 +125,16 @@ public class ControllerCharacter1 : MonoBehaviour
             anim.SetTrigger("Death");
             GetComponent<ControllerCharacter1>().enabled = false;
         }
+    }
+
+    private void Step()
+    {
+        AudioClip clip = GetRandomClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private AudioClip GetRandomClip()
+    {
+        return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
     }
 }
