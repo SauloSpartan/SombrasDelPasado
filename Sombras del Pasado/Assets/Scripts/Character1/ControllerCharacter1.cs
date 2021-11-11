@@ -8,6 +8,8 @@ public class ControllerCharacter1 : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     public float rotationSpeed;
+    private float velocity;
+    [SerializeField]  private float acceleration;
     public float health = 100f;
 
     //3D Direction & Gravity
@@ -19,8 +21,8 @@ public class ControllerCharacter1 : MonoBehaviour
     private CharacterController controller;
     private Animator anim;
 
-    [SerializeField]
-    private AudioClip[] stepClips;
+    //Audio
+    [SerializeField] private AudioClip[] stepClips;
     private AudioSource audioSource;
 
     void Start()
@@ -51,12 +53,14 @@ public class ControllerCharacter1 : MonoBehaviour
         //Directions it can move and speed
         moveDirection = new Vector3(moveX, 0, moveZ);
 
-        if(moveDirection == Vector3.zero)
+        if (moveDirection == Vector3.zero && velocity > 0.0f)
         {
+            velocity -= Time.deltaTime * acceleration;
             Idle();
         }
-        else
+        else if (moveDirection != Vector3.zero && velocity < 1.0f)
         {
+            velocity += Time.deltaTime * acceleration;
             Walk();
         }
 
@@ -87,12 +91,12 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void Idle()
     {
-        anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
+        anim.SetFloat("Speed", velocity);
     }       
 
     private void Walk()
     {
-        anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+        anim.SetFloat("Speed", velocity);
     }
 
     private void Gravity()
