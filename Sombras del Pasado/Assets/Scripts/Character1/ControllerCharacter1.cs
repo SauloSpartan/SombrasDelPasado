@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class ControllerCharacter1 : MonoBehaviour
 {
-    //Variables
+    //Movement
     private float moveSpeed;
     public float walkSpeed;
     public float rotationSpeed;
+
+    //Animation
     private float velocity;
     [SerializeField]  private float acceleration;
+
+    //Health
     public float health = 100f;
 
     //3D Direction & Gravity
@@ -22,8 +26,10 @@ public class ControllerCharacter1 : MonoBehaviour
     private Animator anim;
 
     //Audio
-    [SerializeField] private AudioClip[] stepClips;
     private AudioSource audioSource;
+    [SerializeField] private AudioClip[] stepClips;
+    [SerializeField] private AudioClip[] attackClips;
+    [SerializeField] private AudioClip[] deathClips;
 
     void Start()
     {
@@ -37,11 +43,18 @@ public class ControllerCharacter1 : MonoBehaviour
     void Update()
     {
         //Always updating
-        Move();
-        Rotate();
+        if (health > 0)
+        {
+            Move();
+            Rotate();
+            Attack();
+        }
+        if (health <= 0)
+        {
+            Death();
+        }
+
         Gravity();
-        Attack();
-        Death();
     }
 
     private void Move()
@@ -62,6 +75,14 @@ public class ControllerCharacter1 : MonoBehaviour
         {
             velocity += Time.deltaTime * acceleration;
             Walk();
+        }
+        else if(moveDirection == Vector3.zero && velocity < 0.0f)
+        {
+            velocity = 0.0f;
+        }
+        else if (moveDirection != Vector3.zero && velocity > 1.0f)
+        {
+            velocity = 1.0f;
         }
 
         moveDirection *= walkSpeed;
@@ -124,17 +145,35 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void Death()
     {
-        if (health <= 0)
-        {
-            anim.SetTrigger("Death");
-            GetComponent<ControllerCharacter1>().enabled = false;
-        }
+        anim.SetTrigger("Death");
     }
 
     private void Step()
     {
         AudioClip clip = GetRandomClip();
         audioSource.PlayOneShot(clip);
+    }
+
+    private void Attack_1()
+    {
+        AudioClip clip = AttackClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void PlayerDeath()
+    {
+        AudioClip clip = DeathClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private AudioClip AttackClip()
+    {
+        return attackClips[UnityEngine.Random.Range(0, attackClips.Length)];
+    }
+
+    private AudioClip DeathClip()
+    {
+        return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
     }
 
     private AudioClip GetRandomClip()
