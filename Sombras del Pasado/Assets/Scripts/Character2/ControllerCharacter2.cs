@@ -5,14 +5,22 @@ using UnityEngine.AI;
 
 public class ControllerCharacter2 : MonoBehaviour
 {
+
+    //Navegation
     public NavMeshAgent navEnemy;
     public Transform target;
+
+    //References
     private Rigidbody controller;
     private Animator anim;
 
+    //Attack Range and Health
     [SerializeField] private float followRadius;
-
     public float health = 100f;
+
+    //Animation
+    private float velocity;
+    [SerializeField] private float acceleration;
 
     void Start()
     {
@@ -20,27 +28,33 @@ public class ControllerCharacter2 : MonoBehaviour
         controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
+        //Optional
         target = PlayerManager.instance.player.transform;
     }
 
 
     void Update()
     {
-        enemyNav();
+        MoveEnemy();
     }
 
-    private void enemyNav()
+    private void MoveEnemy()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
         if (distance <= followRadius)
         {
+            anim.SetFloat("Speed", 1.0f, 0.1f, Time.deltaTime);
             navEnemy.SetDestination(target.position);
 
             if (distance <= navEnemy.stoppingDistance)
             {
                 FacePlayer();
             }
+        }
+        if (distance > followRadius)
+        {
+            anim.SetFloat("Speed", 0.0f, 0.1f, Time.deltaTime);
         }
     }
 

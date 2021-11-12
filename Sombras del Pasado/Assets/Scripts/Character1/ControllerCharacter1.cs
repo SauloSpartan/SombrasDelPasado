@@ -10,7 +10,7 @@ public class ControllerCharacter1 : MonoBehaviour
     public float rotationSpeed;
 
     //Animation
-    private float velocity;
+    private float velocity = 0.0f;
     [SerializeField]  private float acceleration;
 
     //Health and Damage
