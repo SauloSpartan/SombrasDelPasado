@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &397139540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +306,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &669975035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8161352144849914812, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
+  m_PrefabInstance: {fileID: 1820554665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &669975039
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669975035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1593577335283316231, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &802484812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa9311eb4f7558a408275645e3201422, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa9311eb4f7558a408275645e3201422, type: 3}
 --- !u!1 &910891580 stripped
@@ -583,7 +606,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navEnemy: {fileID: 910891582}
-  player: {fileID: 1820554668}
+  target: {fileID: 0}
+  followRadius: 3
+  health: 100
 --- !u!195 &910891582
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -594,11 +619,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 3
-  m_Acceleration: 3
+  m_Speed: 1.5
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 3
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -632,7 +657,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -934,6 +959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1522037759}
+  - component: {fileID: 1522037760}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -959,25 +985,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1555461223 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8542397800690126605, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
-  m_PrefabInstance: {fileID: 1820554665}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &1555461225
-CapsuleCollider:
+--- !u!114 &1522037760
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555461223}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_GameObject: {fileID: 1522037758}
   m_Enabled: 1
-  m_Radius: 0.001
-  m_Height: 0.012
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.005, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441672789fd9a64faac74858df33ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1820554666}
 --- !u!1 &1709679941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
 --- !u!1 &1820554666 stripped
@@ -1207,7 +1231,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820554666}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: c440b798fd9c9ba43900561506c29b87, type: 3}
   m_Controller: {fileID: 9100000, guid: 0d46e3ae4b0789c49b8a8a229afcc60f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -1352,6 +1376,7 @@ MonoBehaviour:
   rotationSpeed: 1080
   acceleration: 5
   health: 100
+  damage: 20
   stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}

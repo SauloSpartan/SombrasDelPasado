@@ -13,8 +13,9 @@ public class ControllerCharacter1 : MonoBehaviour
     private float velocity;
     [SerializeField]  private float acceleration;
 
-    //Health
+    //Health and Damage
     public float health = 100f;
+    public int damage;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
@@ -39,7 +40,7 @@ public class ControllerCharacter1 : MonoBehaviour
         //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-
+        Enemy = FindObjectOfType<ControllerCharacter2>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -143,6 +144,14 @@ public class ControllerCharacter1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             anim.SetTrigger("Attack1");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Enemy.health = Enemy.health - damage;
         }
     }
 
