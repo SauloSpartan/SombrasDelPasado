@@ -31,6 +31,9 @@ public class ControllerCharacter1 : MonoBehaviour
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deathClips;
 
+    //Reference from others
+    ControllerCharacter2 Enemy;
+
     void Start()
     {
         //Getting the references
@@ -148,6 +151,8 @@ public class ControllerCharacter1 : MonoBehaviour
         anim.SetTrigger("Death");
     }
 
+
+    //Audio functions
     private void Step()
     {
         AudioClip clip = GetRandomClip();
@@ -166,6 +171,11 @@ public class ControllerCharacter1 : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
+    private AudioClip GetRandomClip()
+    {
+        return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
+    }
+
     private AudioClip AttackClip()
     {
         return attackClips[UnityEngine.Random.Range(0, attackClips.Length)];
@@ -174,10 +184,5 @@ public class ControllerCharacter1 : MonoBehaviour
     private AudioClip DeathClip()
     {
         return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
-    }
-
-    private AudioClip GetRandomClip()
-    {
-        return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
     }
 }
