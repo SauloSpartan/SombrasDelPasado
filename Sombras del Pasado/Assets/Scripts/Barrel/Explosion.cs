@@ -5,6 +5,8 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     private ParticleSystem Particle;
+    public GameObject DMG;
+    public GameObject Barrel; 
 
     // Start is called before the first frame update
     void Start()
@@ -12,17 +14,15 @@ public class Explosion : MonoBehaviour
         Particle = GetComponent<ParticleSystem>();
     }
 
-    void Hit(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Explode();
+            DMG.SetActive(true);
+            Particle.Play();
+            Destroy(Barrel, 2f);
+            Destroy(DMG, .1f);
         }
     }
 
-    void Explode()
-    {
-        Particle.Play();
-        Destroy(gameObject, Particle.duration);
-    }
 }
