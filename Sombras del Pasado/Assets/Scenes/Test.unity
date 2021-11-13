@@ -231,6 +231,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &640320432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2818922523760957725, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+  m_PrefabInstance: {fileID: 6222885691944806152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &640320434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640320432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0016263475, y: 0.00036193314, z: 0.012805817}
+  m_Center: {x: -0.0000000035781293, y: 2.5036043e-11, z: -0.0036253184}
+--- !u!114 &640320437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640320432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6939c84cda6ac40b94acde47b9b752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &802484812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802484811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.25, y: 1.82, z: 0}
+  m_LocalPosition: {x: -6.7, y: 1.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -513,7 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navEnemy: {fileID: 910891582}
   target: {fileID: 0}
-  followRadius: 3
+  followRadius: 5
   health: 100
   acceleration: 0
 --- !u!195 &910891582
@@ -738,5 +768,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6222885693496513208, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6222885692542035703, guid: 58e81815c11ed4246962829d67b77517, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58e81815c11ed4246962829d67b77517, type: 3}

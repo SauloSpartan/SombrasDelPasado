@@ -25,6 +25,7 @@ public class ControllerCharacter1 : MonoBehaviour
     //References
     private CharacterController controller;
     private Animator anim;
+    private BoxCollider sword;
 
     //Audio
     private AudioSource audioSource;
@@ -32,16 +33,15 @@ public class ControllerCharacter1 : MonoBehaviour
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deathClips;
 
-    //Reference from others
-    ControllerCharacter2 Enemy;
-
     void Start()
     {
         //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
-        Enemy = FindObjectOfType<ControllerCharacter2>();
         audioSource = GetComponent<AudioSource>();
+        sword = GameObject.Find("Espada").GetComponent<BoxCollider>();
+
+        sword.enabled = false;
     }
 
     void Update()
@@ -144,14 +144,7 @@ public class ControllerCharacter1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             anim.SetTrigger("Attack1");
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            Enemy.health = Enemy.health - damage;
+            sword.enabled = true;
         }
     }
 

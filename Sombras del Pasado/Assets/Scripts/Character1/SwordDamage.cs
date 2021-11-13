@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestDamage : MonoBehaviour
+public class SwordDamage : MonoBehaviour
 {
-    public int damage;
     ControllerCharacter1 Player;
+    ControllerCharacter2 Enemy1;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
+        Enemy1 = FindObjectOfType<ControllerCharacter2>();
     }
+
 
     void Update()
     {
@@ -21,7 +23,7 @@ public class TestDamage : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Player.health = Player.health - damage;
+            Enemy1.health = Enemy1.health - Player.damage;
         }
     }
 }

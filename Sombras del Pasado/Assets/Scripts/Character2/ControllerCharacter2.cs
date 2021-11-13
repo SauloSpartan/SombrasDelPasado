@@ -35,7 +35,14 @@ public class ControllerCharacter2 : MonoBehaviour
 
     void Update()
     {
-        MoveEnemy();
+        if (health > 0)
+        {
+            MoveEnemy();
+        }
+        if (health <= 0)
+        {
+            Death();
+        }
     }
 
     private void MoveEnemy()
@@ -54,7 +61,7 @@ public class ControllerCharacter2 : MonoBehaviour
         }
         if (distance > followRadius)
         {
-            anim.SetFloat("Speed", 0.0f, 0.1f, Time.deltaTime);
+            anim.SetFloat("Speed", 0.0f, 1.0f, Time.deltaTime);
         }
     }
 
@@ -72,4 +79,9 @@ public class ControllerCharacter2 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, followRadius);
     }
     //You can activate gizmos to be seen
+
+    private void Death()
+    {
+        anim.SetTrigger("Death");
+    }
 }
