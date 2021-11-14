@@ -25,6 +25,7 @@ public class ControllerCharacter1 : MonoBehaviour
     //References
     private CharacterController controller;
     private Animator anim;
+    private BoxCollider sword;
 
     //Audio
     private AudioSource audioSource;
@@ -38,6 +39,8 @@ public class ControllerCharacter1 : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        sword = GameObject.Find("Espada").GetComponent<BoxCollider>();
+        sword.enabled = false;
     }
 
     void Update()
@@ -160,6 +163,16 @@ public class ControllerCharacter1 : MonoBehaviour
     {
         AudioClip clip = AttackClip();
         audioSource.PlayOneShot(clip);
+    }
+
+    private void IsAttacking()
+    {
+        sword.enabled = true;
+    }
+
+    private void NotAttacking()
+    {
+        sword.enabled = false;
     }
 
     private void PlayerDeath()
