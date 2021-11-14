@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ControllerCharacter2 : MonoBehaviour
+public class ControllerCharacter5 : MonoBehaviour
 {
     //Navegation
     public NavMeshAgent navEnemy;
@@ -22,6 +22,12 @@ public class ControllerCharacter2 : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float deacceleration;
 
+    //Audio
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip[] stepClips;
+    [SerializeField] private AudioClip[] attackClips;
+    [SerializeField] private AudioClip[] deathClips;
+
     //Other Scripts
     ControllerCharacter1 Player;
 
@@ -32,6 +38,7 @@ public class ControllerCharacter2 : MonoBehaviour
         navEnemy = GetComponent<NavMeshAgent>();
         controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         //Optional
         target = PlayerManager.instance.player.transform;
@@ -121,5 +128,27 @@ public class ControllerCharacter2 : MonoBehaviour
     private void Walk()
     {
         anim.SetFloat("Speed", velocity);
+    }
+
+    private void Step()
+    {
+        AudioClip clip = StepClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void EnemyDeath()
+    {
+        AudioClip clip = DeathClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private AudioClip StepClip()
+    {
+        return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
+    }
+
+    private AudioClip DeathClip()
+    {
+        return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
     }
 }

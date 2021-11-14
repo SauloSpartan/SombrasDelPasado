@@ -155,7 +155,7 @@ public class ControllerCharacter1 : MonoBehaviour
     //Audio functions
     private void Step()
     {
-        AudioClip clip = GetRandomClip();
+        AudioClip clip = StepClip();
         audioSource.PlayOneShot(clip);
     }
 
@@ -181,7 +181,7 @@ public class ControllerCharacter1 : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    private AudioClip GetRandomClip()
+    private AudioClip StepClip()
     {
         return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
     }
