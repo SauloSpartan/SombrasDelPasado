@@ -25,7 +25,6 @@ public class ControllerCharacter1 : MonoBehaviour
     //References
     private CharacterController controller;
     private Animator anim;
-    private BoxCollider sword;
 
     //Audio
     private AudioSource audioSource;
@@ -39,9 +38,6 @@ public class ControllerCharacter1 : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        sword = GameObject.Find("Espada").GetComponent<BoxCollider>();
-
-        sword.enabled = false;
     }
 
     void Update()
@@ -80,11 +76,11 @@ public class ControllerCharacter1 : MonoBehaviour
             velocity += Time.deltaTime * acceleration;
             Walk();
         }
-        else if(moveDirection == Vector3.zero && velocity < 0.0f)
+        else if(velocity < 0.0f)
         {
             velocity = 0.0f;
         }
-        else if (moveDirection != Vector3.zero && velocity > 1.0f)
+        else if (velocity > 1.0f)
         {
             velocity = 1.0f;
         }
@@ -144,7 +140,6 @@ public class ControllerCharacter1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             anim.SetTrigger("Attack1");
-            sword.enabled = true;
         }
     }
 

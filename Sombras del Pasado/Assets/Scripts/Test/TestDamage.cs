@@ -19,7 +19,7 @@ public class TestDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Player")
         {
             Player.health = Player.health - damage;
         }

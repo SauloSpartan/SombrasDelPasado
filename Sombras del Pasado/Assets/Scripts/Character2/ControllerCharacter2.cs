@@ -16,14 +16,19 @@ public class ControllerCharacter2 : MonoBehaviour
 
     //Attack Range and Health
     [SerializeField] private float followRadius;
-    public float health = 100f;
+    [SerializeField] private float health;
 
     //Animation
-    private float velocity;
+    private float velocity = 0.0f;
     [SerializeField] private float acceleration;
+    [SerializeField] private float deacceleration;
+
+    ControllerCharacter1 Player;
 
     void Start()
     {
+        Player = FindObjectOfType<ControllerCharacter1>();
+
         navEnemy = GetComponent<NavMeshAgent>();
         controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -49,19 +54,32 @@ public class ControllerCharacter2 : MonoBehaviour
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= followRadius)
+        if (distance <= followRadius && velocity < 1.0f)
         {
-            anim.SetFloat("Speed", 1.0f, 0.1f, Time.deltaTime);
+            velocity += Time.deltaTime * acceleration;
+            Walk();
+        }
+        else if (distance <= followRadius)
+        {
             navEnemy.SetDestination(target.position);
-
             if (distance <= navEnemy.stoppingDistance)
             {
                 FacePlayer();
             }
         }
-        if (distance > followRadius)
+        else if (distance > followRadius && velocity > 0.0f)
         {
-            anim.SetFloat("Speed", 0.0f, 1.0f, Time.deltaTime);
+            navEnemy.SetDestination(target.forward);
+            velocity -= Time.deltaTime * deacceleration;
+            Idle();
+        }
+        else if (velocity < 0.0f)
+        {
+            velocity = 0.0f;
+        }
+        else if (velocity > 1.0f)
+        {
+            velocity = 1.0f;
         }
     }
 
@@ -80,8 +98,26 @@ public class ControllerCharacter2 : MonoBehaviour
     }
     //You can activate gizmos to be seen
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player Sword")
+        {
+            health = health - Player.damage;
+        }
+    }
+
     private void Death()
     {
         anim.SetTrigger("Death");
+    }
+
+    private void Idle()
+    {
+        anim.SetFloat("Speed", velocity);
+    }
+
+    private void Walk()
+    {
+        anim.SetFloat("Speed", velocity);
     }
 }
