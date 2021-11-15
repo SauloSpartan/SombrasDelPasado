@@ -20,7 +20,6 @@ public class ControllerCharacter2 : MonoBehaviour
     //Animation
     private float velocity = 0.0f;
     [SerializeField] private float acceleration;
-    [SerializeField] private float deacceleration;
 
     //Other Scripts
     ControllerCharacter1 Player;
@@ -62,6 +61,7 @@ public class ControllerCharacter2 : MonoBehaviour
         }
         else if (distance <= followRadius)
         {
+            navEnemy.enabled = true;
             navEnemy.SetDestination(target.position);
             if (distance <= navEnemy.stoppingDistance)
             {
@@ -70,8 +70,8 @@ public class ControllerCharacter2 : MonoBehaviour
         }
         else if (distance > followRadius && velocity > 0.0f)
         {
-            navEnemy.SetDestination(target.forward);
-            velocity -= Time.deltaTime * deacceleration;
+            navEnemy.enabled = false;
+            velocity -= Time.deltaTime * acceleration;
             Idle();
         }
         else if (velocity < 0.0f)
