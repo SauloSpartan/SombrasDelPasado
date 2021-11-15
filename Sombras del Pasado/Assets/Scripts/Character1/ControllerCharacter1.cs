@@ -33,13 +33,19 @@ public class ControllerCharacter1 : MonoBehaviour
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deathClips;
 
+    ControllerCharacter2 Enemy1;
+
     void Start()
     {
+        Enemy1 = FindObjectOfType<ControllerCharacter2>();
+
         //Getting the references
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        sword = GameObject.Find("Espada").GetComponent<BoxCollider>();
+
+        sword = GameObject.Find("Espada Allard").GetComponent<BoxCollider>();
+
         sword.enabled = false;
     }
 
@@ -146,25 +152,6 @@ public class ControllerCharacter1 : MonoBehaviour
         }
     }
 
-    private void Death()
-    {
-        anim.SetTrigger("Death");
-    }
-
-
-    //Audio functions
-    private void Step()
-    {
-        AudioClip clip = StepClip();
-        audioSource.PlayOneShot(clip);
-    }
-
-    private void Attack_1()
-    {
-        AudioClip clip = AttackClip();
-        audioSource.PlayOneShot(clip);
-    }
-
     private void IsAttacking()
     {
         sword.enabled = true;
@@ -175,7 +162,26 @@ public class ControllerCharacter1 : MonoBehaviour
         sword.enabled = false;
     }
 
-    private void PlayerDeath()
+    private void Death()
+    {
+        anim.SetTrigger("Death");
+    }
+
+
+    //Audio functions
+    private void Step_Sound()
+    {
+        AudioClip clip = StepClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Attack1_Sound()
+    {
+        AudioClip clip = AttackClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Death_Sound()
     {
         AudioClip clip = DeathClip();
         audioSource.PlayOneShot(clip);
@@ -194,5 +200,13 @@ public class ControllerCharacter1 : MonoBehaviour
     private AudioClip DeathClip()
     {
         return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy1 Sword")
+        {
+            health = health - Enemy1.damage;
+        }
     }
 }

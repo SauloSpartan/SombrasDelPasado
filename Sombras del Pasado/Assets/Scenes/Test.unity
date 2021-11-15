@@ -449,8 +449,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0016263477, y: 0.00036193317, z: 0.009466201}
-  m_Center: {x: 0.0000000141528105, y: 0.0000000022824453, z: -0.00529513}
+  m_Size: {x: 0.0008958069, y: 0.00036193317, z: 0.009466202}
+  m_Center: {x: -0.0000020876228, y: 0.0000000022242346, z: -0.0052951314}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +704,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6618483606497585637, guid: aa9311eb4f7558a408275645e3201422, type: 3}
+      propertyPath: m_Name
+      value: Espada Enemigo1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6618483606497585637, guid: aa9311eb4f7558a408275645e3201422, type: 3}
+      propertyPath: m_TagString
+      value: Enemy1 Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9311eb4f7558a408275645e3201422, type: 3}
       propertyPath: m_Name
       value: Character2
@@ -737,11 +745,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navEnemy: {fileID: 910891582}
   target: {fileID: 0}
-  followRadius: 5.5
   health: 100
+  damage: 100
+  followRadius: 5.5
   attackRadius: 1.5
   attackCoooldown: 0
   acceleration: 5
+  stepClips:
+  - {fileID: 8300000, guid: 19922506244dc3143b2cb4f849dedb0a, type: 3}
+  - {fileID: 8300000, guid: 32e1d946493fceb4192b61d47455772c, type: 3}
+  - {fileID: 8300000, guid: 4ac29b21216c6fc44a77e7912cc9387d, type: 3}
+  - {fileID: 8300000, guid: 644bf0601e766e1488929fa5e029f686, type: 3}
+  - {fileID: 8300000, guid: eefe280b7e2408546aecad9d3e174a49, type: 3}
+  - {fileID: 8300000, guid: dde3ef36ec57fc44a99a019db22dcee3, type: 3}
+  - {fileID: 8300000, guid: e80411974a9e04d44bc7ed7018dd061e, type: 3}
+  - {fileID: 8300000, guid: bf3800a0d85329647993cf1cea8f1d9d, type: 3}
+  attackClips:
+  - {fileID: 8300000, guid: d0089e88b7b52684baf3b221ad427e48, type: 3}
+  - {fileID: 8300000, guid: fa7ca4ee09598c64980c9fc0317a5d62, type: 3}
+  - {fileID: 8300000, guid: 673021d61e7e9f7459716d71dffc97e5, type: 3}
+  deathClips:
+  - {fileID: 8300000, guid: 54aedf294298af645b381281c477f001, type: 3}
 --- !u!195 &910891582
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -813,6 +837,120 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &910891587
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910891580}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &969499893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6618483606497585637, guid: aa9311eb4f7558a408275645e3201422, type: 3}
+  m_PrefabInstance: {fileID: 836967243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &969499897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969499893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.000957351, y: 0.00045570187, z: 0.010127451}
+  m_Center: {x: -0.000013825189, y: 9.54138e-10, z: -0.005227429}
 --- !u!1 &1139597193
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1116,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2818922523760957725, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_Name
+      value: Espada Allard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818922523760957725, guid: 58e81815c11ed4246962829d67b77517, type: 3}
       propertyPath: m_TagString
       value: Player Sword
       objectReference: {fileID: 0}
@@ -1028,6 +1170,10 @@ PrefabInstance:
     - target: {fileID: 6222885693123941623, guid: 58e81815c11ed4246962829d67b77517, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222885693496513189, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6222885693496513208, guid: 58e81815c11ed4246962829d67b77517, type: 3}
       propertyPath: damage
