@@ -14,6 +14,7 @@ public class ControllerCharacter2 : MonoBehaviour
     private Rigidbody controller;
     private Animator anim;
     private BoxCollider sword;
+    private CapsuleCollider enemyCollider;
 
     //Attack Range and Health
     [SerializeField] private float health;
@@ -21,7 +22,7 @@ public class ControllerCharacter2 : MonoBehaviour
     [SerializeField] private float followRadius;
     [SerializeField] private float attackRadius;
     private float attackSpeed = 2.0f;
-    [SerializeField] private float attackCoooldown = 0.0f;
+    private float attackCoooldown = 0.0f;
 
     //Animation
     private float velocity = 0.0f;
@@ -44,6 +45,7 @@ public class ControllerCharacter2 : MonoBehaviour
         controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        enemyCollider = GetComponent<CapsuleCollider>();
 
         sword = GameObject.Find("Espada Enemigo1").GetComponent<BoxCollider>();
 
@@ -173,6 +175,9 @@ public class ControllerCharacter2 : MonoBehaviour
     private void Death()
     {
         anim.SetTrigger("Death");
+        sword.enabled = false;
+        enemyCollider.enabled = false;
+        Destroy(gameObject, 4.5f);
     }
 
     private void Idle()

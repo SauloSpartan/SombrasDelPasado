@@ -718,7 +718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9311eb4f7558a408275645e3201422, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aa9311eb4f7558a408275645e3201422, type: 3}
       propertyPath: m_TagString
@@ -749,7 +749,6 @@ MonoBehaviour:
   damage: 100
   followRadius: 5.5
   attackRadius: 1.5
-  attackCoooldown: 0
   acceleration: 5
   stepClips:
   - {fileID: 8300000, guid: 19922506244dc3143b2cb4f849dedb0a, type: 3}
@@ -780,7 +779,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 1
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

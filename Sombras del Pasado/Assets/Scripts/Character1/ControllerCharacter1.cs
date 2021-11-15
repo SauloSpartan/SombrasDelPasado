@@ -16,6 +16,7 @@ public class ControllerCharacter1 : MonoBehaviour
     //Health and Damage
     public float health = 100f;
     public int damage;
+    [SerializeField] private float attackCoooldown = 0.0f;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
@@ -146,9 +147,32 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J) && attackCoooldown <= 0.5f)
         {
             anim.SetTrigger("Attack1");
+            attackCoooldown = 2.0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && attackCoooldown > 0.5f && attackCoooldown <= 2.0f)
+        {
+            anim.SetTrigger("Attack2");
+            attackCoooldown = 4.0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.K) && attackCoooldown > 2.0f && attackCoooldown <= 4.0f)
+        {
+            anim.SetTrigger("Attack3");
+            attackCoooldown = 0.0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && attackCoooldown > 2.0f && attackCoooldown <= 4.0f)
+        {
+            attackCoooldown = 0.0f;
+        }
+        else if (attackCoooldown > 0.0f)
+        {
+            attackCoooldown -= Time.deltaTime;
+        }
+        else if (attackCoooldown <= 0.0f)
+        {
+            attackCoooldown = 0;
         }
     }
 
@@ -175,7 +199,7 @@ public class ControllerCharacter1 : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    private void Attack1_Sound()
+    private void Attack_Sound()
     {
         AudioClip clip = AttackClip();
         audioSource.PlayOneShot(clip);
