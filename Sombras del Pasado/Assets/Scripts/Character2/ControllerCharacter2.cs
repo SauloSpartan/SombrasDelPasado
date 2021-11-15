@@ -8,6 +8,7 @@ public class ControllerCharacter2 : MonoBehaviour
     //Navegation
     public NavMeshAgent navEnemy;
     public Transform target;
+    private bool followTarget = true;
 
     //References
     private Rigidbody controller;
@@ -16,6 +17,9 @@ public class ControllerCharacter2 : MonoBehaviour
     //Attack Range and Health
     [SerializeField] private float followRadius;
     [SerializeField] private float health;
+    [SerializeField] private float attackRadius;
+    private float attackSpeed = 2.0f;
+    [SerializeField] private float attackCoooldown = 0.0f;
 
     //Animation
     private float velocity = 0.0f;
@@ -32,6 +36,7 @@ public class ControllerCharacter2 : MonoBehaviour
         controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
+
         //Optional
         target = PlayerManager.instance.player.transform;
     }
@@ -41,7 +46,11 @@ public class ControllerCharacter2 : MonoBehaviour
     {
         if (health > 0)
         {
-            MoveEnemy();
+            if (followTarget == true)
+            {
+                MoveEnemy();
+            }
+            AttackEnemy();
         }
         if (health <= 0)
         {
@@ -84,6 +93,29 @@ public class ControllerCharacter2 : MonoBehaviour
         }
     }
 
+    private void AttackEnemy()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+        if (distance <= attackRadius && attackCoooldown <= 0.0f)
+        {
+            anim.SetTrigger("Attack1");
+            attackCoooldown = attackSpeed;
+            if (attackCoooldown == attackSpeed)
+            {
+                anim.SetTrigger("Attack2");
+            }
+        } 
+        else if (attackCoooldown > 0.0f)
+        {
+            attackCoooldown -= Time.deltaTime;
+            followTarget = false;
+        }
+        else if (attackCoooldown <= 0.0f)
+        {
+            followTarget = true;
+        }
+    }
+
     private void FacePlayer()
     {
         //Rotate to player
@@ -95,8 +127,11 @@ public class ControllerCharacter2 : MonoBehaviour
     //Gizmos are like the colliders, they can not be seen, but they interact with something
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, followRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
     //You can activate gizmos to be seen
 

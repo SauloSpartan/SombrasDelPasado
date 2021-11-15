@@ -737,9 +737,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navEnemy: {fileID: 910891582}
   target: {fileID: 0}
-  followRadius: 5
+  followRadius: 5.5
   health: 100
-  acceleration: 2.5
+  attackRadius: 1.5
+  attackCoooldown: 0
+  acceleration: 5
 --- !u!195 &910891582
 NavMeshAgent:
   m_ObjectHideFlags: 0
