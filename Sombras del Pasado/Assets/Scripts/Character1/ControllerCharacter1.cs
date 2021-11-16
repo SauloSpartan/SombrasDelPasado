@@ -16,7 +16,8 @@ public class ControllerCharacter1 : MonoBehaviour
     //Health and Damage
     public float health = 100f;
     public int damage;
-    [SerializeField] private float attackCoooldown = 0.0f;
+    [SerializeField] private float attackCombo1 = 0.0f;
+    [SerializeField] private float attackCombo2 = 0.0f;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
@@ -150,7 +151,7 @@ public class ControllerCharacter1 : MonoBehaviour
         controller.Move(moveVector * Time.deltaTime);
     }
 
-    private void Attack()
+    /*private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.J) && attackCoooldown <= 0.5f)
         {
@@ -178,6 +179,37 @@ public class ControllerCharacter1 : MonoBehaviour
         else if (attackCoooldown <= 0.0f)
         {
             attackCoooldown = 0;
+        }
+    }*/
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.0f && attackCombo2 <= 0.0f)
+        {
+            anim.SetTrigger("Attack1");
+            attackCombo1 = 0.5f;
+            attackCombo2 = 0.0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.5f && attackCombo1 > 0.0f)
+        {
+            anim.SetTrigger("Attack2");
+            attackCombo1 = 0.0f;
+            attackCombo2 = 0.5f;
+        }
+        else if (Input.GetKeyDown(KeyCode.J) && attackCombo2 <= 0.5f && attackCombo2 > 0.0f)
+        {
+            anim.SetTrigger("Attack3");
+            attackCombo1 = 0.0f;
+            attackCombo2 = 0.0f;
+        }
+
+        if (attackCombo1 > 0.0f)
+        {
+            attackCombo1 -= Time.deltaTime;
+        }
+        if (attackCombo2 > 0.0f)
+        {
+            attackCombo2 -= Time.deltaTime;
         }
     }
 
