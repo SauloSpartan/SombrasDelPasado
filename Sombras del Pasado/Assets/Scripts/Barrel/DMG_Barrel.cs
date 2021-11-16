@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DMG : MonoBehaviour
+public class DMG_Barrel : MonoBehaviour
 {
     // Start is called before the first frame update
     public int damage;
     ControllerCharacter1 Player;
-
+        
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
@@ -18,8 +18,7 @@ public class DMG : MonoBehaviour
 
     }
 
-    //Es un trigger "Stay" porque el jugador ya se encuentra dentro del trigger
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Player.health = Player.health - damage;
     }

@@ -5,8 +5,11 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     private ParticleSystem Particle;
-    public GameObject DMG;
-    public GameObject Barrel; 
+    public GameObject OBJ_Barrel;
+    public Animator Explode;
+    //Variables para el collider y renderer del barril
+    public MeshRenderer Visual;
+    public MeshCollider Collider;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +21,11 @@ public class Explosion : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            DMG.SetActive(true);
+            Explode.enabled = true;
+            Visual.enabled = false;
+            Collider.enabled = false;
             Particle.Play();
-            Destroy(Barrel, 2f);
-            Destroy(DMG, .1f);
+            Destroy(OBJ_Barrel, 1.5f);
         }
     }
 
