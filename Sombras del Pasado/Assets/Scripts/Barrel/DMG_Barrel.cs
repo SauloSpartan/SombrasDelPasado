@@ -6,11 +6,11 @@ public class DMG_Barrel : MonoBehaviour
 {
     // Start is called before the first frame update
     public int damage;
-    ControllerCharacter1 Player;
+    //ControllerCharacter1 Player;
         
     void Start()
     {
-        Player = FindObjectOfType<ControllerCharacter1>();
+        //Player = FindObjectOfType<ControllerCharacter1>();
     }
 
     void Update()
@@ -20,6 +20,6 @@ public class DMG_Barrel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Player.health = Player.health - damage;
+        //Player.health = Player.health - damage;
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Player Sword
   - Enemy1 Sword
   - Post-Processing
+  - Barrel
+  - Spikes
   layers:
   - Default
   - TransparentFX
