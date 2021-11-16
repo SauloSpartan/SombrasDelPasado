@@ -1178,6 +1178,22 @@ PrefabInstance:
       propertyPath: damage
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6222885693496513208, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: attackClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222885693496513208, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: attackClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e8c84f460f6568c4f80b66a4368aa0b9, type: 3}
+    - target: {fileID: 6222885693496513208, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: attackClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f9e49605c3f97c2428db79bcc9c333dd, type: 3}
+    - target: {fileID: 6222885693496513208, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: attackClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: ff2cd083ab9690a4396075439644b4a4, type: 3}
     m_RemovedComponents:
     - {fileID: 6222885692542035703, guid: 58e81815c11ed4246962829d67b77517, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58e81815c11ed4246962829d67b77517, type: 3}
