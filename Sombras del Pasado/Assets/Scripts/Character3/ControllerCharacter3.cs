@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ControllerCharacter2 : MonoBehaviour
+public class ControllerCharacter3 : MonoBehaviour
 {
     //Navegation
     public NavMeshAgent navEnemy;
@@ -57,7 +57,7 @@ public class ControllerCharacter2 : MonoBehaviour
         target = PlayerManager.instance.player.transform;
     }
 
-
+    // Update is called once per frame
     void Update()
     {
         if (health > 0)
