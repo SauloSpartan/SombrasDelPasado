@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Player Sword
   - Enemy1 Sword
   - Post-Processing
   - Barrel
   - Spikes
+  - Enemy2 Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX

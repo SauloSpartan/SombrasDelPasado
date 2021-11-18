@@ -21,7 +21,6 @@ public class ControllerCharacter3 : MonoBehaviour
     public float damage;
     [SerializeField] private float followRadius;
     [SerializeField] private float attackRadius;
-    private float attackSpeed = 2.0f;
     private float attackCoooldown = 0.0f;
 
     //Animation
@@ -143,11 +142,7 @@ public class ControllerCharacter3 : MonoBehaviour
         if (distance <= attackRadius && attackCoooldown <= 0.0f)
         {
             anim.SetTrigger("Attack1");
-            attackCoooldown = attackSpeed;
-            if (attackCoooldown == attackSpeed)
-            {
-                anim.SetTrigger("Attack2");
-            }
+            attackCoooldown = 3.0f;
         }
         else if (attackCoooldown > 0.0f)
         {
