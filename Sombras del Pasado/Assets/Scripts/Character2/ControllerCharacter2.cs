@@ -26,7 +26,7 @@ public class ControllerCharacter2 : MonoBehaviour
 
     //Animation
     private float velocity = 0.0f;
-    [SerializeField] private float acceleration;
+    private float acceleration = 5.0f;
 
     //Audio
     private AudioSource audioSource;
@@ -36,10 +36,12 @@ public class ControllerCharacter2 : MonoBehaviour
 
     //Other Scripts
     ControllerCharacter1 Player;
+    Score Score;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
+        Score = FindObjectOfType<Score>();
 
         navEnemy = GetComponent<NavMeshAgent>();
         controller = GetComponent<Rigidbody>();
@@ -47,7 +49,8 @@ public class ControllerCharacter2 : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
 
-        sword = GameObject.Find("Espada Enemigo1").GetComponent<BoxCollider>();
+        //sword = GameObject.Find("Espada Enemigo1").GetComponent<BoxCollider>();
+        sword = GetComponentInChildren<BoxCollider>();
 
         sword.enabled = false;
 
@@ -131,6 +134,7 @@ public class ControllerCharacter2 : MonoBehaviour
         if (other.gameObject.tag == "Player Sword")
         {
             health = health - Player.damage;
+            Score.score = Score.score + 150;
         }
     }
 
@@ -177,6 +181,7 @@ public class ControllerCharacter2 : MonoBehaviour
         anim.SetTrigger("Death");
         sword.enabled = false;
         enemyCollider.enabled = false;
+        Score.score = Score.score + 1;
         Destroy(gameObject, 4.5f);
     }
 

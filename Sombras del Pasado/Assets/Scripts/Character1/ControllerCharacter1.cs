@@ -189,18 +189,21 @@ public class ControllerCharacter1 : MonoBehaviour
             anim.SetTrigger("Attack1");
             attackCombo1 = 0.5f;
             attackCombo2 = 0.0f;
+            damage = 20;
         }
         else if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.5f && attackCombo1 > 0.0f)
         {
             anim.SetTrigger("Attack2");
             attackCombo1 = 0.0f;
             attackCombo2 = 0.5f;
+            damage = 30;
         }
         else if (Input.GetKeyDown(KeyCode.J) && attackCombo2 <= 0.5f && attackCombo2 > 0.0f)
         {
             anim.SetTrigger("Attack3");
             attackCombo1 = 0.0f;
             attackCombo2 = 0.0f;
+            damage = 50;
         }
 
         if (attackCombo1 > 0.0f)
