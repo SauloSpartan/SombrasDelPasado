@@ -7,6 +7,7 @@ public class Explosion : MonoBehaviour
     private ParticleSystem Particle;
     public GameObject OBJ_Barrel;
     public Animator Explode;
+    public AudioSource Sound;
     //Variables para el collider y renderer del barril
     public MeshRenderer Visual;
     public MeshCollider Collider;
@@ -22,6 +23,7 @@ public class Explosion : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Explode.enabled = true;
+            Sound.enabled = true;
             Visual.enabled = false;
             Collider.enabled = false;
             Particle.Play();
