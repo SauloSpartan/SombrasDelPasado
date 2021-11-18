@@ -36,6 +36,7 @@ public class ControllerCharacter1 : MonoBehaviour
     [SerializeField] private AudioClip[] deathClips;
 
     ControllerCharacter2 Enemy1;
+    ControllerCharacter3 Enemy2;
     DMG_Barrel Explosion;
     DMG_Spike Spiked;
 
@@ -43,6 +44,7 @@ public class ControllerCharacter1 : MonoBehaviour
     void Start()
     {
         Enemy1 = FindObjectOfType<ControllerCharacter2>();
+        Enemy2 = FindObjectOfType<ControllerCharacter3>();
         Explosion = FindObjectOfType<DMG_Barrel>();
         Spiked = FindObjectOfType<DMG_Spike>();
 
@@ -271,6 +273,10 @@ public class ControllerCharacter1 : MonoBehaviour
         if (other.gameObject.tag == "Enemy1 Sword")
         {
             health = health - Enemy1.damage;
+        }
+        if (other.gameObject.tag == "Enemy2 Sword")
+        {
+            health = health - Enemy2.damage;
         }
         if (other.gameObject.tag == "Barrel")
         {
