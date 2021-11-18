@@ -132,7 +132,7 @@ public class ControllerCharacter3 : MonoBehaviour
         if (other.gameObject.tag == "Player Sword")
         {
             health = health - Player.damage;
-            Score.score = Score.score + 150;
+            Score.score = Score.score + 300;
         }
     }
 
@@ -175,7 +175,7 @@ public class ControllerCharacter3 : MonoBehaviour
         anim.SetTrigger("Death");
         sword.enabled = false;
         enemyCollider.enabled = false;
-        Score.score = Score.score + 1;
+        Score.score = Score.score + 2;
         Destroy(gameObject, 4.5f);
     }
 
