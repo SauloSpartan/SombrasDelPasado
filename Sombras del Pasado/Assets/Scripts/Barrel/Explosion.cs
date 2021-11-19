@@ -8,6 +8,8 @@ public class Explosion : MonoBehaviour
     public GameObject OBJ_Barrel;
     public Animator Explode;
     public AudioSource Sound;
+    //Variable del collider que origina la explosion
+    public CapsuleCollider Trigger;
     //Variables para el collider y renderer del barril
     public MeshRenderer Visual;
     public MeshCollider Collider;
@@ -20,8 +22,9 @@ public class Explosion : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player Sword")
         {
+            Trigger.enabled = false;
             Explode.enabled = true;
             Sound.enabled = true;
             Visual.enabled = false;
@@ -30,5 +33,4 @@ public class Explosion : MonoBehaviour
             Destroy(OBJ_Barrel, 1.5f);
         }
     }
-
 }
