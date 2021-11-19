@@ -14,6 +14,8 @@ public class ControllerCharacter4 : MonoBehaviour
     private Rigidbody controller;
     private Animator anim;
     private CapsuleCollider enemyCollider;
+    public BoxCollider daggerRight;
+    public BoxCollider daggerLeft;
 
     //Attack Range and Health
     [SerializeField] private float health;
@@ -21,8 +23,6 @@ public class ControllerCharacter4 : MonoBehaviour
     [SerializeField] private float followRadius;
     [SerializeField] private float attackRadius;
     private float attackCoooldown = 0.0f;
-    public BoxCollider daggerRight;
-    public BoxCollider daggerLeft;
 
     //Animation
     private float velocity = 0.0f;
@@ -49,11 +49,11 @@ public class ControllerCharacter4 : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
 
-        //Optional
-        target = PlayerManager.instance.player.transform;
-
         daggerRight.enabled = false;
         daggerLeft.enabled = false;
+
+        //Optional
+        target = PlayerManager.instance.player.transform;
     }
 
     // Update is called once per frame
@@ -132,7 +132,7 @@ public class ControllerCharacter4 : MonoBehaviour
         if (other.gameObject.tag == "Player Sword")
         {
             health = health - Player.damage;
-            Score.score = Score.score + 300;
+            Score.score = Score.score + 450;
         }
     }
 
@@ -179,7 +179,7 @@ public class ControllerCharacter4 : MonoBehaviour
         daggerRight.enabled = false;
         daggerLeft.enabled = false;
         enemyCollider.enabled = false;
-        Score.score = Score.score + 2;
+        Score.score = Score.score + 3;
         Destroy(gameObject, 4.5f);
     }
 

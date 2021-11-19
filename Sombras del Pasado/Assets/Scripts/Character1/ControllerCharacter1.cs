@@ -38,6 +38,7 @@ public class ControllerCharacter1 : MonoBehaviour
     ControllerCharacter2 Enemy1;
     ControllerCharacter3 Enemy2;
     ControllerCharacter4 Enemy3;
+    ControllerCharacter5 Boss;
     DMG_Barrel Explosion;
     DMG_Spike Spiked;
 
@@ -47,6 +48,7 @@ public class ControllerCharacter1 : MonoBehaviour
         Enemy1 = FindObjectOfType<ControllerCharacter2>();
         Enemy2 = FindObjectOfType<ControllerCharacter3>();
         Enemy3 = FindObjectOfType<ControllerCharacter4>();
+        Boss = FindObjectOfType<ControllerCharacter5>();
         Explosion = FindObjectOfType<DMG_Barrel>();
         Spiked = FindObjectOfType<DMG_Spike>();
 
@@ -283,6 +285,10 @@ public class ControllerCharacter1 : MonoBehaviour
         if (other.gameObject.tag == "Enemy3 Dagger")
         {
             health = health - Enemy3.damage;
+        }
+        if (other.gameObject.tag == "Enemy4 Sword")
+        {
+            health = health - Boss.damage;
         }
         if (other.gameObject.tag == "Barrel")
         {
