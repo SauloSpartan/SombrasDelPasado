@@ -10,7 +10,7 @@ TagManager:
   - Barrel
   - Spikes
   - Enemy2 Sword
-  - Enemy
+  - Enemy3 Dagger
   layers:
   - Default
   - TransparentFX

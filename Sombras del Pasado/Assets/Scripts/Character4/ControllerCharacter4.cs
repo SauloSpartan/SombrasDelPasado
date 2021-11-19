@@ -21,6 +21,8 @@ public class ControllerCharacter4 : MonoBehaviour
     [SerializeField] private float followRadius;
     [SerializeField] private float attackRadius;
     private float attackCoooldown = 0.0f;
+    public BoxCollider daggerRight;
+    public BoxCollider daggerLeft;
 
     //Animation
     private float velocity = 0.0f;
@@ -35,15 +37,11 @@ public class ControllerCharacter4 : MonoBehaviour
     //Other Scripts
     ControllerCharacter1 Player;
     Score Score;
-    DaggerRight daggerRight;
-    DaggerLeft daggerLeft;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
         Score = FindObjectOfType<Score>();
-        daggerRight = FindObjectOfType<DaggerRight>();
-        daggerLeft = FindObjectOfType<DaggerLeft>();
 
         navEnemy = GetComponent<NavMeshAgent>();
         controller = GetComponent<Rigidbody>();
@@ -51,11 +49,11 @@ public class ControllerCharacter4 : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
 
-        daggerRight.daggerRight.enabled = false;
-        daggerLeft.daggerLeft.enabled = false;
-
         //Optional
         target = PlayerManager.instance.player.transform;
+
+        daggerRight.enabled = false;
+        daggerLeft.enabled = false;
     }
 
     // Update is called once per frame
@@ -156,7 +154,7 @@ public class ControllerCharacter4 : MonoBehaviour
             attackCoooldown = 0;
         }
 
-        if (attackCoooldown <= 0.4f)
+        if (attackCoooldown <= 1.0f)
         {
             followTarget = true;
         }
@@ -164,18 +162,22 @@ public class ControllerCharacter4 : MonoBehaviour
 
     private void IsAttacking()
     {
-
+        daggerRight.enabled = true;
+        daggerLeft.enabled = true;
     }
 
     private void NotAttacking()
     {
-
+        daggerRight.enabled = false;
+        daggerLeft.enabled = false;
     }
 
     private void Death()
     {
+        followTarget = false;
         anim.SetTrigger("Death");
-
+        daggerRight.enabled = false;
+        daggerLeft.enabled = false;
         enemyCollider.enabled = false;
         Score.score = Score.score + 2;
         Destroy(gameObject, 4.5f);
