@@ -11,6 +11,7 @@ TagManager:
   - Spikes
   - Enemy2 Sword
   - Enemy3 Dagger
+  - Enemy4 Sword
   layers:
   - Default
   - TransparentFX
