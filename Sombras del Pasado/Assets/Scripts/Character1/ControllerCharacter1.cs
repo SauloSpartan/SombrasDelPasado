@@ -16,8 +16,8 @@ public class ControllerCharacter1 : MonoBehaviour
     //Health and Damage
     public float health = 100f;
     public int damage;
-    [SerializeField] private float attackCombo1 = 0.0f;
-    [SerializeField] private float attackCombo2 = 0.0f;
+    private float attackCombo1 = 0.0f;
+    private float attackCombo2 = 0.0f;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
@@ -37,6 +37,7 @@ public class ControllerCharacter1 : MonoBehaviour
 
     ControllerCharacter2 Enemy1;
     ControllerCharacter3 Enemy2;
+    ControllerCharacter4 Enemy3;
     DMG_Barrel Explosion;
     DMG_Spike Spiked;
 
@@ -45,6 +46,7 @@ public class ControllerCharacter1 : MonoBehaviour
     {
         Enemy1 = FindObjectOfType<ControllerCharacter2>();
         Enemy2 = FindObjectOfType<ControllerCharacter3>();
+        Enemy3 = FindObjectOfType<ControllerCharacter4>();
         Explosion = FindObjectOfType<DMG_Barrel>();
         Spiked = FindObjectOfType<DMG_Spike>();
 
@@ -189,11 +191,11 @@ public class ControllerCharacter1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.0f && attackCombo2 <= 0.0f)
         {
             anim.SetTrigger("Attack1");
-            attackCombo1 = 0.5f;
+            attackCombo1 = 0.4f;
             attackCombo2 = 0.0f;
             damage = 20;
         }
-        else if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.5f && attackCombo1 > 0.0f)
+        else if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.4f && attackCombo1 > 0.0f)
         {
             anim.SetTrigger("Attack2");
             attackCombo1 = 0.0f;
@@ -277,6 +279,10 @@ public class ControllerCharacter1 : MonoBehaviour
         if (other.gameObject.tag == "Enemy2 Sword")
         {
             health = health - Enemy2.damage;
+        }
+        if (other.gameObject.tag == "Enemy3 Dagger")
+        {
+            health = health - Enemy3.damage;
         }
         if (other.gameObject.tag == "Barrel")
         {
