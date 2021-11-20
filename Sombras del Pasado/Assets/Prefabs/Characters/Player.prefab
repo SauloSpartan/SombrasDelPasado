@@ -221,8 +221,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0011261746, y: 0.0009771963, z: 0.009521245}
-  m_Center: {x: 0.0000025461247, y: 0.000010373802, z: -0.0053226557}
+  m_Size: {x: 0.00205565, y: 0.0031125348, z: 0.010252056}
+  m_Center: {x: 0.00021530756, y: 0.00034236797, z: -0.005334668}
 --- !u!1 &4485061373934268239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,8 +2542,6 @@ MonoBehaviour:
   acceleration: 5
   health: 100
   damage: 0
-  attackCombo1: 0
-  attackCombo2: 0
   stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}
