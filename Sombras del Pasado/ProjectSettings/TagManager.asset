@@ -12,6 +12,9 @@ TagManager:
   - Enemy2 Sword
   - Enemy3 Dagger
   - Enemy4 Sword
+  - PowerUp Defense
+  - PowerUp Attack
+  - PowerUp Velocity
   layers:
   - Default
   - TransparentFX

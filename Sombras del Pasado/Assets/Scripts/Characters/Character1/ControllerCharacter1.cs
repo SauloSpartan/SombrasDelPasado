@@ -16,8 +16,12 @@ public class ControllerCharacter1 : MonoBehaviour
     //Health and Damage
     public float health = 100f;
     public int damage;
+    public int defense;
+    private int attack = 1;
     private float attackCombo1 = 0.0f;
     private float attackCombo2 = 0.0f;
+    private float powerTimer;
+    private int powerUp = 0;
 
     //3D Direction & Gravity
     private Vector3 moveDirection;
@@ -75,8 +79,13 @@ public class ControllerCharacter1 : MonoBehaviour
         {
             Death();
         }
+        if (health > 100)
+        {
+            health = 100;
+        }
 
         Gravity();
+        PowerUp();
     }
 
     private void Move()
@@ -157,37 +166,6 @@ public class ControllerCharacter1 : MonoBehaviour
         controller.Move(moveVector * Time.deltaTime);
     }
 
-    /*private void Attack()
-    {
-        if (Input.GetKeyDown(KeyCode.J) && attackCoooldown <= 0.5f)
-        {
-            anim.SetTrigger("Attack1");
-            attackCoooldown = 2.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.J) && attackCoooldown > 0.5f && attackCoooldown <= 2.0f)
-        {
-            anim.SetTrigger("Attack2");
-            attackCoooldown = 4.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.K) && attackCoooldown > 2.0f && attackCoooldown <= 4.0f)
-        {
-            anim.SetTrigger("Attack3");
-            attackCoooldown = 0.0f;
-        }
-        else if (Input.GetKeyDown(KeyCode.J) && attackCoooldown > 2.0f && attackCoooldown <= 4.0f)
-        {
-            attackCoooldown = 0.0f;
-        }
-        else if (attackCoooldown > 0.0f)
-        {
-            attackCoooldown -= Time.deltaTime;
-        }
-        else if (attackCoooldown <= 0.0f)
-        {
-            attackCoooldown = 0;
-        }
-    }*/
-
     private void Attack()
     {
         if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.0f && attackCombo2 <= 0.0f)
@@ -195,21 +173,21 @@ public class ControllerCharacter1 : MonoBehaviour
             anim.SetTrigger("Attack1");
             attackCombo1 = 0.4f;
             attackCombo2 = 0.0f;
-            damage = 20;
+            damage = 20 * attack;
         }
         else if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.4f && attackCombo1 > 0.0f)
         {
             anim.SetTrigger("Attack2");
             attackCombo1 = 0.0f;
             attackCombo2 = 0.5f;
-            damage = 30;
+            damage = 30 * attack;
         }
         else if (Input.GetKeyDown(KeyCode.J) && attackCombo2 <= 0.5f && attackCombo2 > 0.0f)
         {
             anim.SetTrigger("Attack3");
             attackCombo1 = 0.0f;
             attackCombo2 = 0.0f;
-            damage = 50;
+            damage = 50 * attack;
         }
 
         if (attackCombo1 > 0.0f)
@@ -235,6 +213,34 @@ public class ControllerCharacter1 : MonoBehaviour
     private void Death()
     {
         anim.SetTrigger("Death");
+    }
+
+    private void PowerUp()
+    {
+        if (powerTimer > 0.0f && powerUp == 1)
+        {
+            defense = 2;
+            powerTimer -= Time.deltaTime;
+            Destroy(GameObject.Find("PowerUp Defense"));
+        }
+        if (powerTimer > 0.0f && powerUp == 2)
+        {
+            attack = 2;
+            powerTimer -= Time.deltaTime;
+            Destroy(GameObject.Find("PowerUp Damage"));
+        }
+        if (powerTimer > 0.0f && powerUp == 3)
+        {
+            walkSpeed = 4;
+            powerTimer -= Time.deltaTime;
+            Destroy(GameObject.Find("PowerUp Velocity"));
+        }
+        if (powerTimer <= 0.0f)
+        {
+            defense = 0;
+            attack = 1;
+            walkSpeed = 3;
+        }
     }
 
 
@@ -276,27 +282,43 @@ public class ControllerCharacter1 : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy1 Sword")
         {
-            health = health - Enemy1.damage;
+            health = health - (Enemy1.damage - defense);
         }
         if (other.gameObject.tag == "Enemy2 Sword")
         {
-            health = health - Enemy2.damage;
+            health = health - (Enemy2.damage - defense);
         }
         if (other.gameObject.tag == "Enemy3 Dagger")
         {
-            health = health - Enemy3.damage;
+            health = health - (Enemy3.damage - defense);
         }
         if (other.gameObject.tag == "Enemy4 Sword")
         {
-            health = health - Boss.damage;
+            health = health - (Boss.damage - defense);
         }
         if (other.gameObject.tag == "Barrel")
         {
-            health = health - Explosion.damage;
+            health = health - (Explosion.damage - defense);
         }
         if (other.gameObject.tag == "Spikes")
         {
-            health = health - Spiked.damage;
+            health = health - (Spiked.damage - defense);
+        }
+
+        if (other.gameObject.tag == "PowerUp Defense")
+        {
+            powerTimer = 15.0f;
+            powerUp = 1;
+        }
+        if (other.gameObject.tag == "PowerUp Attack")
+        {
+            powerTimer = 15.0f;
+            powerUp = 2;
+        }
+        if (other.gameObject.tag == "PowerUp Velocity")
+        {
+            powerTimer = 15.0f;
+            powerUp = 3;
         }
     }
 }
