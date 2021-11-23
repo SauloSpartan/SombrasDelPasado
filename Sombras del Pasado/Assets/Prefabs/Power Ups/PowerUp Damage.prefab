@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3090944424318953162}
   - component: {fileID: 3368118702764059885}
   - component: {fileID: 2049285023681397266}
+  - component: {fileID: 866840678849547385}
   m_Layer: 0
   m_Name: PowerUp Damage
   m_TagString: PowerUp Attack
@@ -4820,6 +4821,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.06, z: 6.83}
   m_Center: {x: 0, y: 0, z: 1.4}
+--- !u!95 &866840678849547385
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049285023681397261}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4fa34680f0533f04db0b6e28c1d6a9b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4956687251018961676
 GameObject:
   m_ObjectHideFlags: 0
