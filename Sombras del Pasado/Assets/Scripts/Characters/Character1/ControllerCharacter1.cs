@@ -32,6 +32,9 @@ public class ControllerCharacter1 : MonoBehaviour
     private CharacterController controller;
     private Animator anim;
     private BoxCollider sword;
+    private GameObject powerDefense;
+    private GameObject powerDamage;
+    private GameObject powerVelocity;
 
     //Audio
     private AudioSource audioSource;
@@ -39,6 +42,7 @@ public class ControllerCharacter1 : MonoBehaviour
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deathClips;
 
+    //Scripts
     ControllerCharacter2 Enemy1;
     ControllerCharacter3 Enemy2;
     ControllerCharacter4 Enemy3;
@@ -55,6 +59,9 @@ public class ControllerCharacter1 : MonoBehaviour
         Boss = FindObjectOfType<ControllerCharacter5>();
         Explosion = FindObjectOfType<DMG_Barrel>();
         Spiked = FindObjectOfType<DMG_Spike>();
+        powerDefense = GameObject.Find("Power Defense");
+        powerDamage = GameObject.Find("Power Damage");
+        powerVelocity = GameObject.Find("Power Velocity");
 
         //Getting the references
         controller = GetComponent<CharacterController>();
@@ -64,6 +71,9 @@ public class ControllerCharacter1 : MonoBehaviour
         sword = GameObject.Find("Espada Allard").GetComponent<BoxCollider>();
 
         sword.enabled = false;
+        powerDefense.SetActive(false);
+        powerDamage.SetActive(false);
+        powerVelocity.SetActive(false);
     }
 
     void Update()
@@ -220,18 +230,21 @@ public class ControllerCharacter1 : MonoBehaviour
         if (powerTimer > 0.0f && powerUp == 1)
         {
             defense = 2;
+            powerDefense.SetActive(true);
             powerTimer -= Time.deltaTime;
             Destroy(GameObject.Find("PowerUp Defense"));
         }
         if (powerTimer > 0.0f && powerUp == 2)
         {
             attack = 2;
+            powerDamage.SetActive(true);
             powerTimer -= Time.deltaTime;
             Destroy(GameObject.Find("PowerUp Damage"));
         }
         if (powerTimer > 0.0f && powerUp == 3)
         {
             walkSpeed = 4;
+            powerVelocity.SetActive(true);
             powerTimer -= Time.deltaTime;
             Destroy(GameObject.Find("PowerUp Velocity"));
         }
@@ -240,6 +253,10 @@ public class ControllerCharacter1 : MonoBehaviour
             defense = 0;
             attack = 1;
             walkSpeed = 3;
+
+            powerDefense.SetActive(false);
+            powerDamage.SetActive(false);
+            powerVelocity.SetActive(false);
         }
     }
 

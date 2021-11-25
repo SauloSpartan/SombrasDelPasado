@@ -3958,7 +3958,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4919,7 +4919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1503030688387856239
 Transform:
   m_ObjectHideFlags: 0
@@ -4991,7 +4991,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.503132e+28, y: 4.1958698e+21, z: 2.1685555e-10, w: 4.4714135e+21}
+  m_BoundingSphereOverride: {x: 0, y: 7.540152e+19, z: 4.5905e-41, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
