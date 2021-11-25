@@ -37,11 +37,14 @@ public class ControllerCharacter4 : MonoBehaviour
     //Other Scripts
     ControllerCharacter1 Player;
     Score Score;
+    LevelClear InstancedEnemie;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
         Score = FindObjectOfType<Score>();
+        InstancedEnemie = FindObjectOfType<LevelClear>();
+        InstancedEnemie.TotalEnemies++;
 
         navEnemy = GetComponent<NavMeshAgent>();
         controller = GetComponent<Rigidbody>();
@@ -181,6 +184,11 @@ public class ControllerCharacter4 : MonoBehaviour
         enemyCollider.enabled = false;
         Score.score = Score.score + 3;
         Destroy(gameObject, 4.5f);
+    }
+
+    private void OnDestroy()
+    {
+        InstancedEnemie.DeadEnemies++;
     }
 
     private void Idle()
