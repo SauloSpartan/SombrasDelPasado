@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230198758036628676}
   - component: {fileID: 201320332483932709}
+  - component: {fileID: 5427059691407023464}
   m_Layer: 0
   m_Name: PowerUp Defense
   m_TagString: PowerUp Defense
@@ -46,6 +47,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 7.25, z: 4.19}
   m_Center: {x: 0, y: 5.3, z: 0}
+--- !u!95 &5427059691407023464
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201320332483932711}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 651205fb33333f74983e1dadf7de4e3f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3738854219271960907
 GameObject:
   m_ObjectHideFlags: 0

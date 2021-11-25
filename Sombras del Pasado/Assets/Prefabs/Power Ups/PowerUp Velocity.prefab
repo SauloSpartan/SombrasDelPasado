@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6079056385924155177}
   - component: {fileID: 2801213974318079597}
   - component: {fileID: 3439333512406264360}
+  - component: {fileID: 6121333836226234358}
   m_Layer: 0
   m_Name: PowerUp Velocity
   m_TagString: PowerUp Velocity
@@ -4903,6 +4904,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5, z: 13.35}
   m_Center: {x: 0, y: 0, z: 3}
+--- !u!95 &6121333836226234358
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439333512406264361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e103abc4ba757cd448931f48b97a009a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4980212415981562623
 GameObject:
   m_ObjectHideFlags: 0
