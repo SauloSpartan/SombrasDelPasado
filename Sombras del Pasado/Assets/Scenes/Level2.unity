@@ -5998,6 +5998,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114544016745803160, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544016745803161, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114544016745803162, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_Name
       value: NextLevel
@@ -6011,8 +6019,16 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 94.77633
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10.817
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.56
+      value: 45.6723
       objectReference: {fileID: 0}
     - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6052,9 +6068,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
---- !u!23 &114544016335656883 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 114544016745803161, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+--- !u!65 &114544016335656883 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 114544016745803160, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
   m_PrefabInstance: {fileID: 114544016335656882}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6955702711119531138 stripped

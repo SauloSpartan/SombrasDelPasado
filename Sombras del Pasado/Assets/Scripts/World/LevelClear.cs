@@ -6,7 +6,7 @@ public class LevelClear : MonoBehaviour
 {
     public int TotalEnemies;
     public int DeadEnemies = -1;
-    public MeshRenderer Next;
+    public BoxCollider Next;
 
     // Start is called before the first frame update
     void Start()

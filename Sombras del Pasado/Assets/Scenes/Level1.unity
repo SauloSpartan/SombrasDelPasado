@@ -10082,7 +10082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114544016745803160, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114544016745803161, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_Enabled
@@ -10101,8 +10101,16 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 73.02729
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.9096
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.222
+      value: -12.7917
       objectReference: {fileID: 0}
     - target: {fileID: 114544016745803167, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10142,6 +10150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+--- !u!65 &751873049 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 114544016745803160, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
+  m_PrefabInstance: {fileID: 751873048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &759092282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10849,11 +10862,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e89dd12bf45da50409cd190f29300038, type: 3}
   m_PrefabInstance: {fileID: 811569395}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &812749899 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 114544016745803161, guid: ba8441db5b144e54abea4c0924baf656, type: 3}
-  m_PrefabInstance: {fileID: 751873048}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &815522685
 PrefabInstance:
@@ -27949,7 +27957,7 @@ PrefabInstance:
     - target: {fileID: 2856377524574737888, guid: ebe05a3c4399fab4c9e643f7d1510030, type: 3}
       propertyPath: Next
       value: 
-      objectReference: {fileID: 812749899}
+      objectReference: {fileID: 751873049}
     - target: {fileID: 2856377524574737889, guid: ebe05a3c4399fab4c9e643f7d1510030, type: 3}
       propertyPath: m_RootOrder
       value: 14
