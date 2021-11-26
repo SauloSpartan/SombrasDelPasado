@@ -18,7 +18,42 @@ ModelImporter:
   - first:
       74: 4348485665485846014
     second: Death
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinturon.001
+    second: {fileID: 2100000, guid: a8cfa4115830cf041954f6dd284e25c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: b82206e1476f9164abc340da1e0ad60c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: b88085daf743c8545b1de3be6050676c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 4e55b036217b51d49a0bfc9c5104f46c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piel.001
+    second: {fileID: 2100000, guid: cf40eaf7399d21d4c9fcaeeec8c0b485, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa.001
+    second: {fileID: 2100000, guid: 1ab592ddaf02b4f4bb33610b261fda32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Traje.001
+    second: {fileID: 2100000, guid: d4d17dcc53134194899458dfa9b50db9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
