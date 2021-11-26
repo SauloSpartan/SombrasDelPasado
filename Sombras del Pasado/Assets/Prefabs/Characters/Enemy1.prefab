@@ -1869,6 +1869,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 673021d61e7e9f7459716d71dffc97e5, type: 3}
   deathClips:
   - {fileID: 8300000, guid: 54aedf294298af645b381281c477f001, type: 3}
+  - {fileID: 8300000, guid: ff572a0f898debc4fa2ea0b98604b550, type: 3}
+  - {fileID: 8300000, guid: 56d95492ee09d7c4e80f88752926cc49, type: 3}
 --- !u!195 &7077182024485894240
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -1948,6 +1948,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 292142f97f5ab5044851826ea3123e68, type: 3}
   deathClips:
   - {fileID: 8300000, guid: 85c2bb708ee17e94186316e8262b6119, type: 3}
+  - {fileID: 8300000, guid: 4bcaeee955e8a6b4aa20a53fe9979100, type: 3}
+  - {fileID: 8300000, guid: 6676ea2d021392549adfac86aa0a9758, type: 3}
 --- !u!1 &6523741988438213196
 GameObject:
   m_ObjectHideFlags: 0
