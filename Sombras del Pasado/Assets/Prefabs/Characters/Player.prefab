@@ -3453,7 +3453,6 @@ GameObject:
   - component: {fileID: 434004361891324194}
   - component: {fileID: 434004361891324193}
   - component: {fileID: 434004361891324192}
-  - component: {fileID: 7639501730288893821}
   m_Layer: 0
   m_Name: Character1
   m_TagString: Player
@@ -3652,19 +3651,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ff2cd083ab9690a4396075439644b4a4, type: 3}
   deathClips:
   - {fileID: 8300000, guid: 6a6da3e47689cb843a69f92c4ddbe4ee, type: 3}
---- !u!65 &7639501730288893821
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434004361891324207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &434004361925209284
 GameObject:
   m_ObjectHideFlags: 0
