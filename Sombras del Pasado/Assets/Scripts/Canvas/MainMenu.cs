@@ -33,4 +33,9 @@ public class MainMenu : MonoBehaviour
     {
         audioMixer.SetFloat("Volume", volume);
     }
+
+    public void SetQuality (int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }
