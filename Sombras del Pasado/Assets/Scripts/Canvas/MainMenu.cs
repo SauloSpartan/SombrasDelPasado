@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
     public int buildIndex;
+    public AudioMixer audioMixer;
 
     void Start()
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -26,5 +27,10 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void SetVolume (float volume)
+    {
+        audioMixer.SetFloat("Volume", volume);
     }
 }
