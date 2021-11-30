@@ -43,12 +43,19 @@ public class Interface : MonoBehaviour
 
     private void ChangeMenu()
     {
+        AudioSource[] audio = FindObjectsOfType<AudioSource>();
+
         if (menuSet == 0 && Input.GetKeyDown(KeyCode.Escape))
         {
             playerInterface.SetActive(false);
             menu.SetActive(true);
             menuSet = menuSet + 1;
             Time.timeScale = 0.0f;
+
+            foreach (AudioSource sound in audio)
+            {
+                sound.Pause();
+            }
         }
         else if (menuSet == 1 && Input.GetKeyDown(KeyCode.Escape))
         {
@@ -56,6 +63,11 @@ public class Interface : MonoBehaviour
             menu.SetActive(false);
             menuSet = menuSet - 1;
             Time.timeScale = 1.0f;
+
+            foreach (AudioSource sound in audio)
+            {
+                sound.Play();
+            }
         }
     }
 
