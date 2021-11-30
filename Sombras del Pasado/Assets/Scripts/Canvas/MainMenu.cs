@@ -40,6 +40,11 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("Volume", volume);
