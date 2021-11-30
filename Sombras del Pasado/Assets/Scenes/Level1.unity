@@ -13971,6 +13971,50 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.501
       objectReference: {fileID: 0}
+    - target: {fileID: 1834259786257070424, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259786257070424, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259786826350355, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259786826350355, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259786920992741, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259787100997937, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259787100997937, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259787100997937, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259787152980280, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259787152980280, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834259787152980280, guid: 58e81815c11ed4246962829d67b77517, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1917722784806938690, guid: 58e81815c11ed4246962829d67b77517, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -17071,7 +17115,7 @@ AudioSource:
   m_GameObject: {fileID: 1326890986}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
   m_audioClip: {fileID: 8300000, guid: fd65cf957860f4f408ef3e6f9a1a003a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

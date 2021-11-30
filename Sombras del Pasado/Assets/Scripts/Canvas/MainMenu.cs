@@ -29,6 +29,12 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(buildIndex);
+        Time.timeScale = 1.0f;
+    }
+
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("Volume", volume);

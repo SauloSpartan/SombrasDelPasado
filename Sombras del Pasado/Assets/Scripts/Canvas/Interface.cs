@@ -17,7 +17,7 @@ public class Interface : MonoBehaviour
     {
         //Finding objects in Scene
         playerInterface = GameObject.Find("Player Interface");
-        menu = GameObject.Find("Menu");
+        menu = GameObject.Find("Main Menu");
         deathInterface = GameObject.Find("Death Interface");
         Player = FindObjectOfType<ControllerCharacter1>();
 
