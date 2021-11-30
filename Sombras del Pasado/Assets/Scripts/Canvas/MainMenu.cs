@@ -9,9 +9,13 @@ public class MainMenu : MonoBehaviour
     public int buildIndex;
     public AudioMixer audioMixer;
 
+    Score Score;
+
     void Start()
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
+
+        Score = FindObjectOfType<Score>();
     }
 
     void Update()
@@ -22,6 +26,7 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(buildIndex + 1);
+        Score.score = 0;
     }
 
     public void ExitGame()
@@ -38,6 +43,16 @@ public class MainMenu : MonoBehaviour
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("Volume", volume);
+    }
+
+    public void SetMusic(float volume)
+    {
+        audioMixer.SetFloat("Music", volume);
+    }
+
+    public void SetSound(float volume)
+    {
+        audioMixer.SetFloat("Sound", volume);
     }
 
     public void SetQuality (int qualityIndex)
