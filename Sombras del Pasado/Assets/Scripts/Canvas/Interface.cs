@@ -31,33 +31,38 @@ public class Interface : MonoBehaviour
 
     void Update()
     {
-        ChangeMenu();
+        if (Player.health >= 1)
+        {
+            ChangeMenu();
+        }
+        else if (Player.health <= 0)
+        {
+            GameOver();
+        }
     }
 
     private void ChangeMenu()
     {
-        //If the player is alive he can open and close the menu
-        if (Player.health >= 1)
-        {
-            if (menuSet == 0 && Input.GetKeyDown(KeyCode.Escape))
-            {
-                playerInterface.SetActive(false);
-                menu.SetActive(true);
-                menuSet = menuSet + 1;
-            }
-            else if (menuSet == 1 && Input.GetKeyDown(KeyCode.Escape))
-            {
-                playerInterface.SetActive(true);
-                menu.SetActive(false);
-                menuSet = menuSet - 1;
-            }
-        }
-        //If the player dies the death interface shows up
-        else if (Player.health <= 0)
+        if (menuSet == 0 && Input.GetKeyDown(KeyCode.Escape))
         {
             playerInterface.SetActive(false);
-            menu.SetActive(false);
-            deathInterface.SetActive(true);
+            menu.SetActive(true);
+            menuSet = menuSet + 1;
+            Time.timeScale = 0.0f;
         }
+        else if (menuSet == 1 && Input.GetKeyDown(KeyCode.Escape))
+        {
+            playerInterface.SetActive(true);
+            menu.SetActive(false);
+            menuSet = menuSet - 1;
+            Time.timeScale = 1.0f;
+        }
+    }
+
+    private void GameOver()
+    {
+        playerInterface.SetActive(false);
+        menu.SetActive(false);
+        deathInterface.SetActive(true);
     }
 }
