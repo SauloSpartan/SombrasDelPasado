@@ -193,9 +193,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'estefania bruno selva
+  m_Text: 'saulo azael trujillo gonzalez
 
-    jesus gabriel tapia diaz'
+    angel emiliano davalos vazquez'
 --- !u!222 &20421617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -1739}
+  m_AnchoredPosition: {x: 56, y: -1794}
   m_SizeDelta: {x: 999.7, y: 965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796441849
@@ -589,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -855}
+  m_AnchoredPosition: {x: 56, y: -894.99994}
   m_SizeDelta: {x: 999.7, y: 965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004934008
@@ -704,7 +704,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: saulo azael trujillo gonzalez
+  m_Text: 'saulo azael trujillo gonzalez
+
+    angel emiliano davalos vazquez'
 --- !u!222 &1005207294
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -748,7 +750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -1007}
+  m_AnchoredPosition: {x: 56, y: -1108.0001}
   m_SizeDelta: {x: 999.7, y: 965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143008023
@@ -863,12 +865,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'angel emiliano davalos vazquez
+  m_Text: 'saulo azael trujillo gonzalez
 
-    carolina buenrostro castro
-
-    jesus
-    gabriel tapia diaz'
+    angel emiliano davalos vazquez'
 --- !u!222 &1158240669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -912,7 +911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -1233}
+  m_AnchoredPosition: {x: 56, y: -1334.0001}
   m_SizeDelta: {x: 999.7, y: 965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206731018
@@ -1027,9 +1026,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'carolina buenrostro castro
+  m_Text: 'saulo azael trujillo gonzalez
 
-    estefania bruno selva'
+    angel emiliano davalos vazquez'
 --- !u!222 &1214488976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1257,7 +1256,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: angel emiliano davalos vazquez
+  m_Text: 'saulo azael trujillo gonzalez
+
+    angel emiliano davalos vazquez'
 --- !u!222 &1359863348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1421,7 +1422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -1456}
+  m_AnchoredPosition: {x: 56, y: -1557.0001}
   m_SizeDelta: {x: 999.7, y: 965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546145421
@@ -1758,10 +1759,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'saulo azael trujillo gonzalez
 
-    angel emiliano davalos vazquez
-
-    jesus
-    gabriel tapia diaz'
+    angel emiliano davalos vazquez'
 --- !u!222 &1737568355
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1884,7 +1882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -2035}
+  m_AnchoredPosition: {x: 56, y: -2028}
   m_SizeDelta: {x: 999.7, y: 965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042299706
