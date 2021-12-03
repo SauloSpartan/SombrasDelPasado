@@ -10,3 +10,5 @@ Estefania Bruno Selva: Encargada de los niveles, hizo el diseño y modelado de l
 Jesus Gabriel Tapia Diaz: Encargado de los menus, hizo el diseño, programacion de interfaces y menus de muerte, creo el diseño y modelo del enemigo 3 (rapido), le dio su sonido y animaciones al enemigo 2 (pesado), también ayudo con otras composiciones sonoras como las de los niveles.
 
 Saulo Azael Trujillo González: Jefe del equipo, creo el diseño y modelo del personaje principal, tamibén le dio su sonido y animaciones, hizo la programacion del jugador y los power ups, también añadio efectos visuales y mejoro la calidad grafica.
+
+https://darksaulo.itch.io/shadows-from-the-past
