@@ -11,7 +11,6 @@ public class ControllerCharacter4 : MonoBehaviour
     private bool followTarget = true;
 
     //References
-    private Rigidbody controller;
     private Animator anim;
     private CapsuleCollider enemyCollider;
     public BoxCollider daggerRight;
@@ -36,18 +35,15 @@ public class ControllerCharacter4 : MonoBehaviour
 
     //Other Scripts
     ControllerCharacter1 Player;
-    Score Score;
     LevelClear InstancedEnemie;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
-        Score = FindObjectOfType<Score>();
         InstancedEnemie = FindObjectOfType<LevelClear>();
         InstancedEnemie.TotalEnemies++;
 
         navEnemy = GetComponent<NavMeshAgent>();
-        controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
@@ -57,6 +53,8 @@ public class ControllerCharacter4 : MonoBehaviour
 
         //Optional
         target = PlayerManager.instance.player.transform;
+
+        Difficulty();
     }
 
     // Update is called once per frame
@@ -232,5 +230,21 @@ public class ControllerCharacter4 : MonoBehaviour
     private AudioClip DeathClip()
     {
         return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
+    }
+
+    private void Difficulty()
+    {
+        if (MainMenu.difficulty == 1)
+        {
+            health = 30;
+        }
+        else if (MainMenu.difficulty == 2)
+        {
+            health = 60;
+        }
+        else if (MainMenu.difficulty == 3)
+        {
+            health = 90;
+        }
     }
 }

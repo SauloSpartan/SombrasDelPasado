@@ -11,7 +11,6 @@ public class ControllerCharacter2 : MonoBehaviour
     private bool followTarget = true;
 
     //References
-    private Rigidbody controller;
     private Animator anim;
     private BoxCollider sword;
     private CapsuleCollider enemyCollider;
@@ -35,18 +34,15 @@ public class ControllerCharacter2 : MonoBehaviour
 
     //Other Scripts
     ControllerCharacter1 Player;
-    Score Score;
     LevelClear InstancedEnemie;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
-        Score = FindObjectOfType<Score>();
         InstancedEnemie = FindObjectOfType<LevelClear>();
         InstancedEnemie.TotalEnemies++;
 
         navEnemy = GetComponent<NavMeshAgent>();
-        controller = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
@@ -57,6 +53,8 @@ public class ControllerCharacter2 : MonoBehaviour
 
         //Optional
         target = PlayerManager.instance.player.transform;
+
+        Difficulty();
     }
 
 
@@ -228,5 +226,21 @@ public class ControllerCharacter2 : MonoBehaviour
     private AudioClip DeathClip()
     {
         return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
+    }
+
+    private void Difficulty()
+    {
+        if (MainMenu.difficulty == 1)
+        {
+            health = 50;
+        }
+        else if (MainMenu.difficulty == 2)
+        {
+            health = 100;
+        }
+        else if (MainMenu.difficulty == 3)
+        {
+            health = 150;
+        }
     }
 }

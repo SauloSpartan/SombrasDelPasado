@@ -8,25 +8,22 @@ public class MainMenu : MonoBehaviour
 {
     public int buildIndex;
     public AudioMixer audioMixer;
+    public static int difficulty;
 
     Score Score;
+    ControllerCharacter2 Enemy1;
 
     void Start()
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
 
         Score = FindObjectOfType<Score>();
+        Enemy1 = FindObjectOfType<ControllerCharacter2>();
     }
 
     void Update()
     {
         
-    }
-
-    public void NewGame()
-    {
-        SceneManager.LoadScene(buildIndex + 1);
-        Score.score = 0;
     }
 
     public void ExitGame()
@@ -43,6 +40,27 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void EasyMode()
+    {
+        difficulty = 1;
+        SceneManager.LoadScene(buildIndex + 1);
+        Score.score = 0;
+    }
+
+    public void MediumMode()
+    {
+        difficulty = 2;
+        SceneManager.LoadScene(buildIndex + 1);
+        Score.score = 0;
+    }
+
+    public void HardMode()
+    {
+        difficulty = 3;
+        SceneManager.LoadScene(buildIndex + 1);
+        Score.score = 0;
     }
 
     public void SetVolume (float volume)
