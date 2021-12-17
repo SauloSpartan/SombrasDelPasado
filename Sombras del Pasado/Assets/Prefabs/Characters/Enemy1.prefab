@@ -1851,7 +1851,7 @@ MonoBehaviour:
   navEnemy: {fileID: 7077182024485894240}
   target: {fileID: 0}
   health: 100
-  damage: 5
+  damage: 4
   followRadius: 6
   attackRadius: 1.5
   stepClips:

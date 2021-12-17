@@ -233,14 +233,17 @@ public class ControllerCharacter3 : MonoBehaviour
         if (MainMenu.difficulty == 1)
         {
             health = 100;
+            damage = 5;
         }
         else if (MainMenu.difficulty == 2)
         {
             health = 200;
+            damage = 10;
         }
         else if (MainMenu.difficulty == 3)
         {
             health = 300;
+            damage = 15;
         }
     }
 }
