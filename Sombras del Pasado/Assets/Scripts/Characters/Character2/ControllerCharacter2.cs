@@ -32,6 +32,11 @@ public class ControllerCharacter2 : MonoBehaviour
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deathClips;
 
+    //Power Ups
+    [SerializeField] private GameObject[] powerUps;
+    private int randomPower;
+    private int amount = 1;
+
     //Other Scripts
     ControllerCharacter1 Player;
     LevelClear InstancedEnemie;
@@ -177,6 +182,14 @@ public class ControllerCharacter2 : MonoBehaviour
         sword.enabled = false;
         enemyCollider.enabled = false;
         Score.score = Score.score + 1;
+
+        if (amount == 1)
+        {
+            amount = 0;
+            randomPower = Random.Range(0, powerUps.Length);
+            Instantiate(powerUps[randomPower], transform.position, transform.rotation);
+        }
+
         Destroy(gameObject, 4.5f);
     }
 

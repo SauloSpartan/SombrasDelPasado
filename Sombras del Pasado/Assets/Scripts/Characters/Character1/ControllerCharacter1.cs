@@ -232,21 +232,18 @@ public class ControllerCharacter1 : MonoBehaviour
             defense = 2;
             powerDefense.SetActive(true);
             powerTimer -= Time.deltaTime;
-            Destroy(GameObject.Find("PowerUp Defense"));
         }
         if (powerTimer > 0.0f && powerUp == 2)
         {
             attack = 2;
             powerDamage.SetActive(true);
             powerTimer -= Time.deltaTime;
-            Destroy(GameObject.Find("PowerUp Damage"));
         }
         if (powerTimer > 0.0f && powerUp == 3)
         {
             walkSpeed = 4;
             powerVelocity.SetActive(true);
             powerTimer -= Time.deltaTime;
-            Destroy(GameObject.Find("PowerUp Velocity"));
         }
         if (powerTimer <= 0.0f)
         {
