@@ -36,6 +36,7 @@ public class ControllerCharacter2 : MonoBehaviour
     [SerializeField] private GameObject[] powerUps;
     private int randomPower;
     private int amount = 1;
+    [SerializeField]private int probabilityPower;
 
     //Other Scripts
     ControllerCharacter1 Player;
@@ -186,8 +187,11 @@ public class ControllerCharacter2 : MonoBehaviour
         if (amount == 1)
         {
             amount = 0;
+            probabilityPower = Random.Range(0, 100);
             randomPower = Random.Range(0, powerUps.Length);
-            Instantiate(powerUps[randomPower], transform.position, transform.rotation);
+            
+            if (probabilityPower <= 15 || probabilityPower >= 90 && probabilityPower <= 100)
+                Instantiate(powerUps[randomPower], transform.position, transform.rotation);
         }
 
         Destroy(gameObject, 4.5f);
