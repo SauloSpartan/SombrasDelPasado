@@ -21,7 +21,52 @@ ModelImporter:
   - first:
       74: 4348485665485846014
     second: Death
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Amarillo
+    second: {fileID: 2100000, guid: 146ab263a5dc82346b110bd258de3cbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinturon
+    second: {fileID: 2100000, guid: 5c5fef8223354994f96fe8cf0ab6527e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: dea51fb9411276042bd9beb42f1bfd61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: ebc99ca22179fa24499d2cc34bad3f02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Negro
+    second: {fileID: 2100000, guid: a18c698bc578c8849876429c99f6e842, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Negro.001
+    second: {fileID: 2100000, guid: 9c92239c20cb7dc4ebd25a3812d8be1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plata
+    second: {fileID: 2100000, guid: 37e66a73060d013488de22a91b2cd330, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa1
+    second: {fileID: 2100000, guid: 4453efc53069f294294e7b59dc0a8aec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa2
+    second: {fileID: 2100000, guid: aa1c331664af2c34fae60b5fbe4fbd53, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

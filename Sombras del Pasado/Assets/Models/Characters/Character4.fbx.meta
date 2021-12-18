@@ -21,7 +21,47 @@ ModelImporter:
   - first:
       74: 4348485665485846014
     second: Death
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabello
+    second: {fileID: 2100000, guid: 642c66613ee6cd241ad907ae953c97bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabello.001
+    second: {fileID: 2100000, guid: 7b5c07e30a1235a4caf7db8d7716b3c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 450d3e775077aad4ebc2f9001490f80f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: a344081c0a07aa9449649e931cd971d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piel
+    second: {fileID: 2100000, guid: cc841aeff9146a6488fd2613eb220434, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plata
+    second: {fileID: 2100000, guid: 6cb1d695d9545a54cba1d9066101d993, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa
+    second: {fileID: 2100000, guid: 0db9915d9bfa6ef47acac0d64c897422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropita
+    second: {fileID: 2100000, guid: ca3177e94c8ca1a48b3ca0220accfaab, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

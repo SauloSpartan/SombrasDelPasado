@@ -12,7 +12,12 @@ public class ControllerCharacter5 : MonoBehaviour
 
     //References
     private Animator anim;
+    private BoxCollider sword;
     private CapsuleCollider enemyCollider;
+    [SerializeField] private Material enemyColor;
+    private Color easyColor;
+    private Color mediumColor;
+    private Color hardColor;
 
     //Attack Range and Health
     [SerializeField] private float health;
@@ -20,7 +25,6 @@ public class ControllerCharacter5 : MonoBehaviour
     [SerializeField] private float followRadius;
     [SerializeField] private float attackRadius;
     private float attackCoooldown = 0.0f;
-    private BoxCollider sword;
 
     //Animation
     private float velocity = 0.0f;
@@ -217,16 +221,22 @@ public class ControllerCharacter5 : MonoBehaviour
         {
             health = 150;
             damage = 10;
+            ColorUtility.TryParseHtmlString("#1C7D68", out easyColor);
+            enemyColor.color = easyColor;
         }
         else if (MainMenu.difficulty == 2)
         {
             health = 300;
             damage = 15;
+            ColorUtility.TryParseHtmlString("#1C3E7D", out mediumColor);
+            enemyColor.color = mediumColor;
         }
         else if (MainMenu.difficulty == 3)
         {
             health = 450;
             damage = 25;
+            ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
+            enemyColor.color = hardColor;
         }
     }
 

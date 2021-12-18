@@ -15,6 +15,10 @@ public class ControllerCharacter4 : MonoBehaviour
     private CapsuleCollider enemyCollider;
     public BoxCollider daggerRight;
     public BoxCollider daggerLeft;
+    [SerializeField] private Material enemyColor;
+    private Color easyColor;
+    private Color mediumColor;
+    private Color hardColor;
 
     //Attack Range and Health
     [SerializeField] private float health;
@@ -227,16 +231,22 @@ public class ControllerCharacter4 : MonoBehaviour
         {
             health = 30;
             damage = 1;
+            ColorUtility.TryParseHtmlString("#1C7D68", out easyColor);
+            enemyColor.color = easyColor;
         }
         else if (MainMenu.difficulty == 2)
         {
             health = 60;
             damage = 2;
+            ColorUtility.TryParseHtmlString("#1C3E7D", out mediumColor);
+            enemyColor.color = mediumColor;
         }
         else if (MainMenu.difficulty == 3)
         {
             health = 90;
             damage = 3;
+            ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
+            enemyColor.color = hardColor;
         }
     }
 
