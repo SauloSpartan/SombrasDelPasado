@@ -32,5 +32,45 @@ public class Explosion : MonoBehaviour
             Particle.Play();
             Destroy(OBJ_Barrel, 1.5f);
         }
+        if (other.gameObject.tag == "Enemy1 Sword")
+        {
+            Trigger.enabled = false;
+            Explode.enabled = true;
+            Sound.enabled = true;
+            Visual.enabled = false;
+            Collider.enabled = false;
+            Particle.Play();
+            Destroy(OBJ_Barrel, 1.5f);
+        }
+        if (other.gameObject.tag == "Enemy2 Sword")
+        {
+            Trigger.enabled = false;
+            Explode.enabled = true;
+            Sound.enabled = true;
+            Visual.enabled = false;
+            Collider.enabled = false;
+            Particle.Play();
+            Destroy(OBJ_Barrel, 1.5f);
+        }
+        if (other.gameObject.tag == "Enemy3 Dagger")
+        {
+            Trigger.enabled = false;
+            Explode.enabled = true;
+            Sound.enabled = true;
+            Visual.enabled = false;
+            Collider.enabled = false;
+            Particle.Play();
+            Destroy(OBJ_Barrel, 1.5f);
+        }
+        if (other.gameObject.tag == "Enemy4 Sword")
+        {
+            Trigger.enabled = false;
+            Explode.enabled = true;
+            Sound.enabled = true;
+            Visual.enabled = false;
+            Collider.enabled = false;
+            Particle.Play();
+            Destroy(OBJ_Barrel, 1.5f);
+        }
     }
 }

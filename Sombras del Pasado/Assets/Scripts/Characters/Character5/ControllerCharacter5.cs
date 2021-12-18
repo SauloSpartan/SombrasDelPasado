@@ -35,10 +35,12 @@ public class ControllerCharacter5 : MonoBehaviour
     //Other Scripts
     ControllerCharacter1 Player;
     LevelClear InstancedEnemie;
+    DMG_Barrel Explosion;
 
     void Start()
     {
         Player = FindObjectOfType<ControllerCharacter1>();
+        Explosion = FindObjectOfType<DMG_Barrel>();
         InstancedEnemie = FindObjectOfType<LevelClear>();
         InstancedEnemie.TotalEnemies++;
 
@@ -115,26 +117,6 @@ public class ControllerCharacter5 : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 12.5f);
-    }
-
-    //Gizmos are like the colliders, they can not be seen, but they interact with something
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, followRadius);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
-    }
-    //You can activate gizmos to be seen
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player Sword")
-        {
-            health = health - Player.damage;
-            Score.score = Score.score + 600;
-        }
     }
 
     private void AttackEnemy()
@@ -245,6 +227,30 @@ public class ControllerCharacter5 : MonoBehaviour
         {
             health = 450;
             damage = 25;
+        }
+    }
+
+    //Gizmos are like the colliders, they can not be seen, but they interact with something
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, followRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
+    }
+    //You can activate gizmos to be seen
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player Sword")
+        {
+            health = health - Player.damage;
+            Score.score = Score.score + 600;
+        }
+        if (other.gameObject.tag == "Barrel")
+        {
+            health = health - Explosion.damage;
         }
     }
 }
