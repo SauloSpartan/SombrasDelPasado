@@ -36,7 +36,7 @@ public class ControllerCharacter3 : MonoBehaviour
     [SerializeField] private GameObject[] powerUps;
     private int randomPower;
     private int amount = 1;
-    [SerializeField] private int probabilityPower;
+    private int probabilityPower;
 
     //Other Scripts
     ControllerCharacter1 Player;

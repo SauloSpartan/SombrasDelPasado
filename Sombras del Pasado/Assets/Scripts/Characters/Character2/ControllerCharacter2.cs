@@ -14,6 +14,10 @@ public class ControllerCharacter2 : MonoBehaviour
     private Animator anim;
     private BoxCollider sword;
     private CapsuleCollider enemyCollider;
+    [SerializeField] private Material enemyColor;
+    private Color easyColor;
+    private Color mediumColor;
+    private Color hardColor;
 
     //Attack Range and Health
     [SerializeField] private float health;
@@ -36,7 +40,7 @@ public class ControllerCharacter2 : MonoBehaviour
     [SerializeField] private GameObject[] powerUps;
     private int randomPower;
     private int amount = 1;
-    [SerializeField]private int probabilityPower;
+    private int probabilityPower;
 
     //Other Scripts
     ControllerCharacter1 Player;
@@ -223,16 +227,22 @@ public class ControllerCharacter2 : MonoBehaviour
         {
             health = 50;
             damage = 2;
+            ColorUtility.TryParseHtmlString("#1C7D68", out easyColor);
+            enemyColor.color = easyColor;
         }
         else if (MainMenu.difficulty == 2)
         {
             health = 100;
             damage = 4;
+            ColorUtility.TryParseHtmlString("#1C3E7D", out mediumColor);
+            enemyColor.color = mediumColor;
         }
         else if (MainMenu.difficulty == 3)
         {
             health = 150;
             damage = 6;
+            ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
+            enemyColor.color = hardColor;
         }
     }
 
