@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour
 
         Score = FindObjectOfType<Score>();
         Enemy1 = FindObjectOfType<ControllerCharacter2>();
+
+        Time.timeScale = 1.0f;
     }
 
     void Update()
