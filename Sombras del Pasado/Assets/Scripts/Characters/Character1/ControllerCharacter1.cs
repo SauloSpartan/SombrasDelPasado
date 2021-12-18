@@ -16,8 +16,10 @@ public class ControllerCharacter1 : MonoBehaviour
     //Health and Damage
     public float health = 100f;
     public int damage;
-    public int defense;
+    public int defense = 1;
     private int attack = 1;
+    [SerializeField] private int luck;
+    [SerializeField] private int evasion = 0;
     private float attackCombo1 = 0.0f;
     private float attackCombo2 = 0.0f;
     private float powerTimer;
@@ -227,6 +229,8 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void PowerUp()
     {
+        luck = Random.Range(0, 4);
+
         if (powerTimer > 0.0f && powerUp == 1)
         {
             defense = 2;
@@ -242,14 +246,16 @@ public class ControllerCharacter1 : MonoBehaviour
         if (powerTimer > 0.0f && powerUp == 3)
         {
             walkSpeed = 4;
+            evasion = 1;
             powerVelocity.SetActive(true);
             powerTimer -= Time.deltaTime;
         }
         if (powerTimer <= 0.0f)
         {
-            defense = 0;
+            defense = 1;
             attack = 1;
             walkSpeed = 3;
+            evasion = 0;
 
             powerDefense.SetActive(false);
             powerDamage.SetActive(false);
@@ -294,29 +300,59 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy1 Sword")
+        if (luck == evasion && evasion == 1)
         {
-            health = health - (Enemy1.damage - defense);
+            if (other.gameObject.tag == "Enemy1 Sword")
+            {
+                health = health - (Enemy1.damage - Enemy1.damage);
+            }
+            if (other.gameObject.tag == "Enemy2 Sword")
+            {
+                health = health - (Enemy2.damage - Enemy2.damage);
+            }
+            if (other.gameObject.tag == "Enemy3 Dagger")
+            {
+                health = health - (Enemy3.damage - Enemy3.damage);
+            }
+            if (other.gameObject.tag == "Enemy4 Sword")
+            {
+                health = health - (Boss.damage - Boss.damage);
+            }
+            if (other.gameObject.tag == "Barrel")
+            {
+                health = health - (Explosion.damage - Explosion.damage);
+            }
+            if (other.gameObject.tag == "Spikes")
+            {
+                health = health - (Spiked.damage - Spiked.damage);
+            }
         }
-        if (other.gameObject.tag == "Enemy2 Sword")
+        else
         {
-            health = health - (Enemy2.damage - defense);
-        }
-        if (other.gameObject.tag == "Enemy3 Dagger")
-        {
-            health = health - (Enemy3.damage - defense);
-        }
-        if (other.gameObject.tag == "Enemy4 Sword")
-        {
-            health = health - (Boss.damage - defense);
-        }
-        if (other.gameObject.tag == "Barrel")
-        {
-            health = health - (Explosion.damage - defense);
-        }
-        if (other.gameObject.tag == "Spikes")
-        {
-            health = health - (Spiked.damage - defense);
+            if (other.gameObject.tag == "Enemy1 Sword")
+            {
+                health = health - (Enemy1.damage / defense);
+            }
+            if (other.gameObject.tag == "Enemy2 Sword")
+            {
+                health = health - (Enemy2.damage / defense);
+            }
+            if (other.gameObject.tag == "Enemy3 Dagger")
+            {
+                health = health - (Enemy3.damage / defense);
+            }
+            if (other.gameObject.tag == "Enemy4 Sword")
+            {
+                health = health - (Boss.damage / defense);
+            }
+            if (other.gameObject.tag == "Barrel")
+            {
+                health = health - (Explosion.damage / defense);
+            }
+            if (other.gameObject.tag == "Spikes")
+            {
+                health = health - (Spiked.damage / defense);
+            }
         }
 
         if (other.gameObject.tag == "PowerUp Defense")
