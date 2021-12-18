@@ -321,17 +321,17 @@ public class ControllerCharacter1 : MonoBehaviour
 
         if (other.gameObject.tag == "PowerUp Defense")
         {
-            powerTimer = 15.0f;
+            powerTimer = 20.0f;
             powerUp = 1;
         }
         if (other.gameObject.tag == "PowerUp Attack")
         {
-            powerTimer = 15.0f;
+            powerTimer = 20.0f;
             powerUp = 2;
         }
         if (other.gameObject.tag == "PowerUp Velocity")
         {
-            powerTimer = 15.0f;
+            powerTimer = 20.0f;
             powerUp = 3;
         }
     }

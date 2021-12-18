@@ -183,17 +183,7 @@ public class ControllerCharacter2 : MonoBehaviour
         sword.enabled = false;
         enemyCollider.enabled = false;
         Score.score = Score.score + 1;
-
-        if (amount == 1)
-        {
-            amount = 0;
-            probabilityPower = Random.Range(0, 100);
-            randomPower = Random.Range(0, powerUps.Length);
-            
-            if (probabilityPower <= 15 || probabilityPower >= 90 && probabilityPower <= 100)
-                Instantiate(powerUps[randomPower], transform.position, transform.rotation);
-        }
-
+        PowerUp();
         Destroy(gameObject, 4.5f);
     }
 
@@ -261,6 +251,21 @@ public class ControllerCharacter2 : MonoBehaviour
         {
             health = 150;
             damage = 6;
+        }
+    }
+
+    private void PowerUp()
+    {
+        if (amount == 1)
+        {
+            Vector3 enemyPosition = (transform.position);
+            Vector3 powerPosition = new Vector3(enemyPosition.x, enemyPosition.y + 0.7f, enemyPosition.z);
+            amount = 0;
+            probabilityPower = Random.Range(0, 100);
+            randomPower = Random.Range(0, powerUps.Length);
+
+            if (probabilityPower <= 8 || probabilityPower >= 92)
+                Instantiate(powerUps[randomPower], powerPosition, transform.rotation);
         }
     }
 }
