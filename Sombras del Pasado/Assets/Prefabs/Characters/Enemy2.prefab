@@ -1085,6 +1085,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a08fdfdec34996447a8875b3be7e794d, type: 3}
   - {fileID: 8300000, guid: 668611a7226052a43b023171b4c2d543, type: 3}
   - {fileID: 8300000, guid: 4360d02702de1ca47869d761b05bb80c, type: 3}
+  powerUps:
+  - {fileID: 2049285023681397261, guid: e2a1cfba998616e408c6880f9062aec0, type: 3}
+  - {fileID: 201320332483932711, guid: d988937f1d44a6741b6c2271d148b19c, type: 3}
+  - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
+  probabilityPower: 0
 --- !u!1 &4505140158747652915
 GameObject:
   m_ObjectHideFlags: 0
