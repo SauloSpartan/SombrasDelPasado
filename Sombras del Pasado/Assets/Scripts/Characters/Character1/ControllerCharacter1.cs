@@ -303,56 +303,43 @@ public class ControllerCharacter1 : MonoBehaviour
         if (luck == evasion && evasion == 1)
         {
             if (other.gameObject.tag == "Enemy1 Sword")
-            {
                 health = health - (Enemy1.damage - Enemy1.damage);
-            }
+
             if (other.gameObject.tag == "Enemy2 Sword")
-            {
                 health = health - (Enemy2.damage - Enemy2.damage);
-            }
+
             if (other.gameObject.tag == "Enemy3 Dagger")
-            {
                 health = health - (Enemy3.damage - Enemy3.damage);
-            }
+
             if (other.gameObject.tag == "Enemy4 Sword")
-            {
                 health = health - (Boss.damage - Boss.damage);
-            }
+
             if (other.gameObject.tag == "Barrel")
-            {
                 health = health - (Explosion.damage - Explosion.damage);
-            }
+
             if (other.gameObject.tag == "Spikes")
-            {
                 health = health - (Spiked.damage - Spiked.damage);
-            }
         }
         else
         {
             if (other.gameObject.tag == "Enemy1 Sword")
-            {
                 health = health - (Enemy1.damage / defense);
-            }
+
             if (other.gameObject.tag == "Enemy2 Sword")
-            {
                 health = health - (Enemy2.damage / defense);
-            }
+
             if (other.gameObject.tag == "Enemy3 Dagger")
-            {
                 health = health - (Enemy3.damage / defense);
-            }
+
             if (other.gameObject.tag == "Enemy4 Sword")
-            {
                 health = health - (Boss.damage / defense);
-            }
+
             if (other.gameObject.tag == "Barrel")
-            {
                 health = health - (Explosion.damage / defense);
-            }
+
             if (other.gameObject.tag == "Spikes")
-            {
                 health = health - (Spiked.damage / defense);
-            }
+
         }
 
         if (other.gameObject.tag == "PowerUp Defense")

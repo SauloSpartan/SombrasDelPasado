@@ -10,6 +10,8 @@ public class Interface : MonoBehaviour
     private GameObject playerInterface;
     private GameObject menu;
     private GameObject deathInterface;
+    [SerializeField] private Button menuButton;
+    [SerializeField] private Button continueButton;
 
     ControllerCharacter1 Player;
 
@@ -20,6 +22,9 @@ public class Interface : MonoBehaviour
         menu = GameObject.Find("Main Menu");
         deathInterface = GameObject.Find("Death Interface");
         Player = FindObjectOfType<ControllerCharacter1>();
+
+        menuButton.onClick.AddListener(ClickMenu);
+        continueButton.onClick.AddListener(ClickContinue);
 
         //Deactivating menu and death
         menu.SetActive(false);
@@ -41,15 +46,25 @@ public class Interface : MonoBehaviour
         }
     }
 
+    private void ClickMenu()
+    {
+        menuSet = 3;
+    }
+
+    private void ClickContinue()
+    {
+        menuSet = 4;
+    }
+
     private void ChangeMenu()
     {
         AudioSource[] audio = FindObjectsOfType<AudioSource>();
 
-        if (menuSet == 0 && Input.GetKeyDown(KeyCode.Escape))
+        if (menuSet == 0 && Input.GetKeyDown(KeyCode.Escape) || menuSet == 3)
         {
             playerInterface.SetActive(false);
             menu.SetActive(true);
-            menuSet = menuSet + 1;
+            menuSet = 1;
             Time.timeScale = 0.0f;
 
             foreach (AudioSource sound in audio)
@@ -57,11 +72,11 @@ public class Interface : MonoBehaviour
                 sound.Pause();
             }
         }
-        else if (menuSet == 1 && Input.GetKeyDown(KeyCode.Escape))
+        else if (menuSet == 1 && Input.GetKeyDown(KeyCode.Escape) || menuSet == 4)
         {
             playerInterface.SetActive(true);
             menu.SetActive(false);
-            menuSet = menuSet - 1;
+            menuSet = 0;
             Time.timeScale = 1.0f;
 
             foreach (AudioSource sound in audio)

@@ -42,6 +42,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void MenuReturn()
+    {
+        SceneManager.LoadScene(buildIndex = 0);
+        Time.timeScale = 1.0f;
+    }
+
     public void EasyMode()
     {
         difficulty = 1;
