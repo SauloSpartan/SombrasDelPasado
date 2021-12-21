@@ -49,6 +49,7 @@ public class ControllerCharacter2 : MonoBehaviour
     private float maxHealth = 100f;
     private float lerpSpeed;
     [SerializeField] private GameObject interfaceEnemy;
+    [SerializeField] private float healthTimer;
 
     //Other Scripts
     ControllerCharacter1 Player;
@@ -195,6 +196,9 @@ public class ControllerCharacter2 : MonoBehaviour
     {
         currentHealth = health;
         healthBar.fillAmount = currentHealth / maxHealth;
+        healthTimer -= Time.deltaTime;
+        if (healthTimer <= 0)
+            interfaceEnemy.SetActive(false);
     }
 
     private void ColorChanger()
@@ -310,11 +314,13 @@ public class ControllerCharacter2 : MonoBehaviour
             health = health - Player.damage;
             Score.score = Score.score + 150;
             interfaceEnemy.SetActive(true);
+            healthTimer = 3.5f;
         }
         if (other.gameObject.tag == "Barrel")
         {
             health = health - Explosion.damage;
             interfaceEnemy.SetActive(true);
+            healthTimer = 3.5f;
         }
     }
 }
