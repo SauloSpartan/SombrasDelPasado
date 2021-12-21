@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ControllerCharacter2 : MonoBehaviour
 {
@@ -42,6 +43,13 @@ public class ControllerCharacter2 : MonoBehaviour
     private int amount = 1;
     private int probabilityPower;
 
+    //Health Bar
+    [SerializeField] private Image healthBar;
+    public float currentHealth;
+    private float maxHealth = 100f;
+    private float lerpSpeed;
+    [SerializeField] private GameObject interfaceEnemy;
+
     //Other Scripts
     ControllerCharacter1 Player;
     LevelClear InstancedEnemie;
@@ -62,6 +70,8 @@ public class ControllerCharacter2 : MonoBehaviour
         sword = GetComponentInChildren<BoxCollider>();
 
         sword.enabled = false;
+        maxHealth = health;
+        interfaceEnemy.SetActive(false);
 
         //Optional
         target = PlayerManager.instance.player.transform;
@@ -84,6 +94,13 @@ public class ControllerCharacter2 : MonoBehaviour
         {
             Death();
         }
+        HealthControl();
+
+        lerpSpeed = 3f * Time.deltaTime;
+
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentHealth / maxHealth, lerpSpeed);
+
+        ColorChanger();
     }
 
     private void MoveEnemy()
@@ -170,7 +187,21 @@ public class ControllerCharacter2 : MonoBehaviour
         enemyCollider.enabled = false;
         Score.score = Score.score + 1;
         PowerUp();
+        interfaceEnemy.SetActive(false);
         Destroy(gameObject, 4.5f);
+    }
+
+    private void HealthControl()
+    {
+        currentHealth = health;
+        healthBar.fillAmount = currentHealth / maxHealth;
+    }
+
+    private void ColorChanger()
+    {
+        Color healthColor = Color.Lerp(Color.red, Color.green, (currentHealth / maxHealth));
+
+        healthBar.color = healthColor;
     }
 
     private void OnDestroy()
@@ -278,10 +309,12 @@ public class ControllerCharacter2 : MonoBehaviour
         {
             health = health - Player.damage;
             Score.score = Score.score + 150;
+            interfaceEnemy.SetActive(true);
         }
         if (other.gameObject.tag == "Barrel")
         {
             health = health - Explosion.damage;
+            interfaceEnemy.SetActive(true);
         }
     }
 }

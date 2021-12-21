@@ -229,21 +229,21 @@ public class ControllerCharacter4 : MonoBehaviour
     {
         if (MainMenu.difficulty == 1)
         {
-            health = 30;
+            health = 40;
             damage = 1;
             ColorUtility.TryParseHtmlString("#1C7D68", out easyColor);
             enemyColor.color = easyColor;
         }
         else if (MainMenu.difficulty == 2)
         {
-            health = 60;
+            health = 80;
             damage = 2;
             ColorUtility.TryParseHtmlString("#1C3E7D", out mediumColor);
             enemyColor.color = mediumColor;
         }
         else if (MainMenu.difficulty == 3)
         {
-            health = 90;
+            health = 120;
             damage = 3;
             ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
             enemyColor.color = hardColor;
