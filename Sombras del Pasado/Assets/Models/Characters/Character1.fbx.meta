@@ -188,7 +188,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.008000092
+      - time: 0.0057047587
         functionName: ComboStart
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -209,7 +209,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.99379313
+      - time: 0.9922629
         functionName: ComboEnd
         data: 
         objectReferenceParameter: {instanceID: 0}

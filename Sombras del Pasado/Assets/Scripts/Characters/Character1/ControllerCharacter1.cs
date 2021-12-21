@@ -19,10 +19,8 @@ public class ControllerCharacter1 : MonoBehaviour
     public int defense = 1;
     private int attack = 1;
     private int luck;
-    [SerializeField] private int evasion = 0;
-    private float attackCombo1 = 0.0f;
-    private float attackCombo2 = 0.0f;
-    [SerializeField] private int attackCombo = 1;
+    private int evasion = 0;
+    private int attackCombo = 1;
     private float powerTimer;
     private int powerUp = 0;
 
