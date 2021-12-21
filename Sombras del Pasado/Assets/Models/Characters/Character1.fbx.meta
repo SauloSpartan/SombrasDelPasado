@@ -280,7 +280,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.8235294
+      - time: 0.94794476
         functionName: IsAttacking
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -337,7 +337,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.54466504
+      - time: 0.70836943
         functionName: IsAttacking
         data: 
         objectReferenceParameter: {instanceID: 0}

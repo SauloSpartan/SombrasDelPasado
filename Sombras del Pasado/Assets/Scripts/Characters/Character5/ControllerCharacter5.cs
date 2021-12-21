@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ControllerCharacter5 : MonoBehaviour
 {
@@ -36,6 +37,14 @@ public class ControllerCharacter5 : MonoBehaviour
     [SerializeField] private AudioClip[] attackClips;
     [SerializeField] private AudioClip[] deathClips;
 
+    //Health Bar
+    [SerializeField] private Image healthBar;
+    private float currentHealth;
+    private float maxHealth = 100f;
+    private float lerpSpeed;
+    [SerializeField] private GameObject interfaceEnemy;
+    private float healthTimer;
+
     //Other Scripts
     ControllerCharacter1 Player;
     LevelClear InstancedEnemie;
@@ -56,6 +65,8 @@ public class ControllerCharacter5 : MonoBehaviour
         sword = GetComponentInChildren<BoxCollider>();
 
         sword.enabled = false;
+        maxHealth = health;
+        interfaceEnemy.SetActive(false);
 
         //Optional
         target = PlayerManager.instance.player.transform;
@@ -78,6 +89,13 @@ public class ControllerCharacter5 : MonoBehaviour
         {
             Death();
         }
+        HealthControl();
+
+        lerpSpeed = 3f * Time.deltaTime;
+
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentHealth / maxHealth, lerpSpeed);
+
+        ColorChanger();
     }
 
     private void MoveEnemy()
@@ -164,7 +182,24 @@ public class ControllerCharacter5 : MonoBehaviour
         sword.enabled = false;
         enemyCollider.enabled = false;
         Score.score = Score.score + 4;
+        interfaceEnemy.SetActive(false);
         Destroy(gameObject, 4.5f);
+    }
+
+    private void HealthControl()
+    {
+        currentHealth = health;
+        healthBar.fillAmount = currentHealth / maxHealth;
+        healthTimer -= Time.deltaTime;
+        if (healthTimer <= 0)
+            interfaceEnemy.SetActive(false);
+    }
+
+    private void ColorChanger()
+    {
+        Color healthColor = Color.Lerp(Color.red, Color.green, (currentHealth / maxHealth));
+
+        healthBar.color = healthColor;
     }
 
     private void OnDestroy()
@@ -257,10 +292,14 @@ public class ControllerCharacter5 : MonoBehaviour
         {
             health = health - Player.damage;
             Score.score = Score.score + 600;
+            interfaceEnemy.SetActive(true);
+            healthTimer = 3.5f;
         }
         if (other.gameObject.tag == "Barrel")
         {
             health = health - Explosion.damage;
+            interfaceEnemy.SetActive(true);
+            healthTimer = 3.5f;
         }
     }
 }

@@ -45,11 +45,11 @@ public class ControllerCharacter2 : MonoBehaviour
 
     //Health Bar
     [SerializeField] private Image healthBar;
-    public float currentHealth;
+    private float currentHealth;
     private float maxHealth = 100f;
     private float lerpSpeed;
     [SerializeField] private GameObject interfaceEnemy;
-    [SerializeField] private float healthTimer;
+    private float healthTimer;
 
     //Other Scripts
     ControllerCharacter1 Player;
