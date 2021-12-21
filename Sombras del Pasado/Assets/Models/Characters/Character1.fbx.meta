@@ -188,6 +188,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.008000092
+        functionName: ComboStart
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.08071749
         functionName: IsAttacking
         data: 
@@ -197,6 +204,13 @@ ModelImporter:
         messageOptions: 0
       - time: 0.41436514
         functionName: Attack_Sound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.99379313
+        functionName: ComboEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -245,8 +259,22 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.015799185
+        functionName: Combo2
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.13289762
         functionName: IsAttacking
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.42483658
+        functionName: Attack_Sound
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -259,15 +287,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.98366016
-        functionName: NotAttacking
+      - time: 0.99440783
+        functionName: ComboEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.42483658
-        functionName: Attack_Sound
+      - time: 1
+        functionName: NotAttacking
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -316,6 +344,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.89330035
+        functionName: Attack_Sound
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       - time: 0.97022325
         functionName: IsAttacking
         data: 
@@ -323,15 +358,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 1
-        functionName: NotAttacking
+      - time: 0.99510634
+        functionName: ComboEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.89330035
-        functionName: Attack_Sound
+      - time: 1
+        functionName: NotAttacking
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

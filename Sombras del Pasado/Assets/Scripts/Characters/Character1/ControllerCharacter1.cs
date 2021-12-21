@@ -18,10 +18,11 @@ public class ControllerCharacter1 : MonoBehaviour
     public int damage;
     public int defense = 1;
     private int attack = 1;
-    [SerializeField] private int luck;
+    private int luck;
     [SerializeField] private int evasion = 0;
     private float attackCombo1 = 0.0f;
     private float attackCombo2 = 0.0f;
+    [SerializeField] private int attackCombo = 1;
     private float powerTimer;
     private int powerUp = 0;
 
@@ -180,35 +181,20 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.0f && attackCombo2 <= 0.0f)
+        if (attackCombo == 1 && Input.GetKeyDown(KeyCode.J))
         {
-            anim.SetTrigger("Attack1");
-            attackCombo1 = 0.4f;
-            attackCombo2 = 0.0f;
+            anim.SetInteger("AttackCombo", 1);
             damage = 20 * attack;
         }
-        else if (Input.GetKeyDown(KeyCode.J) && attackCombo1 <= 0.4f && attackCombo1 > 0.0f)
+        if (attackCombo == 2 && Input.GetKeyDown(KeyCode.J))
         {
-            anim.SetTrigger("Attack2");
-            attackCombo1 = 0.0f;
-            attackCombo2 = 0.5f;
+            anim.SetInteger("AttackCombo", 2);
             damage = 30 * attack;
         }
-        else if (Input.GetKeyDown(KeyCode.J) && attackCombo2 <= 0.5f && attackCombo2 > 0.0f)
+        if (attackCombo == 3 && Input.GetKeyDown(KeyCode.J))
         {
-            anim.SetTrigger("Attack3");
-            attackCombo1 = 0.0f;
-            attackCombo2 = 0.0f;
+            anim.SetInteger("AttackCombo", 3);
             damage = 50 * attack;
-        }
-
-        if (attackCombo1 > 0.0f)
-        {
-            attackCombo1 -= Time.deltaTime;
-        }
-        if (attackCombo2 > 0.0f)
-        {
-            attackCombo2 -= Time.deltaTime;
         }
     }
 
@@ -220,6 +206,21 @@ public class ControllerCharacter1 : MonoBehaviour
     private void NotAttacking()
     {
         sword.enabled = false;
+    }
+
+    private void ComboStart()
+    {
+        attackCombo = 2;
+    }
+    private void Combo2()
+    {
+        attackCombo = 3;
+    }
+
+    private void ComboEnd()
+    {
+        attackCombo = 1;
+        anim.SetInteger("AttackCombo", 0);
     }
 
     private void Death()
