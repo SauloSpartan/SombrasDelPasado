@@ -30,6 +30,7 @@ public class ControllerCharacter3 : MonoBehaviour
     //Animation
     private float velocity = 0.0f;
     private float acceleration = 5.0f;
+    [SerializeField] private GameObject trailSword;
 
     //Audio
     private AudioSource audioSource;
@@ -73,6 +74,7 @@ public class ControllerCharacter3 : MonoBehaviour
         sword.enabled = false;
         maxHealth = health;
         interfaceEnemy.SetActive(false);
+        trailSword.SetActive(false);
 
         //Optional
         target = PlayerManager.instance.player.transform;
@@ -152,6 +154,7 @@ public class ControllerCharacter3 : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= attackRadius && attackCoooldown <= 0.0f)
         {
+            trailSword.SetActive(true);
             anim.SetTrigger("Attack1");
             attackCoooldown = 3.0f;
         }
@@ -168,6 +171,7 @@ public class ControllerCharacter3 : MonoBehaviour
         if (attackCoooldown <= 0.4f)
         {
             followTarget = true;
+            trailSword.SetActive(false);
         }
     }
 

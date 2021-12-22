@@ -31,6 +31,8 @@ public class ControllerCharacter4 : MonoBehaviour
     //Animation
     private float velocity = 0.0f;
     private float acceleration = 5.0f;
+    [SerializeField] private GameObject trailDaggerR;
+    [SerializeField] private GameObject trailDaggerL;
 
     //Audio
     private AudioSource audioSource;
@@ -73,6 +75,8 @@ public class ControllerCharacter4 : MonoBehaviour
         daggerLeft.enabled = false;
         maxHealth = health;
         interfaceEnemy.SetActive(false);
+        trailDaggerR.SetActive(false);
+        trailDaggerL.SetActive(false);
 
         //Optional
         target = PlayerManager.instance.player.transform;
@@ -152,6 +156,8 @@ public class ControllerCharacter4 : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= attackRadius && attackCoooldown <= 0.0f)
         {
+            trailDaggerR.SetActive(true);
+            trailDaggerL.SetActive(true);
             anim.SetTrigger("Attack1");
             attackCoooldown = 2.0f;
         }
@@ -168,6 +174,11 @@ public class ControllerCharacter4 : MonoBehaviour
         if (attackCoooldown <= 1.0f)
         {
             followTarget = true;
+        }
+        if (attackCoooldown <= 0.3f)
+        {
+            trailDaggerR.SetActive(false);
+            trailDaggerL.SetActive(false);
         }
     }
 

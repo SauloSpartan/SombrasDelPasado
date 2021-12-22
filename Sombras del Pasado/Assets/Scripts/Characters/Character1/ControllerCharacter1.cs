@@ -11,7 +11,8 @@ public class ControllerCharacter1 : MonoBehaviour
 
     //Animation
     private float velocity = 0.0f;
-    [SerializeField]  private float acceleration;
+    [SerializeField] private float acceleration;
+    [SerializeField] private GameObject trailSword; 
 
     //Health and Damage
     public float health = 100f;
@@ -60,6 +61,7 @@ public class ControllerCharacter1 : MonoBehaviour
         Boss = FindObjectOfType<ControllerCharacter5>();
         Explosion = FindObjectOfType<DMG_Barrel>();
         Spiked = FindObjectOfType<DMG_Spike>();
+
         powerDefense = GameObject.Find("Power Defense");
         powerDamage = GameObject.Find("Power Damage");
         powerVelocity = GameObject.Find("Power Velocity");
@@ -75,6 +77,7 @@ public class ControllerCharacter1 : MonoBehaviour
         powerDefense.SetActive(false);
         powerDamage.SetActive(false);
         powerVelocity.SetActive(false);
+        trailSword.SetActive(false);
     }
 
     void Update()
@@ -208,10 +211,12 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void ComboStart()
     {
+        trailSword.SetActive(true);
         attackCombo = 2;
     }
     private void Combo2()
     {
+        trailSword.SetActive(true);
         attackCombo = 3;
     }
 
@@ -219,6 +224,7 @@ public class ControllerCharacter1 : MonoBehaviour
     {
         attackCombo = 1;
         anim.SetInteger("AttackCombo", 0);
+        trailSword.SetActive(false);
     }
 
     private void Death()

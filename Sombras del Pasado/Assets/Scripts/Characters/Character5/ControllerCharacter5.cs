@@ -30,6 +30,7 @@ public class ControllerCharacter5 : MonoBehaviour
     //Animation
     private float velocity = 0.0f;
     private float acceleration = 5.0f;
+    [SerializeField] private GameObject trailSword;
 
     //Audio
     private AudioSource audioSource;
@@ -67,6 +68,7 @@ public class ControllerCharacter5 : MonoBehaviour
         sword.enabled = false;
         maxHealth = health;
         interfaceEnemy.SetActive(false);
+        trailSword.SetActive(false);
 
         //Optional
         target = PlayerManager.instance.player.transform;
@@ -147,7 +149,8 @@ public class ControllerCharacter5 : MonoBehaviour
         if (distance <= attackRadius && attackCoooldown <= 0.0f)
         {
             anim.SetTrigger("Attack1");
-            attackCoooldown = 2.5f;
+            attackCoooldown = 4.0f;
+            trailSword.SetActive(true);
         }
         else if (attackCoooldown > 0.0f)
         {
@@ -159,10 +162,15 @@ public class ControllerCharacter5 : MonoBehaviour
             attackCoooldown = 0;
         }
 
-        if (attackCoooldown <= 1.0f)
+        if (attackCoooldown <= 2.0f)
         {
             followTarget = true;
         }
+        if (attackCoooldown <= 0.5f)
+        {
+            trailSword.SetActive(false);
+        }
+
     }
 
     private void IsAttacking()
