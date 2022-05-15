@@ -7096,7 +7096,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &7831779344703710378
 CapsuleCollider:
@@ -7261,13 +7261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb5605d6a4efb54db2c34aaba4862dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navEnemy: {fileID: 7831779344703710359}
-  target: {fileID: 0}
   enemyColor: {fileID: 2100000, guid: 0b4ab8c8328be8a49b4ce3fa8e487287, type: 2}
   health: 300
   damage: 15
   followRadius: 10
   attackRadius: 1.5
+  attackDistance: 0
   trailSword: {fileID: 5774006900178956843}
   stepClips:
   - {fileID: 8300000, guid: 968423678a3b87c49b9f2b6eda68482a, type: 3}
@@ -7291,6 +7290,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f3b2bfd5e60b82642ad4ea48706394fa, type: 3}
   healthBar: {fileID: 4891990768725486054}
   interfaceEnemy: {fileID: 3407419284914216675}
+  enemyThrust: 1
+  knockTimer: 0.5
 --- !u!1 &6998296199479642684
 GameObject:
   m_ObjectHideFlags: 0

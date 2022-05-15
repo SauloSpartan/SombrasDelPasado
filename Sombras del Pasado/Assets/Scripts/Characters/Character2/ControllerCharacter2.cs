@@ -8,7 +8,7 @@ public class ControllerCharacter2 : MonoBehaviour
 {
     //Navegation
     NavMeshAgent navEnemy;
-    [HideInInspector] Transform target;
+    Transform target;
     bool followTarget = true;
 
     //References
@@ -89,8 +89,6 @@ public class ControllerCharacter2 : MonoBehaviour
         Difficulty();
 
         attackDistance = attackRadius;
-        lerpSpeed = 3f * Time.deltaTime;
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentHealth / maxHealth, lerpSpeed);
     }
 
 
@@ -296,6 +294,9 @@ public class ControllerCharacter2 : MonoBehaviour
             ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
             enemyColor.color = hardColor;
         }
+
+        lerpSpeed = 3f * Time.deltaTime;
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentHealth / maxHealth, lerpSpeed);
     }
 
     private void PowerUp()

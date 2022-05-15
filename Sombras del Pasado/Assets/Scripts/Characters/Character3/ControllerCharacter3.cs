@@ -7,50 +7,56 @@ using UnityEngine.UI;
 public class ControllerCharacter3 : MonoBehaviour
 {
     //Navegation
-    public NavMeshAgent navEnemy;
-    [HideInInspector] public Transform target;
-    private bool followTarget = true;
+    NavMeshAgent navEnemy;
+    Transform target;
+    bool followTarget = true;
 
     //References
-    private Animator anim;
-    private BoxCollider sword;
-    private CapsuleCollider enemyCollider;
-    [SerializeField] private Material enemyColor;
-    private Color easyColor;
-    private Color mediumColor;
-    private Color hardColor;
+    Animator anim;
+    BoxCollider sword;
+    CapsuleCollider enemyCollider;
+    [SerializeField] Material enemyColor;
+    Color easyColor;
+    Color mediumColor;
+    Color hardColor;
 
     //Attack Range and Health
-    [SerializeField] private float health;
+    [SerializeField] float health;
     public float damage;
-    [SerializeField] private float followRadius;
-    [SerializeField] private float attackRadius;
-    private float attackCoooldown = 0.0f;
+    [SerializeField] float followRadius;
+    [SerializeField] float attackRadius;
+    [HideInInspector] public float attackDistance;
+    float attackCoooldown = 0.0f;
 
     //Animation
-    private float velocity = 0.0f;
-    private float acceleration = 5.0f;
-    [SerializeField] private GameObject trailSword;
+    float velocity = 0.0f;
+    float acceleration = 5.0f;
+    [SerializeField] GameObject trailSword;
 
     //Audio
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip[] stepClips;
-    [SerializeField] private AudioClip[] attackClips;
-    [SerializeField] private AudioClip[] deathClips;
+    AudioSource audioSource;
+    [SerializeField] AudioClip[] stepClips;
+    [SerializeField] AudioClip[] attackClips;
+    [SerializeField] AudioClip[] deathClips;
 
     //Power Ups
-    [SerializeField] private GameObject[] powerUps;
-    private int randomPower;
-    private int amount = 1;
-    private int probabilityPower;
+    [SerializeField] GameObject[] powerUps;
+    int randomPower;
+    int amount = 1;
+    int probabilityPower;
 
     //Health Bar
-    [SerializeField] private Image healthBar;
-    private float currentHealth;
-    private float maxHealth = 100f;
-    private float lerpSpeed;
-    [SerializeField] private GameObject interfaceEnemy;
-    private float healthTimer;
+    [SerializeField] Image healthBar;
+    float currentHealth;
+    float maxHealth = 100f;
+    float lerpSpeed;
+    [SerializeField] GameObject interfaceEnemy;
+    float healthTimer;
+
+    //Knockback
+    [SerializeField] float enemyThrust;
+    [SerializeField] float knockTimer;
+    Rigidbody rigidbodyEnemy;
 
     //Other Scripts
     ControllerCharacter1 Player;
@@ -68,6 +74,7 @@ public class ControllerCharacter3 : MonoBehaviour
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
+        rigidbodyEnemy = GetComponent<Rigidbody>();
 
         sword = GetComponentInChildren<BoxCollider>();
 
@@ -80,18 +87,20 @@ public class ControllerCharacter3 : MonoBehaviour
         target = PlayerManager.instance.player.transform;
 
         Difficulty();
+
+        attackDistance = attackRadius;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (health > 0)
         {
             if (followTarget == true)
             {
-                MoveEnemy();
+                FollowPlayer();
             }
-            AttackEnemy();
+            AttackPlayer();
         }
         if (health <= 0)
         {
@@ -106,7 +115,7 @@ public class ControllerCharacter3 : MonoBehaviour
         ColorChanger();
     }
 
-    private void MoveEnemy()
+    private void FollowPlayer()
     {
         //Follow player
         float distance = Vector3.Distance(target.position, transform.position);
@@ -149,10 +158,10 @@ public class ControllerCharacter3 : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 12.5f);
     }
 
-    private void AttackEnemy()
+    private void AttackPlayer()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-        if (distance <= attackRadius && attackCoooldown <= 0.0f)
+        if (distance <= attackDistance && attackCoooldown <= 0.0f)
         {
             trailSword.SetActive(true);
             anim.SetTrigger("Attack1");
@@ -187,6 +196,7 @@ public class ControllerCharacter3 : MonoBehaviour
 
     private void Death()
     {
+        navEnemy.enabled = true;
         anim.SetTrigger("Death");
         sword.enabled = false;
         enemyCollider.enabled = false;
@@ -283,6 +293,9 @@ public class ControllerCharacter3 : MonoBehaviour
             ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
             enemyColor.color = hardColor;
         }
+
+        lerpSpeed = 3f * Time.deltaTime;
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, currentHealth / maxHealth, lerpSpeed);
     }
 
     private void PowerUp()
@@ -300,6 +313,40 @@ public class ControllerCharacter3 : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player Sword")
+        {
+            health = health - Player.damage;
+            Score.score = Score.score + 300;
+            interfaceEnemy.SetActive(true);
+            healthTimer = 3.5f;
+
+            attackDistance = 0;
+            rigidbodyEnemy.isKinematic = false;
+            navEnemy.enabled = false;
+            Vector3 difference = rigidbodyEnemy.transform.position - target.transform.position;
+            difference = difference.normalized * enemyThrust;
+            rigidbodyEnemy.AddForce(difference, ForceMode.Impulse);
+            StartCoroutine(KnockBack(rigidbodyEnemy));
+        }
+        if (other.gameObject.tag == "Barrel")
+        {
+            health = health - Explosion.damage;
+            interfaceEnemy.SetActive(true);
+            healthTimer = 3.5f;
+        }
+    }
+
+    private IEnumerator KnockBack(Rigidbody rigidboyEnemy)
+    {
+        yield return new WaitForSeconds(knockTimer);
+        rigidbodyEnemy.velocity = Vector3.zero;
+        rigidbodyEnemy.isKinematic = true;
+        navEnemy.enabled = true;
+        attackDistance = attackRadius;
+    }
+
     //Gizmos are like the colliders, they can not be seen, but they interact with something
     private void OnDrawGizmosSelected()
     {
@@ -310,21 +357,4 @@ public class ControllerCharacter3 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
     //You can activate gizmos to be seen
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player Sword")
-        {
-            health = health - Player.damage;
-            Score.score = Score.score + 300;
-            interfaceEnemy.SetActive(true);
-            healthTimer = 3.5f;
-        }
-        if (other.gameObject.tag == "Barrel")
-        {
-            health = health - Explosion.damage;
-            interfaceEnemy.SetActive(true);
-            healthTimer = 3.5f;
-        }
-    }
 }

@@ -11771,7 +11771,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &6196078223883541471
 CapsuleCollider:
@@ -11936,8 +11936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8e206722c829e468c87af6cb4e1994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navEnemy: {fileID: 6196078223883541465}
-  target: {fileID: 0}
   daggerRight: {fileID: 6196078223805682497}
   daggerLeft: {fileID: 6196078222466185414}
   enemyColor: {fileID: 2100000, guid: 0db9915d9bfa6ef47acac0d64c897422, type: 2}
@@ -11945,6 +11943,7 @@ MonoBehaviour:
   damage: 2
   followRadius: 8
   attackRadius: 1.2
+  attackDistance: 0
   trailDaggerR: {fileID: 440523929831280320}
   trailDaggerL: {fileID: 2077716141081500400}
   stepClips:
@@ -11975,6 +11974,8 @@ MonoBehaviour:
   - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
   healthBar: {fileID: 6818241488469564137}
   interfaceEnemy: {fileID: 1234624701867855670}
+  enemyThrust: 2
+  knockTimer: 0.5
 --- !u!1 &6523741988438213196
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,8 +85,8 @@ public class ControllerCharacter1 : MonoBehaviour
         //Always updating
         if (health > 0)
         {
-            Move();
-            Rotate();
+            Movement();
+            Rotation();
             Attack();
         }
         if (health <= 0)
@@ -102,7 +102,7 @@ public class ControllerCharacter1 : MonoBehaviour
         PowerUp();
     }
 
-    private void Move()
+    private void Movement()
     {
         //Keys it gets to move
         float moveX = Input.GetAxis("Horizontal");
@@ -135,7 +135,7 @@ public class ControllerCharacter1 : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
     }
 
-    private void Rotate()
+    private void Rotation()
     {
         //Direction it rotates
         float rotateX = Input.GetAxis("Horizontal");

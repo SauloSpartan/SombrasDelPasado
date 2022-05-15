@@ -5662,8 +5662,8 @@ GameObject:
   - component: {fileID: 3598764832624120906}
   - component: {fileID: 3598764832624120907}
   - component: {fileID: 3598764832624120904}
-  - component: {fileID: 3598764832624120910}
   - component: {fileID: 3598764832624120905}
+  - component: {fileID: 3598764832624120910}
   m_Layer: 0
   m_Name: Character3
   m_TagString: Untagged
@@ -5704,7 +5704,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &3598764832624120906
 CapsuleCollider:
@@ -5835,28 +5835,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &3598764832624120910
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4409033233895289622}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.3
-  m_Speed: 1
-  m_Acceleration: 20
-  avoidancePriority: 50
-  m_AngularSpeed: 200
-  m_StoppingDistance: 1.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &3598764832624120905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5876,6 +5854,7 @@ MonoBehaviour:
   damage: 10
   followRadius: 6
   attackRadius: 2
+  attackDistance: 0
   trailSword: {fileID: 3994028626562548539}
   stepClips:
   - {fileID: 8300000, guid: 71199802c10ae5a41af95d2248e172f5, type: 3}
@@ -5900,6 +5879,30 @@ MonoBehaviour:
   - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
   healthBar: {fileID: 1385956411119159819}
   interfaceEnemy: {fileID: 7597062705832956824}
+  enemyThrust: 1.5
+  knockTimer: 0.5
+--- !u!195 &3598764832624120910
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4409033233895289622}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 1
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 200
+  m_StoppingDistance: 1.5
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4505140158747652915
 GameObject:
   m_ObjectHideFlags: 0
