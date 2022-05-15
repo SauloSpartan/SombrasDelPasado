@@ -8,7 +8,7 @@ public class ControllerCharacter5 : MonoBehaviour
 {
     //Navegation
     public NavMeshAgent navEnemy;
-    public Transform target;
+    [HideInInspector] public Transform target;
     private bool followTarget = true;
 
     //References
