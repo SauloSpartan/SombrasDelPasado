@@ -5,33 +5,32 @@ using UnityEngine;
 public class ControllerCharacter1 : MonoBehaviour
 {
     //Movement
-    private float moveSpeed;
-    public float walkSpeed;
-    public float rotationSpeed;
+    private float _moveSpeed;
+    public float _walkSpeed;
+    public float _rotationSpeed;
 
     //Animation
-    private float velocity = 0.0f;
-    [SerializeField] private float acceleration;
-    [SerializeField] private GameObject trailSword; 
+    private float _animVelocity = 0.0f;
+    [SerializeField] private float _animAcceleration;
+    [SerializeField] private GameObject _particTrailSword; 
 
     //Health and Damage
-    public float health = 100f;
-    public int damage;
-    public int defense = 1;
-    private int attack = 1;
-    private int luck;
-    private int evasion = 0;
-    private int attackCombo = 1;
-    private float powerTimer;
-    private int powerUp = 0;
+    public float _health = 100f;
+    public int _damage;
+    public int _defense = 1;
+    private int _attack = 1;
+    private int _luck;
+    private int _evasion = 0;
+    private int _attackCombo = 1;
+    private float _powerTimer;
+    private int _powerUp = 0;
 
     //3D Direction & Gravity
-    private Vector3 moveDirection;
-    private Vector3 moveVector;
-    private Vector3 moveRotation;
+    private Vector3 _moveDirection;
+    private Vector3 _moveVector;
+    private Vector3 _moveRotation;
 
     //References
-    private CharacterController controller;
     private Animator anim;
     private BoxCollider sword;
     private GameObject powerDefense;
@@ -45,29 +44,30 @@ public class ControllerCharacter1 : MonoBehaviour
     [SerializeField] private AudioClip[] deathClips;
 
     //Scripts
-    ControllerCharacter2 Enemy1;
-    ControllerCharacter3 Enemy2;
-    ControllerCharacter4 Enemy3;
-    ControllerCharacter5 Boss;
-    DMG_Barrel Explosion;
-    DMG_Spike Spiked;
+    private CharacterController _charController;
+    private ControllerCharacter2 _enemy1;
+    private ControllerCharacter3 _enemy2;
+    private ControllerCharacter4 _enemy3;
+    private ControllerCharacter5 _boss;
+    private DMG_Barrel _explosion;
+    private DMG_Spike _spiked;
 
 
     void Start()
     {
-        Enemy1 = FindObjectOfType<ControllerCharacter2>();
-        Enemy2 = FindObjectOfType<ControllerCharacter3>();
-        Enemy3 = FindObjectOfType<ControllerCharacter4>();
-        Boss = FindObjectOfType<ControllerCharacter5>();
-        Explosion = FindObjectOfType<DMG_Barrel>();
-        Spiked = FindObjectOfType<DMG_Spike>();
+        _enemy1 = FindObjectOfType<ControllerCharacter2>();
+        _enemy2 = FindObjectOfType<ControllerCharacter3>();
+        _enemy3 = FindObjectOfType<ControllerCharacter4>();
+        _boss = FindObjectOfType<ControllerCharacter5>();
+        _explosion = FindObjectOfType<DMG_Barrel>();
+        _spiked = FindObjectOfType<DMG_Spike>();
 
         powerDefense = GameObject.Find("Power Defense");
         powerDamage = GameObject.Find("Power Damage");
         powerVelocity = GameObject.Find("Power Velocity");
 
         //Getting the references
-        controller = GetComponent<CharacterController>();
+        _charController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
 
@@ -77,25 +77,25 @@ public class ControllerCharacter1 : MonoBehaviour
         powerDefense.SetActive(false);
         powerDamage.SetActive(false);
         powerVelocity.SetActive(false);
-        trailSword.SetActive(false);
+        _particTrailSword.SetActive(false);
     }
 
     void Update()
     {
         //Always updating
-        if (health > 0)
+        if (_health > 0)
         {
             Movement();
             Rotation();
             Attack();
         }
-        if (health <= 0)
+        if (_health <= 0)
         {
             Death();
         }
-        if (health > 100)
+        if (_health > 100)
         {
-            health = 100;
+            _health = 100;
         }
 
         Gravity();
@@ -109,30 +109,30 @@ public class ControllerCharacter1 : MonoBehaviour
         float moveZ = Input.GetAxis("Vertical");
 
         //Directions it can move and speed
-        moveDirection = new Vector3(moveX, 0, moveZ);
+        _moveDirection = new Vector3(moveX, 0, moveZ);
 
-        if (moveDirection == Vector3.zero && velocity > 0.0f)
+        if (_moveDirection == Vector3.zero && _animVelocity > 0.0f)
         {
-            velocity -= Time.deltaTime * acceleration;
+            _animVelocity -= Time.deltaTime * _animAcceleration;
             Idle();
         }
-        else if (moveDirection != Vector3.zero && velocity < 1.0f)
+        else if (_moveDirection != Vector3.zero && _animVelocity < 1.0f)
         {
-            velocity += Time.deltaTime * acceleration;
+            _animVelocity += Time.deltaTime * _animAcceleration;
             Walk();
         }
-        else if(velocity < 0.0f)
+        else if(_animVelocity < 0.0f)
         {
-            velocity = 0.0f;
+            _animVelocity = 0.0f;
         }
-        else if (velocity > 1.0f)
+        else if (_animVelocity > 1.0f)
         {
-            velocity = 1.0f;
+            _animVelocity = 1.0f;
         }
 
-        moveDirection *= walkSpeed;
+        _moveDirection *= _walkSpeed;
 
-        controller.Move(moveDirection * Time.deltaTime);
+        _charController.Move(_moveDirection * Time.deltaTime);
     }
 
     private void Rotation()
@@ -141,61 +141,61 @@ public class ControllerCharacter1 : MonoBehaviour
         float rotateX = Input.GetAxis("Horizontal");
 
         //Apply varibles of rotation
-        moveRotation = new Vector3(rotateX, 0, 0);
-        moveRotation.Normalize();
+        _moveRotation = new Vector3(rotateX, 0, 0);
+        _moveRotation.Normalize();
 
-        transform.Translate(moveRotation * moveSpeed * Time.deltaTime, Space.World);
+        transform.Translate(_moveRotation * _moveSpeed * Time.deltaTime, Space.World);
 
         //If character is moving it rotates
-        if (moveRotation != Vector3.zero)
+        if (_moveRotation != Vector3.zero)
         {
-            Quaternion toRotation = Quaternion.LookRotation(moveRotation, Vector3.up);
+            Quaternion toRotation = Quaternion.LookRotation(_moveRotation, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
         }
     }
 
     private void Idle()
     {
-        anim.SetFloat("Speed", velocity);
+        anim.SetFloat("Speed", _animVelocity);
     }       
 
     private void Walk()
     {
-        anim.SetFloat("Speed", velocity);
+        anim.SetFloat("Speed", _animVelocity);
     }
 
     private void Gravity()
     {
-        moveVector = Vector3.zero;
+        _moveVector = Vector3.zero;
 
         //Check if character is grounded
-        if (controller.isGrounded == false)
+        if (_charController.isGrounded == false)
         {
             //Add our gravity Vector
-            moveVector += Physics.gravity;
+            _moveVector += Physics.gravity;
         }
 
         //Apply our move Vector , remeber to multiply by Time.delta
-        controller.Move(moveVector * Time.deltaTime);
+        _charController.Move(_moveVector * Time.deltaTime);
     }
 
     private void Attack()
     {
-        if (attackCombo == 1 && Input.GetKeyDown(KeyCode.J))
+        if (_attackCombo == 1 && Input.GetKeyDown(KeyCode.J))
         {
             anim.SetInteger("AttackCombo", 1);
-            damage = 20 * attack;
+            _damage = 20 * _attack;
         }
-        if (attackCombo == 2 && Input.GetKeyDown(KeyCode.J))
+        if (_attackCombo == 2 && Input.GetKeyDown(KeyCode.J))
         {
             anim.SetInteger("AttackCombo", 2);
-            damage = 30 * attack;
+            _damage = 30 * _attack;
         }
-        if (attackCombo == 3 && Input.GetKeyDown(KeyCode.J))
+        if (_attackCombo == 3 && Input.GetKeyDown(KeyCode.J))
         {
             anim.SetInteger("AttackCombo", 3);
-            damage = 50 * attack;
+            _damage = 50 * _attack;
         }
     }
 
@@ -211,20 +211,20 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void ComboStart()
     {
-        trailSword.SetActive(true);
-        attackCombo = 2;
+        _particTrailSword.SetActive(true);
+        _attackCombo = 2;
     }
     private void Combo2()
     {
-        trailSword.SetActive(true);
-        attackCombo = 3;
+        _particTrailSword.SetActive(true);
+        _attackCombo = 3;
     }
 
     private void ComboEnd()
     {
-        attackCombo = 1;
+        _attackCombo = 1;
         anim.SetInteger("AttackCombo", 0);
-        trailSword.SetActive(false);
+        _particTrailSword.SetActive(false);
     }
 
     private void Death()
@@ -234,33 +234,33 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void PowerUp()
     {
-        luck = Random.Range(0, 4);
+        _luck = Random.Range(0, 4);
 
-        if (powerTimer > 0.0f && powerUp == 1)
+        if (_powerTimer > 0.0f && _powerUp == 1)
         {
-            defense = 2;
+            _defense = 2;
             powerDefense.SetActive(true);
-            powerTimer -= Time.deltaTime;
+            _powerTimer -= Time.deltaTime;
         }
-        if (powerTimer > 0.0f && powerUp == 2)
+        if (_powerTimer > 0.0f && _powerUp == 2)
         {
-            attack = 2;
+            _attack = 2;
             powerDamage.SetActive(true);
-            powerTimer -= Time.deltaTime;
+            _powerTimer -= Time.deltaTime;
         }
-        if (powerTimer > 0.0f && powerUp == 3)
+        if (_powerTimer > 0.0f && _powerUp == 3)
         {
-            walkSpeed = 4;
-            evasion = 1;
+            _walkSpeed = 4;
+            _evasion = 1;
             powerVelocity.SetActive(true);
-            powerTimer -= Time.deltaTime;
+            _powerTimer -= Time.deltaTime;
         }
-        if (powerTimer <= 0.0f)
+        if (_powerTimer <= 0.0f)
         {
-            defense = 1;
-            attack = 1;
-            walkSpeed = 3;
-            evasion = 0;
+            _defense = 1;
+            _attack = 1;
+            _walkSpeed = 3;
+            _evasion = 0;
 
             powerDefense.SetActive(false);
             powerDamage.SetActive(false);
@@ -305,62 +305,62 @@ public class ControllerCharacter1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (luck == evasion && evasion == 1)
+        if (_luck == _evasion && _evasion == 1)
         {
             if (other.gameObject.tag == "Enemy1 Sword")
-                health = health - (Enemy1.damage - Enemy1.damage);
+                _health = _health - (_enemy1.damage - _enemy1.damage);
 
             if (other.gameObject.tag == "Enemy2 Sword")
-                health = health - (Enemy2.damage - Enemy2.damage);
+                _health = _health - (_enemy2.damage - _enemy2.damage);
 
             if (other.gameObject.tag == "Enemy3 Dagger")
-                health = health - (Enemy3.damage - Enemy3.damage);
+                _health = _health - (_enemy3.damage - _enemy3.damage);
 
             if (other.gameObject.tag == "Enemy4 Sword")
-                health = health - (Boss.damage - Boss.damage);
+                _health = _health - (_boss.damage - _boss.damage);
 
             if (other.gameObject.tag == "Barrel")
-                health = health - (Explosion.damage - Explosion.damage);
+                _health = _health - (_explosion.damage - _explosion.damage);
 
             if (other.gameObject.tag == "Spikes")
-                health = health - (Spiked.damage - Spiked.damage);
+                _health = _health - (_spiked.damage - _spiked.damage);
         }
         else
         {
             if (other.gameObject.tag == "Enemy1 Sword")
-                health = health - (Enemy1.damage / defense);
+                _health = _health - (_enemy1.damage / _defense);
 
             if (other.gameObject.tag == "Enemy2 Sword")
-                health = health - (Enemy2.damage / defense);
+                _health = _health - (_enemy2.damage / _defense);
 
             if (other.gameObject.tag == "Enemy3 Dagger")
-                health = health - (Enemy3.damage / defense);
+                _health = _health - (_enemy3.damage / _defense);
 
             if (other.gameObject.tag == "Enemy4 Sword")
-                health = health - (Boss.damage / defense);
+                _health = _health - (_boss.damage / _defense);
 
             if (other.gameObject.tag == "Barrel")
-                health = health - (Explosion.damage / defense);
+                _health = _health - (_explosion.damage / _defense);
 
             if (other.gameObject.tag == "Spikes")
-                health = health - (Spiked.damage / defense);
+                _health = _health - (_spiked.damage / _defense);
 
         }
 
         if (other.gameObject.tag == "PowerUp Defense")
         {
-            powerTimer = 20.0f;
-            powerUp = 1;
+            _powerTimer = 20.0f;
+            _powerUp = 1;
         }
         if (other.gameObject.tag == "PowerUp Attack")
         {
-            powerTimer = 20.0f;
-            powerUp = 2;
+            _powerTimer = 20.0f;
+            _powerUp = 2;
         }
         if (other.gameObject.tag == "PowerUp Velocity")
         {
-            powerTimer = 20.0f;
-            powerUp = 3;
+            _powerTimer = 20.0f;
+            _powerUp = 3;
         }
     }
 }

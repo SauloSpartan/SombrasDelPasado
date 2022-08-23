@@ -36,11 +36,11 @@ public class Interface : MonoBehaviour
 
     void Update()
     {
-        if (Player.health >= 1)
+        if (Player._health >= 1)
         {
             ChangeMenu();
         }
-        else if (Player.health <= 0)
+        else if (Player._health <= 0)
         {
             GameOver();
         }
