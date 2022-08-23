@@ -35,7 +35,7 @@ public class HealthBar : MonoBehaviour
 
     private void HealthControl()
     {
-        currentHealth = Player._health;
+        currentHealth = Player.health;
         healthBar.fillAmount = currentHealth / maxHealth;
     }
 

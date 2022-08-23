@@ -21,7 +21,7 @@ public class TestDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Player._health = Player._health - damage;
+            Player.health = Player.health - damage;
         }
     }
 }

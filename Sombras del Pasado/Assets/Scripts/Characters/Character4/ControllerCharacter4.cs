@@ -328,7 +328,7 @@ public class ControllerCharacter4 : MonoBehaviour
     {
         if (other.gameObject.tag == "Player Sword")
         {
-            health = health - Player._damage;
+            health = health - Player.damage;
             Score.score = Score.score + 450;
             interfaceEnemy.SetActive(true);
             healthTimer = 3.5f;
