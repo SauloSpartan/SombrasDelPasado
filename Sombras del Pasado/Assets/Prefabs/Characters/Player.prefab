@@ -3471,13 +3471,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a041970432c13cb4c993cd53cd30ba97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
-  rotationSpeed: 1080
-  acceleration: 5
-  trailSword: {fileID: 6365787198161722139}
-  health: 100
-  damage: 0
-  defense: 0
+  _walkSpeed: 3
+  _rotationSpeed: 1080
+  _animAcceleration: 5
+  _particTrailSword: {fileID: 6365787198161722139}
+  _health: 100
+  _damage: 0
+  _defense: 0
   stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}

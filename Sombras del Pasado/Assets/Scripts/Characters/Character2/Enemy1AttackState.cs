@@ -4,7 +4,7 @@ public class Enemy1AttackState : Enemy1BaseState
 {
     public override void EnterState(Enemy1SateManager enemy1)
     {
-
+        Debug.Log("AttackState");
     }
 
     public override void UpdateState(Enemy1SateManager enemy1)
