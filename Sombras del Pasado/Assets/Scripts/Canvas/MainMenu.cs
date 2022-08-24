@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public int buildIndex;
     public AudioMixer audioMixer;
     public static int difficulty;
+
+    public Slider sliderGlobalVolume;
+    public Slider sliderMusicVolume;
+    public Slider sliderSoundVolume;
+
 
     Score Score;
     ControllerCharacter2 Enemy1;
@@ -21,6 +27,13 @@ public class MainMenu : MonoBehaviour
         Enemy1 = FindObjectOfType<ControllerCharacter2>();
 
         Time.timeScale = 1.0f;
+
+        sliderGlobalVolume.value = PlayerPrefs.GetFloat("volumeGlobal", 0.5f);
+        sliderMusicVolume.value = PlayerPrefs.GetFloat("volumeMusic", -20.0f);
+        sliderSoundVolume.value = PlayerPrefs.GetFloat("volumeSound", -20.0f);
+        AudioListener.volume = sliderGlobalVolume.value;
+        audioMixer.SetFloat("Music", sliderMusicVolume.value);
+        audioMixer.SetFloat("Sound", sliderSoundVolume.value);
     }
 
     void Update()
@@ -71,23 +84,27 @@ public class MainMenu : MonoBehaviour
         Score.score = 0;
     }
 
-    public void SetVolume (float volume)
+    public void SetGlobalVolume (float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("volumeGlobal", volume);
+        AudioListener.volume = sliderGlobalVolume.value;
     }
 
     public void SetMusic(float volume)
     {
-        audioMixer.SetFloat("Music", volume);
+        PlayerPrefs.SetFloat("volumeMusic", volume);
+        audioMixer.SetFloat("Music", sliderMusicVolume.value);
     }
 
     public void SetSound(float volume)
     {
-        audioMixer.SetFloat("Sound", volume);
+        PlayerPrefs.SetFloat("volumeSound", volume);
+        audioMixer.SetFloat("Sound", sliderSoundVolume.value);
     }
 
     public void SetQuality (int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
+    
 }
