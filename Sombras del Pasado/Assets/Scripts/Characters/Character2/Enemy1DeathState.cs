@@ -12,7 +12,7 @@ public class Enemy1DeathState : Enemy1BaseState
 
     }
 
-    public override void OnCollisionState(Enemy1SateManager enemy1)
+    public override void OnTriggerState(Enemy1SateManager enemy1)
     {
 
     }

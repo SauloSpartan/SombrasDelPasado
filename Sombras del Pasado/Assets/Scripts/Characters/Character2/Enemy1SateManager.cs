@@ -10,7 +10,7 @@ public class Enemy1SateManager : MonoBehaviour
     public Enemy1AttackState AttackState = new Enemy1AttackState();
     public Enemy1DeathState DeathState = new Enemy1DeathState();
 
-        void Start()
+    void Start()
     {
         currentState = MovementState;
         //"this" is a reference to the Enemy1 context

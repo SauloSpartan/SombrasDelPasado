@@ -4,17 +4,69 @@ using UnityEngine;
 
 public class Enemy1OtherParameters : MonoBehaviour
 {
-    AudioSource _audioSource;
-    [SerializeField] AudioClip[] _stepClips;
+    //Audio variables
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _stepClips;
+    [SerializeField] private AudioClip[] _attackClips;
+    [SerializeField] private AudioClip[] _deathClips;
+
+    //Material variables
+    [SerializeField] private Material _enemyColor;
+    private Color _easyColor;
+    private Color _mediumColor;
+    private Color _hardColor;
+
+    public float Health;
+    public float Damage;
 
     private void Start()
     {
+        Difficulty();
+
         _audioSource = GetComponent<AudioSource>();
     }
 
+    private void Difficulty()
+    {
+        if (MainMenu.difficulty == 1)
+        {
+            Health = 50;
+            Damage = 2;
+            ColorUtility.TryParseHtmlString("#1C7D68", out _easyColor);
+            _enemyColor.color = _easyColor;
+        }
+        else if (MainMenu.difficulty == 2)
+        {
+            Health = 100;
+            Damage = 4;
+            ColorUtility.TryParseHtmlString("#1C3E7D", out _mediumColor);
+            _enemyColor.color = _mediumColor;
+        }
+        else if (MainMenu.difficulty == 3)
+        {
+            Health = 150;
+            Damage = 6;
+            ColorUtility.TryParseHtmlString("#731C7D", out _hardColor);
+            _enemyColor.color = _hardColor;
+        }
+    }
+
+    #region Audio Events
     private void Step_Sound()
     {
         AudioClip clip = StepClip();
+        _audioSource.PlayOneShot(clip);
+    }
+
+    private void Attack_Sound()
+    {
+        AudioClip clip = AttackClip();
+        _audioSource.PlayOneShot(clip);
+    }
+
+    private void Death_Sound()
+    {
+        AudioClip clip = DeathClip();
         _audioSource.PlayOneShot(clip);
     }
 
@@ -22,4 +74,15 @@ public class Enemy1OtherParameters : MonoBehaviour
     {
         return _stepClips[UnityEngine.Random.Range(0, _stepClips.Length)];
     }
+
+    private AudioClip AttackClip()
+    {
+        return _attackClips[UnityEngine.Random.Range(0, _attackClips.Length)];
+    }
+
+    private AudioClip DeathClip()
+    {
+        return _deathClips[UnityEngine.Random.Range(0, _deathClips.Length)];
+    }
+    #endregion
 }
