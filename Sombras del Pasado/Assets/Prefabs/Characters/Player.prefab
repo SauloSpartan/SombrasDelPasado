@@ -232,6 +232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 0}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &434004360150549582
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,13 +3474,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a041970432c13cb4c993cd53cd30ba97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkSpeed: 3
-  _rotationSpeed: 1080
-  _animAcceleration: 5
-  _particTrailSword: {fileID: 6365787198161722139}
-  _health: 100
-  _damage: 0
-  _defense: 0
+  walkSpeed: 3
+  rotationSpeed: 1080
+  acceleration: 5
+  trailSword: {fileID: 6365787198161722139}
+  health: 100
+  damage: 0
+  defense: 0
   stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}
@@ -4205,6 +4208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 0}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &1260652064583336425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &1667558128905366477
 GameObject:
   m_ObjectHideFlags: 0
@@ -5036,6 +5045,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &1834259785971236453
 GameObject:
   m_ObjectHideFlags: 0
@@ -6319,6 +6331,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 0}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &1834259786826350354
 GameObject:
   m_ObjectHideFlags: 0
@@ -7207,6 +7222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 0}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &1834259787082105003
 GameObject:
   m_ObjectHideFlags: 0
@@ -8883,7 +8901,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildIndex: 0
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
+  sliderGlobalVolume: {fileID: 1834259785959129741}
+  sliderMusicVolume: {fileID: 7432638212887256127}
+  sliderSoundVolume: {fileID: 7351101836538776588}
 --- !u!1 &3422946676976043309
 GameObject:
   m_ObjectHideFlags: 0
@@ -9148,7 +9169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildIndex: 0
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
+  sliderGlobalVolume: {fileID: 1834259785959129741}
+  sliderMusicVolume: {fileID: 7432638212887256127}
+  sliderSoundVolume: {fileID: 7351101836538776588}
 --- !u!1 &3972840378420779586
 GameObject:
   m_ObjectHideFlags: 0
@@ -9341,6 +9365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
+  sliderGlobalVolume: {fileID: 0}
+  sliderMusicVolume: {fileID: 0}
+  sliderSoundVolume: {fileID: 0}
 --- !u!1 &5987493150625145806
 GameObject:
   m_ObjectHideFlags: 0
