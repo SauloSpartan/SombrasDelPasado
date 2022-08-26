@@ -65,6 +65,14 @@ public class Enemy1OtherParameters : MonoBehaviour
         Health = Health - _player.damage;
     }
 
+    public void DeathDestroy()
+    {
+        if (Health <= 0)
+        {
+            Destroy(gameObject, 4.5f);
+        }
+    }
+
     #region Attack Events
     private void IsAttacking()
     {
