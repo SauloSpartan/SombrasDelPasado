@@ -52,6 +52,6 @@ public class Enemy1AttackState : Enemy1BaseState
 
     public override void OnTriggerState(Enemy1SateManager enemy1)
     {
-
+        enemy1.SwitchState(enemy1.DamageState);
     }
 }

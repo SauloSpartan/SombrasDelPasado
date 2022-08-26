@@ -78,7 +78,6 @@ public class ControllerCharacter2 : MonoBehaviour
 
         sword = GetComponentInChildren<BoxCollider>();
 
-        sword.enabled = false;
         maxHealth = health;
         interfaceEnemy.SetActive(false);
         trailSword.SetActive(false);

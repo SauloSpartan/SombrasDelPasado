@@ -16,14 +16,23 @@ public class Enemy1OtherParameters : MonoBehaviour
     private Color _mediumColor;
     private Color _hardColor;
 
+    BoxCollider _sword;
+
     public float Health;
     public float Damage;
+
+    ControllerCharacter1 _player;
 
     private void Start()
     {
         Difficulty();
 
         _audioSource = GetComponent<AudioSource>();
+
+        _sword = GetComponentInChildren<BoxCollider>();
+        _sword.enabled = false;
+
+        _player = FindObjectOfType<ControllerCharacter1>();
     }
 
     private void Difficulty()
@@ -50,6 +59,23 @@ public class Enemy1OtherParameters : MonoBehaviour
             _enemyColor.color = _hardColor;
         }
     }
+
+    public void DamageRecieve()
+    {
+        Health = Health - _player.damage;
+    }
+
+    #region Attack Events
+    private void IsAttacking()
+    {
+        _sword.enabled = true;
+    }
+
+    private void NotAttacking()
+    {
+        _sword.enabled = false;
+    }
+    #endregion
 
     #region Audio Events
     private void Step_Sound()

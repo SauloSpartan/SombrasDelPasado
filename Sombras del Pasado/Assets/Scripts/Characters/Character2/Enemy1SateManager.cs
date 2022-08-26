@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Enemy1SateManager : MonoBehaviour
 {
-    #region State Management system
+    #region State Management System
     Enemy1BaseState currentState;
     public Enemy1MovementState MovementState = new Enemy1MovementState();
     public Enemy1AttackState AttackState = new Enemy1AttackState();
     public Enemy1DeathState DeathState = new Enemy1DeathState();
+    public Enemy1DamageState DamageState = new Enemy1DamageState();
 
     void Start()
     {
@@ -20,7 +21,15 @@ public class Enemy1SateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-    }   
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player Sword")
+        {
+            currentState.OnTriggerState(this);
+        }
+    }
 
     public void SwitchState(Enemy1BaseState state)
     {
