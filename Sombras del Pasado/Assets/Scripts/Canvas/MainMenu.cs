@@ -11,9 +11,10 @@ public class MainMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public static int difficulty;
 
-    public Slider sliderGlobalVolume;
-    public Slider sliderMusicVolume;
-    public Slider sliderSoundVolume;
+    [SerializeField] private Slider sliderGlobalVolume;
+    [SerializeField] private Slider sliderMusicVolume;
+    [SerializeField] private Slider sliderSoundVolume;
+    [SerializeField] private Dropdown dropdownQuality;
 
 
     Score Score;
@@ -34,6 +35,8 @@ public class MainMenu : MonoBehaviour
         AudioListener.volume = sliderGlobalVolume.value;
         audioMixer.SetFloat("Music", sliderMusicVolume.value);
         audioMixer.SetFloat("Sound", sliderSoundVolume.value);
+
+        dropdownQuality.value = PlayerPrefs.GetInt("quality", 3);
     }
 
     void Update()
@@ -102,9 +105,10 @@ public class MainMenu : MonoBehaviour
         audioMixer.SetFloat("Sound", sliderSoundVolume.value);
     }
 
-    public void SetQuality (int qualityIndex)
+    public void SetQuality ()
     {
-        QualitySettings.SetQualityLevel(qualityIndex);
+        QualitySettings.SetQualityLevel(dropdownQuality.value);
+        PlayerPrefs.SetInt("quality", dropdownQuality.value);
     }
     
 }
