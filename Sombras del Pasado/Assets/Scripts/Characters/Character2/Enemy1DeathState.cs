@@ -13,6 +13,8 @@ public class Enemy1DeathState : Enemy1BaseState
         _enemyCollider = enemy1.GetComponent<CapsuleCollider>();
         _enemyCollider.enabled = false;
         enemyParameters = enemy1.GetComponent<Enemy1OtherParameters>();
+
+        enemyParameters.PowerUp();
     }
 
     public override void UpdateState(Enemy1SateManager enemy1)

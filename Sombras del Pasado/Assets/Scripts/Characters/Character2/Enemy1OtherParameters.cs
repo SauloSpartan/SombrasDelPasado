@@ -21,6 +21,8 @@ public class Enemy1OtherParameters : MonoBehaviour
     public float Health;
     public float Damage;
 
+    [SerializeField] private GameObject[] _powerUps;
+
     ControllerCharacter1 _player;
 
     private void Start()
@@ -71,6 +73,20 @@ public class Enemy1OtherParameters : MonoBehaviour
         {
             Destroy(gameObject, 4.5f);
         }
+    }
+
+    public void PowerUp()
+    {
+        int randomPower;
+        int probabilityPower;
+
+        Vector3 enemyPosition = (transform.position);
+        Vector3 powerPosition = new Vector3(enemyPosition.x, enemyPosition.y + 0.7f, enemyPosition.z);
+        probabilityPower = Random.Range(0, 100);
+        randomPower = Random.Range(0, _powerUps.Length);
+
+        if (probabilityPower <= 8 || probabilityPower >= 92)
+            Instantiate(_powerUps[randomPower], powerPosition, transform.rotation);
     }
 
     #region Attack Events
