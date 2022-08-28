@@ -75,7 +75,7 @@ public class Enemy1OtherParameters : MonoBehaviour
         }
     }
 
-    public void PowerUp()
+    public void PowerUpSpawn(int spawnProbability)
     {
         int randomPower;
         int probabilityPower;
@@ -85,8 +85,10 @@ public class Enemy1OtherParameters : MonoBehaviour
         probabilityPower = Random.Range(0, 100);
         randomPower = Random.Range(0, _powerUps.Length);
 
-        if (probabilityPower <= 8 || probabilityPower >= 92)
+        if (probabilityPower <= spawnProbability)
+        {
             Instantiate(_powerUps[randomPower], powerPosition, transform.rotation);
+        }
     }
 
     #region Attack Events

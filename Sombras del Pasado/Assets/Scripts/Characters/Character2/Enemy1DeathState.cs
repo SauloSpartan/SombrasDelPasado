@@ -8,13 +8,18 @@ public class Enemy1DeathState : Enemy1BaseState
 
     public override void EnterState(Enemy1SateManager enemy1)
     {
+        //Set the Death animation
         _anim = enemy1.GetComponent<Animator>();
         _anim.SetTrigger("Death");
+
+
         _enemyCollider = enemy1.GetComponent<CapsuleCollider>();
         _enemyCollider.enabled = false;
+
         enemyParameters = enemy1.GetComponent<Enemy1OtherParameters>();
 
-        enemyParameters.PowerUp();
+        //The number in PowerUpSpawn(30%) represents probability to spawn
+        enemyParameters.PowerUpSpawn(20);
     }
 
     public override void UpdateState(Enemy1SateManager enemy1)
