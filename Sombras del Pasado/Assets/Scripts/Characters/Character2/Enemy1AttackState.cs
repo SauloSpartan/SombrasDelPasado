@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Enemy1AttackState : Enemy1BaseState
 {
@@ -13,7 +12,7 @@ public class Enemy1AttackState : Enemy1BaseState
 
     public override void EnterState(Enemy1SateManager enemy1)
     {
-        _attackCoooldown = 0.4f;
+        _attackCoooldown = 0.1f;
 
         enemyParameters = enemy1.GetComponent<Enemy1OtherParameters>();
         _damage = enemyParameters.Damage;

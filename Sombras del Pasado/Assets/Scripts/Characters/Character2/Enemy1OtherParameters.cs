@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy1OtherParameters : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class Enemy1OtherParameters : MonoBehaviour
 
     [SerializeField] private GameObject[] _powerUps;
 
+    [HideInInspector] public NavMeshAgent NavEnemy;
+    [HideInInspector] public Rigidbody RigidEnemy;
+    private Transform _target;
+    private float _enemyThrust = 3;
+
     ControllerCharacter1 _player;
 
     private void Start()
@@ -34,9 +40,14 @@ public class Enemy1OtherParameters : MonoBehaviour
         _sword = GetComponentInChildren<BoxCollider>();
         _sword.enabled = false;
 
+        NavEnemy = GetComponent<NavMeshAgent>();
+        RigidEnemy = GetComponent<Rigidbody>();
+        _target = PlayerManager.instance.player.transform;
+
         _player = FindObjectOfType<ControllerCharacter1>();
     }
 
+    #region Start Methods
     private void Difficulty()
     {
         if (MainMenu.difficulty == 1)
@@ -61,12 +72,20 @@ public class Enemy1OtherParameters : MonoBehaviour
             _enemyColor.color = _hardColor;
         }
     }
+    #endregion
 
+    #region Damage Recieve Method
     public void DamageRecieve()
     {
         Health = Health - _player.damage;
-    }
 
+        Vector3 difference = RigidEnemy.transform.position - _target.transform.position;
+        difference = difference.normalized * _enemyThrust;
+        RigidEnemy.AddForce(difference, ForceMode.Impulse);
+    }
+    #endregion
+
+    #region Death Methods
     public void DeathDestroy()
     {
         if (Health <= 0)
@@ -90,6 +109,7 @@ public class Enemy1OtherParameters : MonoBehaviour
             Instantiate(_powerUps[randomPower], powerPosition, transform.rotation);
         }
     }
+    #endregion
 
     #region Attack Events
     private void IsAttacking()

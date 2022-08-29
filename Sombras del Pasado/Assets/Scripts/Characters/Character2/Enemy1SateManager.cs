@@ -9,7 +9,7 @@ public class Enemy1SateManager : MonoBehaviour
     public Enemy1MovementState MovementState = new Enemy1MovementState();
     public Enemy1AttackState AttackState = new Enemy1AttackState();
     public Enemy1DeathState DeathState = new Enemy1DeathState();
-    public Enemy1DamageState DamageState = new Enemy1DamageState();
+    public Enemy1DamagedState DamageState = new Enemy1DamagedState();
 
     void Start()
     {

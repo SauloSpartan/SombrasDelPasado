@@ -1,14 +1,18 @@
 using UnityEngine;
 
-public class Enemy1DamageState : Enemy1BaseState
+public class Enemy1DamagedState : Enemy1BaseState
 {
-    Enemy1OtherParameters enemyParameters;
     private Transform _target;
+
+    Enemy1OtherParameters enemyParameters;
 
     public override void EnterState(Enemy1SateManager enemy1)
     {
         _target = PlayerManager.instance.player.transform;
         enemyParameters = enemy1.GetComponent<Enemy1OtherParameters>();
+        enemyParameters.NavEnemy.enabled = false;
+        enemyParameters.RigidEnemy.isKinematic = false;
+
         enemyParameters.DamageRecieve();
     }
 

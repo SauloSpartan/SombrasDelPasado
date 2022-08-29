@@ -1,15 +1,18 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Enemy1MovementState : Enemy1BaseState
 {
-    private NavMeshAgent _navEnemy;
     private Transform _target;
     private Animator _anim;
 
+    Enemy1OtherParameters enemyParameters;
+
     public override void EnterState(Enemy1SateManager enemy1)
     {
-        _navEnemy = enemy1.GetComponent<NavMeshAgent>();
+        enemyParameters = enemy1.GetComponent<Enemy1OtherParameters>();
+        enemyParameters.NavEnemy.enabled = true;
+        enemyParameters.RigidEnemy.isKinematic = true;
+
         _target = PlayerManager.instance.player.transform;
         _anim = enemy1.GetComponent<Animator>();
     }
@@ -28,7 +31,7 @@ public class Enemy1MovementState : Enemy1BaseState
         //Switching states depending if in attack range
         if (distance > attackRadius)
         {
-            _navEnemy.SetDestination(_target.position);
+            enemyParameters.NavEnemy.SetDestination(_target.position);
             _anim.SetFloat("Speed", 1f);
         }
         else
