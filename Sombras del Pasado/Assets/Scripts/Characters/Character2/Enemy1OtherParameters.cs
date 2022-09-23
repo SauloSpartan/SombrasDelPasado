@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(NavMeshAgent))]
+[RequireComponent(typeof(AudioSource))]
 public class Enemy1OtherParameters : MonoBehaviour
 {
     //Audio variables
