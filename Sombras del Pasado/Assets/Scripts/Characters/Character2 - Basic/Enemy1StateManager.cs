@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1SateManager : MonoBehaviour
+public class Enemy1StateManager : MonoBehaviour
 {
     #region State Management System
     Enemy1BaseState currentState;

@@ -7,7 +7,7 @@ public class Enemy1DeathState : Enemy1BaseState
 
     Enemy1OtherParameters enemyParameters;
 
-    public override void EnterState(Enemy1SateManager enemy1)
+    public override void EnterState(Enemy1StateManager enemy1)
     {
         //Set the Death animation
         _anim = enemy1.GetComponent<Animator>();
@@ -24,12 +24,12 @@ public class Enemy1DeathState : Enemy1BaseState
         enemyParameters.PowerUpSpawn(20);
     }
 
-    public override void UpdateState(Enemy1SateManager enemy1)
+    public override void UpdateState(Enemy1StateManager enemy1)
     {
         enemyParameters.DeathDestroy();
     }
 
-    public override void OnTriggerState(Enemy1SateManager enemy1)
+    public override void OnTriggerState(Enemy1StateManager enemy1)
     {
 
     }

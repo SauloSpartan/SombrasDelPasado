@@ -7,7 +7,7 @@ public class Enemy1MovementState : Enemy1BaseState
 
     Enemy1OtherParameters enemyParameters;
 
-    public override void EnterState(Enemy1SateManager enemy1)
+    public override void EnterState(Enemy1StateManager enemy1)
     {
         enemyParameters = enemy1.GetComponent<Enemy1OtherParameters>();
         enemyParameters.NavEnemy.enabled = true;
@@ -17,7 +17,7 @@ public class Enemy1MovementState : Enemy1BaseState
         _anim = enemy1.GetComponent<Animator>();
     }
 
-    public override void UpdateState(Enemy1SateManager enemy1)
+    public override void UpdateState(Enemy1StateManager enemy1)
     {
         //Follow player
         float attackRadius = 1.5f;
@@ -40,7 +40,7 @@ public class Enemy1MovementState : Enemy1BaseState
         }
     }
 
-    public override void OnTriggerState(Enemy1SateManager enemy1)
+    public override void OnTriggerState(Enemy1StateManager enemy1)
     {
 
     }
