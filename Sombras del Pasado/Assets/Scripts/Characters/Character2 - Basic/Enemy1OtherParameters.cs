@@ -14,24 +14,25 @@ public class Enemy1OtherParameters : MonoBehaviour
     [SerializeField] private AudioClip[] _deathClips;
 
     //Material variables
-    [SerializeField] private Material _enemyColor;
     private Color _easyColor;
     private Color _mediumColor;
     private Color _hardColor;
+    [SerializeField] private Material _enemyColor;
 
-    BoxCollider _sword;
-
+    //Fight variables
     public float Health;
     public float Damage;
+    BoxCollider _sword;
 
     [SerializeField] private GameObject[] _powerUps;
 
+    //Movement variables
+    private float _enemyThrust = 3;
     [HideInInspector] public NavMeshAgent NavEnemy;
     [HideInInspector] public Rigidbody RigidEnemy;
     private Transform _target;
-    private float _enemyThrust = 3;
 
-    ControllerCharacter1 _player;
+    PlayerOtherParameters _player;
 
     private void Start()
     {
@@ -46,7 +47,7 @@ public class Enemy1OtherParameters : MonoBehaviour
         RigidEnemy = GetComponent<Rigidbody>();
         _target = PlayerManager.instance.player.transform;
 
-        _player = FindObjectOfType<ControllerCharacter1>();
+        _player = FindObjectOfType<PlayerOtherParameters>();
     }
 
     #region Start Methods
@@ -79,7 +80,7 @@ public class Enemy1OtherParameters : MonoBehaviour
     #region Damage Recieve Method
     public void DamageRecieve()
     {
-        Health = Health - _player.damage;
+        Health = Health - _player.Damage;
 
         Vector3 difference = RigidEnemy.transform.position - _target.transform.position;
         difference = difference.normalized * _enemyThrust;

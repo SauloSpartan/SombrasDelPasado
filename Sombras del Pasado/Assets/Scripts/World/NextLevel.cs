@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    public int buildIndex;
+    [SerializeField] private int _buildIndex;
 
-    // Start is called before the first frame update
     void Start()
     {
-        buildIndex = SceneManager.GetActiveScene().buildIndex;
+        _buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -23,7 +22,7 @@ public class NextLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(buildIndex + 1);
+            SceneManager.LoadScene(_buildIndex + 1);
         }
     }
 }

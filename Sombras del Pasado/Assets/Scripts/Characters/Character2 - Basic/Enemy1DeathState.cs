@@ -29,7 +29,7 @@ public class Enemy1DeathState : Enemy1BaseState
         enemyParameters.DeathDestroy();
     }
 
-    public override void OnTriggerState(Enemy1StateManager enemy1)
+    public override void OnTriggerState(Enemy1StateManager enemy1, Collider other)
     {
 
     }

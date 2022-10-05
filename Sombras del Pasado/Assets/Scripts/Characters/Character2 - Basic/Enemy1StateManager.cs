@@ -25,10 +25,7 @@ public class Enemy1StateManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player Sword")
-        {
-            currentState.OnTriggerState(this);
-        }
+        currentState.OnTriggerState(this, other);
     }
 
     public void SwitchState(Enemy1BaseState state)

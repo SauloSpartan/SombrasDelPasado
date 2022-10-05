@@ -67,6 +67,8 @@ public class ControllerCharacter2 : MonoBehaviour
     {
         Player = FindObjectOfType<ControllerCharacter1>();
         Explosion = FindObjectOfType<DMG_Barrel>();
+
+        //Level Clear
         InstancedEnemie = FindObjectOfType<LevelClear>();
         InstancedEnemie.TotalEnemies++;
 

@@ -49,8 +49,11 @@ public class Enemy1AttackState : Enemy1BaseState
         }
     }
 
-    public override void OnTriggerState(Enemy1StateManager enemy1)
+    public override void OnTriggerState(Enemy1StateManager enemy1, Collider other)
     {
-        enemy1.SwitchState(enemy1.DamageState);
+        if (other.gameObject.tag == "Player Sword")
+        {
+            enemy1.SwitchState(enemy1.DamageState);
+        }
     }
 }

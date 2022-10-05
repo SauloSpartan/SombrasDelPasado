@@ -28,7 +28,7 @@ public class Enemy1DamagedState : Enemy1BaseState
         }
     }
 
-    public override void OnTriggerState(Enemy1StateManager enemy1)
+    public override void OnTriggerState(Enemy1StateManager enemy1, Collider other)
     {
 
     }
