@@ -32,8 +32,6 @@ public class Enemy1OtherParameters : MonoBehaviour
     [HideInInspector] public Rigidbody RigidEnemy;
     private Transform _target;
 
-    PlayerOtherParameters _player;
-
     private void Start()
     {
         Difficulty();
@@ -46,8 +44,6 @@ public class Enemy1OtherParameters : MonoBehaviour
         NavEnemy = GetComponent<NavMeshAgent>();
         RigidEnemy = GetComponent<Rigidbody>();
         _target = PlayerManager.instance.player.transform;
-
-        _player = FindObjectOfType<PlayerOtherParameters>();
     }
 
     #region Start Methods
@@ -80,8 +76,6 @@ public class Enemy1OtherParameters : MonoBehaviour
     #region Damage Recieve Method
     public void DamageRecieve()
     {
-        Health = Health - _player.Damage;
-
         Vector3 difference = RigidEnemy.transform.position - _target.transform.position;
         difference = difference.normalized * _enemyThrust;
         RigidEnemy.AddForce(difference, ForceMode.Impulse);

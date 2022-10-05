@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackState : PlayerBaseState
+public class PlayerDamageState : PlayerBaseState
 {
     public override void EnterState()
     {

@@ -52,7 +52,6 @@ public class ControllerCharacter1 : MonoBehaviour
     DMG_Barrel Explosion;
     DMG_Spike Spiked;
 
-
     void Start()
     {
         Enemy1 = FindObjectOfType<ControllerCharacter2>();

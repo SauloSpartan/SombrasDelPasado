@@ -1,11 +1,17 @@
-using UnityEngine;
-
 public abstract class PlayerBaseState
 {
-    public abstract void EnterState(PlayerStateManager player);
+    public abstract void EnterState();
 
-    public abstract void UpdateState(PlayerStateManager player);
+    public abstract void UpdateState();
 
-    public abstract void OnTriggerState(PlayerStateManager player);
+    public abstract void ExitState();
 
+    public abstract void CheckSwitchState();
+
+    private void SwitchState(PlayerBaseState newState)
+    {
+        ExitState();
+
+        newState.EnterState();
+    }
 }
