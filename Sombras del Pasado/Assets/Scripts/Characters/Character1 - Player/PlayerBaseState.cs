@@ -1,3 +1,4 @@
+
 public abstract class PlayerBaseState
 {
     protected PlayerStateMachine _newContext;

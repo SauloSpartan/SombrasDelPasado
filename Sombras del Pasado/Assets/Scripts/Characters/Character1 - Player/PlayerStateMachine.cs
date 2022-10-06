@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This is the CONTEXT and stores the data concrete states need to be performed
 public class PlayerStateMachine : MonoBehaviour
 {
-    // Movement variables
-    [SerializeField] private float WalkSpeed;
-    [SerializeField] private float RotationSpeed;
+    // Movement and Rotation variables
+    private float _moveX;
+    private float _moveZ;
+    [SerializeField] private float _walkSpeed;
+    private float _rotationSpeed = 1080;
+    private Vector3 _moveDirection;
+    private Vector3 _moveVector;
+    private Vector3 _moveRotation;
 
     // Animation variables
     private float velocity = 0.0f;
-    [SerializeField] private float acceleration;
-    [SerializeField] private GameObject trailSword;
+    [SerializeField] private float _acceleration;
+    [SerializeField] private GameObject _trailSword;
     private Animator _animator;
 
     // Health and Damage variables
@@ -24,11 +30,6 @@ public class PlayerStateMachine : MonoBehaviour
     private int attackCombo = 1;
     private float powerTimer;
     private int powerUp = 0;
-
-    // 3D Direction & Gravity variables
-    private Vector3 _moveDirection;
-    private Vector3 moveVector;
-    private Vector3 moveRotation;
 
     // References variables
     private CharacterController _charController;
@@ -50,7 +51,13 @@ public class PlayerStateMachine : MonoBehaviour
     // Getters and Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public Animator Animator { get { return _animator; } set { _animator = value; } }
+    public float MoveX { get { return _moveX; } set { _moveX = value; } }
+    public float MoveZ { get { return _moveZ; } set { _moveZ = value; } }
     public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
+    public CharacterController CharController { get { return _charController; } }
+    public float WalkSpeed { get { return _walkSpeed; } set { _walkSpeed = value; } }
+    public float RotationSpeed { get { return _rotationSpeed; } }
+    public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
 
     void Awake()
     {
@@ -69,7 +76,7 @@ public class PlayerStateMachine : MonoBehaviour
         powerDefense.SetActive(false);
         powerDamage.SetActive(false);
         powerVelocity.SetActive(false);
-        trailSword.SetActive(false);
+        _trailSword.SetActive(false);
 
         // Setup state
         _states = new PlayerStateFactory(this); // "(this)" is a PlayerStateMachine instance
@@ -79,44 +86,23 @@ public class PlayerStateMachine : MonoBehaviour
 
     void Update()
     {
-        Rotation();
         Gravity();
         _currentState.UpdateState();
-        _charController.Move(_moveDirection * Time.deltaTime);
-    }
-
-    private void Rotation()
-    {
-        //Direction it rotates
-        float rotateX = Input.GetAxis("Horizontal");
-
-        //Apply varibles of rotation
-        moveRotation = new Vector3(rotateX, 0, 0);
-        moveRotation.Normalize();
-
-        transform.Translate(moveRotation * WalkSpeed * Time.deltaTime, Space.World);
-
-        //If character is moving it rotates
-        if (moveRotation != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(moveRotation, Vector3.up);
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, RotationSpeed * Time.deltaTime);
-        }
+        _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime);
     }
 
     private void Gravity()
     {
-        moveVector = Vector3.zero;
+        _moveVector = Vector3.zero;
 
         //Check if character is grounded
         if (_charController.isGrounded == false)
         {
             //Add our gravity Vector
-            moveVector += Physics.gravity;
+            _moveVector += Physics.gravity;
         }
 
         //Apply our move Vector , remeber to multiply by Time.delta
-        _charController.Move(moveVector * Time.deltaTime);
+        _charController.Move(_moveVector * Time.deltaTime);
     }
 }
