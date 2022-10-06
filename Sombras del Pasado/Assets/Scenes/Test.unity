@@ -33597,7 +33597,6 @@ GameObject:
   - component: {fileID: 8717023726026236288}
   - component: {fileID: 8717023726026236289}
   - component: {fileID: 8717023726026236290}
-  - component: {fileID: 8717023726026236302}
   - component: {fileID: 8717023726026236301}
   m_Layer: 0
   m_Name: Character1
@@ -33615,42 +33614,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 8717023726026236300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87043bade909c3642ae05f12414bcb1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e54b6b57c5102c4e9a8b720490ff450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stepClips:
-  - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
-  - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}
-  - {fileID: 8300000, guid: 688fe91373c6b694a8c47158d103b1f4, type: 3}
-  - {fileID: 8300000, guid: 614169efa848e6a41bfd91025de5cc49, type: 3}
-  - {fileID: 8300000, guid: f24781319bbca5c42812b18a331e223c, type: 3}
-  - {fileID: 8300000, guid: 8c77a59f837445d4f8db1118b8cf8c26, type: 3}
-  - {fileID: 8300000, guid: 23fdbca20688f3547b509052172fc481, type: 3}
-  - {fileID: 8300000, guid: 2bde8e554d440e64ca6b75623715d77c, type: 3}
-  _attackClips:
-  - {fileID: 8300000, guid: 8bebf180925e2e34089097768639ef52, type: 3}
-  - {fileID: 8300000, guid: e8c84f460f6568c4f80b66a4368aa0b9, type: 3}
-  - {fileID: 8300000, guid: f9e49605c3f97c2428db79bcc9c333dd, type: 3}
-  - {fileID: 8300000, guid: ff2cd083ab9690a4396075439644b4a4, type: 3}
-  _deathClips:
-  - {fileID: 8300000, guid: 6a6da3e47689cb843a69f92c4ddbe4ee, type: 3}
-  - {fileID: 8300000, guid: a3c6099fce00dc042b6951e2cbf18279, type: 3}
-  - {fileID: 8300000, guid: 5939d9fbadb5b4a46b88c64bb111d9db, type: 3}
-  MoveDirection: {x: 0, y: 0, z: 0}
-  Health: 100
-  Damage: 0
---- !u!114 &8717023726026236302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8717023726026236300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 084d327ac6cb05b4d8ffd4f115f078b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  WalkSpeed: 0
+  RotationSpeed: 0
+  acceleration: 0
+  trailSword: {fileID: 2786360328489409464}
+  health: 100
+  damage: 0
+  defense: 1
+  stepClips: []
+  attackClips: []
+  deathClips: []
 --- !u!4 &8717023726060121190
 Transform:
   m_ObjectHideFlags: 0

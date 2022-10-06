@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerIdleState : PlayerBaseState
 {
+    public PlayerIdleState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactor) : base (currentContext, playerStateFactor)
+    {
+
+    }
+
     public override void EnterState()
     {
         Debug.Log("Hello from Idle");

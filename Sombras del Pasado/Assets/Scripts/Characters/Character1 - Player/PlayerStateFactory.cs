@@ -11,7 +11,7 @@ public class PlayerStateFactory
         _context = currentContext;
     }
 
-    public PlayerBaseState Idle()
+    public PlayerBaseState Idle() //Returns a new instance of his respective state
     {
         return new PlayerIdleState(_context, this);
     }

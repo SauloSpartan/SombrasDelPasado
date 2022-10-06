@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerWalkState : PlayerBaseState
 {
+    public PlayerWalkState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactor) : base(currentContext, playerStateFactor)
+    {
+
+    }
+
     public override void EnterState()
     {
 

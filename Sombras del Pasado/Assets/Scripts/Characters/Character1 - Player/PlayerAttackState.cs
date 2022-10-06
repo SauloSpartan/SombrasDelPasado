@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerAttackState : PlayerBaseState
 {
+    public PlayerAttackState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactor) : base(currentContext, playerStateFactor)
+    {
+
+    }
+
     public override void EnterState()
     {
 

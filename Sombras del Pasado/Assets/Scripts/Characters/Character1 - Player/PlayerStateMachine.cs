@@ -44,16 +44,19 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private AudioClip[] deathClips;
 
     // Scripts variables
-    ControllerCharacter2 Enemy1;
-    ControllerCharacter3 Enemy2;
-    ControllerCharacter4 Enemy3;
-    ControllerCharacter5 Boss;
-    DMG_Barrel Explosion;
-    DMG_Spike Spiked;
+    private ControllerCharacter2 Enemy1;
+    private ControllerCharacter3 Enemy2;
+    private ControllerCharacter4 Enemy3;
+    private ControllerCharacter5 Boss;
+    private DMG_Barrel Explosion;
+    private DMG_Spike Spiked;
 
     // State variables
-    PlayerBaseState _currentState;
-    PlayerStateFactory _states;
+    private PlayerBaseState _currentState;
+    private PlayerStateFactory _states;
+
+    // Getters and Setters
+    public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
 
     void Awake()
     {
