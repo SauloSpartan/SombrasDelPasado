@@ -1,10 +1,10 @@
 public abstract class PlayerBaseState
 {
-    protected PlayerStateMachine _context;
+    protected PlayerStateMachine _newContext;
     protected PlayerStateFactory _factory;
     public PlayerBaseState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactor)
     {
-        _context = currentContext;
+        _newContext = currentContext;
         _factory = playerStateFactor;
     }
 
@@ -22,6 +22,6 @@ public abstract class PlayerBaseState
 
         newState.EnterState();
 
-        _context.CurrentState = newState;
+        _newContext.CurrentState = newState;
     }
 }
