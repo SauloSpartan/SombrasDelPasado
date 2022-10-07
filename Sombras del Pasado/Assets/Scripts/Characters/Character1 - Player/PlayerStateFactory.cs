@@ -1,11 +1,12 @@
+// Used to create concrete states
 public class PlayerStateFactory
 {
     PlayerStateMachine _context;
 
     /// <summary>
-    /// Constructor function that is called when we create a new instance of a class
+    /// Constructor function that is called when we create a new instance of a class.
     /// </summary>
-    /// <param name="currentContext"></param>
+    /// <param name="currentContext"> Holds reference for our State Machine. </param>
     public PlayerStateFactory(PlayerStateMachine currentContext) // Expects a PlayerStateMachine instance to be passed in
     {
         _context = currentContext;
@@ -13,7 +14,7 @@ public class PlayerStateFactory
 
     public PlayerBaseState Idle() //Returns a new instance of his respective state
     {
-        return new PlayerIdleState(_context, this);
+        return new PlayerIdleState(_context, this); // We pass in the same context that we have in StateFactory constructor
     }
 
     public PlayerBaseState Walk()

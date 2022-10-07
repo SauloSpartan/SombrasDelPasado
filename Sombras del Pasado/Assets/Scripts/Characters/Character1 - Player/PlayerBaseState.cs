@@ -1,11 +1,16 @@
-
+// Establishes methods and variables that all concrete states must have
 public abstract class PlayerBaseState
 {
-    protected PlayerStateMachine _newContext;
+    /// <value> Short for CONTEXT, it is a reference to the State Machine Script for the concrete states. </value>
+    protected PlayerStateMachine _ctx;
     protected PlayerStateFactory _factory;
+
+    /// <summary>
+    /// Constructor that passes the parameters and values from the StateMachine and StateFactory.
+    /// </summary>
     public PlayerBaseState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactor)
     {
-        _newContext = currentContext;
+        _ctx = currentContext;
         _factory = playerStateFactor;
     }
 
@@ -23,6 +28,6 @@ public abstract class PlayerBaseState
 
         newState.EnterState();
 
-        _newContext.CurrentState = newState;
+        _ctx.CurrentState = newState;
     }
 }

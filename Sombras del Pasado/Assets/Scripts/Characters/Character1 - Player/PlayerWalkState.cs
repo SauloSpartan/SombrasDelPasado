@@ -11,13 +11,15 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void EnterState()
     {
-        _newContext.Animator.SetFloat("Speed", 1);
+        _ctx.Animator.SetFloat("Speed", 1);
 
         Debug.Log("Hello from Walk");
     }
 
     public override void UpdateState()
     {
+        Movement();
+        Rotation();
         CheckSwitchState();
     }
 
@@ -28,39 +30,42 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void CheckSwitchState()
     {
-        Movement();
-        Rotation();
-
-        if (_newContext.MoveDirection == Vector3.zero)
+        if (_ctx.MoveDirection == Vector3.zero)
         {
             SwitchState(_factory.Idle());
         }
     }
 
+    /// <summary>
+    /// Function that controls character movement.
+    /// </summary>
     private void Movement()
     {
-        _newContext.MoveX = Input.GetAxis("Horizontal");
-        _newContext.MoveZ = Input.GetAxis("Vertical");
+        _ctx.MoveX = Input.GetAxis("Horizontal");
+        _ctx.MoveZ = Input.GetAxis("Vertical");
 
-        _newContext.MoveDirection = new Vector3(_newContext.MoveX, 0, _newContext.MoveZ);
+        _ctx.MoveDirection = new Vector3(_ctx.MoveX, 0, _ctx.MoveZ);
     }
 
+    /// <summary>
+    /// Function that controls character rotation.
+    /// </summary>
     private void Rotation()
     {
-        _newContext.MoveX = Input.GetAxis("Horizontal");
+        _ctx.MoveX = Input.GetAxis("Horizontal");
 
         //Apply varibles of rotation
-        _newContext.MoveRotation = new Vector3(_newContext.MoveX, 0, 0);
-        _newContext.MoveRotation.Normalize();
+        _ctx.MoveRotation = new Vector3(_ctx.MoveX, 0, 0);
+        _ctx.MoveRotation.Normalize();
 
-        _newContext.transform.Translate(_newContext.MoveRotation * _newContext.WalkSpeed * Time.deltaTime, Space.World);
+        _ctx.transform.Translate(_ctx.MoveRotation * _ctx.WalkSpeed * Time.deltaTime, Space.World);
 
         //If character is moving it rotates
-        if (_newContext.MoveRotation != Vector3.zero)
+        if (_ctx.MoveRotation != Vector3.zero)
         {
-            Quaternion toRotation = Quaternion.LookRotation(_newContext.MoveRotation, Vector3.up);
+            Quaternion toRotation = Quaternion.LookRotation(_ctx.MoveRotation, Vector3.up);
 
-            _newContext.transform.rotation = Quaternion.RotateTowards(_newContext.transform.rotation, toRotation, _newContext.RotationSpeed * Time.deltaTime);
+            _ctx.transform.rotation = Quaternion.RotateTowards(_ctx.transform.rotation, toRotation, _ctx.RotationSpeed * Time.deltaTime);
         }
     }
 }

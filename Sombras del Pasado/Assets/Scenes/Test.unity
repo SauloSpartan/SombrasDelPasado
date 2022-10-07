@@ -33617,10 +33617,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e54b6b57c5102c4e9a8b720490ff450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 0
-  RotationSpeed: 0
-  acceleration: 0
-  trailSword: {fileID: 2786360328489409464}
+  _walkSpeed: 3
+  _acceleration: 0
+  _trailSword: {fileID: 2786360328489409464}
   health: 100
   damage: 0
   defense: 1

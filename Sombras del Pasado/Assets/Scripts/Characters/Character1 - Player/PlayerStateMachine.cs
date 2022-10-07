@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// This is the CONTEXT and stores the data concrete states need to be performed
+// This is the CONTEXT and stores the data that the concrete states need to be performed
 public class PlayerStateMachine : MonoBehaviour
 {
     // Movement and Rotation variables
@@ -51,7 +51,9 @@ public class PlayerStateMachine : MonoBehaviour
     // Getters and Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public Animator Animator { get { return _animator; } set { _animator = value; } }
+    /// <value> Float for movement in X axis. </value>
     public float MoveX { get { return _moveX; } set { _moveX = value; } }
+    /// <value> Float for movement in Z axis. </value>
     public float MoveZ { get { return _moveZ; } set { _moveZ = value; } }
     public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
     public CharacterController CharController { get { return _charController; } }
@@ -59,6 +61,7 @@ public class PlayerStateMachine : MonoBehaviour
     public float RotationSpeed { get { return _rotationSpeed; } }
     public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
 
+    // Awake is called earlier than Start
     void Awake()
     {
         powerDefense = GameObject.Find("Power Defense");
@@ -77,7 +80,10 @@ public class PlayerStateMachine : MonoBehaviour
         powerDamage.SetActive(false);
         powerVelocity.SetActive(false);
         _trailSword.SetActive(false);
+    }
 
+    void Start()
+    {
         // Setup state
         _states = new PlayerStateFactory(this); // "(this)" is a PlayerStateMachine instance
         _currentState = _states.Idle();
@@ -88,21 +94,24 @@ public class PlayerStateMachine : MonoBehaviour
     {
         Gravity();
         _currentState.UpdateState();
-        _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime);
+
+        // It is outside "WalkState" because glitches if its inside
+        _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime); // It moves the character
     }
 
+
+    /// <summary>
+    /// Function that adds Gravity to the player.
+    /// </summary>
     private void Gravity()
     {
         _moveVector = Vector3.zero;
 
-        //Check if character is grounded
-        if (_charController.isGrounded == false)
+        if (_charController.isGrounded == false) // Check if character is grounded
         {
-            //Add our gravity Vector
-            _moveVector += Physics.gravity;
+            _moveVector += Physics.gravity; // Add our gravity Vector
         }
 
-        //Apply our move Vector , remeber to multiply by Time.delta
-        _charController.Move(_moveVector * Time.deltaTime);
+        _charController.Move(_moveVector * Time.deltaTime); // Apply our move Vector
     }
 }

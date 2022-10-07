@@ -11,7 +11,7 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void EnterState()
     {
-        _newContext.Animator.SetFloat("Speed", 0);
+        _ctx.Animator.SetFloat("Speed", 0);
 
         Debug.Log("Hello from Idle");
     }
@@ -23,17 +23,17 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void ExitState()
     {
-
+        Debug.Log("Goodbye from Idle");
     }
 
     public override void CheckSwitchState()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        _ctx.MoveX = Input.GetAxis("Horizontal");
+        _ctx.MoveZ = Input.GetAxis("Vertical");
 
-        _newContext.MoveDirection = new Vector3(moveX, 0, moveZ);
+        _ctx.MoveDirection = new Vector3(_ctx.MoveX, 0, _ctx.MoveZ);
 
-        if (_newContext.MoveDirection != Vector3.zero)
+        if (_ctx.MoveDirection != Vector3.zero)
         {
             SwitchState(_factory.Walk());
         }
