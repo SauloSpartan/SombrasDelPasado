@@ -34,6 +34,10 @@ public class PlayerWalkState : PlayerBaseState
         {
             SwitchState(_factory.Idle());
         }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            SwitchState(_factory.Attack());
+        }
     }
 
     /// <summary>

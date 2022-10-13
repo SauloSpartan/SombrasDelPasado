@@ -22,12 +22,12 @@ public class PlayerStateMachine : MonoBehaviour
 
     // Health and Damage variables
     [SerializeField] private float health = 100f;
-    [SerializeField] private int damage;
+    [SerializeField] private int _damage;
     [SerializeField] private int defense = 1;
-    private int attack = 1;
+    private int _attack = 1;
     private int luck;
     private int evasion = 0;
-    private int attackCombo = 1;
+    private int _attackCombo = 1;
     private float powerTimer;
     private int powerUp = 0;
 
@@ -49,6 +49,7 @@ public class PlayerStateMachine : MonoBehaviour
     private PlayerStateFactory _states;
 
     // Getters and Setters
+    /// <value> Reference to BaseState Script. </value>
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public Animator Animator { get { return _animator; } set { _animator = value; } }
     /// <value> Float for movement in X axis. </value>
@@ -60,6 +61,9 @@ public class PlayerStateMachine : MonoBehaviour
     public float WalkSpeed { get { return _walkSpeed; } set { _walkSpeed = value; } }
     public float RotationSpeed { get { return _rotationSpeed; } }
     public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
+    public int Damage {  get { return _damage; } set { _damage = value; } }
+    public int Attack {  get { return _attack; } set { _attack = value; } }
+    public int AttackCombo { get { return _attackCombo; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -93,6 +97,7 @@ public class PlayerStateMachine : MonoBehaviour
     void Update()
     {
         Gravity();
+
         _currentState.UpdateState();
 
         // It is outside "WalkState" because glitches if its inside
@@ -114,4 +119,69 @@ public class PlayerStateMachine : MonoBehaviour
 
         _charController.Move(_moveVector * Time.deltaTime); // Apply our move Vector
     }
+
+    #region Attack Events
+    private void IsAttacking()
+    {
+        sword.enabled = true;
+    }
+
+    private void NotAttacking()
+    {
+        sword.enabled = false;
+    }
+
+    private void ComboStart()
+    {
+        _trailSword.SetActive(true);
+        _attackCombo = 2;
+    }
+    private void Combo2()
+    {
+        _trailSword.SetActive(true);
+        _attackCombo = 3;
+    }
+
+    private void ComboEnd()
+    {
+        _attackCombo = 1;
+        _animator.SetInteger("AttackCombo", 0);
+        _trailSword.SetActive(false);
+    }
+    #endregion
+
+    #region Audio Events
+    private void Step_Sound()
+    {
+        AudioClip clip = StepClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Attack_Sound()
+    {
+        AudioClip clip = AttackClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private void Death_Sound()
+    {
+        AudioClip clip = DeathClip();
+        audioSource.PlayOneShot(clip);
+    }
+
+    private AudioClip StepClip()
+    {
+        return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
+    }
+
+    private AudioClip AttackClip()
+    {
+        return attackClips[UnityEngine.Random.Range(0, attackClips.Length)];
+    }
+
+    private AudioClip DeathClip()
+    {
+        return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
+    }
+    #endregion
 }

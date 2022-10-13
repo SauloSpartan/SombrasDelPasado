@@ -11,12 +11,16 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void EnterState()
     {
+        Debug.Log("Hello from Attack");
 
+        _ctx.Animator.SetInteger("AttackCombo", 1);
+        _ctx.Damage = 20 * _ctx.Attack;
     }
 
     public override void UpdateState()
     {
-
+        Attack();
+        CheckSwitchState();
     }
 
     public override void ExitState()
@@ -27,5 +31,27 @@ public class PlayerAttackState : PlayerBaseState
     public override void CheckSwitchState()
     {
 
+    }
+
+    /// <summary>
+    /// Function that controls the attack and combos.
+    /// </summary>
+    private void Attack()
+    {
+        if (_ctx.AttackCombo == 1 && Input.GetKeyDown(KeyCode.J))
+        {
+            _ctx.Animator.SetInteger("AttackCombo", 1);
+            _ctx.Damage = 20 * _ctx.Attack;
+        }
+        if (_ctx.AttackCombo == 2 && Input.GetKeyDown(KeyCode.J))
+        {
+            _ctx.Animator.SetInteger("AttackCombo", 2);
+            _ctx.Damage = 30 * _ctx.Attack;
+        }
+        if (_ctx.AttackCombo == 3 && Input.GetKeyDown(KeyCode.J))
+        {
+            _ctx.Animator.SetInteger("AttackCombo", 3);
+            _ctx.Damage = 50 * _ctx.Attack;
+        }
     }
 }

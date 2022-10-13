@@ -37,5 +37,9 @@ public class PlayerIdleState : PlayerBaseState
         {
             SwitchState(_factory.Walk());
         }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            SwitchState(_factory.Attack());
+        }
     }
 }
