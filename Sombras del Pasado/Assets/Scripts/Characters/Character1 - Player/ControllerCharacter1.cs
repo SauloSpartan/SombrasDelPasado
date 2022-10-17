@@ -219,6 +219,11 @@ public class ControllerCharacter1 : MonoBehaviour
         attackCombo = 3;
     }
 
+    private void Combo3()
+    {
+        trailSword.SetActive(true);
+    }
+
     private void ComboEnd()
     {
         attackCombo = 1;

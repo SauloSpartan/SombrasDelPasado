@@ -25,7 +25,7 @@ public class PlayerWalkState : PlayerBaseState
 
     public override void ExitState()
     {
-
+        _ctx.MoveDirection = Vector3.zero;
     }
 
     public override void CheckSwitchState()

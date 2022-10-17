@@ -30,6 +30,7 @@ public class PlayerStateMachine : MonoBehaviour
     private int _attackCombo = 1;
     private float powerTimer;
     private int powerUp = 0;
+    private bool _canMove = true;
 
     // References variables
     private CharacterController _charController;
@@ -61,9 +62,10 @@ public class PlayerStateMachine : MonoBehaviour
     public float WalkSpeed { get { return _walkSpeed; } set { _walkSpeed = value; } }
     public float RotationSpeed { get { return _rotationSpeed; } }
     public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
-    public int Damage {  get { return _damage; } set { _damage = value; } }
-    public int Attack {  get { return _attack; } set { _attack = value; } }
+    public int Damage { get { return _damage; } set { _damage = value; } }
+    public int Attack { get { return _attack; } set { _attack = value; } }
     public int AttackCombo { get { return _attackCombo; } }
+    public bool CanMove { get { return _canMove; } set { _canMove = value; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -135,18 +137,27 @@ public class PlayerStateMachine : MonoBehaviour
     {
         _trailSword.SetActive(true);
         _attackCombo = 2;
+        _canMove = false;
     }
     private void Combo2()
     {
         _trailSword.SetActive(true);
         _attackCombo = 3;
+        _canMove = false;
+    }
+
+    private void Combo3()
+    {
+        _trailSword.SetActive(true);
+        _canMove = false;
     }
 
     private void ComboEnd()
     {
+        _trailSword.SetActive(false);
         _attackCombo = 1;
         _animator.SetInteger("AttackCombo", 0);
-        _trailSword.SetActive(false);
+        _canMove = true;
     }
     #endregion
 

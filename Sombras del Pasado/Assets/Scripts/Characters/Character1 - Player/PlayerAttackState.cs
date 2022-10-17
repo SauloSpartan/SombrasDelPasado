@@ -30,7 +30,10 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void CheckSwitchState()
     {
-
+        if (_ctx.CanMove == true)
+        {
+            SwitchState(_factory.Idle());
+        }
     }
 
     /// <summary>
