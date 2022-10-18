@@ -41,5 +41,9 @@ public class PlayerIdleState : PlayerBaseState
         {
             SwitchState(_factory.Attack());
         }
+        if (_ctx.Health <= 0)
+        {
+            SwitchState(_factory.Death());
+        }
     }
 }

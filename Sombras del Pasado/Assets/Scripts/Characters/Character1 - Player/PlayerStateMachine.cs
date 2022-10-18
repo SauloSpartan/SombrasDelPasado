@@ -21,7 +21,7 @@ public class PlayerStateMachine : MonoBehaviour
     private Animator _animator;
 
     // Health and Damage variables
-    [SerializeField] private float health = 100f;
+    [SerializeField] private float _health = 100f;
     [SerializeField] private int _damage;
     [SerializeField] private int defense = 1;
     private int _attack = 1;
@@ -66,6 +66,7 @@ public class PlayerStateMachine : MonoBehaviour
     public int Attack { get { return _attack; } set { _attack = value; } }
     public int AttackCombo { get { return _attackCombo; } }
     public bool CanMove { get { return _canMove; } set { _canMove = value; } }
+    public float Health { get { return _health; } }
 
     // Awake is called earlier than Start
     void Awake()

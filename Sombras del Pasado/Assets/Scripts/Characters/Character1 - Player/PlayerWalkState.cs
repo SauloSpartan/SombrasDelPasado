@@ -38,6 +38,10 @@ public class PlayerWalkState : PlayerBaseState
         {
             SwitchState(_factory.Attack());
         }
+        if (_ctx.Health <= 0)
+        {
+            SwitchState(_factory.Death());
+        }
     }
 
     /// <summary>

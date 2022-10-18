@@ -34,6 +34,10 @@ public class PlayerAttackState : PlayerBaseState
         {
             SwitchState(_factory.Idle());
         }
+        if (_ctx.Health <= 0)
+        {
+            SwitchState(_factory.Death());
+        }
     }
 
     /// <summary>
