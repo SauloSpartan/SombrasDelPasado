@@ -140,6 +140,7 @@ public class PlayerStateMachine : MonoBehaviour
         _attackCombo = 2;
         _canMove = false;
     }
+
     private void Combo2()
     {
         _trailSword.SetActive(true);
