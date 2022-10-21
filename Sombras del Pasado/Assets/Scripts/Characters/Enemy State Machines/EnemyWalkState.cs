@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDeathState : PlayerBaseState
+public class EnemyWalkState : EnemyBaseState
 {
-    public PlayerDeathState(PlayerStateMachine currentContext, PlayerStateFactory playerStateFactor) : base(currentContext, playerStateFactor)
+    public EnemyWalkState(EnemyStateMachine currentContext, EnemyStateFactory enemyStateFactor) : base(currentContext, enemyStateFactor)
     {
 
     }
 
     public override void EnterState()
     {
-        _ctx.Animator.SetTrigger("Death");
+
     }
 
     public override void UpdateState()
