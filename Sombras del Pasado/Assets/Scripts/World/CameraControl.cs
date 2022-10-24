@@ -1,0 +1,53 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraControl : MonoBehaviour
+{
+    // Variable for offset
+    [SerializeField] private Vector3 _offset;
+    private Vector3 _initialOffset;
+
+    void Start()
+    {
+        _initialOffset = _offset;
+    }
+
+    void Update()
+    {
+        CameraFollow();
+    }
+
+    /// <summary>
+    /// Function that makes the camera follow the player.
+    /// </summary>
+    private void CameraFollow()
+    {
+        transform.position = GameObject.Find("Character1").transform.position + _offset;
+
+        // This is the distance between player and camera in X, Y and Z
+        Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        transform.position = playerPos;
+
+        // To change camera distance just write trasnform.position.? +/- c
+    }
+
+    public IEnumerator CameraShake(float duration, float magnitude)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float x_Position = Random.Range(-0.5f, 0.5f) * magnitude;
+            float y_Position = Random.Range(2.5f, 3.5f) * magnitude;
+
+            _offset = new Vector3(x_Position, y_Position, _offset.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        _offset = _initialOffset;
+    }
+}

@@ -9,20 +9,20 @@ public class Explosion : MonoBehaviour
     public Animator Explode;
     public AudioSource Sound;
 
-    //Variable del collider que origina la explosion
+    // Variable del collider que origina la explosion
     public CapsuleCollider Trigger;
 
-    //Variables para el collider y renderer del barril
+    // Variables para el collider y renderer del barril
     public MeshRenderer Visual;
     public MeshCollider Collider;
 
-    CameraFollow cameraShake;
+    CameraControl cameraShake;
     // Start is called before the first frame update
     void Start()
     {
         Particle = GetComponent<ParticleSystem>();
 
-        cameraShake = FindObjectOfType<CameraFollow>();
+        cameraShake = FindObjectOfType<CameraControl>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -31,7 +31,7 @@ public class Explosion : MonoBehaviour
             || other.gameObject.tag == "Enemy2 Sword" || other.gameObject.tag == "Enemy3 Dagger"
             || other.gameObject.tag == "Enemy4 Sword")
         {
-            StartCoroutine(cameraShake.CameraShake());
+            StartCoroutine(cameraShake.CameraShake(0.5f, 1f));
             Trigger.enabled = false;
             Explode.enabled = true;
             Sound.enabled = true;

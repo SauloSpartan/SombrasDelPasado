@@ -32,7 +32,7 @@ public class PlayerStateMachine : MonoBehaviour
     private int powerUp = 0;
     private bool _canMove = true;
 
-    // References variables
+    // Reference variables
     private CharacterController _charController;
     private BoxCollider sword;
     private GameObject powerDefense;
@@ -40,10 +40,10 @@ public class PlayerStateMachine : MonoBehaviour
     private GameObject powerVelocity;
 
     // Audio variables
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip[] stepClips;
-    [SerializeField] private AudioClip[] attackClips;
-    [SerializeField] private AudioClip[] deathClips;
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _stepClips;
+    [SerializeField] private AudioClip[] _attackClips;
+    [SerializeField] private AudioClip[] _deathClips;
 
     // State variables
     private PlayerBaseState _currentState;
@@ -78,7 +78,7 @@ public class PlayerStateMachine : MonoBehaviour
         // Getting the references
         _charController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
 
         sword = GameObject.Find("Espada Allard").GetComponent<BoxCollider>();
 
@@ -167,34 +167,34 @@ public class PlayerStateMachine : MonoBehaviour
     private void Step_Sound()
     {
         AudioClip clip = StepClip();
-        audioSource.PlayOneShot(clip);
+        _audioSource.PlayOneShot(clip);
     }
 
     private void Attack_Sound()
     {
         AudioClip clip = AttackClip();
-        audioSource.PlayOneShot(clip);
+        _audioSource.PlayOneShot(clip);
     }
 
     private void Death_Sound()
     {
         AudioClip clip = DeathClip();
-        audioSource.PlayOneShot(clip);
+        _audioSource.PlayOneShot(clip);
     }
 
     private AudioClip StepClip()
     {
-        return stepClips[UnityEngine.Random.Range(0, stepClips.Length)];
+        return _stepClips[UnityEngine.Random.Range(0, _stepClips.Length)];
     }
 
     private AudioClip AttackClip()
     {
-        return attackClips[UnityEngine.Random.Range(0, attackClips.Length)];
+        return _attackClips[UnityEngine.Random.Range(0, _attackClips.Length)];
     }
 
     private AudioClip DeathClip()
     {
-        return deathClips[UnityEngine.Random.Range(0, deathClips.Length)];
+        return _deathClips[UnityEngine.Random.Range(0, _deathClips.Length)];
     }
     #endregion
 }
