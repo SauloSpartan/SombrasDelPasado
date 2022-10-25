@@ -2135,7 +2135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 434004361780066276, guid: 58e81815c11ed4246962829d67b77517, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 434004361780066278, guid: 58e81815c11ed4246962829d67b77517, type: 3}
       propertyPath: m_RootOrder
@@ -11268,16 +11268,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c293d3f057fb183418521fb8f62c8d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailSword: {fileID: 7623864793817639027}
+  _stopRadius: 3
   health: 100
   damage: 20
-  attackRadius: 5
   attackDistance: 0
+  attackRadius: 1.5
   powerUps: []
   healthBar: {fileID: 4633822546896687467}
   interfaceEnemy: {fileID: 4811602829549818755}
   enemyThrust: 20
   knockTimer: 20
+  trailSword: {fileID: 7623864793817639027}
   enemyColor: {fileID: 0}
   _stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
@@ -20493,7 +20494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3671157272664202565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.07, y: 0, z: 3.257104}
+  m_LocalPosition: {x: 23.68, y: 0, z: 2.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5658017031972143686}
@@ -26925,7 +26926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c9a407fefeee94a80f21e3ffc83062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offset: {x: 0, y: 0, z: 0}
+  _offset: {x: 0, y: 3, z: -4}
 --- !u!114 &8717023725029325079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29212,7 +29213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8717023726206220103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.63, y: -0.00000047683716, z: -0.88691187}
+  m_LocalPosition: {x: 19.15, y: -0.00000047683716, z: -0.88691187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8717023726026236295}
@@ -29252,7 +29253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!137 &8717023726210327020
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
