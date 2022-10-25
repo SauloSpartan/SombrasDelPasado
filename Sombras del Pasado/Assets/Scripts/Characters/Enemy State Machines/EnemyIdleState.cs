@@ -49,7 +49,7 @@ public class EnemyIdleState : EnemyBaseState
             _ctx.FollowTarget = false;
             _ctx.Animator.SetFloat("Speed", 0f);
             _ctx.NavMesh.isStopped = true;
-            yield return new WaitForSecondsRealtime(2f);
+            yield return new WaitForSecondsRealtime(1f);
 
             SwitchState(_factory.Idle());
         }

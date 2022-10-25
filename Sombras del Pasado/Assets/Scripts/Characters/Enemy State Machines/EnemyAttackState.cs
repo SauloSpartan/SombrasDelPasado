@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = true;
-        _ctx.GeneralCooldown = 0f;
+        _ctx.GeneralCooldown = 0.5f;
     }
 
     public override void UpdateState()
@@ -37,6 +37,9 @@ public class EnemyAttackState : EnemyBaseState
         }
     }
 
+    /// <summary>
+    /// Function that controls attack animation and cooldown.
+    /// </summary>
     private void AttackPlayer()
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
