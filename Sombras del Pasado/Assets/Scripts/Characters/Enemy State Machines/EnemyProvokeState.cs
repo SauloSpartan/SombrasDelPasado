@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWalkState : EnemyBaseState
+public class EnemyProvokeState : EnemyBaseState
 {
-    public EnemyWalkState(EnemyStateMachine currentContext, EnemyStateFactory enemyStateFactor) : base(currentContext, enemyStateFactor)
+    public EnemyProvokeState(EnemyStateMachine currentContext, EnemyStateFactory enemyStateFactor) : base(currentContext, enemyStateFactor)
     {
 
     }
@@ -17,9 +17,8 @@ public class EnemyWalkState : EnemyBaseState
 
     public override void UpdateState()
     {
-        FollowPlayer();
+        AroundPlayer();
         FacePlayer();
-        CheckSwitchState();
     }
 
     public override void ExitState()
@@ -29,20 +28,14 @@ public class EnemyWalkState : EnemyBaseState
 
     public override void CheckSwitchState()
     {
-        float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance <= _ctx.StopRadius && _ctx.FollowTarget == false)
-        {
-            SwitchState(_factory.Idle());
-        }
     }
 
-    /// <summary>
-    /// Function that controls following the player.
-    /// </summary>
-    private void FollowPlayer()
+    private void AroundPlayer()
     {
-        _ctx.NavMesh.SetDestination(_ctx.Target.position);
+        Vector3 offsetPlayer = _ctx.Target.transform.position - _ctx.NavMesh.transform.position;
+        Vector3 rotateDirection = Vector3.Cross(offsetPlayer, Vector3.up);
+        _ctx.NavMesh.SetDestination(_ctx.NavMesh.transform.position + rotateDirection);
     }
 
     /// <summary>

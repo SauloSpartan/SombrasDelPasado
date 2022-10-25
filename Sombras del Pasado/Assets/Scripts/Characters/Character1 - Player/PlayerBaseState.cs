@@ -22,6 +22,10 @@ public abstract class PlayerBaseState
 
     public abstract void CheckSwitchState();
 
+    /// <summary>
+    /// It switches the state you are currently on, the format is "SwitchState(_factory.State());".
+    /// </summary>
+    /// <param name="newState"> It receives a BaseState reference that is _factory.</param>
     protected private void SwitchState(PlayerBaseState newState)
     {
         ExitState();

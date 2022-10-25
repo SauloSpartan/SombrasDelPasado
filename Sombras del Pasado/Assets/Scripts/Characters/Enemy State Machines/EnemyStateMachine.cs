@@ -10,19 +10,15 @@ public class EnemyStateMachine : MonoBehaviour
     // Navigation variables
     private NavMeshAgent _navMesh;
     private Transform _target;
-    private bool _followTarget = true;
-
-    // Animation variables
-    private float velocity = 0.0f;
-    private float acceleration = 5.0f;
-    [SerializeField] private GameObject trailSword;
+    private bool _followTarget = false;
+    [SerializeField] float _stopRadius;
 
     // Health and Damage variables
     [SerializeField] private float health;
     public float damage;
-    [SerializeField] private float attackRadius;
     [HideInInspector] public float attackDistance;
     private float attackCoooldown = 0.0f;
+    [SerializeField] private float attackRadius;
 
     // Power Ups variables
     [SerializeField] private GameObject[] powerUps;
@@ -43,8 +39,13 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private float knockTimer;
     private Rigidbody rigidbodyEnemy;
 
+    // Animation variables
+    private float velocity = 0.0f;
+    private float acceleration = 5.0f;
+    private Animator _animator;
+    [SerializeField] private GameObject trailSword;
+
     // Reference variables
-    private Animator anim;
     private BoxCollider sword;
     private CapsuleCollider enemyCollider;
     [SerializeField] private Material enemyColor;
@@ -65,14 +66,17 @@ public class EnemyStateMachine : MonoBehaviour
     // Getters and Setters
     /// <value> Reference to BaseState Script. </value>
     public EnemyBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
+    public Animator Animator { get { return _animator; } }
     public NavMeshAgent NavMesh { get { return _navMesh; } set { _navMesh = value; } }
     public Transform Target { get { return _target; } }
+    public bool FollowTarget { get { return _followTarget; } set { _followTarget = value; } }
+    public float StopRadius { get { return _stopRadius; } }
 
     // Awake is called earlier than Start
     void Awake()
     {
         _navMesh = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
         enemyCollider = GetComponent<CapsuleCollider>();
         rigidbodyEnemy = GetComponent<Rigidbody>();
@@ -162,4 +166,14 @@ public class EnemyStateMachine : MonoBehaviour
         return _deathClips[UnityEngine.Random.Range(0, _deathClips.Length)];
     }
     #endregion
+
+    // Gizmos are like the colliders, they can not be seen, but they interact with something
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, _stopRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
+    }
 }

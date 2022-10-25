@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls the camera tracking the player and other effects
 public class CameraControl : MonoBehaviour
 {
     // Variable for offset
@@ -29,9 +30,15 @@ public class CameraControl : MonoBehaviour
         Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         transform.position = playerPos;
 
-        // To change camera distance just write trasnform.position.? +/- c
+        // To change camera distance just write trasnform.position.? +/- number
     }
 
+    /// <summary>
+    /// Coroutine that makes the camera shake, it receives two floats, one for duration and one for magnitude.
+    /// </summary>
+    /// <param name="duration"> Controls how long shake last.</param>
+    /// <param name="magnitude"> Controls how strong shake is.</param>
+    /// <returns></returns>
     public IEnumerator CameraShake(float duration, float magnitude)
     {
         float elapsed = 0f;
