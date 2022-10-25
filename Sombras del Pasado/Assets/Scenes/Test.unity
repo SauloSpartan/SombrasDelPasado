@@ -1347,6 +1347,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961963590}
   m_CullTransparentMesh: 1
+--- !u!1 &990053958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990053959}
+  m_Layer: 0
+  m_Name: Escape Position
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990053959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990053958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5658017031972143686}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1000932506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1682,7 +1712,7 @@ Transform:
   m_GameObject: {fileID: 1139597193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.3, y: 1, z: 1}
+  m_LocalScale: {x: 5.3, y: 1, z: 1.8341}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -11268,17 +11298,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c293d3f057fb183418521fb8f62c8d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stopRadius: 3
+  _stopRadius: 3.5
+  _escapeRadius: 5
+  _escapePosition: {fileID: 990053959}
+  _attackRadius: 1.5
   health: 100
   damage: 20
-  attackDistance: 0
-  attackRadius: 1.5
   powerUps: []
   healthBar: {fileID: 4633822546896687467}
   interfaceEnemy: {fileID: 4811602829549818755}
   enemyThrust: 20
   knockTimer: 20
-  trailSword: {fileID: 7623864793817639027}
+  _trailSword: {fileID: 7623864793817639027}
   enemyColor: {fileID: 0}
   _stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
@@ -11782,6 +11813,7 @@ Transform:
   - {fileID: 4048957081570442833}
   - {fileID: 3051697085943916365}
   - {fileID: 6794769473896657335}
+  - {fileID: 990053959}
   m_Father: {fileID: 7841082686202720183}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

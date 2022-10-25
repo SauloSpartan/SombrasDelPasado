@@ -27,6 +27,11 @@ public class EnemyStateFactory
         return new EnemyProvokeState(_context, this);
     }
 
+    public EnemyBaseState Escape()
+    {
+        return new EnemyEscapeState(_context, this);
+    }
+
     public EnemyBaseState Attack()
     {
         return new EnemyAttackState(_context, this);

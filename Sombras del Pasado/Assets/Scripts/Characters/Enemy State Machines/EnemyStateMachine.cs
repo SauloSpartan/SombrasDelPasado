@@ -12,13 +12,15 @@ public class EnemyStateMachine : MonoBehaviour
     private Transform _target;
     private bool _followTarget = false;
     [SerializeField] float _stopRadius;
+    private int _randomDesition;
+    [SerializeField] float _escapeRadius;
+    [SerializeField] private Transform _escapePosition;
 
     // Health and Damage variables
+    [SerializeField] private float _attackRadius;
     [SerializeField] private float health;
     public float damage;
-    [HideInInspector] public float attackDistance;
-    private float attackCoooldown = 0.0f;
-    [SerializeField] private float attackRadius;
+    private float _generalCooldown;
 
     // Power Ups variables
     [SerializeField] private GameObject[] powerUps;
@@ -43,10 +45,10 @@ public class EnemyStateMachine : MonoBehaviour
     private float velocity = 0.0f;
     private float acceleration = 5.0f;
     private Animator _animator;
-    [SerializeField] private GameObject trailSword;
+    [SerializeField] private GameObject _trailSword;
 
     // Reference variables
-    private BoxCollider sword;
+    private BoxCollider _sword;
     private CapsuleCollider enemyCollider;
     [SerializeField] private Material enemyColor;
     private Color easyColor;
@@ -66,11 +68,17 @@ public class EnemyStateMachine : MonoBehaviour
     // Getters and Setters
     /// <value> Reference to BaseState Script. </value>
     public EnemyBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
-    public Animator Animator { get { return _animator; } }
     public NavMeshAgent NavMesh { get { return _navMesh; } set { _navMesh = value; } }
     public Transform Target { get { return _target; } }
     public bool FollowTarget { get { return _followTarget; } set { _followTarget = value; } }
     public float StopRadius { get { return _stopRadius; } }
+    public int RandomDesition { get { return _randomDesition; } set { _randomDesition = value; } }
+    public float EscapeRadius { get { return _escapeRadius; } }
+    public Transform EscapePosition { get { return _escapePosition; } }
+    public float AttackRadius { get { return _attackRadius; } }
+    public float GeneralCooldown { get { return _generalCooldown; } set { _generalCooldown = value; } }
+    public Animator Animator { get { return _animator; } }
+    public GameObject TrailSword { get { return _trailSword; } set { _trailSword = value; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -81,11 +89,11 @@ public class EnemyStateMachine : MonoBehaviour
         enemyCollider = GetComponent<CapsuleCollider>();
         rigidbodyEnemy = GetComponent<Rigidbody>();
 
-        sword = GetComponentInChildren<BoxCollider>();
+        _sword = GetComponentInChildren<BoxCollider>();
 
         maxHealth = health;
         interfaceEnemy.SetActive(false);
-        trailSword.SetActive(false);
+        _trailSword.SetActive(false);
 
         Difficulty();
     }
@@ -132,6 +140,18 @@ public class EnemyStateMachine : MonoBehaviour
         }
     }
 
+    #region Attack Events
+    private void IsAttacking()
+    {
+        _sword.enabled = true;
+    }
+
+    private void NotAttacking()
+    {
+        _sword.enabled = false;
+    }
+    #endregion
+
     #region Audio Events
     private void Step_Sound()
     {
@@ -173,7 +193,10 @@ public class EnemyStateMachine : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, _stopRadius);
 
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, _escapeRadius);
+
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        Gizmos.DrawWireSphere(transform.position, _attackRadius);
     }
 }

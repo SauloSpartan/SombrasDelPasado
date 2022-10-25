@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttackState : EnemyBaseState
+public class EnemyEscapeState : EnemyBaseState
 {
-    public EnemyAttackState(EnemyStateMachine currentContext, EnemyStateFactory enemyStateFactor) : base(currentContext, enemyStateFactor)
+    public EnemyEscapeState(EnemyStateMachine currentContext, EnemyStateFactory enemyStateFactor) : base(currentContext, enemyStateFactor)
     {
 
     }
@@ -12,13 +12,13 @@ public class EnemyAttackState : EnemyBaseState
     public override void EnterState()
     {
         _ctx.Animator.SetFloat("Speed", 1f);
-        _ctx.NavMesh.isStopped = true;
-        _ctx.GeneralCooldown = 0f;
+        _ctx.NavMesh.isStopped = false;
     }
 
     public override void UpdateState()
     {
-        AttackPlayer();
+        SpacingPlayer();
+        FacePlayer();
         CheckSwitchState();
     }
 
@@ -31,32 +31,22 @@ public class EnemyAttackState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance > _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.0f)
+        if (distance >= _ctx.EscapeRadius)
         {
             SwitchState(_factory.Walk());
         }
+        if (distance <= _ctx.AttackRadius)
+        {
+            SwitchState(_factory.Attack());
+        }
     }
 
-    private void AttackPlayer()
+    /// <summary>
+    /// Function that makes the enemy get away from player.
+    /// </summary>
+    private void SpacingPlayer()
     {
-        float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
-
-        if (distance <= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.0f)
-        {
-            _ctx.TrailSword.SetActive(true);
-            _ctx.Animator.SetTrigger("Attack1");
-            _ctx.GeneralCooldown = 2.0f;
-        }
-        else if (_ctx.GeneralCooldown > 0.0f)
-        {
-            _ctx.GeneralCooldown -= Time.deltaTime;
-        }
-
-        if (_ctx.GeneralCooldown <= 0.4f)
-        {
-            _ctx.TrailSword.SetActive(false);
-            FacePlayer();
-        }
+        _ctx.NavMesh.SetDestination(_ctx.EscapePosition.position);
     }
 
     /// <summary>

@@ -11,8 +11,6 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void EnterState()
     {
-        Debug.Log("Hello from Attack");
-
         _ctx.Animator.SetInteger("AttackCombo", 1);
         _ctx.Damage = 20 * _ctx.Attack;
     }

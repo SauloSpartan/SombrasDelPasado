@@ -12,8 +12,6 @@ public class PlayerWalkState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.Animator.SetFloat("Speed", 1);
-
-        Debug.Log("Hello from Walk");
     }
 
     public override void UpdateState()

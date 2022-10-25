@@ -12,8 +12,6 @@ public class PlayerIdleState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.Animator.SetFloat("Speed", 0);
-
-        Debug.Log("Hello from Idle");
     }
 
     public override void UpdateState()
@@ -23,7 +21,7 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void ExitState()
     {
-        Debug.Log("Goodbye from Idle");
+
     }
 
     public override void CheckSwitchState()
