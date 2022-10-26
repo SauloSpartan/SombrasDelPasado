@@ -19,7 +19,9 @@ public class EnemyStateMachine : MonoBehaviour
     // Health and Damage variables
     [SerializeField] private float _attackRadius;
     [SerializeField] private float _health;
+    private float _baseHealth;
     [SerializeField] private float _damage;
+    private float _baseDamage;
     private float _generalCooldown;
 
     // Power Ups variables
@@ -35,11 +37,6 @@ public class EnemyStateMachine : MonoBehaviour
     private float lerpSpeed;
     [SerializeField] private GameObject interfaceEnemy;
     private float healthTimer;
-
-    // Knockback variables
-    [SerializeField] private float enemyThrust;
-    [SerializeField] private float knockTimer;
-    private Rigidbody rigidbodyEnemy;
 
     // Animation variables
     private float velocity = 0.0f;
@@ -92,7 +89,6 @@ public class EnemyStateMachine : MonoBehaviour
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
         _enemyCollider = GetComponent<CapsuleCollider>();
-        rigidbodyEnemy = GetComponent<Rigidbody>();
 
         _sword = GetComponentInChildren<BoxCollider>();
 
@@ -102,6 +98,7 @@ public class EnemyStateMachine : MonoBehaviour
 
         _player = FindObjectOfType<PlayerStateMachine>();
 
+        EnemyVariables();
         Difficulty();
     }
 
@@ -131,26 +128,56 @@ public class EnemyStateMachine : MonoBehaviour
         Destroy(gameObject, 4.5f);
     }
 
+    /// <summary>
+    /// Function that manages the base variables enemies use depending on tag.
+    /// </summary>
+    private void EnemyVariables()
+    {
+        if (gameObject.tag == "Enemy Basic")
+        {
+            _baseHealth = 100;
+            _baseDamage = 4;
+        }
+        if (gameObject.tag == "Enemy Heavy")
+        {
+            _baseHealth = 200;
+            _baseDamage = 10;
+        }
+        if (gameObject.tag == "Enemy Fast")
+        {
+            _baseHealth = 80;
+            _baseDamage = 2;
+        }
+        if (gameObject.tag == "Enemy Boss")
+        {
+            _baseHealth = 300;
+            _baseDamage = 20;
+        }
+    }
+
+    /// <summary>
+    /// Function that manages the variables used depending on the difficulty.
+    /// </summary>
     private void Difficulty()
     {
-        if (MainMenu.difficulty == 1)
+        if (MainMenu.Difficulty == 1)
         {
-            _health = 50;
-            _damage = 2;
+            _health = _baseHealth / 2;
+            _damage = _baseDamage / 2;
             ColorUtility.TryParseHtmlString("#1C7D68", out _easyColor);
             _enemyColor.color = _easyColor;
         }
-        else if (MainMenu.difficulty == 2)
+        else if (MainMenu.Difficulty == 2)
         {
-            _health = 100;
-            _damage = 4;
+            _health = _baseHealth;
+            _damage = _baseDamage;
             ColorUtility.TryParseHtmlString("#1C3E7D", out _mediumColor);
             _enemyColor.color = _mediumColor;
         }
-        else if (MainMenu.difficulty == 3)
+        else if (MainMenu.Difficulty == 3)
         {
-            _health = 150;
-            _damage = 6;
+            _health = _baseHealth + (_baseHealth / 2);
+            _damage = _baseDamage + (_baseDamage / 2);
             ColorUtility.TryParseHtmlString("#731C7D", out _hardColor);
             _enemyColor.color = _hardColor;
         }

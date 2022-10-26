@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player Sword
-  - Enemy1 Sword
   - Post-Processing
   - Barrel
   - Spikes
+  - Enemy1 Sword
   - Enemy2 Sword
   - Enemy3 Dagger
   - Enemy4 Sword
@@ -16,6 +16,10 @@ TagManager:
   - PowerUp Attack
   - PowerUp Velocity
   - Enemy
+  - Enemy Basic
+  - Enemy Heavy
+  - Enemy Fast
+  - Enemy Boss
   layers:
   - Default
   - TransparentFX

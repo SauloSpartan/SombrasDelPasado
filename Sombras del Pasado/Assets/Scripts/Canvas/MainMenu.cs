@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     public int buildIndex;
     public AudioMixer audioMixer;
-    public static int difficulty;
+    public static int Difficulty;
 
     [SerializeField] private Slider sliderGlobalVolume;
     [SerializeField] private Slider sliderMusicVolume;
@@ -68,21 +68,21 @@ public class MainMenu : MonoBehaviour
 
     public void EasyMode()
     {
-        difficulty = 1;
+        Difficulty = 1;
         SceneManager.LoadScene(buildIndex + 1);
         Score.score = 0;
     }
 
     public void MediumMode()
     {
-        difficulty = 2;
+        Difficulty = 2;
         SceneManager.LoadScene(buildIndex + 1);
         Score.score = 0;
     }
 
     public void HardMode()
     {
-        difficulty = 3;
+        Difficulty = 3;
         SceneManager.LoadScene(buildIndex + 1);
         Score.score = 0;
     }

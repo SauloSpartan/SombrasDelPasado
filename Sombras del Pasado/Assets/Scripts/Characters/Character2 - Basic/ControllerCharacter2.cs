@@ -274,21 +274,21 @@ public class ControllerCharacter2 : MonoBehaviour
 
     private void Difficulty()
     {
-        if (MainMenu.difficulty == 1)
+        if (MainMenu.Difficulty == 1)
         {
             health = 50;
             damage = 2;
             ColorUtility.TryParseHtmlString("#1C7D68", out easyColor);
             enemyColor.color = easyColor;
         }
-        else if (MainMenu.difficulty == 2)
+        else if (MainMenu.Difficulty == 2)
         {
             health = 100;
             damage = 4;
             ColorUtility.TryParseHtmlString("#1C3E7D", out mediumColor);
             enemyColor.color = mediumColor;
         }
-        else if (MainMenu.difficulty == 3)
+        else if (MainMenu.Difficulty == 3)
         {
             health = 150;
             damage = 6;
