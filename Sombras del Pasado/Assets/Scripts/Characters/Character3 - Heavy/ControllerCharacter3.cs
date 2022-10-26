@@ -67,8 +67,13 @@ public class ControllerCharacter3 : MonoBehaviour
     {
         Player = FindObjectOfType<ControllerCharacter1>();
         Explosion = FindObjectOfType<DMG_Barrel>();
+
+        // Level Clear
         InstancedEnemie = FindObjectOfType<LevelClear>();
-        InstancedEnemie.TotalEnemies++;
+        if (InstancedEnemie != null)
+        {
+            InstancedEnemie.TotalEnemies++;
+        }
 
         navEnemy = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
@@ -224,7 +229,10 @@ public class ControllerCharacter3 : MonoBehaviour
 
     private void OnDestroy()
     {
-        InstancedEnemie.DeadEnemies++;
+        if (InstancedEnemie != null)
+        {
+            InstancedEnemie.DeadEnemies++;
+        }
     }
 
     private void Idle()
