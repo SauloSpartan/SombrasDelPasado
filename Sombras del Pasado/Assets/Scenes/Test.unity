@@ -11281,7 +11281,7 @@ GameObject:
   - component: {fileID: 5030098776417573117}
   m_Layer: 0
   m_Name: Character2
-  m_TagString: Enemy
+  m_TagString: Enemy Basic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11307,9 +11307,10 @@ MonoBehaviour:
   powerUps: []
   healthBar: {fileID: 4633822546896687467}
   interfaceEnemy: {fileID: 4811602829549818755}
-  enemyThrust: 20
-  knockTimer: 20
-  _trailSword: {fileID: 7623864793817639027}
+  _swordOne: {fileID: 5264683767311129119}
+  _swordTwo: {fileID: 0}
+  _trailSwordOne: {fileID: 7623864793817639027}
+  _trailSwordTwo: {fileID: 0}
   _enemyColor: {fileID: 0}
   _stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
@@ -29095,7 +29096,6 @@ MonoBehaviour:
   _trailSword: {fileID: 2786360328489409464}
   _health: 100
   _damage: 0
-  _defense: 0
   _stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}

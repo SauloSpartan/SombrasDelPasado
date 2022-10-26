@@ -5679,7 +5679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4409033233895289622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.37460423, y: -2.08025, z: -0.75321853}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7365363903613397972}
@@ -5847,8 +5847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa33a78d8d61f6246b1de83c8dfb3bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navEnemy: {fileID: 3598764832624120910}
-  target: {fileID: 0}
   enemyColor: {fileID: 2100000, guid: aa1c331664af2c34fae60b5fbe4fbd53, type: 2}
   health: 200
   damage: 10

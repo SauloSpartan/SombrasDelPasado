@@ -50,7 +50,15 @@ public class EnemyAttackState : EnemyBaseState
 
         if (distance <= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.0f)
         {
-            _ctx.TrailSword.SetActive(true);
+            if (_ctx.TrailSwordOne != null)
+            {
+                _ctx.TrailSwordOne.SetActive(true);
+            }
+            if (_ctx.TrailSwordTwo != null) // Not all characters need a second trail
+            {
+                _ctx.TrailSwordTwo.SetActive(true);
+            }
+
             _ctx.Animator.SetTrigger("Attack1");
             _ctx.GeneralCooldown = 2.0f;
         }
@@ -61,7 +69,15 @@ public class EnemyAttackState : EnemyBaseState
 
         if (_ctx.GeneralCooldown <= 0.4f)
         {
-            _ctx.TrailSword.SetActive(false);
+            if (_ctx.TrailSwordOne != null)
+            {
+                _ctx.TrailSwordOne.SetActive(false);
+            }
+            if (_ctx.TrailSwordTwo != null)
+            {
+                _ctx.TrailSwordTwo.SetActive(false);
+            }
+
             FacePlayer();
         }
     }

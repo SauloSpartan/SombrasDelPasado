@@ -42,10 +42,12 @@ public class EnemyStateMachine : MonoBehaviour
     private float velocity = 0.0f;
     private float acceleration = 5.0f;
     private Animator _animator;
-    [SerializeField] private GameObject _trailSword;
 
     // Reference variables
-    private BoxCollider _sword;
+    [SerializeField] private BoxCollider _swordOne = null;
+    [SerializeField] private BoxCollider _swordTwo = null;
+    [SerializeField] private GameObject _trailSwordOne = null;
+    [SerializeField] private GameObject _trailSwordTwo = null;
     private CapsuleCollider _enemyCollider;
     [SerializeField] private Material _enemyColor;
     private Color _easyColor;
@@ -78,7 +80,8 @@ public class EnemyStateMachine : MonoBehaviour
     public float AttackRadius { get { return _attackRadius; } }
     public float GeneralCooldown { get { return _generalCooldown; } set { _generalCooldown = value; } }
     public Animator Animator { get { return _animator; } }
-    public GameObject TrailSword { get { return _trailSword; } set { _trailSword = value; } }
+    public GameObject TrailSwordOne { get { return _trailSwordOne; } set { _trailSwordOne = value; } }
+    public GameObject TrailSwordTwo { get { return _trailSwordTwo; } set { _trailSwordTwo = value; } }
     public float Health { get { return _health; } }
     public float Damage { get { return _damage; } }
 
@@ -90,11 +93,17 @@ public class EnemyStateMachine : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _enemyCollider = GetComponent<CapsuleCollider>();
 
-        _sword = GetComponentInChildren<BoxCollider>();
-
         maxHealth = _health;
         interfaceEnemy.SetActive(false);
-        _trailSword.SetActive(false);
+
+        if (_trailSwordOne != null) // It means that doesn't require and argument
+        {
+            _trailSwordOne.SetActive(false);
+        }
+        if (_trailSwordTwo != null)
+        {
+            _trailSwordTwo.SetActive(false);
+        }
 
         _player = FindObjectOfType<PlayerStateMachine>();
 
@@ -123,7 +132,7 @@ public class EnemyStateMachine : MonoBehaviour
     {
         _navMesh.isStopped = true;
         _animator.SetTrigger("Death");
-        _sword.enabled = false;
+        _swordOne.enabled = false;
         _enemyCollider.enabled = false;
         Destroy(gameObject, 4.5f);
     }
@@ -137,21 +146,25 @@ public class EnemyStateMachine : MonoBehaviour
         {
             _baseHealth = 100;
             _baseDamage = 4;
+            _attackRadius = 1.5f;
         }
         if (gameObject.tag == "Enemy Heavy")
         {
             _baseHealth = 200;
             _baseDamage = 10;
+            _attackRadius = 2f;
         }
         if (gameObject.tag == "Enemy Fast")
         {
             _baseHealth = 80;
             _baseDamage = 2;
+            _attackRadius = 1.2f;
         }
         if (gameObject.tag == "Enemy Boss")
         {
             _baseHealth = 300;
             _baseDamage = 20;
+            _attackRadius = 1.5f;
         }
     }
 
@@ -186,12 +199,26 @@ public class EnemyStateMachine : MonoBehaviour
     #region Attack Events
     private void IsAttacking()
     {
-        _sword.enabled = true;
+        if (_swordOne != null)
+        {
+            _swordOne.enabled = true;
+        }
+        if (_swordTwo != null)
+        {
+            _swordTwo.enabled = true;
+        }
     }
 
     private void NotAttacking()
     {
-        _sword.enabled = false;
+        if (_swordOne != null)
+        {
+            _swordOne.enabled = false;
+        }
+        if (_swordTwo != null)
+        {
+            _swordTwo.enabled = false;
+        }
     }
     #endregion
 
