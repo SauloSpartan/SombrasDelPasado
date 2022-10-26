@@ -11,7 +11,7 @@ public class EnemyDeathState : EnemyBaseState
 
     public override void EnterState()
     {
-
+        _ctx.Death();
     }
 
     public override void UpdateState()

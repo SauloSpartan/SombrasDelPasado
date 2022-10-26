@@ -23,7 +23,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Health and Damage variables
     [SerializeField] private float _health = 100f;
     [SerializeField] private int _damage;
-    [SerializeField] private int defense = 1;
+    private int _defense = 1;
     private int _attack = 1;
     private int luck;
     private int evasion = 0;
@@ -44,6 +44,9 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _attackClips;
     [SerializeField] private AudioClip[] _deathClips;
+
+    // Enemy variables
+    EnemyStateMachine _enemy;
 
     // State variables
     private PlayerBaseState _currentState;
@@ -87,6 +90,8 @@ public class PlayerStateMachine : MonoBehaviour
         powerDamage.SetActive(false);
         powerVelocity.SetActive(false);
         _trailSword.SetActive(false);
+
+        _enemy = FindObjectOfType<EnemyStateMachine>();
     }
 
     void Start()
@@ -197,4 +202,12 @@ public class PlayerStateMachine : MonoBehaviour
         return _deathClips[UnityEngine.Random.Range(0, _deathClips.Length)];
     }
     #endregion
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy1 Sword")
+        {
+            _health -= _enemy.Damage / _defense;
+        }  
+    }
 }

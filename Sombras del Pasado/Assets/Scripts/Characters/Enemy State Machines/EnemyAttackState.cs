@@ -35,6 +35,10 @@ public class EnemyAttackState : EnemyBaseState
         {
             SwitchState(_factory.Walk());
         }
+        if (_ctx.Health <= 0)
+        {
+            SwitchState(_factory.Death());
+        }
     }
 
     /// <summary>

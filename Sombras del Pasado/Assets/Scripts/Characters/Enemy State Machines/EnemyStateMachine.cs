@@ -18,8 +18,8 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Health and Damage variables
     [SerializeField] private float _attackRadius;
-    [SerializeField] private float health;
-    public float damage;
+    [SerializeField] private float _health;
+    [SerializeField] private float _damage;
     private float _generalCooldown;
 
     // Power Ups variables
@@ -49,17 +49,20 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Reference variables
     private BoxCollider _sword;
-    private CapsuleCollider enemyCollider;
-    [SerializeField] private Material enemyColor;
-    private Color easyColor;
-    private Color mediumColor;
-    private Color hardColor;
+    private CapsuleCollider _enemyCollider;
+    [SerializeField] private Material _enemyColor;
+    private Color _easyColor;
+    private Color _mediumColor;
+    private Color _hardColor;
 
     // Audio variables
     private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _attackClips;
     [SerializeField] private AudioClip[] _deathClips;
+
+    // Player variables
+    PlayerStateMachine _player;
 
     // State variables
     private EnemyBaseState _currentState;
@@ -79,6 +82,8 @@ public class EnemyStateMachine : MonoBehaviour
     public float GeneralCooldown { get { return _generalCooldown; } set { _generalCooldown = value; } }
     public Animator Animator { get { return _animator; } }
     public GameObject TrailSword { get { return _trailSword; } set { _trailSword = value; } }
+    public float Health { get { return _health; } }
+    public float Damage { get { return _damage; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -86,14 +91,16 @@ public class EnemyStateMachine : MonoBehaviour
         _navMesh = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
-        enemyCollider = GetComponent<CapsuleCollider>();
+        _enemyCollider = GetComponent<CapsuleCollider>();
         rigidbodyEnemy = GetComponent<Rigidbody>();
 
         _sword = GetComponentInChildren<BoxCollider>();
 
-        maxHealth = health;
+        maxHealth = _health;
         interfaceEnemy.SetActive(false);
         _trailSword.SetActive(false);
+
+        _player = FindObjectOfType<PlayerStateMachine>();
 
         Difficulty();
     }
@@ -101,7 +108,7 @@ public class EnemyStateMachine : MonoBehaviour
     void Start()
     {
         // Setup state
-        _states = new EnemyStateFactory(this); // "(this)" is a PlayerStateMachine instance
+        _states = new EnemyStateFactory(this); // "(this)" is a EnemyStateMachine instance
         _currentState = _states.Walk();
         _currentState.EnterState();
 
@@ -115,28 +122,37 @@ public class EnemyStateMachine : MonoBehaviour
         _currentState.UpdateState();
     }
 
+    public void Death()
+    {
+        _navMesh.isStopped = true;
+        _animator.SetTrigger("Death");
+        _sword.enabled = false;
+        _enemyCollider.enabled = false;
+        Destroy(gameObject, 4.5f);
+    }
+
     private void Difficulty()
     {
         if (MainMenu.difficulty == 1)
         {
-            health = 50;
-            damage = 2;
-            ColorUtility.TryParseHtmlString("#1C7D68", out easyColor);
-            enemyColor.color = easyColor;
+            _health = 50;
+            _damage = 2;
+            ColorUtility.TryParseHtmlString("#1C7D68", out _easyColor);
+            _enemyColor.color = _easyColor;
         }
         else if (MainMenu.difficulty == 2)
         {
-            health = 100;
-            damage = 4;
-            ColorUtility.TryParseHtmlString("#1C3E7D", out mediumColor);
-            enemyColor.color = mediumColor;
+            _health = 100;
+            _damage = 4;
+            ColorUtility.TryParseHtmlString("#1C3E7D", out _mediumColor);
+            _enemyColor.color = _mediumColor;
         }
         else if (MainMenu.difficulty == 3)
         {
-            health = 150;
-            damage = 6;
-            ColorUtility.TryParseHtmlString("#731C7D", out hardColor);
-            enemyColor.color = hardColor;
+            _health = 150;
+            _damage = 6;
+            ColorUtility.TryParseHtmlString("#731C7D", out _hardColor);
+            _enemyColor.color = _hardColor;
         }
     }
 
@@ -186,6 +202,14 @@ public class EnemyStateMachine : MonoBehaviour
         return _deathClips[UnityEngine.Random.Range(0, _deathClips.Length)];
     }
     #endregion
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player Sword")
+        {
+            _health -= _player.Damage;
+        }
+    }
 
     // Gizmos are like the colliders, they can not be seen, but they interact with something
     private void OnDrawGizmosSelected()

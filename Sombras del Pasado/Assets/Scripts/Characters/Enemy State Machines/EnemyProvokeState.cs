@@ -37,6 +37,10 @@ public class EnemyProvokeState : EnemyBaseState
         {
             SwitchState(_factory.Attack());
         }
+        if (_ctx.Health <= 0)
+        {
+            SwitchState(_factory.Death());
+        }
     }
 
     /// <summary>

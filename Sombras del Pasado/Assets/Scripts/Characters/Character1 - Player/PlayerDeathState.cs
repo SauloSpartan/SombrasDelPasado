@@ -11,7 +11,7 @@ public class PlayerDeathState : PlayerBaseState
 
     public override void EnterState()
     {
-
+        _ctx.Animator.SetTrigger("Death");
     }
 
     public override void UpdateState()
