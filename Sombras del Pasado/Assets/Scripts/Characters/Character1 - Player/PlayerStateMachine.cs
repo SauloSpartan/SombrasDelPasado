@@ -48,6 +48,9 @@ public class PlayerStateMachine : MonoBehaviour
     // Enemy variables
     EnemyStateMachine _enemy;
 
+    // Camera variables
+    CameraControl _camera;
+
     // State variables
     private PlayerBaseState _currentState;
     private PlayerStateFactory _states;
@@ -92,6 +95,7 @@ public class PlayerStateMachine : MonoBehaviour
         _trailSword.SetActive(false);
 
         _enemy = FindObjectOfType<EnemyStateMachine>();
+        _camera = FindObjectOfType<CameraControl>();
     }
 
     void Start()
@@ -208,6 +212,7 @@ public class PlayerStateMachine : MonoBehaviour
         if (other.gameObject.tag == "Enemy1 Sword")
         {
             _health -= _enemy.Damage / _defense;
+            StartCoroutine(_camera.CameraShake(0.1f, 1f));
         }  
     }
 }

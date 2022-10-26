@@ -45,8 +45,8 @@ public class CameraControl : MonoBehaviour
 
         while (elapsed < duration)
         {
-            float x_Position = Random.Range(-0.5f, 0.5f) * magnitude;
-            float y_Position = Random.Range(2.5f, 3.5f) * magnitude;
+            float x_Position = Random.Range(-0.1f, 0.1f) * magnitude;
+            float y_Position = Random.Range(2.9f, 3.1f) * magnitude;
 
             _offset = new Vector3(x_Position, y_Position, _offset.z);
 
