@@ -50,6 +50,8 @@ public class EnemyAttackState : EnemyBaseState
 
         if (distance <= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0f)
         {
+            _ctx.Animator.SetTrigger("Attack1");
+
             if (_ctx.TrailSwordOne != null)
             {
                 _ctx.TrailSwordOne.SetActive(true);
@@ -59,8 +61,22 @@ public class EnemyAttackState : EnemyBaseState
                 _ctx.TrailSwordTwo.SetActive(true);
             }
 
-            _ctx.Animator.SetTrigger("Attack1");
-            _ctx.GeneralCooldown = 2.0f;
+            if (_ctx.EnemyType == "Enemy Basic")
+            {
+                _ctx.GeneralCooldown = 2.0f;
+            }
+            if (_ctx.EnemyType == "Enemy Heavy")
+            {
+                _ctx.GeneralCooldown = 3.0f;
+            }
+            if (_ctx.EnemyType == "Enemy Fast")
+            {
+                _ctx.GeneralCooldown = 2.0f;
+            }
+            if (_ctx.EnemyType == "Enemy Boss")
+            {
+                _ctx.GeneralCooldown = 4.0f;
+            }
         }
         else if (_ctx.GeneralCooldown > 0f) // Makes a countdown for cooldown
         {

@@ -18,11 +18,12 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Health and Damage variables
     [SerializeField] private float _attackRadius;
-    private float _generalCooldown;
+    [SerializeField] private float _generalCooldown;
     [SerializeField] private float _health;
     private float _baseHealth;
     [SerializeField] private float _damage;
     private float _baseDamage;
+    [SerializeField] private string _enemyType;
 
     // Power Ups variables
     [SerializeField] private GameObject[] powerUps;
@@ -84,6 +85,7 @@ public class EnemyStateMachine : MonoBehaviour
     public GameObject TrailSwordTwo { get { return _trailSwordTwo; } set { _trailSwordTwo = value; } }
     public float Health { get { return _health; } }
     public float Damage { get { return _damage; } }
+    public string EnemyType { get { return _enemyType; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -156,24 +158,28 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 100;
             _baseDamage = 4;
             _attackRadius = 1.5f;
+            _enemyType = "Enemy Basic";
         }
         if (gameObject.tag == "Enemy Heavy")
         {
             _baseHealth = 200;
             _baseDamage = 10;
             _attackRadius = 2f;
+            _enemyType = "Enemy Heavy";
         }
         if (gameObject.tag == "Enemy Fast")
         {
             _baseHealth = 80;
             _baseDamage = 2;
             _attackRadius = 1.2f;
+            _enemyType = "Enemy Fast";
         }
         if (gameObject.tag == "Enemy Boss")
         {
             _baseHealth = 300;
             _baseDamage = 20;
             _attackRadius = 1.5f;
+            _enemyType = "Enemy Boss";
         }
     }
 
