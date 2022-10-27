@@ -13,6 +13,7 @@ public class EnemyEscapeState : EnemyBaseState
     {
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = false;
+        _ctx.GeneralCooldown = 1.5f;
     }
 
     public override void UpdateState()
@@ -31,7 +32,7 @@ public class EnemyEscapeState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance >= _ctx.EscapeRadius)
+        if (distance >= _ctx.EscapeRadius || _ctx.GeneralCooldown <= 0f)
         {
             SwitchState(_factory.Walk());
         }
@@ -51,6 +52,11 @@ public class EnemyEscapeState : EnemyBaseState
     private void SpacingPlayer()
     {
         _ctx.NavMesh.SetDestination(_ctx.EscapePosition.position);
+
+        if (_ctx.GeneralCooldown > 0f)
+        {
+            _ctx.GeneralCooldown -= Time.deltaTime;
+        }
     }
 
     /// <summary>

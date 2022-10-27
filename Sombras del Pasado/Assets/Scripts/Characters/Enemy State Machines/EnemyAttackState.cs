@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = true;
-        _ctx.GeneralCooldown = 0.5f;
+        _ctx.GeneralCooldown = 0.5f; // Takes some time before attacking
     }
 
     public override void UpdateState()
@@ -31,9 +31,9 @@ public class EnemyAttackState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance > _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.0f)
+        if (distance > _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.4f)
         {
-            SwitchState(_factory.Walk());
+            SwitchState(_factory.Escape());
         }
         if (_ctx.Health <= 0)
         {
@@ -48,13 +48,13 @@ public class EnemyAttackState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance <= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.0f)
+        if (distance <= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0f)
         {
             if (_ctx.TrailSwordOne != null)
             {
                 _ctx.TrailSwordOne.SetActive(true);
             }
-            if (_ctx.TrailSwordTwo != null) // Not all characters need a second trail
+            if (_ctx.TrailSwordTwo != null) // Not all characters need a second trail, if it's null, nothing happens
             {
                 _ctx.TrailSwordTwo.SetActive(true);
             }
@@ -62,12 +62,12 @@ public class EnemyAttackState : EnemyBaseState
             _ctx.Animator.SetTrigger("Attack1");
             _ctx.GeneralCooldown = 2.0f;
         }
-        else if (_ctx.GeneralCooldown > 0.0f)
+        else if (_ctx.GeneralCooldown > 0f) // Makes a countdown for cooldown
         {
             _ctx.GeneralCooldown -= Time.deltaTime;
         }
 
-        if (_ctx.GeneralCooldown <= 0.4f)
+        if (_ctx.GeneralCooldown <= 0.4f) // Before attacking again it rotates to player
         {
             if (_ctx.TrailSwordOne != null)
             {

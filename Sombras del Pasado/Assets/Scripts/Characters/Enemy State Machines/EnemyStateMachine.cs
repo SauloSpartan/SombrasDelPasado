@@ -18,11 +18,11 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Health and Damage variables
     [SerializeField] private float _attackRadius;
+    private float _generalCooldown;
     [SerializeField] private float _health;
     private float _baseHealth;
     [SerializeField] private float _damage;
     private float _baseDamage;
-    private float _generalCooldown;
 
     // Power Ups variables
     [SerializeField] private GameObject[] powerUps;
@@ -120,6 +120,15 @@ public class EnemyStateMachine : MonoBehaviour
 
         // Optional
         _target = PlayerManager.instance.player.transform;
+
+        if (_swordOne != null)
+        {
+            _swordOne.enabled = false;
+        }
+        if (_swordTwo != null)
+        {
+            _swordTwo.enabled = false;
+        }
     }
 
     // Update is called once per frame
