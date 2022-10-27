@@ -94,7 +94,6 @@ public class PlayerStateMachine : MonoBehaviour
         powerVelocity.SetActive(false);
         _trailSword.SetActive(false);
 
-        _enemy = FindObjectOfType<EnemyStateMachine>();
         _camera = FindObjectOfType<CameraControl>();
     }
 
@@ -209,6 +208,8 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        _enemy = other.GetComponentInParent<EnemyStateMachine>(); // Gets the unique copy of that script
+
         if (other.gameObject.tag == "Enemy1 Sword")
         {
             _health -= _enemy.Damage / _defense;
