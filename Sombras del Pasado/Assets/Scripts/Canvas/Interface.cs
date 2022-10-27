@@ -7,11 +7,15 @@ public class Interface : MonoBehaviour
 {
     //Variables
     private int menuSet = 0;
+    private float _timeScale = 1.0f;
     private GameObject playerInterface;
     private GameObject menu;
     private GameObject deathInterface;
     [SerializeField] private Button menuButton;
     [SerializeField] private Button continueButton;
+    [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _settingsMenu;
+    [SerializeField] private GameObject _controlsMenu;
 
     ControllerCharacter1 Player;
 
@@ -44,6 +48,7 @@ public class Interface : MonoBehaviour
         {
             GameOver();
         }
+        Time.timeScale = _timeScale;
     }
 
     private void ClickMenu()
@@ -65,7 +70,10 @@ public class Interface : MonoBehaviour
             playerInterface.SetActive(false);
             menu.SetActive(true);
             menuSet = 1;
-            Time.timeScale = 0.0f;
+            _timeScale = 0.0f;
+            _pauseMenu.SetActive(true);
+            _settingsMenu.SetActive(false);
+            _controlsMenu.SetActive(false);
 
             foreach (AudioSource sound in audio)
             {
@@ -77,7 +85,7 @@ public class Interface : MonoBehaviour
             playerInterface.SetActive(true);
             menu.SetActive(false);
             menuSet = 0;
-            Time.timeScale = 1.0f;
+            _timeScale = 1.0f;
 
             foreach (AudioSource sound in audio)
             {

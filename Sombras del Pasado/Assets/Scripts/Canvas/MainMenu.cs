@@ -11,10 +11,10 @@ public class MainMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public static int Difficulty;
 
-    [SerializeField] private Slider sliderGlobalVolume;
-    [SerializeField] private Slider sliderMusicVolume;
-    [SerializeField] private Slider sliderSoundVolume;
-    [SerializeField] private Dropdown dropdownQuality;
+    [SerializeField] private Slider _sliderGlobalVolume;
+    [SerializeField] private Slider _sliderMusicVolume;
+    [SerializeField] private Slider _sliderSoundVolume;
+    [SerializeField] private Dropdown _dropdownQuality;
 
 
     Score Score;
@@ -29,19 +29,14 @@ public class MainMenu : MonoBehaviour
 
         Time.timeScale = 1.0f;
 
-        sliderGlobalVolume.value = PlayerPrefs.GetFloat("volumeGlobal", 0.5f);
-        sliderMusicVolume.value = PlayerPrefs.GetFloat("volumeMusic", -20.0f);
-        sliderSoundVolume.value = PlayerPrefs.GetFloat("volumeSound", -20.0f);
-        AudioListener.volume = sliderGlobalVolume.value;
-        audioMixer.SetFloat("Music", sliderMusicVolume.value);
-        audioMixer.SetFloat("Sound", sliderSoundVolume.value);
+        _sliderGlobalVolume.value = PlayerPrefs.GetFloat("volumeGlobal", 0.5f);
+        _sliderMusicVolume.value = PlayerPrefs.GetFloat("volumeMusic", -20.0f);
+        _sliderSoundVolume.value = PlayerPrefs.GetFloat("volumeSound", -20.0f);
+        AudioListener.volume = _sliderGlobalVolume.value;
+        audioMixer.SetFloat("Music", _sliderMusicVolume.value);
+        audioMixer.SetFloat("Sound", _sliderSoundVolume.value);
 
-        dropdownQuality.value = PlayerPrefs.GetInt("quality", 3);
-    }
-
-    void Update()
-    {
-        
+        _dropdownQuality.value = PlayerPrefs.GetInt("quality", 3);
     }
 
     public void ExitGame()
@@ -90,25 +85,25 @@ public class MainMenu : MonoBehaviour
     public void SetGlobalVolume (float volume)
     {
         PlayerPrefs.SetFloat("volumeGlobal", volume);
-        AudioListener.volume = sliderGlobalVolume.value;
+        AudioListener.volume = _sliderGlobalVolume.value;
     }
 
     public void SetMusic(float volume)
     {
         PlayerPrefs.SetFloat("volumeMusic", volume);
-        audioMixer.SetFloat("Music", sliderMusicVolume.value);
+        audioMixer.SetFloat("Music", _sliderMusicVolume.value);
     }
 
     public void SetSound(float volume)
     {
         PlayerPrefs.SetFloat("volumeSound", volume);
-        audioMixer.SetFloat("Sound", sliderSoundVolume.value);
+        audioMixer.SetFloat("Sound", _sliderSoundVolume.value);
     }
 
     public void SetQuality ()
     {
-        QualitySettings.SetQualityLevel(dropdownQuality.value);
-        PlayerPrefs.SetInt("quality", dropdownQuality.value);
+        QualitySettings.SetQualityLevel(_dropdownQuality.value);
+        PlayerPrefs.SetInt("quality", _dropdownQuality.value);
     }
     
 }

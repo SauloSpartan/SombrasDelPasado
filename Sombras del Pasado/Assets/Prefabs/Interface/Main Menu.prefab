@@ -793,10 +793,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildIndex: 0
   audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
-  sliderGlobalVolume: {fileID: 4939828304492228711}
-  sliderMusicVolume: {fileID: 7962155285867332053}
-  sliderSoundVolume: {fileID: 8024595619276460518}
-  dropdownQuality: {fileID: 1894390460467514021}
+  _pauseMenu: {fileID: 1165819401405404203}
+  _settingsMenu: {fileID: 1165819401393037869}
+  _sliderGlobalVolume: {fileID: 4939828304492228711}
+  _sliderMusicVolume: {fileID: 7962155285867332053}
+  _sliderSoundVolume: {fileID: 8024595619276460518}
+  _dropdownQuality: {fileID: 1894390460467514021}
 --- !u!1 &1165819400918918183
 GameObject:
   m_ObjectHideFlags: 0
