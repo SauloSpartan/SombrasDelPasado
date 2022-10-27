@@ -209,26 +209,7 @@ public class PlayerStateMachine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _enemy = other.GetComponentInParent<EnemyStateMachine>(); // Gets the unique copy of that script
-
-        if (other.gameObject.tag == "Enemy1 Sword")
-        {
-            _health -= _enemy.Damage / _defense;
-            StartCoroutine(_camera.CameraShake(0.1f, 1f));
-        }
-        if (other.gameObject.tag == "Enemy2 Sword")
-        {
-            _health -= _enemy.Damage / _defense;
-            StartCoroutine(_camera.CameraShake(0.1f, 1f));
-        }
-        if (other.gameObject.tag == "Enemy3 Dagger")
-        {
-            _health -= _enemy.Damage / _defense;
-            StartCoroutine(_camera.CameraShake(0.1f, 1f));
-        }
-        if (other.gameObject.tag == "Enemy4 Sword")
-        {
-            _health -= _enemy.Damage / _defense;
-            StartCoroutine(_camera.CameraShake(0.1f, 1f));
-        }
+        _health -= _enemy.Damage / _defense;
+        StartCoroutine(_camera.CameraShake(0.1f, 1f));
     }
 }
