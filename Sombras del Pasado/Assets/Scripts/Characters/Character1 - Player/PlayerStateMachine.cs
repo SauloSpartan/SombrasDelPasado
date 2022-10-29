@@ -219,8 +219,9 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_enemy == other.GetComponentInParent<EnemyStateMachine>()) // Gets the unique copy of that script
+        if (other.tag == "Enemy1 Sword" || other.tag == "Enemy2 Sword" || other.tag == "Enemy3 Dagger" || other.tag == "Enemy4 Sword")
         {
+            _enemy = other.GetComponentInParent<EnemyStateMachine>(); // Gets the unique copy of that script
             _health -= _enemy.Damage / _defense;
             StartCoroutine(_camera.CameraShake(0.1f, 1f));
         }
