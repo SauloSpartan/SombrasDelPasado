@@ -13830,7 +13830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MenuReturn
         m_Mode: 1
@@ -15473,7 +15473,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: SetSound
         m_Mode: 0
@@ -15587,7 +15587,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: SetMusic
         m_Mode: 0
@@ -15933,7 +15933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -28285,7 +28285,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: SetGlobalVolume
         m_Mode: 0
@@ -32099,24 +32099,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5670603888589582953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8717023724575802273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5403adf6bb91ab4884cfa20add1baff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildIndex: 0
-  audioMixer: {fileID: 24100000, guid: 1fa1a99cabc3b774f8359c5b856fd565, type: 2}
-  _sliderGlobalVolume: {fileID: 0}
-  _sliderMusicVolume: {fileID: 0}
-  _sliderSoundVolume: {fileID: 0}
-  _dropdownQuality: {fileID: 0}
 --- !u!1 &5679062418912616226
 GameObject:
   m_ObjectHideFlags: 0
@@ -42795,7 +42777,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: Credits
         m_Mode: 1
@@ -43641,7 +43623,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -45390,7 +45372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: MenuReturn
         m_Mode: 1
@@ -45642,7 +45624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -47245,7 +47227,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670603888589582953}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: SetQuality
         m_Mode: 1
@@ -53572,7 +53554,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8717023724575802272}
   - component: {fileID: 8717023724575802278}
-  - component: {fileID: 5670603888589582953}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -53853,23 +53834,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8717023724781917377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8717023724781917379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 210a36fc61e94e64da8f8b4aadf4a020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuButton: {fileID: 2299956132270155578}
-  continueButton: {fileID: 3635113309254150927}
-  _pauseMenu: {fileID: 7460331257856592226}
-  _settingsMenu: {fileID: 7460331257835323236}
-  _controlsMenu: {fileID: 7460331257838900417}
 --- !u!224 &8717023724781917378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53904,7 +53868,6 @@ GameObject:
   - component: {fileID: 8717023724781917382}
   - component: {fileID: 8717023724781917383}
   - component: {fileID: 8717023724781917376}
-  - component: {fileID: 8717023724781917377}
   - component: {fileID: 8717023724781917380}
   m_Layer: 5
   m_Name: Interface
@@ -53925,7 +53888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eecb1eef3b4f3b4597db89e948bb4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
+  _healthBar: {fileID: 8717023726318948597}
 --- !u!223 &8717023724781917382
 Canvas:
   m_ObjectHideFlags: 0
@@ -56563,6 +56526,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a6da3e47689cb843a69f92c4ddbe4ee, type: 3}
   - {fileID: 8300000, guid: a3c6099fce00dc042b6951e2cbf18279, type: 3}
   - {fileID: 8300000, guid: 5939d9fbadb5b4a46b88c64bb111d9db, type: 3}
+  _healthBar: {fileID: 8717023724781917380}
 --- !u!4 &8717023726060121190
 Transform:
   m_ObjectHideFlags: 0
@@ -56873,7 +56837,6 @@ GameObject:
   - component: {fileID: 8717023726318948599}
   - component: {fileID: 8717023726318948596}
   - component: {fileID: 8717023726318948597}
-  - component: {fileID: 8717023726318948598}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -56919,19 +56882,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8717023726318948598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8717023726318948592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451001379f3ceb644aad81e064e25130, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
 --- !u!224 &8717023726318948599
 RectTransform:
   m_ObjectHideFlags: 0
