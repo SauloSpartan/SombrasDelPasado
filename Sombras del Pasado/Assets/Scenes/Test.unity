@@ -47164,7 +47164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &7919179959268574442
 GameObject:
   m_ObjectHideFlags: 0
@@ -53867,9 +53867,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButton: {fileID: 2299956132270155578}
   continueButton: {fileID: 3635113309254150927}
-  _pauseMenu: {fileID: 0}
-  _settingsMenu: {fileID: 0}
-  _controlsMenu: {fileID: 0}
+  _pauseMenu: {fileID: 7460331257856592226}
+  _settingsMenu: {fileID: 7460331257835323236}
+  _controlsMenu: {fileID: 7460331257838900417}
 --- !u!224 &8717023724781917378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53905,13 +53905,27 @@ GameObject:
   - component: {fileID: 8717023724781917383}
   - component: {fileID: 8717023724781917376}
   - component: {fileID: 8717023724781917377}
+  - component: {fileID: 8717023724781917380}
   m_Layer: 5
   m_Name: Interface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!114 &8717023724781917380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717023724781917379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eecb1eef3b4f3b4597db89e948bb4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
 --- !u!223 &8717023724781917382
 Canvas:
   m_ObjectHideFlags: 0
@@ -56861,7 +56875,7 @@ GameObject:
   - component: {fileID: 8717023726318948597}
   - component: {fileID: 8717023726318948598}
   m_Layer: 5
-  m_Name: Health
+  m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

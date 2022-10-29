@@ -22,6 +22,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     // Health and Damage variables
     [SerializeField] private float _health = 100f;
+    private float _maxHealth;
     [SerializeField] private int _damage;
     private int _defense = 1;
     private int _attack = 1;
@@ -34,10 +35,10 @@ public class PlayerStateMachine : MonoBehaviour
 
     // Reference variables
     private CharacterController _charController;
-    private BoxCollider sword;
-    private GameObject powerDefense;
-    private GameObject powerDamage;
-    private GameObject powerVelocity;
+    private BoxCollider _sword;
+    private GameObject _powerDefense;
+    private GameObject _powerDamage;
+    private GameObject _powerVelocity;
 
     // Audio variables
     private AudioSource _audioSource;
@@ -47,6 +48,9 @@ public class PlayerStateMachine : MonoBehaviour
 
     // Enemy variables
     EnemyStateMachine _enemy;
+
+    // Interface variables
+    [SerializeField] HealthControl _healthBar;
 
     // Camera variables
     CameraControl _camera;
@@ -73,28 +77,31 @@ public class PlayerStateMachine : MonoBehaviour
     public int AttackCombo { get { return _attackCombo; } }
     public bool CanMove { get { return _canMove; } set { _canMove = value; } }
     public float Health { get { return _health; } }
+    public float MaxHealth { get { return _maxHealth; } }
 
     // Awake is called earlier than Start
     void Awake()
     {
-        powerDefense = GameObject.Find("Power Defense");
-        powerDamage = GameObject.Find("Power Damage");
-        powerVelocity = GameObject.Find("Power Velocity");
+        _powerDefense = GameObject.Find("Power Defense");
+        _powerDamage = GameObject.Find("Power Damage");
+        _powerVelocity = GameObject.Find("Power Velocity");
 
         // Getting the references
         _charController = GetComponent<CharacterController>();
+        _camera = FindObjectOfType<CameraControl>();
         _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
+        _sword = GameObject.Find("Espada Allard").GetComponent<BoxCollider>();
 
-        sword = GameObject.Find("Espada Allard").GetComponent<BoxCollider>();
-
-        sword.enabled = false;
-        powerDefense.SetActive(false);
-        powerDamage.SetActive(false);
-        powerVelocity.SetActive(false);
+        // Deactivating visual or other stuff
+        _sword.enabled = false;
+        _powerDefense.SetActive(false);
+        _powerDamage.SetActive(false);
+        _powerVelocity.SetActive(false);
         _trailSword.SetActive(false);
 
-        _camera = FindObjectOfType<CameraControl>();
+        // Initial variables
+        _maxHealth = _health;
     }
 
     void Start()
@@ -107,12 +114,16 @@ public class PlayerStateMachine : MonoBehaviour
 
     void Update()
     {
-        Gravity();
-
+        // Setup state
         _currentState.UpdateState();
 
-        // It is outside "WalkState" because glitches if its inside
+        // Functions and code needed
+        Gravity();
         _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime); // It moves the character
+        if (_healthBar != null)
+        {
+            _healthBar.HealthBarControl(_health, _maxHealth);
+        }
     }
 
 
@@ -134,12 +145,12 @@ public class PlayerStateMachine : MonoBehaviour
     #region Attack Events
     private void IsAttacking()
     {
-        sword.enabled = true;
+        _sword.enabled = true;
     }
 
     private void NotAttacking()
     {
-        sword.enabled = false;
+        _sword.enabled = false;
     }
 
     private void ComboStart()
@@ -208,8 +219,10 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _enemy = other.GetComponentInParent<EnemyStateMachine>(); // Gets the unique copy of that script
-        _health -= _enemy.Damage / _defense;
-        StartCoroutine(_camera.CameraShake(0.1f, 1f));
+        if (_enemy == other.GetComponentInParent<EnemyStateMachine>()) // Gets the unique copy of that script
+        {
+            _health -= _enemy.Damage / _defense;
+            StartCoroutine(_camera.CameraShake(0.1f, 1f));
+        }
     }
 }
