@@ -31,7 +31,7 @@ public class Explosion : MonoBehaviour
             || other.gameObject.tag == "Enemy2 Sword" || other.gameObject.tag == "Enemy3 Dagger"
             || other.gameObject.tag == "Enemy4 Sword")
         {
-            StartCoroutine(cameraShake.CameraShake(0.5f, 1f));
+            StartCoroutine(cameraShake.CameraShake(0.5f, 10f));
             Trigger.enabled = false;
             Explode.enabled = true;
             Sound.enabled = true;

@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
 // This is the CONTEXT and stores the data that the concrete states need to be performed
 public class EnemyStateMachine : MonoBehaviour
@@ -18,30 +15,15 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Health and Damage variables
     [SerializeField] private float _attackRadius;
-    [SerializeField] private float _generalCooldown;
+    private float _generalCooldown;
     [SerializeField] private float _health;
+    private float _maxHealth;
     private float _baseHealth;
     [SerializeField] private float _damage;
     private float _baseDamage;
-    [SerializeField] private string _enemyType;
-
-    // Power Ups variables
-    [SerializeField] private GameObject[] powerUps;
-    private int randomPower;
-    private int amount = 1;
-    private int probabilityPower;
-
-    // Health Bar variables
-    [SerializeField] private Image healthBar;
-    private float currentHealth;
-    private float maxHealth = 100f;
-    private float lerpSpeed;
-    [SerializeField] private GameObject interfaceEnemy;
-    private float healthTimer;
+    private string _enemyType;
 
     // Animation variables
-    private float velocity = 0.0f;
-    private float acceleration = 5.0f;
     private Animator _animator;
 
     // Reference variables
@@ -55,6 +37,12 @@ public class EnemyStateMachine : MonoBehaviour
     private Color _mediumColor;
     private Color _hardColor;
 
+    // Power Ups variables
+    [SerializeField] private GameObject[] powerUps;
+    private int randomPower;
+    private int amount = 1;
+    private int probabilityPower;
+
     // Audio variables
     private AudioSource _audioSource;
     [SerializeField] private AudioClip[] _stepClips;
@@ -62,7 +50,11 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private AudioClip[] _deathClips;
 
     // Player variables
-    PlayerStateMachine _player;
+    private PlayerStateMachine _player;
+
+    // Interface variables
+    [SerializeField] private GameObject _interfaceEnemy;
+    [SerializeField] private HealthControl _healthBar;
 
     // State variables
     private EnemyBaseState _currentState;
@@ -95,8 +87,10 @@ public class EnemyStateMachine : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _enemyCollider = GetComponent<CapsuleCollider>();
 
-        maxHealth = _health;
-        interfaceEnemy.SetActive(false);
+        _player = FindObjectOfType<PlayerStateMachine>();
+
+        // Initial variables
+        _interfaceEnemy.SetActive(false);
 
         if (_trailSwordOne != null) // It means that doesn't require and argument
         {
@@ -107,10 +101,10 @@ public class EnemyStateMachine : MonoBehaviour
             _trailSwordTwo.SetActive(false);
         }
 
-        _player = FindObjectOfType<PlayerStateMachine>();
-
         EnemyVariables();
         Difficulty();
+
+        _maxHealth = _health;
     }
 
     void Start()
@@ -137,6 +131,12 @@ public class EnemyStateMachine : MonoBehaviour
     void Update()
     {
         _currentState.UpdateState();
+
+        // Functions and code needed
+        if (_healthBar != null) // Takes out dependance, verifying that reference is not null
+        {
+            _healthBar.HealthBarControl(_health, _maxHealth);
+        }
     }
 
     public void Death()

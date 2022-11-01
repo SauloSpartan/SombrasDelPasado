@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // This is the CONTEXT and stores the data that the concrete states need to be performed
@@ -15,9 +13,6 @@ public class PlayerStateMachine : MonoBehaviour
     private Vector3 _moveRotation;
 
     // Animation variables
-    private float velocity = 0.0f;
-    [SerializeField] private float _acceleration;
-    [SerializeField] private GameObject _trailSword;
     private Animator _animator;
 
     // Health and Damage variables
@@ -34,6 +29,7 @@ public class PlayerStateMachine : MonoBehaviour
     private bool _canMove = true;
 
     // Reference variables
+    [SerializeField] private GameObject _trailSword;
     private CharacterController _charController;
     private BoxCollider _sword;
     private GameObject _powerDefense;
@@ -47,13 +43,13 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private AudioClip[] _deathClips;
 
     // Enemy variables
-    EnemyStateMachine _enemy;
+    private EnemyStateMachine _enemy;
 
     // Interface variables
-    [SerializeField] HealthControl _healthBar;
+    [SerializeField] private HealthControl _healthBar;
 
     // Camera variables
-    CameraControl _camera;
+    private CameraControl _camera;
 
     // State variables
     private PlayerBaseState _currentState;
@@ -77,7 +73,6 @@ public class PlayerStateMachine : MonoBehaviour
     public int AttackCombo { get { return _attackCombo; } }
     public bool CanMove { get { return _canMove; } set { _canMove = value; } }
     public float Health { get { return _health; } }
-    public float MaxHealth { get { return _maxHealth; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -120,7 +115,7 @@ public class PlayerStateMachine : MonoBehaviour
         // Functions and code needed
         Gravity();
         _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime); // It moves the character
-        if (_healthBar != null)
+        if (_healthBar != null) // Takes out dependance, verifying that reference is not null
         {
             _healthBar.HealthBarControl(_health, _maxHealth);
         }
