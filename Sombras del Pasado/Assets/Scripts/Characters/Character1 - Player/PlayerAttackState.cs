@@ -13,6 +13,7 @@ public class PlayerAttackState : PlayerBaseState
     {
         _ctx.Animator.SetInteger("AttackCombo", 1);
         _ctx.Damage = 20 * _ctx.Attack;
+        _ctx.CanMove = false;
     }
 
     public override void UpdateState()
@@ -28,7 +29,7 @@ public class PlayerAttackState : PlayerBaseState
 
     public override void CheckSwitchState()
     {
-        if (_ctx.CanMove == true)
+        if (_ctx.CanMove == true) // CanMove is controlled in player events
         {
             SwitchState(_factory.Idle());
         }

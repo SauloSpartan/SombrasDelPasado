@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -55,6 +56,8 @@ public class EnemyStateMachine : MonoBehaviour
     // Interface variables
     [SerializeField] private GameObject _interfaceEnemy;
     [SerializeField] private HealthControl _healthBar;
+    [SerializeField] private GameObject _enemyObject;
+    private int _hierarchyIndex;
 
     // State variables
     private EnemyBaseState _currentState;
@@ -139,6 +142,9 @@ public class EnemyStateMachine : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function that disables variables when death.
+    /// </summary>
     public void Death()
     {
         _navMesh.isStopped = true;
@@ -211,6 +217,19 @@ public class EnemyStateMachine : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Coroutine that controls enemy health bar showing up.
+    /// </summary>
+    /// <returns> Returns the time before hiding again.</returns>
+    private IEnumerator HealthTimer()
+    {
+        _interfaceEnemy.SetActive(true);
+        _hierarchyIndex = 2;
+        _enemyObject.transform.SetSiblingIndex(_hierarchyIndex);
+        yield return new WaitForSecondsRealtime(2f);
+        _interfaceEnemy.SetActive(false);
+    }
+
     #region Attack Events
     private void IsAttacking()
     {
@@ -277,6 +296,7 @@ public class EnemyStateMachine : MonoBehaviour
         if (other.gameObject.tag == "Player Sword")
         {
             _health -= _player.Damage;
+            StartCoroutine(HealthTimer());
         }
     }
 
