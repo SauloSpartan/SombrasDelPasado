@@ -18,14 +18,12 @@ public class MainMenu : MonoBehaviour
 
 
     Score Score;
-    ControllerCharacter2 Enemy1;
 
     void Start()
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
 
         Score = FindObjectOfType<Score>();
-        Enemy1 = FindObjectOfType<ControllerCharacter2>();
 
         Time.timeScale = 1.0f;
 

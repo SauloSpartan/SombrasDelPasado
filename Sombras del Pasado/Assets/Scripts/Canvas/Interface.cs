@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Interface : MonoBehaviour
 {
     //Variables
-    private int menuSet = 0;
-    private float _timeScale = 1.0f;
+    private int menuSet;
+    private float _timeScale;
     private GameObject playerInterface;
     private GameObject menu;
     private GameObject deathInterface;
@@ -36,6 +36,9 @@ public class Interface : MonoBehaviour
 
         //It is necessary to first have them active to make them inactive,
         //if not they can not be referenced
+
+        _timeScale = 1.0f;
+        menuSet = 0;
     }
 
     void Update()

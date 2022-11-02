@@ -69,7 +69,7 @@ public class PlayerStateMachine : MonoBehaviour
     public float RotationSpeed { get { return _rotationSpeed; } }
     public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
     public int Damage { get { return _damage; } set { _damage = value; } }
-    public int Attack { get { return _attack; } set { _attack = value; } }
+    public int Attack { get { return _attack; } }
     public int AttackCombo { get { return _attackCombo; } }
     public bool CanMove { get { return _canMove; } set { _canMove = value; } }
     public float Health { get { return _health; } }
