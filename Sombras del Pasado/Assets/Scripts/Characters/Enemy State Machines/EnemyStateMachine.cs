@@ -6,21 +6,23 @@ using UnityEngine.AI;
 public class EnemyStateMachine : MonoBehaviour
 {
     // Navigation variables
+    [Header("Navigation")]
+    [SerializeField] float _stopRadius;
+    [SerializeField] float _escapeRadius;
+    [SerializeField] private Transform _escapePosition;
     private NavMeshAgent _navMesh;
     private Transform _target;
     private bool _followTarget = false;
-    [SerializeField] float _stopRadius;
     private int _randomDesition;
-    [SerializeField] float _escapeRadius;
-    [SerializeField] private Transform _escapePosition;
 
     // Health and Damage variables
+    [Header("Health & Damage")]
     [SerializeField] private float _attackRadius;
-    private float _generalCooldown;
     [SerializeField] private float _health;
+    [SerializeField] private float _damage;
+    private float _generalCooldown;
     private float _maxHealth;
     private float _baseHealth;
-    [SerializeField] private float _damage;
     private float _baseDamage;
     private string _enemyType;
 
@@ -28,32 +30,36 @@ public class EnemyStateMachine : MonoBehaviour
     private Animator _animator;
 
     // Reference variables
+    [Header("Reference")]
     [SerializeField] private BoxCollider _swordOne = null;
     [SerializeField] private BoxCollider _swordTwo = null;
     [SerializeField] private GameObject _trailSwordOne = null;
     [SerializeField] private GameObject _trailSwordTwo = null;
-    private CapsuleCollider _enemyCollider;
     [SerializeField] private Material _enemyColor;
+    private CapsuleCollider _enemyCollider;
     private Color _easyColor;
     private Color _mediumColor;
     private Color _hardColor;
 
     // Power Ups variables
+    [Header("Power Ups")]
     [SerializeField] private GameObject[] powerUps;
     private int randomPower;
     private int amount = 1;
     private int probabilityPower;
 
     // Audio variables
-    private AudioSource _audioSource;
+    [Header("Audio Clips")]
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _attackClips;
     [SerializeField] private AudioClip[] _deathClips;
+    private AudioSource _audioSource;
 
     // Player variables
     private PlayerStateMachine _player;
 
     // Interface variables
+    [Header("Interface")]
     [SerializeField] private GameObject _interfaceEnemy;
     [SerializeField] private HealthControl _healthBar;
     [SerializeField] private GameObject _enemyObject;

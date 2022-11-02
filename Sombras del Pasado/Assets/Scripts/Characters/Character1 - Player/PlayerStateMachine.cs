@@ -4,10 +4,11 @@ using UnityEngine;
 public class PlayerStateMachine : MonoBehaviour
 {
     // Movement and Rotation variables
-    private float _moveX;
-    private float _moveZ;
+    [Header("Movement")]
     [SerializeField] private float _walkSpeed;
     [SerializeField] private float _rotationSpeed = 1080;
+    private float _moveX;
+    private float _moveZ;
     private Vector3 _moveDirection;
     private Vector3 _moveVector;
     private Vector3 _moveRotation;
@@ -16,9 +17,10 @@ public class PlayerStateMachine : MonoBehaviour
     private Animator _animator;
 
     // Health and Damage variables
+    [Header("Health & Damage")]
     [SerializeField] private float _health = 100f;
-    private float _maxHealth;
     [SerializeField] private int _damage;
+    private float _maxHealth;
     private int _defense = 1;
     private int _attack = 1;
     private int luck;
@@ -29,6 +31,7 @@ public class PlayerStateMachine : MonoBehaviour
     private bool _canMove = true;
 
     // Reference variables
+    [Header("Reference")]
     [SerializeField] private GameObject _trailSword;
     private CharacterController _charController;
     private BoxCollider _sword;
@@ -37,15 +40,17 @@ public class PlayerStateMachine : MonoBehaviour
     private GameObject _powerVelocity;
 
     // Audio variables
-    private AudioSource _audioSource;
+    [Header("Audio Clips")]
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _attackClips;
     [SerializeField] private AudioClip[] _deathClips;
+    private AudioSource _audioSource;
 
     // Enemy variables
     private EnemyStateMachine _enemy;
 
     // Interface variables
+    [Header("Interface")]
     [SerializeField] private HealthControl _healthBar;
 
     // Camera variables
