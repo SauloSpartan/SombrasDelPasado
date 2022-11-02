@@ -42,14 +42,14 @@ public class EnemyStateMachine : MonoBehaviour
     private Color _hardColor;
 
     // Power Ups variables
-    [Header("Power Ups")]
+    [Space]
     [SerializeField] private GameObject[] powerUps;
     private int randomPower;
     private int amount = 1;
     private int probabilityPower;
 
     // Audio variables
-    [Header("Audio Clips")]
+    [Space]
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _attackClips;
     [SerializeField] private AudioClip[] _deathClips;

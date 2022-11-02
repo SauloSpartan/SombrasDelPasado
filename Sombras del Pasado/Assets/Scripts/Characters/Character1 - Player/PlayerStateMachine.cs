@@ -1,6 +1,7 @@
 using UnityEngine;
 
 // This is the CONTEXT and stores the data that the concrete states need to be performed
+[RequireComponent(typeof(CharacterController), typeof(AudioSource), typeof(Animator))]
 public class PlayerStateMachine : MonoBehaviour
 {
     // Movement and Rotation variables
@@ -20,27 +21,29 @@ public class PlayerStateMachine : MonoBehaviour
     [Header("Health & Damage")]
     [SerializeField] private float _health = 100f;
     [SerializeField] private int _damage;
+    private int _attackCombo = 1;
     private float _maxHealth;
+    private bool _canMove = true;
+
+    // Power Ups variables
     private int _defense = 1;
     private int _attack = 1;
-    private int luck;
-    private int evasion = 0;
-    private int _attackCombo = 1;
-    private float powerTimer;
-    private int powerUp = 0;
-    private bool _canMove = true;
+    private int _evasion = 0;
+    private int _luck;
+    private int _powerUp = 0;
+    private float _powerTimer;
 
     // Reference variables
     [Header("Reference")]
     [SerializeField] private GameObject _trailSword;
     private CharacterController _charController;
     private BoxCollider _sword;
-    private GameObject _powerDefense;
-    private GameObject _powerDamage;
-    private GameObject _powerVelocity;
+    [SerializeField] private GameObject _powerDefense;
+    [SerializeField] private GameObject _powerDamage;
+    [SerializeField] private GameObject _powerVelocity;
 
     // Audio variables
-    [Header("Audio Clips")]
+    [Space]
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _attackClips;
     [SerializeField] private AudioClip[] _deathClips;
@@ -119,6 +122,7 @@ public class PlayerStateMachine : MonoBehaviour
 
         // Functions and code needed
         Gravity();
+        PowerUp();
         _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime); // It moves the character
         if (_healthBar != null) // Takes out dependance, verifying that reference is not null
         {
@@ -140,6 +144,43 @@ public class PlayerStateMachine : MonoBehaviour
         }
 
         _charController.Move(_moveVector * Time.deltaTime); // Apply our move Vector
+    }
+
+    /// <summary>
+    /// Function that controls power ups viusals and effects.
+    /// </summary>
+    private void PowerUp()
+    {
+        if (_powerTimer > 0.0f && _powerUp == 1) // Defense power up
+        {
+            _defense = 2;
+            _powerDefense.SetActive(true);
+            _powerTimer -= Time.deltaTime;
+        }
+        if (_powerTimer > 0.0f && _powerUp == 2) // Attack power up
+        {
+            _attack = 2;
+            _powerDamage.SetActive(true);
+            _powerTimer -= Time.deltaTime;
+        }
+        if (_powerTimer > 0.0f && _powerUp == 3) // Evasion power up
+        {
+            _evasion = 1;
+            _walkSpeed = 4;
+            _powerVelocity.SetActive(true);
+            _powerTimer -= Time.deltaTime;
+        }
+        if (_powerTimer <= 0.0f) // No power up
+        {
+            _defense = 1;
+            _attack = 1;
+            _walkSpeed = 3;
+            _evasion = 0;
+
+            _powerDefense.SetActive(false);
+            _powerDamage.SetActive(false);
+            _powerVelocity.SetActive(false);
+        }
     }
 
     #region Attack Events
@@ -221,9 +262,34 @@ public class PlayerStateMachine : MonoBehaviour
     {
         if (other.tag == "Enemy1 Sword" || other.tag == "Enemy2 Sword" || other.tag == "Enemy3 Dagger" || other.tag == "Enemy4 Sword")
         {
+            _luck = Random.Range(0, 4);
             _enemy = other.GetComponentInParent<EnemyStateMachine>(); // Gets the unique copy of that script
-            _health -= _enemy.Damage / _defense;
             StartCoroutine(_camera.CameraShake(0.1f, 1f));
+
+            if (_luck == _evasion && _evasion == 1)
+            {
+                _health -= _enemy.Damage - _enemy.Damage;
+            }
+            else
+            {
+                _health -= _enemy.Damage / _defense;
+            }
+        }
+
+        if (other.tag == "PowerUp Defense")
+        {
+            _powerTimer = 20f;
+            _powerUp = 1;
+        }
+        if (other.tag == "PowerUp Attack")
+        {
+            _powerTimer = 20f;
+            _powerUp = 2;
+        }
+        if (other.tag == "PowerUp Velocity")
+        {
+            _powerTimer = 20f;
+            _powerUp = 3;
         }
     }
 }
