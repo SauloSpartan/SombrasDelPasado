@@ -43,10 +43,8 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Power Ups variables
     [Space]
-    [SerializeField] private GameObject[] powerUps;
-    private int randomPower;
-    private int amount = 1;
-    private int probabilityPower;
+    [SerializeField] private GameObject[] _powerUps;
+    private int _powerAmount = 1;
 
     // Audio variables
     [Space]
@@ -157,6 +155,7 @@ public class EnemyStateMachine : MonoBehaviour
         _animator.SetTrigger("Death");
         _swordOne.enabled = false;
         _enemyCollider.enabled = false;
+        PowerUp();
         Destroy(gameObject, 4.5f);
     }
 
@@ -220,6 +219,26 @@ public class EnemyStateMachine : MonoBehaviour
             _damage = _baseDamage + (_baseDamage / 2);
             ColorUtility.TryParseHtmlString("#731C7D", out _hardColor);
             _enemyColor.color = _hardColor;
+        }
+    }
+
+    /// <summary>
+    /// Function that controls power up spawn when enemies die.
+    /// </summary>
+    private void PowerUp()
+    {
+        if (_powerAmount == 1)
+        {
+            Vector3 enemyPosition = (transform.position);
+            Vector3 powerPosition = new Vector3(enemyPosition.x, enemyPosition.y + 0.7f, enemyPosition.z);
+            _powerAmount = 0;
+            int probabilityPower = Random.Range(0, 100);
+            int randomPower = Random.Range(0, _powerUps.Length);
+
+            if (probabilityPower <= 10)
+            {
+                Instantiate(_powerUps[randomPower], powerPosition, transform.rotation);
+            }
         }
     }
 
