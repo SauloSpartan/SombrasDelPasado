@@ -38,9 +38,9 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private GameObject _trailSword;
     private CharacterController _charController;
     private BoxCollider _sword;
-    [SerializeField] private GameObject _powerDefense;
-    [SerializeField] private GameObject _powerDamage;
-    [SerializeField] private GameObject _powerVelocity;
+    private GameObject _powerDefense;
+    private GameObject _powerDamage;
+    private GameObject _powerVelocity;
 
     // Audio variables
     [Space]

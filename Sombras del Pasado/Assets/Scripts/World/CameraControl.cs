@@ -25,12 +25,6 @@ public class CameraControl : MonoBehaviour
     private void CameraFollow()
     {
         transform.position = GameObject.Find("Character1").transform.position + _offset;
-
-        // This is the distance between player and camera in X, Y and Z
-        Vector3 playerPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        transform.position = playerPosition;
-
-        // To change camera distance just write trasnform.position.? +/- number
     }
 
     /// <summary>
