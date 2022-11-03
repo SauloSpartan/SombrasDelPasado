@@ -29493,7 +29493,10 @@ MonoBehaviour:
   _trailSwordOne: {fileID: 7623864793817639027}
   _trailSwordTwo: {fileID: 0}
   _enemyColor: {fileID: 2100000, guid: 1ab592ddaf02b4f4bb33610b261fda32, type: 2}
-  powerUps: []
+  _powerUps:
+  - {fileID: 2049285023681397261, guid: e2a1cfba998616e408c6880f9062aec0, type: 3}
+  - {fileID: 201320332483932711, guid: d988937f1d44a6741b6c2271d148b19c, type: 3}
+  - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
   _stepClips:
   - {fileID: 8300000, guid: 19922506244dc3143b2cb4f849dedb0a, type: 3}
   - {fileID: 8300000, guid: 32e1d946493fceb4192b61d47455772c, type: 3}
@@ -29637,7 +29640,10 @@ MonoBehaviour:
   _trailSwordOne: {fileID: 235659486547827276}
   _trailSwordTwo: {fileID: 1841324573946498684}
   _enemyColor: {fileID: 2100000, guid: 0db9915d9bfa6ef47acac0d64c897422, type: 2}
-  powerUps: []
+  _powerUps:
+  - {fileID: 2049285023681397261, guid: e2a1cfba998616e408c6880f9062aec0, type: 3}
+  - {fileID: 201320332483932711, guid: d988937f1d44a6741b6c2271d148b19c, type: 3}
+  - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
   _stepClips:
   - {fileID: 8300000, guid: 52180850ee7cb1f40a79853caabd08fd, type: 3}
   - {fileID: 8300000, guid: 6add10710b8861e4888feb7ae4a2a3af, type: 3}
@@ -30874,7 +30880,10 @@ MonoBehaviour:
   _trailSwordOne: {fileID: 4712451378604975003}
   _trailSwordTwo: {fileID: 0}
   _enemyColor: {fileID: 2100000, guid: aa1c331664af2c34fae60b5fbe4fbd53, type: 2}
-  powerUps: []
+  _powerUps:
+  - {fileID: 2049285023681397261, guid: e2a1cfba998616e408c6880f9062aec0, type: 3}
+  - {fileID: 201320332483932711, guid: d988937f1d44a6741b6c2271d148b19c, type: 3}
+  - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
   _stepClips:
   - {fileID: 8300000, guid: 71199802c10ae5a41af95d2248e172f5, type: 3}
   - {fileID: 8300000, guid: 528b8718ba1e2184a98c835d406169fd, type: 3}
@@ -47147,7 +47156,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1686659472469938804}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.6272727
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -55694,6 +55703,9 @@ MonoBehaviour:
   _health: 1000
   _damage: 0
   _trailSword: {fileID: 2786360328489409464}
+  _powerDefense: {fileID: 0}
+  _powerDamage: {fileID: 0}
+  _powerVelocity: {fileID: 0}
   _stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}
@@ -61526,7 +61538,10 @@ MonoBehaviour:
   _trailSwordOne: {fileID: 5571503885067864699}
   _trailSwordTwo: {fileID: 0}
   _enemyColor: {fileID: 2100000, guid: 0b4ab8c8328be8a49b4ce3fa8e487287, type: 2}
-  powerUps: []
+  _powerUps:
+  - {fileID: 2049285023681397261, guid: e2a1cfba998616e408c6880f9062aec0, type: 3}
+  - {fileID: 201320332483932711, guid: d988937f1d44a6741b6c2271d148b19c, type: 3}
+  - {fileID: 3439333512406264361, guid: cf0c78ba1e89f2242880a1ecbb13ff91, type: 3}
   _stepClips:
   - {fileID: 8300000, guid: 968423678a3b87c49b9f2b6eda68482a, type: 3}
   - {fileID: 8300000, guid: f0731b8e60fb267439cce21e1d69f5fd, type: 3}

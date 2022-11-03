@@ -27,8 +27,8 @@ public class CameraControl : MonoBehaviour
         transform.position = GameObject.Find("Character1").transform.position + _offset;
 
         // This is the distance between player and camera in X, Y and Z
-        Vector3 playerPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        transform.position = playerPos;
+        Vector3 playerPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        transform.position = playerPosition;
 
         // To change camera distance just write trasnform.position.? +/- number
     }
@@ -46,9 +46,9 @@ public class CameraControl : MonoBehaviour
         while (elapsed < duration)
         {
             float x_Position = Random.Range(-0.05f, 0.05f) * magnitude;
-            float y_Position = Random.Range(2.95f, 3.05f) * magnitude;
+            float y_Position = Random.Range(-0.05f, 0.05f) * magnitude;
 
-            _offset = new Vector3(x_Position, y_Position, _offset.z);
+            _offset = new Vector3(_initialOffset.x + x_Position, _initialOffset.y + y_Position, _initialOffset.z);
 
             elapsed += Time.deltaTime;
 
