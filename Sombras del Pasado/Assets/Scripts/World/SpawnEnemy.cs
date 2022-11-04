@@ -13,6 +13,7 @@ public class SpawnEnemy : MonoBehaviour
     private Vector3 _leftWall;
     private Transform _rightCollider;
     private Transform _leftCollider;
+    private BoxCollider _boxCollider;
 
     [Header("Spawn Control")]
     [SerializeField] private float _spawnTimer;
@@ -38,6 +39,8 @@ public class SpawnEnemy : MonoBehaviour
 
         _rightCollider.transform.gameObject.SetActive(false);
         _leftCollider.transform.gameObject.SetActive(false);
+
+        _boxCollider = GetComponent<BoxCollider>();
     }
 
     void Update()
@@ -46,6 +49,9 @@ public class SpawnEnemy : MonoBehaviour
         SpawnSpacing();
     }
 
+    /// <summary>
+    /// Function that controls the space between walls.
+    /// </summary>
     private void WallSpacing()
     {
         _spawnerPosition = transform.position;
@@ -56,14 +62,22 @@ public class SpawnEnemy : MonoBehaviour
         _leftCollider.transform.position = _leftWall;
     }
 
+    /// <summary>
+    /// Function that controls the space between spawns.
+    /// </summary>
     private void SpawnSpacing()
     {
         _enemySpawnRight = _spawnerPosition + (_offset * 3);
         _enemySpawnLeft = _spawnerPosition - (_offset * 3);
     }
 
+    /// <summary>
+    /// Coroutine that spawns enemies.
+    /// </summary>
+    /// <returns> Returns time between spawning an enemy.</returns>
     private IEnumerator SpawnControl()
     {
+        _boxCollider.enabled = false;
         int randomSpawner = 0;
         Vector3 randomPosition = _spawnerPosition;
 
