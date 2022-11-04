@@ -15,9 +15,19 @@ public class SpawnEnemy : MonoBehaviour
     private Transform _leftCollider;
 
     [Header("Spawn Control")]
-    [SerializeField] private float _spawnTimer; 
+    [SerializeField] private float _spawnTimer;
+    [Space]
     [SerializeField] private GameObject _enemyBasic;
     [SerializeField] private int _basicQuantity;
+    [Space]
+    [SerializeField] private GameObject _enemyHeavy;
+    [SerializeField] private int _heavyQuantity;
+    [Space]
+    [SerializeField] private GameObject _enemyFast;
+    [SerializeField] private int _fastQuantity;
+    [Space]
+    [SerializeField] private GameObject _enemyBoss;
+    [SerializeField] private int _bossQuantity;
     private Vector3 _enemySpawnRight;
     private Vector3 _enemySpawnLeft;
 
@@ -69,6 +79,51 @@ public class SpawnEnemy : MonoBehaviour
                 randomPosition = _enemySpawnLeft;
             }
             Instantiate(_enemyBasic, randomPosition, transform.rotation);
+            yield return new WaitForSecondsRealtime(_spawnTimer);
+        }
+
+        for (int i = 0; i < _heavyQuantity; i++)
+        {
+            randomSpawner = Random.Range(0, 2);
+            if (randomSpawner == 0)
+            {
+                randomPosition = _enemySpawnRight;
+            }
+            else if (randomSpawner == 1)
+            {
+                randomPosition = _enemySpawnLeft;
+            }
+            Instantiate(_enemyHeavy, randomPosition, transform.rotation);
+            yield return new WaitForSecondsRealtime(_spawnTimer);
+        }
+
+        for (int i = 0; i < _fastQuantity; i++)
+        {
+            randomSpawner = Random.Range(0, 2);
+            if (randomSpawner == 0)
+            {
+                randomPosition = _enemySpawnRight;
+            }
+            else if (randomSpawner == 1)
+            {
+                randomPosition = _enemySpawnLeft;
+            }
+            Instantiate(_enemyFast, randomPosition, transform.rotation);
+            yield return new WaitForSecondsRealtime(_spawnTimer);
+        }
+
+        for (int i = 0; i < _bossQuantity; i++)
+        {
+            randomSpawner = Random.Range(0, 2);
+            if (randomSpawner == 0)
+            {
+                randomPosition = _enemySpawnRight;
+            }
+            else if (randomSpawner == 1)
+            {
+                randomPosition = _enemySpawnLeft;
+            }
+            Instantiate(_enemyBoss, randomPosition, transform.rotation);
             yield return new WaitForSecondsRealtime(_spawnTimer);
         }
     }
