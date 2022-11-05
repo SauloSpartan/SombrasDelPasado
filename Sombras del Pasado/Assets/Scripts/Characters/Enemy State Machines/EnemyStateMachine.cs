@@ -63,6 +63,9 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private GameObject _enemyObject;
     private int _hierarchyIndex;
 
+    // Spawn variables
+    private SpawnEnemy _spawnEnemy;
+
     // State variables
     private EnemyBaseState _currentState;
     private EnemyStateFactory _states;
@@ -123,6 +126,7 @@ public class EnemyStateMachine : MonoBehaviour
 
         // Optional
         _target = PlayerManager.instance.player.transform;
+        _spawnEnemy = GetComponentInParent<SpawnEnemy>();
 
         if (_swordOne != null)
         {
@@ -156,6 +160,7 @@ public class EnemyStateMachine : MonoBehaviour
         _swordOne.enabled = false;
         _enemyCollider.enabled = false;
         PowerUp();
+        _spawnEnemy.EnemyDeath++;
         Destroy(gameObject, 4.5f);
     }
 

@@ -29,6 +29,7 @@ public class SpawnEnemy : MonoBehaviour
     [Space]
     [SerializeField] private GameObject _enemyBoss;
     [SerializeField] private int _bossQuantity;
+    [HideInInspector] public int EnemyDeath;
     private Vector3 _enemySpawnRight;
     private Vector3 _enemySpawnLeft;
 
@@ -47,6 +48,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         WallSpacing();
         SpawnSpacing();
+        EnemiesDeath();
     }
 
     /// <summary>
@@ -72,6 +74,17 @@ public class SpawnEnemy : MonoBehaviour
     }
 
     /// <summary>
+    /// Function that destroys the spawner.
+    /// </summary>
+    private void EnemiesDeath()
+    {
+        if (EnemyDeath == (_basicQuantity + _heavyQuantity + _fastQuantity + _bossQuantity))
+        {
+            Destroy(gameObject, 4f);
+        }
+    }
+
+    /// <summary>
     /// Coroutine that spawns enemies.
     /// </summary>
     /// <returns> Returns time between spawning an enemy.</returns>
@@ -92,7 +105,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 randomPosition = _enemySpawnLeft;
             }
-            Instantiate(_enemyBasic, randomPosition, transform.rotation);
+            Instantiate(_enemyBasic, randomPosition, transform.rotation, gameObject.transform);
             yield return new WaitForSecondsRealtime(_spawnTimer);
         }
 
@@ -107,7 +120,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 randomPosition = _enemySpawnLeft;
             }
-            Instantiate(_enemyHeavy, randomPosition, transform.rotation);
+            Instantiate(_enemyHeavy, randomPosition, transform.rotation, gameObject.transform);
             yield return new WaitForSecondsRealtime(_spawnTimer);
         }
 
@@ -122,7 +135,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 randomPosition = _enemySpawnLeft;
             }
-            Instantiate(_enemyFast, randomPosition, transform.rotation);
+            Instantiate(_enemyFast, randomPosition, transform.rotation, gameObject.transform);
             yield return new WaitForSecondsRealtime(_spawnTimer);
         }
 
@@ -137,7 +150,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 randomPosition = _enemySpawnLeft;
             }
-            Instantiate(_enemyBoss, randomPosition, transform.rotation);
+            Instantiate(_enemyBoss, randomPosition, transform.rotation, gameObject.transform);
             yield return new WaitForSecondsRealtime(_spawnTimer);
         }
     }
@@ -155,12 +168,12 @@ public class SpawnEnemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(_spawnerPosition, _rightWall);
+        Gizmos.DrawWireSphere(_rightWall, 1f);
 
         Color orange;
         ColorUtility.TryParseHtmlString("#ff8400", out orange);
         Gizmos.color = orange;
-        Gizmos.DrawLine(_spawnerPosition, _leftWall);
+        Gizmos.DrawWireSphere(_leftWall, 1f);
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(_enemySpawnRight, Vector3.one);
