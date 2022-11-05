@@ -161,7 +161,7 @@ public class EnemyStateMachine : MonoBehaviour
         _enemyCollider.enabled = false;
         PowerUp();
         _spawnEnemy.EnemyDeath++;
-        Destroy(gameObject, 4.5f);
+        Destroy(this.gameObject, 4.5f);
     }
 
     /// <summary>
@@ -192,7 +192,7 @@ public class EnemyStateMachine : MonoBehaviour
         }
         if (gameObject.tag == "Enemy Boss")
         {
-            _baseHealth = 300;
+            _baseHealth = 500;
             _baseDamage = 20;
             _attackRadius = 1.5f;
             _enemyType = "Enemy Boss";
