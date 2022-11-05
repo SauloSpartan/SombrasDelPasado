@@ -8,6 +8,7 @@ public class SpawnEnemy : MonoBehaviour
     // Wall variables
     [Header("Wall Spacing")]
     [SerializeField] private Vector3 _offset;
+    [SerializeField] [Range(0, 5)] private float _spawnerOffset;
     private Vector3 _spawnerPosition;
     private Vector3 _rightWall;
     private Vector3 _leftWall;
@@ -69,8 +70,8 @@ public class SpawnEnemy : MonoBehaviour
     /// </summary>
     private void SpawnSpacing()
     {
-        _enemySpawnRight = _spawnerPosition + (_offset * 3);
-        _enemySpawnLeft = _spawnerPosition - (_offset * 3);
+        _enemySpawnRight = _spawnerPosition + (_offset * _spawnerOffset);
+        _enemySpawnLeft = _spawnerPosition - (_offset * _spawnerOffset);
     }
 
     /// <summary>
@@ -80,7 +81,9 @@ public class SpawnEnemy : MonoBehaviour
     {
         if (EnemyDeath == (_basicQuantity + _heavyQuantity + _fastQuantity + _bossQuantity))
         {
-            Destroy(gameObject, 4f);
+            _rightCollider.transform.gameObject.SetActive(false);
+            _leftCollider.transform.gameObject.SetActive(false);
+            Destroy(this.gameObject, 4f);
         }
     }
 
@@ -168,12 +171,14 @@ public class SpawnEnemy : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(_rightWall, 1f);
+        Gizmos.DrawWireSphere(_rightWall, 0.7f);
+        Gizmos.DrawLine(_spawnerPosition, _rightWall);
 
-        Color orange;
-        ColorUtility.TryParseHtmlString("#ff8400", out orange);
-        Gizmos.color = orange;
-        Gizmos.DrawWireSphere(_leftWall, 1f);
+        Color pink;
+        ColorUtility.TryParseHtmlString("#ff00b4", out pink);
+        Gizmos.color = pink;
+        Gizmos.DrawWireSphere(_leftWall, 0.7f);
+        Gizmos.DrawLine(_spawnerPosition, _leftWall);
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(_enemySpawnRight, Vector3.one);

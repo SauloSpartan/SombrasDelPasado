@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: {x: 0, y: 0, z: 0}
+  _spawnerOffset: 2
   _spawnTimer: 0
   _enemyBasic: {fileID: 6276160406585496194, guid: d1d1887a0cba8af499b31dc267b268bb, type: 3}
   _basicQuantity: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   _fastQuantity: 0
   _enemyBoss: {fileID: 119101511082087841, guid: c10574ad354202f4c9cbd23247575a16, type: 3}
   _bossQuantity: 0
+  EnemyDeath: 0
 --- !u!1 &1923548974433392931
 GameObject:
   m_ObjectHideFlags: 0
