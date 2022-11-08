@@ -7,7 +7,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     // Wall variables
     [Header("Wall Spacing")]
-    [SerializeField] private Vector3 _offset; // Recommended 7 offset in x for CamerraOffset()
+    [SerializeField] private Vector3 _offset;
     [SerializeField] [Range(0, 5)] private float _spawnerOffset;
     private Vector3 _spawnerPosition;
     private Vector3 _rightWall;
@@ -100,20 +100,22 @@ public class SpawnEnemy : MonoBehaviour
     /// Coroutine that controls camera offset in x when close to spawn walls.
     /// </summary>
     /// <returns> Returns null.</returns>
-    private IEnumerator CameraOffset() //Remember to set wall offset minimum to 7
+    private IEnumerator CameraOffset()
     {
+        float distanceCenter = Vector3.Distance(_spawnerPosition, _rightWall); // Verify the distance between spawner and walls
+
         while (true)
         {
             float distanceRight = Vector3.Distance(_player.position, _rightWall);
-            float newOffsetRight = Mathf.Lerp(-4f, 0, distanceRight / 6f);
-            if (distanceRight <= 6f)
+            float newOffsetRight = Mathf.Lerp(-4.5f, 0, distanceRight / (distanceCenter - 1f)); // Increase offset value when player close to right wall
+            if (distanceRight <= (distanceCenter - 1f))
             {
                 _cameraControl.CameraRightWall(newOffsetRight);
             }
 
             float distanceLeft = Vector3.Distance(_player.position, _leftWall);
-            float newOffsetLeft = Mathf.Lerp(4f, 0, distanceLeft / 6f);
-            if (distanceLeft <= 6f)
+            float newOffsetLeft = Mathf.Lerp(4.5f, 0, distanceLeft / (distanceCenter - 1f));
+            if (distanceLeft <= (distanceCenter - 1f))
             {
                 _cameraControl.CameraRightWall(newOffsetLeft);
             }
