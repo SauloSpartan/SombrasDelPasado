@@ -28,6 +28,16 @@ public class CameraControl : MonoBehaviour
     }
 
     /// <summary>
+    /// Function that controls offset in x when close to spawn walls, it recieves a float.
+    /// </summary>
+    /// <param name="wallOffset"> Determines the offset in x for camera.</param>
+    public void CameraRightWall(float wallOffset)
+    {
+        _offset.x = wallOffset;
+        transform.position = GameObject.Find("Character1").transform.position + _offset;
+    }
+
+    /// <summary>
     /// Coroutine that makes the camera shake, it receives two floats, one for duration and one for magnitude.
     /// </summary>
     /// <param name="duration"> Controls how long shake last.</param>

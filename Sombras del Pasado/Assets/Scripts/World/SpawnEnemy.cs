@@ -7,7 +7,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     // Wall variables
     [Header("Wall Spacing")]
-    [SerializeField] private Vector3 _offset;
+    [SerializeField] private Vector3 _offset; // Recommended 7 offset in x for CamerraOffset()
     [SerializeField] [Range(0, 5)] private float _spawnerOffset;
     private Vector3 _spawnerPosition;
     private Vector3 _rightWall;
@@ -16,6 +16,7 @@ public class SpawnEnemy : MonoBehaviour
     private Transform _leftCollider;
     private BoxCollider _boxCollider;
 
+    // Spawn variables
     [Header("Spawn Control")]
     [SerializeField] private float _spawnTimer;
     [Space]
@@ -34,6 +35,11 @@ public class SpawnEnemy : MonoBehaviour
     private Vector3 _enemySpawnRight;
     private Vector3 _enemySpawnLeft;
 
+
+    // Reference variables
+    private CameraControl _cameraControl;
+    private Transform _player;
+
     void Awake()
     {
         _rightCollider = transform.Find("RightWall");
@@ -43,6 +49,9 @@ public class SpawnEnemy : MonoBehaviour
         _leftCollider.transform.gameObject.SetActive(false);
 
         _boxCollider = GetComponent<BoxCollider>();
+
+        _cameraControl = FindObjectOfType<CameraControl>();
+        _player = PlayerManager.instance.player.transform;
     }
 
     void Update()
@@ -84,6 +93,32 @@ public class SpawnEnemy : MonoBehaviour
             _rightCollider.transform.gameObject.SetActive(false);
             _leftCollider.transform.gameObject.SetActive(false);
             Destroy(this.gameObject, 4f);
+        }
+    }
+
+    /// <summary>
+    /// Coroutine that controls camera offset in x when close to spawn walls.
+    /// </summary>
+    /// <returns> Returns null.</returns>
+    private IEnumerator CameraOffset() //Remember to set wall offset minimum to 7
+    {
+        while (true)
+        {
+            float distanceRight = Vector3.Distance(_player.position, _rightWall);
+            float newOffsetRight = Mathf.Lerp(-4f, 0, distanceRight / 6f);
+            if (distanceRight <= 6f)
+            {
+                _cameraControl.CameraRightWall(newOffsetRight);
+            }
+
+            float distanceLeft = Vector3.Distance(_player.position, _leftWall);
+            float newOffsetLeft = Mathf.Lerp(4f, 0, distanceLeft / 6f);
+            if (distanceLeft <= 6f)
+            {
+                _cameraControl.CameraRightWall(newOffsetLeft);
+            }
+
+            yield return null;
         }
     }
 
@@ -165,6 +200,7 @@ public class SpawnEnemy : MonoBehaviour
             _rightCollider.transform.gameObject.SetActive(true);
             _leftCollider.transform.gameObject.SetActive(true);
             StartCoroutine(SpawnControl());
+            StartCoroutine(CameraOffset());
         }
     }
 

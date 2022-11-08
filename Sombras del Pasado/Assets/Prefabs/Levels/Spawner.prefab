@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923548973127204189}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
   m_LocalScale: {x: 0.41751167, y: 1, z: 1.2548}
   m_Children: []
   m_Father: {fileID: 1923548973826132763}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdcb9280380c1884d92b83378badad6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _offset: {x: 0, y: 0, z: 0}
+  _offset: {x: 7, y: 0, z: 0}
   _spawnerOffset: 2
   _spawnTimer: 0
   _enemyBasic: {fileID: 6276160406585496194, guid: d1d1887a0cba8af499b31dc267b268bb, type: 3}
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923548974433392931}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7, y: 0, z: 0}
   m_LocalScale: {x: 0.41751167, y: 1, z: 1.2548}
   m_Children: []
   m_Father: {fileID: 1923548973826132763}
