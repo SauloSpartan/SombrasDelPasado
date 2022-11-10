@@ -65,6 +65,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Spawn variables
     private SpawnEnemy _spawnEnemy;
+    private NewNextLevel _nextLevel;
 
     // State variables
     private EnemyBaseState _currentState;
@@ -98,6 +99,7 @@ public class EnemyStateMachine : MonoBehaviour
         _enemyCollider = GetComponent<CapsuleCollider>();
 
         _player = FindObjectOfType<PlayerStateMachine>();
+        _nextLevel = FindObjectOfType<NewNextLevel>();
 
         // Initial variables
         _interfaceEnemy.SetActive(false);
@@ -327,6 +329,14 @@ public class EnemyStateMachine : MonoBehaviour
         {
             _health -= _player.Damage;
             StartCoroutine(HealthTimer());
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (gameObject.tag == "Enemy Boss")
+        {
+            _nextLevel.NextLevel();
         }
     }
 
