@@ -1874,7 +1874,6 @@ GameObject:
   - component: {fileID: 2472676874023190353}
   - component: {fileID: 2472676874023190354}
   - component: {fileID: 2472676874023190355}
-  - component: {fileID: 2472676874023190352}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1943,19 +1942,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0000
---- !u!114 &2472676874023190352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2472676874023190350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f856fcf81297d4346b8b05abea13f2d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 2472676874023190355}
 --- !u!1 &2472676874026327132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2125,7 @@ GameObject:
   - component: {fileID: 2472676874134778746}
   - component: {fileID: 2472676874134778751}
   - component: {fileID: 2472676874134778750}
+  - component: {fileID: 5743698061962722373}
   m_Layer: 5
   m_Name: Interface
   m_TagString: Untagged
@@ -2254,6 +2241,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBar: {fileID: 2472676874560714575}
+--- !u!114 &5743698061962722373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472676874134778745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3aba0acff54d814494deb4f27edbd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 2472676874023190355}
+  ScoreCount: 0
+  _oldScoreCount: 0
 --- !u!1 &2472676874241452844
 GameObject:
   m_ObjectHideFlags: 0
@@ -19622,7 +19624,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5602926237232756174}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.6272727
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

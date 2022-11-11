@@ -55,6 +55,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     // Player variables
     private PlayerStateMachine _player;
+    private NewScore _score;
 
     // Interface variables
     [Header("Interface")]
@@ -99,6 +100,7 @@ public class EnemyStateMachine : MonoBehaviour
         _enemyCollider = GetComponent<CapsuleCollider>();
 
         _player = FindObjectOfType<PlayerStateMachine>();
+        _score = FindObjectOfType<NewScore>();
         _nextLevel = FindObjectOfType<NewNextLevel>();
 
         // Initial variables
@@ -329,6 +331,7 @@ public class EnemyStateMachine : MonoBehaviour
         {
             _health -= _player.Damage;
             StartCoroutine(HealthTimer());
+            _score.ScoreCount++;
         }
     }
 

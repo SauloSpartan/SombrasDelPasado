@@ -6,13 +6,7 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text scoreText;
-
     public static int score = 0;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
