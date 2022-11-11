@@ -31,10 +31,15 @@ public class CameraControl : MonoBehaviour
     /// Function that controls offset in x when close to spawn walls, it recieves a float.
     /// </summary>
     /// <param name="wallOffset"> Determines the offset in x for camera.</param>
-    public void CameraRightWall(float wallOffset)
+    public void CameraWallOffset(float wallOffset)
     {
         _offset.x = wallOffset;
         transform.position = GameObject.Find("Character1").transform.position + _offset;
+    }
+
+    public void CameraOriginalOffset()
+    {
+        _offset.x = Mathf.Lerp(_offset.x, _initialOffset.x, Time.deltaTime * 2.7f);
     }
 
     /// <summary>
@@ -46,13 +51,14 @@ public class CameraControl : MonoBehaviour
     public IEnumerator CameraShake(float duration, float magnitude)
     {
         float elapsed = 0f;
+        Vector3 newOffset = _offset;
 
         while (elapsed < duration)
         {
             float x_Position = Random.Range(-0.05f, 0.05f) * magnitude;
             float y_Position = Random.Range(-0.05f, 0.05f) * magnitude;
 
-            _offset = new Vector3(_initialOffset.x + x_Position, _initialOffset.y + y_Position, _initialOffset.z);
+            _offset = new Vector3(newOffset.x + x_Position, _initialOffset.y + y_Position, _initialOffset.z);
 
             elapsed += Time.deltaTime;
 

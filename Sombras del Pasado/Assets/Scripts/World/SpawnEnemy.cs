@@ -33,7 +33,7 @@ public class SpawnEnemy : MonoBehaviour
     [HideInInspector] public int EnemyDeath;
     private Vector3 _enemySpawnRight;
     private Vector3 _enemySpawnLeft;
-
+    private bool _wallActive;
 
     // Reference variables
     private CameraControl _cameraControl;
@@ -51,6 +51,8 @@ public class SpawnEnemy : MonoBehaviour
 
         _cameraControl = FindObjectOfType<CameraControl>();
         _player = PlayerManager.instance.player.transform;
+
+        _wallActive = true;
     }
 
     void Update()
@@ -91,6 +93,8 @@ public class SpawnEnemy : MonoBehaviour
         {
             _rightCollider.transform.gameObject.SetActive(false);
             _leftCollider.transform.gameObject.SetActive(false);
+            _wallActive = false;
+            _cameraControl.CameraOriginalOffset();
             Destroy(this.gameObject, 4f);
         }
     }
@@ -103,20 +107,20 @@ public class SpawnEnemy : MonoBehaviour
     {
         float distanceCenter = Vector3.Distance(_spawnerPosition, _rightWall); // Verify the distance between spawner and walls
 
-        while (true)
+        while (_wallActive == true)
         {
             float distanceRight = Vector3.Distance(_player.position, _rightWall);
             float newOffsetRight = Mathf.Lerp(-4.5f, 0, distanceRight / (distanceCenter - 1f)); // Increase offset value when player close to right wall
             if (distanceRight <= (distanceCenter - 1f))
             {
-                _cameraControl.CameraRightWall(newOffsetRight);
+                _cameraControl.CameraWallOffset(newOffsetRight);
             }
 
             float distanceLeft = Vector3.Distance(_player.position, _leftWall);
             float newOffsetLeft = Mathf.Lerp(4.5f, 0, distanceLeft / (distanceCenter - 1f));
             if (distanceLeft <= (distanceCenter - 1f))
             {
-                _cameraControl.CameraRightWall(newOffsetLeft);
+                _cameraControl.CameraWallOffset(newOffsetLeft);
             }
 
             yield return null;
