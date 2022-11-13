@@ -38,6 +38,9 @@ public class SpawnEnemy : MonoBehaviour
     // Reference variables
     private CameraControl _cameraControl;
     private Transform _player;
+    private ArrowOffset _arrowOffset;
+
+    private bool _playable;
 
     void Awake()
     {
@@ -51,6 +54,7 @@ public class SpawnEnemy : MonoBehaviour
 
         _cameraControl = FindObjectOfType<CameraControl>();
         _player = PlayerManager.instance.player.transform;
+        _arrowOffset = FindObjectOfType<ArrowOffset>();
 
         _wallActive = true;
     }
@@ -89,14 +93,21 @@ public class SpawnEnemy : MonoBehaviour
     /// </summary>
     private void EnemiesDeath()
     {
-        if (EnemyDeath == (_basicQuantity + _heavyQuantity + _fastQuantity + _bossQuantity))
+        if (EnemyDeath != (_basicQuantity + _heavyQuantity + _fastQuantity + _bossQuantity))
         {
-            _rightCollider.transform.gameObject.SetActive(false);
-            _leftCollider.transform.gameObject.SetActive(false);
-            _wallActive = false;
-            _cameraControl.CameraOriginalOffset();
-            Destroy(this.gameObject, 4f);
+            return;
         }
+
+        if (_playable)
+        {
+            return;
+        }
+        _playable = true;
+        _rightCollider.transform.gameObject.SetActive(false);
+        _leftCollider.transform.gameObject.SetActive(false);
+        _wallActive = false;
+        StartCoroutine(_arrowOffset.ArrowWink());
+        Destroy(this.gameObject, 4f);
     }
 
     /// <summary>

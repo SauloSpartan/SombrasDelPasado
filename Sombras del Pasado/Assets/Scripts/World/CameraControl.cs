@@ -17,6 +17,7 @@ public class CameraControl : MonoBehaviour
     void Update()
     {
         CameraFollow();
+        CameraOriginalOffset();
     }
 
     /// <summary>
@@ -51,10 +52,10 @@ public class CameraControl : MonoBehaviour
     public IEnumerator CameraShake(float duration, float magnitude)
     {
         float elapsed = 0f;
-        Vector3 newOffset = _offset;
 
         while (elapsed < duration)
         {
+            Vector3 newOffset = _offset;
             float x_Position = Random.Range(-0.05f, 0.05f) * magnitude;
             float y_Position = Random.Range(-0.05f, 0.05f) * magnitude;
 
@@ -65,6 +66,7 @@ public class CameraControl : MonoBehaviour
             yield return null;
         }
 
-        _offset = _initialOffset;
+        _offset.y = _initialOffset.y;
+        _offset.z = _initialOffset.z;
     }
 }
