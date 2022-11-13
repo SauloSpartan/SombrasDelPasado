@@ -14,6 +14,9 @@ public class PlayerDamageState : PlayerBaseState
         _ctx.Animator.SetTrigger("Damage");
         _ctx.CanMove = false;
         _ctx.MoveDirection = Vector3.zero;
+        _ctx.DamagedCount++;
+        _ctx.GeneralTimer = 0.5f;
+        _ctx.StartCoroutine(Invulnerability());
     }
 
     public override void UpdateState()
@@ -35,6 +38,26 @@ public class PlayerDamageState : PlayerBaseState
         if (_ctx.Health <= 0)
         {
             SwitchState(_factory.Death());
+        }
+    }
+
+    private IEnumerator Invulnerability()
+    {
+        if (_ctx.DamagedCount >= 3)
+        {
+            _ctx.IsInvulnerable = true;
+
+            for (int i = 0; i < 6; i++)
+            {
+                _ctx.MainMaterial.EnableKeyword("_EMISSION");
+                yield return new WaitForSecondsRealtime(_ctx.GeneralTimer);
+
+                _ctx.MainMaterial.DisableKeyword("_EMISSION");
+                yield return new WaitForSecondsRealtime(_ctx.GeneralTimer);
+            }
+
+            _ctx.DamagedCount = 0;
+            _ctx.IsInvulnerable = false;
         }
     }
 }

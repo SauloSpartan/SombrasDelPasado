@@ -29325,6 +29325,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.0000076293945
       objectReference: {fileID: 0}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6302adc43d481b641be12a057f469f28, type: 2}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e49eac2a781e02d489372498d4038f7f, type: 2}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27052f2ec2ebaef47887ff7b2a79cf40, type: 2}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b297a09cddbfa5408304dd0b23121de, type: 2}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc5ffe14bf4cd4e4f884d0a210f0c90d, type: 2}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3cb5b7a9cd87b44c9dc4a3682bbc616, type: 2}
+    - target: {fileID: 2472676874838672951, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: _materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: 338876fcc974019428adef0767690abf, type: 2}
     - target: {fileID: 2472676874993225981, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
       propertyPath: m_Name
       value: Player - State Machines

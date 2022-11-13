@@ -19,6 +19,7 @@ public class PlayerAttackState : PlayerBaseState
     public override void UpdateState()
     {
         Attack();
+        StopInvulnerability();
         CheckSwitchState();
     }
 
@@ -59,5 +60,11 @@ public class PlayerAttackState : PlayerBaseState
             _ctx.Animator.SetInteger("AttackCombo", 3);
             _ctx.Damage = 50 * _ctx.Attack;
         }
+    }
+
+    private void StopInvulnerability()
+    {
+        _ctx.GeneralTimer = 0;
+        _ctx.IsInvulnerable = false;
     }
 }

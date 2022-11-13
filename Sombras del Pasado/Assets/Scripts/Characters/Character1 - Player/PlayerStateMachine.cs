@@ -24,6 +24,11 @@ public class PlayerStateMachine : MonoBehaviour
     private int _attackCombo = 1;
     private float _maxHealth;
     private bool _canMove = true;
+    private int _damagedCount = 0;
+    private int _oldDamagedCount;
+    private bool _isInvulnerable = false;
+    private float _generalTimer;
+    private float _timer = 0;
 
     // Power Ups variables
     private int _defense = 1;
@@ -36,6 +41,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Reference variables
     [Header("Reference")]
     [SerializeField] private GameObject _trailSword;
+    [SerializeField] Material _mainMaterial = null;
     private CharacterController _charController;
     private BoxCollider _sword;
     private GameObject _powerDefense;
@@ -81,6 +87,10 @@ public class PlayerStateMachine : MonoBehaviour
     public int AttackCombo { get { return _attackCombo; } }
     public bool CanMove { get { return _canMove; } set { _canMove = value; } }
     public float Health { get { return _health; } }
+    public int DamagedCount { get { return _damagedCount; } set { _damagedCount = value; } }
+    public bool IsInvulnerable { get { return _isInvulnerable; } set { _isInvulnerable = value; } }
+    public float GeneralTimer { get { return _generalTimer; } set { _generalTimer = value; } }
+    public Material MainMaterial { get { return _mainMaterial;} set { _mainMaterial = value; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -105,6 +115,7 @@ public class PlayerStateMachine : MonoBehaviour
 
         // Initial variables
         _maxHealth = _health;
+        _oldDamagedCount = _damagedCount;
     }
 
     void Start()
@@ -123,6 +134,7 @@ public class PlayerStateMachine : MonoBehaviour
         // Functions and code needed
         Gravity();
         PowerUp();
+        DamagedCooldown();
         _charController.Move(_moveDirection * _walkSpeed * Time.deltaTime); // It moves the character
         if (_healthBar != null) // Takes out dependance, verifying that reference is not null
         {
@@ -180,6 +192,28 @@ public class PlayerStateMachine : MonoBehaviour
             _powerDefense.SetActive(false);
             _powerDamage.SetActive(false);
             _powerVelocity.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Function that controls the cooldown of the damaged state.
+    /// </summary>
+    private void DamagedCooldown()
+    {
+        if (_oldDamagedCount < _damagedCount)
+        {
+            _timer = 3.5f;
+            _oldDamagedCount = _damagedCount;
+        }
+
+        if (_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+        }
+        else if (_timer <= 0)
+        {
+            _damagedCount = 0;
+            _oldDamagedCount = _damagedCount;
         }
     }
 
@@ -277,15 +311,19 @@ public class PlayerStateMachine : MonoBehaviour
         {
             _luck = Random.Range(0, 4);
             _enemy = other.GetComponentInParent<EnemyStateMachine>(); // Gets the unique copy of that script
-            StartCoroutine(_camera.CameraShake(0.1f, 1f));
 
             if (_luck == _evasion && _evasion == 1)
+            {
+                _health -= _enemy.Damage - _enemy.Damage;
+            }
+            else if (_isInvulnerable == true)
             {
                 _health -= _enemy.Damage - _enemy.Damage;
             }
             else
             {
                 _health -= _enemy.Damage / _defense;
+                StartCoroutine(_camera.CameraShake(0.1f, 1f));
                 _currentState = _states.Damage();
                 _currentState.EnterState();
             }
