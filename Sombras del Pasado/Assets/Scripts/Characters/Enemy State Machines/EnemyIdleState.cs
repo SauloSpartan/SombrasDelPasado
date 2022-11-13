@@ -46,7 +46,7 @@ public class EnemyIdleState : EnemyBaseState
     private IEnumerator DesitionState()
     {
         // Random.Range(x, secondNumber) secondNumber is not gona be used, just the one before it
-        _ctx.RandomDesition = 2; // 1. Idle, 2. Walk, 3. Provoke, 4. Escape
+        _ctx.RandomDesition = Random.Range(1, 5); // 1. Idle, 2. Walk, 3. Provoke, 4. Escape
 
         if (_ctx.RandomDesition == 1) // For Idle
         {

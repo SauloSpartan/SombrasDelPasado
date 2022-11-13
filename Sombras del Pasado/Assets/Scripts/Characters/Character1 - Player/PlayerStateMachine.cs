@@ -41,7 +41,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Reference variables
     [Header("Reference")]
     [SerializeField] private GameObject _trailSword;
-    [SerializeField] Material _mainMaterial = null;
+    [SerializeField] Material[] _mainMaterials = null;
     private CharacterController _charController;
     private BoxCollider _sword;
     private GameObject _powerDefense;
@@ -78,7 +78,6 @@ public class PlayerStateMachine : MonoBehaviour
     /// <value> Float for movement in Z axis. </value>
     public float MoveZ { get { return _moveZ; } set { _moveZ = value; } }
     public Vector3 MoveDirection { get { return _moveDirection; } set { _moveDirection = value; } }
-    public CharacterController CharController { get { return _charController; } }
     public float WalkSpeed { get { return _walkSpeed; } set { _walkSpeed = value; } }
     public float RotationSpeed { get { return _rotationSpeed; } }
     public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
@@ -90,7 +89,7 @@ public class PlayerStateMachine : MonoBehaviour
     public int DamagedCount { get { return _damagedCount; } set { _damagedCount = value; } }
     public bool IsInvulnerable { get { return _isInvulnerable; } set { _isInvulnerable = value; } }
     public float GeneralTimer { get { return _generalTimer; } set { _generalTimer = value; } }
-    public Material MainMaterial { get { return _mainMaterial;} set { _mainMaterial = value; } }
+    public Material[] MainMaterials { get { return _mainMaterials;} set { _mainMaterials = value; } }
 
     // Awake is called earlier than Start
     void Awake()

@@ -3321,7 +3321,14 @@ MonoBehaviour:
   _health: 1000
   _damage: 0
   _trailSword: {fileID: 8935849282515057666}
-  _mainMaterial: {fileID: 2100000, guid: 6302adc43d481b641be12a057f469f28, type: 2}
+  _mainMaterials:
+  - {fileID: 2100000, guid: 6302adc43d481b641be12a057f469f28, type: 2}
+  - {fileID: 2100000, guid: e49eac2a781e02d489372498d4038f7f, type: 2}
+  - {fileID: 2100000, guid: 27052f2ec2ebaef47887ff7b2a79cf40, type: 2}
+  - {fileID: 2100000, guid: 5b297a09cddbfa5408304dd0b23121de, type: 2}
+  - {fileID: 2100000, guid: bc5ffe14bf4cd4e4f884d0a210f0c90d, type: 2}
+  - {fileID: 2100000, guid: f3cb5b7a9cd87b44c9dc4a3682bbc616, type: 2}
+  - {fileID: 2100000, guid: 338876fcc974019428adef0767690abf, type: 2}
   _stepClips:
   - {fileID: 8300000, guid: 0590c592dbe0c3e4ebb348a65114f264, type: 3}
   - {fileID: 8300000, guid: adb7a326f8580b442bde86514b055045, type: 3}
@@ -19721,7 +19728,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5602926237232756174}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.6272727
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -47,12 +47,18 @@ public class PlayerDamageState : PlayerBaseState
         {
             _ctx.IsInvulnerable = true;
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 5; i++)
             {
-                _ctx.MainMaterial.EnableKeyword("_EMISSION");
+                foreach (Material Materials in _ctx.MainMaterials)
+                {
+                    Materials.EnableKeyword("_EMISSION");
+                }
                 yield return new WaitForSecondsRealtime(_ctx.GeneralTimer);
 
-                _ctx.MainMaterial.DisableKeyword("_EMISSION");
+                foreach (Material Materials in _ctx.MainMaterials)
+                {
+                    Materials.DisableKeyword("_EMISSION");
+                }
                 yield return new WaitForSecondsRealtime(_ctx.GeneralTimer);
             }
 
