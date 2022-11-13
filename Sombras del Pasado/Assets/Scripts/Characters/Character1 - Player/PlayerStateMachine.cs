@@ -223,6 +223,19 @@ public class PlayerStateMachine : MonoBehaviour
     }
     #endregion
 
+    #region Damage Events
+    private void Damaged()
+    {
+        _trailSword.SetActive(false);
+        _canMove = false;
+    }
+
+    private void DamagedEnd()
+    {
+        _canMove = true;
+    }
+    #endregion
+
     #region Audio Events
     private void Step_Sound()
     {
@@ -273,6 +286,8 @@ public class PlayerStateMachine : MonoBehaviour
             else
             {
                 _health -= _enemy.Damage / _defense;
+                _currentState = _states.Damage();
+                _currentState.EnterState();
             }
         }
 
