@@ -24,6 +24,7 @@ public class EnemyStateMachine : MonoBehaviour
     private float _maxHealth;
     private float _baseHealth;
     private float _baseDamage;
+    private bool _canMove = true;
     private string _enemyType;
 
     // Animation variables
@@ -89,6 +90,7 @@ public class EnemyStateMachine : MonoBehaviour
     public GameObject TrailSwordTwo { get { return _trailSwordTwo; } set { _trailSwordTwo = value; } }
     public float Health { get { return _health; } }
     public float Damage { get { return _damage; } }
+    public bool CanMove { get { return _canMove; } set { _canMove = value; } }
     public string EnemyType { get { return _enemyType; } }
 
     // Awake is called earlier than Start
@@ -290,6 +292,18 @@ public class EnemyStateMachine : MonoBehaviour
     }
     #endregion
 
+    #region Damage Events
+    private void Damaged()
+    {
+        _canMove = false;
+    }
+
+    private void DamagedEnd()
+    {
+        _canMove = true;
+    }
+    #endregion
+
     #region Audio Events
     private void Step_Sound()
     {
@@ -332,6 +346,8 @@ public class EnemyStateMachine : MonoBehaviour
             _health -= _player.Damage;
             StartCoroutine(HealthTimer());
             _score.ScoreCount++;
+            _currentState = _states.Damage();
+            _currentState.EnterState();
         }
     }
 

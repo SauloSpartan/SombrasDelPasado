@@ -20,7 +20,7 @@ ModelImporter:
     second: Death
   - first:
       74: 2157117808382569344
-    second: Damaged
+    second: Damage
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -321,7 +321,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Damaged
+      name: Damage
       takeName: metarig|metarigAction
       internalID: 0
       firstFrame: 301
@@ -344,7 +344,28 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: Damaged
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: NotAttacking
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.92289996
+        functionName: DamagedEnd
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

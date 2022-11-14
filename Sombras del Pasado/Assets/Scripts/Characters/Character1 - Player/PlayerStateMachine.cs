@@ -90,6 +90,7 @@ public class PlayerStateMachine : MonoBehaviour
     public bool IsInvulnerable { get { return _isInvulnerable; } set { _isInvulnerable = value; } }
     public float GeneralTimer { get { return _generalTimer; } set { _generalTimer = value; } }
     public Material[] MainMaterials { get { return _mainMaterials;} set { _mainMaterials = value; } }
+    public CharacterController CharController { get { return _charController; } set { _charController = value; } }
 
     // Awake is called earlier than Start
     void Awake()
@@ -201,7 +202,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         if (_oldDamagedCount < _damagedCount)
         {
-            _timer = 3.5f;
+            _timer = 3.0f;
             _oldDamagedCount = _damagedCount;
         }
 
