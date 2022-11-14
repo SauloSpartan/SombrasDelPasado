@@ -14,6 +14,7 @@ public class EnemyEscapeState : EnemyBaseState
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = false;
         _ctx.GeneralCooldown = 1.5f;
+        _ctx.NavMesh.speed *= 0.75f;
     }
 
     public override void UpdateState()
@@ -26,6 +27,7 @@ public class EnemyEscapeState : EnemyBaseState
     public override void ExitState()
     {
         _ctx.FollowTarget = false;
+        _ctx.NavMesh.speed = _ctx.InitialSpeed;
     }
 
     public override void CheckSwitchState()

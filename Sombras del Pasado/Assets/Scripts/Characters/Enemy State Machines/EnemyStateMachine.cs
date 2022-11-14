@@ -14,6 +14,7 @@ public class EnemyStateMachine : MonoBehaviour
     private Transform _target;
     private bool _followTarget = false;
     private int _randomDesition;
+    private float _initialSpeed;
 
     // Health and Damage variables
     [Header("Health & Damage")]
@@ -81,6 +82,7 @@ public class EnemyStateMachine : MonoBehaviour
     public bool FollowTarget { get { return _followTarget; } set { _followTarget = value; } }
     public float StopRadius { get { return _stopRadius; } }
     public int RandomDesition { get { return _randomDesition; } set { _randomDesition = value; } }
+    public float InitialSpeed { get { return _initialSpeed; } }
     public float EscapeRadius { get { return _escapeRadius; } }
     public Transform EscapePosition { get { return _escapePosition; } }
     public float AttackRadius { get { return _attackRadius; } }
@@ -121,6 +123,7 @@ public class EnemyStateMachine : MonoBehaviour
         Difficulty();
 
         _maxHealth = _health;
+        _initialSpeed = _navMesh.speed;
     }
 
     void Start()
