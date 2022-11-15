@@ -50,15 +50,29 @@ public class PlayerAttackState : PlayerBaseState
             _ctx.Animator.SetInteger("AttackCombo", 1);
             _ctx.Damage = 20 * _ctx.Attack;
         }
-        if (_ctx.AttackCombo == 2 && Input.GetKeyDown(KeyCode.J))
+        if ((_ctx.AttackCombo == 2 || _ctx.AttackCombo == 4) && Input.GetKeyDown(KeyCode.J))
         {
             _ctx.Animator.SetInteger("AttackCombo", 2);
             _ctx.Damage = 30 * _ctx.Attack;
         }
-        if (_ctx.AttackCombo == 3 && Input.GetKeyDown(KeyCode.J))
+        if ((_ctx.AttackCombo == 3 || _ctx.AttackCombo == 5) && Input.GetKeyDown(KeyCode.J))
         {
             _ctx.Animator.SetInteger("AttackCombo", 3);
             _ctx.Damage = 50 * _ctx.Attack;
+        }
+
+        // Attacks with K
+        if (_ctx.AttackCombo == 2 && Input.GetKeyDown(KeyCode.K))
+        {
+            _ctx.Animator.SetInteger("AttackCombo", 4);
+        }
+        if (_ctx.AttackCombo == 3 && Input.GetKeyDown(KeyCode.K))
+        {
+            _ctx.Animator.SetInteger("AttackCombo", 5);
+        }
+        if (_ctx.AttackCombo == 4 && Input.GetKeyDown(KeyCode.K))
+        {
+            _ctx.Animator.SetInteger("AttackCombo", 6);
         }
     }
 

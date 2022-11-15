@@ -245,6 +245,7 @@ public class PlayerStateMachine : MonoBehaviour
     private void Combo3()
     {
         _trailSword.SetActive(true);
+        _attackCombo = 4;
         _canMove = false;
     }
 
@@ -254,6 +255,26 @@ public class PlayerStateMachine : MonoBehaviour
         _attackCombo = 1;
         _animator.SetInteger("AttackCombo", 0);
         _canMove = true;
+    }
+
+    private void Heavy4()
+    {
+        _trailSword.SetActive(true);
+        _attackCombo = 4;
+        _canMove = false;
+    }
+
+    private void Heavy5()
+    {
+        _trailSword.SetActive(true);
+        _attackCombo = 5;
+        _canMove = false;
+    }
+
+    private void Heavy6()
+    {
+        _trailSword.SetActive(true);
+        _canMove = false;
     }
     #endregion
 
