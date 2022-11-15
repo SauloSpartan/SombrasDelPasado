@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class SpawnEnemy : MonoBehaviour
 {
     // Wall variables
@@ -64,7 +64,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         WallSpacing();
         SpawnSpacing();
-        //EnemiesDeath();
+        EnemiesDeath();
     }
 
     /// <summary>
