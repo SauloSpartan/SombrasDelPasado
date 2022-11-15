@@ -180,29 +180,29 @@ public class EnemyStateMachine : MonoBehaviour
     {
         if (gameObject.tag == "Enemy Basic")
         {
-            _baseHealth = 100;
+            _baseHealth = 50;
             _baseDamage = 4;
             _attackRadius = 1.5f;
             _enemyType = "Enemy Basic";
         }
         if (gameObject.tag == "Enemy Heavy")
         {
-            _baseHealth = 200;
+            _baseHealth = 100;
             _baseDamage = 10;
             _attackRadius = 2f;
             _enemyType = "Enemy Heavy";
         }
         if (gameObject.tag == "Enemy Fast")
         {
-            _baseHealth = 80;
-            _baseDamage = 2;
+            _baseHealth = 50;
+            _baseDamage = 6;
             _attackRadius = 1.2f;
             _enemyType = "Enemy Fast";
         }
         if (gameObject.tag == "Enemy Boss")
         {
-            _baseHealth = 500;
-            _baseDamage = 20;
+            _baseHealth = 350;
+            _baseDamage = 15;
             _attackRadius = 1.5f;
             _enemyType = "Enemy Boss";
         }
@@ -213,24 +213,24 @@ public class EnemyStateMachine : MonoBehaviour
     /// </summary>
     private void Difficulty()
     {
-        if (MainMenu.Difficulty == 1)
+        if (MainMenu.Difficulty == 1) // Easy
         {
             _health = _baseHealth / 2;
             _damage = _baseDamage / 2;
             ColorUtility.TryParseHtmlString("#1C7D68", out _easyColor);
             _enemyColor.color = _easyColor;
         }
-        else if (MainMenu.Difficulty == 2)
+        else if (MainMenu.Difficulty == 2) // Normal
         {
             _health = _baseHealth;
             _damage = _baseDamage;
             ColorUtility.TryParseHtmlString("#1C3E7D", out _mediumColor);
             _enemyColor.color = _mediumColor;
         }
-        else if (MainMenu.Difficulty == 3)
+        else if (MainMenu.Difficulty == 3) // Hard
         {
-            _health = _baseHealth + (_baseHealth / 2);
-            _damage = _baseDamage + (_baseDamage / 2);
+            _health = _baseHealth * 2;
+            _damage = _baseDamage * 2;
             ColorUtility.TryParseHtmlString("#731C7D", out _hardColor);
             _enemyColor.color = _hardColor;
         }

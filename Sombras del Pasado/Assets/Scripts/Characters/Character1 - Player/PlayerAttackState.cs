@@ -12,7 +12,7 @@ public class PlayerAttackState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.Animator.SetInteger("AttackCombo", 1);
-        _ctx.Damage = 20 * _ctx.Attack;
+        _ctx.Damage = 3 * _ctx.Attack;
         _ctx.CanMove = false;
     }
 
@@ -48,31 +48,34 @@ public class PlayerAttackState : PlayerBaseState
         if (_ctx.AttackCombo == 1 && Input.GetKeyDown(KeyCode.J))
         {
             _ctx.Animator.SetInteger("AttackCombo", 1);
-            _ctx.Damage = 20 * _ctx.Attack;
+            _ctx.Damage = 3 * _ctx.Attack;
         }
         if ((_ctx.AttackCombo == 2 || _ctx.AttackCombo == 4) && Input.GetKeyDown(KeyCode.J))
         {
             _ctx.Animator.SetInteger("AttackCombo", 2);
-            _ctx.Damage = 30 * _ctx.Attack;
+            _ctx.Damage = 3 * _ctx.Attack;
         }
         if ((_ctx.AttackCombo == 3 || _ctx.AttackCombo == 5) && Input.GetKeyDown(KeyCode.J))
         {
             _ctx.Animator.SetInteger("AttackCombo", 3);
-            _ctx.Damage = 50 * _ctx.Attack;
+            _ctx.Damage = 5 * _ctx.Attack;
         }
 
         // Attacks with K
         if (_ctx.AttackCombo == 2 && Input.GetKeyDown(KeyCode.K))
         {
             _ctx.Animator.SetInteger("AttackCombo", 4);
+            _ctx.Damage = 7 * _ctx.Attack;
         }
         if (_ctx.AttackCombo == 3 && Input.GetKeyDown(KeyCode.K))
         {
             _ctx.Animator.SetInteger("AttackCombo", 5);
+            _ctx.Damage = 7 * _ctx.Attack;
         }
         if (_ctx.AttackCombo == 4 && Input.GetKeyDown(KeyCode.K))
         {
             _ctx.Animator.SetInteger("AttackCombo", 6);
+            _ctx.Damage = 10 * _ctx.Attack;
         }
     }
 

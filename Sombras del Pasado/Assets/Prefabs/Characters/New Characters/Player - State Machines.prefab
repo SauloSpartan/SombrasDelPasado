@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _walkSpeed: 3
   _rotationSpeed: 3240
-  _health: 1000
+  _health: 100
   _damage: 0
   _trailSword: {fileID: 8935849282515057666}
   _mainMaterials:

@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = true;
-        _ctx.GeneralCooldown = Random.Range(0.5f, 2f); // Takes some time before attacking
+        _ctx.GeneralCooldown = Random.Range(0.3f, 7f); // Takes some time before attacking
     }
 
     public override void UpdateState()
