@@ -35,7 +35,7 @@ public class EnemyWalkState : EnemyBaseState
         {
             SwitchState(_factory.Idle());
         }
-        if (distance <= _ctx.AttackRadius)
+        if (distance < _ctx.AttackRadius)
         {
             SwitchState(_factory.Attack());
         }

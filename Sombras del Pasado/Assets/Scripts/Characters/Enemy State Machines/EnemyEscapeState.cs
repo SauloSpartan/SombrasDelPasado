@@ -38,7 +38,7 @@ public class EnemyEscapeState : EnemyBaseState
         {
             SwitchState(_factory.Walk());
         }
-        if (distance <= _ctx.AttackRadius)
+        if (distance < _ctx.AttackRadius)
         {
             SwitchState(_factory.Attack());
         }

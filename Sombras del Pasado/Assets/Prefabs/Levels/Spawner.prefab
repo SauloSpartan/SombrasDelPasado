@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: {x: 7, y: 0, z: 0}
-  _spawnerOffset: 2
+  _spawnerOffset: 1
   _spawnTimer: 0
   _enemyBasic: {fileID: 6276160406585496194, guid: d1d1887a0cba8af499b31dc267b268bb, type: 3}
   _basicQuantity: 0

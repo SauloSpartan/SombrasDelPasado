@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = true;
-        _ctx.GeneralCooldown = Random.Range(0.3f, 7f); // Takes some time before attacking
+        _ctx.GeneralCooldown = Random.Range(0.3f, 0.7f); // Takes some time before attacking
     }
 
     public override void UpdateState()
@@ -31,7 +31,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance > _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.4f)
+        if (distance >= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.4f)
         {
             SwitchState(_factory.Escape());
         }

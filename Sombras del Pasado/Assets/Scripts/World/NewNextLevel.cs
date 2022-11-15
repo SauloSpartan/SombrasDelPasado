@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +12,9 @@ public class NewNextLevel : MonoBehaviour
         _buildIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void NextLevel()
+    public IEnumerator NextLevel()
     {
+        yield return new WaitForSecondsRealtime(3);
         SceneManager.LoadScene(_buildIndex + 1);
     }
 }

@@ -170,6 +170,10 @@ public class EnemyStateMachine : MonoBehaviour
         _enemyCollider.enabled = false;
         PowerUp();
         _spawnEnemy.EnemyDeath++;
+        if (gameObject.tag == "Enemy Boss")
+        {
+            StartCoroutine(_nextLevel.NextLevel());
+        }
         Destroy(this.gameObject, 4.5f);
     }
 
@@ -180,28 +184,28 @@ public class EnemyStateMachine : MonoBehaviour
     {
         if (gameObject.tag == "Enemy Basic")
         {
-            _baseHealth = 50;
+            _baseHealth = 30;
             _baseDamage = 4;
             _attackRadius = 1.5f;
             _enemyType = "Enemy Basic";
         }
         if (gameObject.tag == "Enemy Heavy")
         {
-            _baseHealth = 100;
+            _baseHealth = 50;
             _baseDamage = 10;
             _attackRadius = 2f;
             _enemyType = "Enemy Heavy";
         }
         if (gameObject.tag == "Enemy Fast")
         {
-            _baseHealth = 50;
+            _baseHealth = 30;
             _baseDamage = 6;
             _attackRadius = 1.2f;
             _enemyType = "Enemy Fast";
         }
         if (gameObject.tag == "Enemy Boss")
         {
-            _baseHealth = 350;
+            _baseHealth = 150;
             _baseDamage = 15;
             _attackRadius = 1.5f;
             _enemyType = "Enemy Boss";
@@ -246,10 +250,10 @@ public class EnemyStateMachine : MonoBehaviour
             Vector3 enemyPosition = (transform.position);
             Vector3 powerPosition = new Vector3(enemyPosition.x, enemyPosition.y + 0.7f, enemyPosition.z);
             _powerAmount = 0;
-            int probabilityPower = Random.Range(0, 100);
+            int probabilityPower = Random.Range(1, 101);
             int randomPower = Random.Range(0, _powerUps.Length);
 
-            if (probabilityPower <= 10)
+            if (probabilityPower <= 15)
             {
                 Instantiate(_powerUps[randomPower], powerPosition, transform.rotation);
             }
@@ -351,14 +355,6 @@ public class EnemyStateMachine : MonoBehaviour
             _score.ScoreCount++;
             _currentState = _states.Damage();
             _currentState.EnterState();
-        }
-    }
-
-    private void OnDestroy()
-    {
-        if (gameObject.tag == "Enemy Boss")
-        {
-            _nextLevel.NextLevel();
         }
     }
 

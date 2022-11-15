@@ -116,6 +116,7 @@ public class PlayerStateMachine : MonoBehaviour
         // Initial variables
         _maxHealth = _health;
         _oldDamagedCount = _damagedCount;
+        NoEmitionMaterial();
     }
 
     void Start()
@@ -214,6 +215,17 @@ public class PlayerStateMachine : MonoBehaviour
         {
             _damagedCount = 0;
             _oldDamagedCount = _damagedCount;
+        }
+    }
+
+    /// <summary>
+    /// Function that disables emition at the beggining of the scene
+    /// </summary>
+    private void NoEmitionMaterial()
+    {
+        foreach (Material materials in _mainMaterials)
+        {
+            materials.DisableKeyword("_EMISSION");
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[ExecuteInEditMode]
 public class SpawnEnemy : MonoBehaviour
 {
     // Wall variables
@@ -36,8 +37,8 @@ public class SpawnEnemy : MonoBehaviour
     private bool _wallActive;
 
     // Reference variables
-    private CameraControl _cameraControl;
     private Transform _player;
+    private CameraControl _cameraControl;
     private ArrowOffset _arrowOffset;
 
     private bool _playable;
@@ -53,8 +54,8 @@ public class SpawnEnemy : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider>();
 
         _cameraControl = FindObjectOfType<CameraControl>();
-        _player = PlayerManager.instance.player.transform;
         _arrowOffset = FindObjectOfType<ArrowOffset>();
+        _player = GameObject.Find("Character1").transform;
 
         _wallActive = true;
     }

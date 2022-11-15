@@ -33,7 +33,7 @@ public class EnemyProvokeState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance <= _ctx.AttackRadius)
+        if (distance < _ctx.AttackRadius)
         {
             SwitchState(_factory.Attack());
         }

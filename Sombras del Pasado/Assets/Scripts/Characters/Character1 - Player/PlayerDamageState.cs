@@ -43,7 +43,7 @@ public class PlayerDamageState : PlayerBaseState
 
     private IEnumerator Invulnerability()
     {
-        if (_ctx.DamagedCount >= 3)
+        if (_ctx.DamagedCount >= 4)
         {
             _ctx.IsInvulnerable = true;
 
