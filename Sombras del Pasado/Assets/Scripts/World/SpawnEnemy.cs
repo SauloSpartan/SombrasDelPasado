@@ -120,14 +120,14 @@ public class SpawnEnemy : MonoBehaviour
 
         while (_wallActive == true)
         {
-            float distanceRight = Vector3.Distance(_player.position, _rightWall);
+            float distanceRight = Mathf.Abs((_player.position.x - _rightWall.x)); // Verify the distance in single axis
             float newOffsetRight = Mathf.Lerp(-4.5f, 0, distanceRight / (distanceCenter - 1f)); // Increase offset value when player close to right wall
             if (distanceRight <= (distanceCenter - 1f))
             {
                 _cameraControl.CameraWallOffset(newOffsetRight);
             }
 
-            float distanceLeft = Vector3.Distance(_player.position, _leftWall);
+            float distanceLeft = Mathf.Abs(_player.position.x - _leftWall.x);
             float newOffsetLeft = Mathf.Lerp(4.5f, 0, distanceLeft / (distanceCenter - 1f));
             if (distanceLeft <= (distanceCenter - 1f))
             {
