@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 public class RestartGame : MonoBehaviour
 {
     public int buildIndex;
+    LoadingScreen loadingScreen;
 
+    private void Awake()
+    {
+        loadingScreen = FindObjectOfType<LoadingScreen>();
+        buildIndex = SceneManager.GetActiveScene().buildIndex;
+    }
     void Start()
     {
-        buildIndex = SceneManager.GetActiveScene().buildIndex;
+
     }
 
 
@@ -20,6 +26,6 @@ public class RestartGame : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(buildIndex);
+        loadingScreen.StartLoading(buildIndex);
     }
 }

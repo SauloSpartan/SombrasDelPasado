@@ -18,6 +18,12 @@ public class MainMenu : MonoBehaviour
 
 
     Score Score;
+    LoadingScreen loadingScreen;
+
+    private void Awake()
+    {
+        loadingScreen = FindObjectOfType<LoadingScreen>();
+    }
 
     void Start()
     {
@@ -44,39 +50,39 @@ public class MainMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(buildIndex);
+        loadingScreen.StartLoading(buildIndex);
         Time.timeScale = 1.0f;
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        loadingScreen.StartLoading("Credits");
     }
 
     public void MenuReturn()
     {
-        SceneManager.LoadScene(buildIndex = 0);
+        loadingScreen.StartLoading(0);
         Time.timeScale = 1.0f;
     }
 
     public void EasyMode()
     {
         Difficulty = 1;
-        SceneManager.LoadScene(buildIndex + 1);
+        loadingScreen.StartLoading(1);
         Score.score = 0;
     }
 
     public void MediumMode()
     {
         Difficulty = 2;
-        SceneManager.LoadScene(buildIndex + 1);
+        loadingScreen.StartLoading(1);
         Score.score = 0;
     }
 
     public void HardMode()
     {
         Difficulty = 3;
-        SceneManager.LoadScene(buildIndex + 1);
+        loadingScreen.StartLoading(1);
         Score.score = 0;
     }
 

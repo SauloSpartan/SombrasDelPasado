@@ -5,20 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GoMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    LoadingScreen loadingScreen;
+
+    private void Awake()
     {
-        
+        loadingScreen = FindObjectOfType<LoadingScreen>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ReturnMenu()
     {
-        SceneManager.LoadScene("Menu");
+        loadingScreen.StartLoading("Menu");
     }
 }
