@@ -11,11 +11,14 @@ public class EnemyIdleState : EnemyBaseState
 
     public override void EnterState()
     {
-        _ctx.StartCoroutine(DesitionState());
+        // Random.Range(x, secondNumber) secondNumber is not gona be used, just the one before it
+        _ctx.RandomDesition = Random.Range(1, 5); // 1. Idle, 2. Walk, 3. Provoke, 4. Escape
+        _ctx.GeneralCooldown = 1f;
     }
 
     public override void UpdateState()
     {
+        DesitionState();
         FacePlayer();
         CheckSwitchState();
     }
@@ -40,40 +43,35 @@ public class EnemyIdleState : EnemyBaseState
     }
 
     /// <summary>
-    /// Coroutine that controls a random desition that AI will make.
+    /// Function that controls a random desition that AI will make.
     /// </summary>
-    /// <returns> Returns a timer if Idle() or null if not.</returns>
-    private IEnumerator DesitionState()
+    private void DesitionState()
     {
-        // Random.Range(x, secondNumber) secondNumber is not gona be used, just the one before it
-        _ctx.RandomDesition = Random.Range(1, 5); // 1. Idle, 2. Walk, 3. Provoke, 4. Escape
-
-        if (_ctx.RandomDesition == 1) // For Idle
+        if(_ctx.RandomDesition == 1) // For Idle
         {
             _ctx.FollowTarget = false;
             _ctx.Animator.SetFloat("Speed", 0f);
             _ctx.NavMesh.isStopped = true;
-            yield return new WaitForSecondsRealtime(1f);
 
-            SwitchState(_factory.Idle());
+            _ctx.GeneralCooldown -= Time.deltaTime;
+
+            if (_ctx.GeneralCooldown <= 0)
+            {
+                SwitchState(_factory.Idle());
+            }
         }
         else if (_ctx.RandomDesition == 2) // For Walk
         {
             _ctx.FollowTarget = true;
-            yield return null;
 
             SwitchState(_factory.Walk());
         }
         else if (_ctx.RandomDesition == 3) // For Provoke
         {
-            yield return null;
-
             SwitchState(_factory.Provoke());
         }
         else if (_ctx.RandomDesition == 4) // For Escape
         {
-            yield return null;
-
             SwitchState(_factory.Escape());
         }
     }
