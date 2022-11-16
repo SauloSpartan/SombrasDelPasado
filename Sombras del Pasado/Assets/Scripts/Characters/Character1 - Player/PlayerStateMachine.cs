@@ -58,6 +58,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Enemy variables
     private EnemyStateMachine _enemy;
     private NewExplosion _barrel;
+    private DMG_Spike _spike;
 
     // Interface variables
     [Header("Interface")]
@@ -381,6 +382,28 @@ public class PlayerStateMachine : MonoBehaviour
             else
             {
                 _health -= _barrel.Damage / _defense;
+                _currentState = _states.Damage();
+                _currentState.EnterState();
+            }
+        }
+
+        // For Spikes
+        if (other.tag == "Spikes")
+        {
+            _luck = Random.Range(0, 4);
+            _spike = other.GetComponentInParent<DMG_Spike>();
+
+            if (_luck == _evasion && _evasion == 1)
+            {
+                _health -= _spike.Damage - _spike.Damage;
+            }
+            else if (_isInvulnerable == true)
+            {
+                _health -= _spike.Damage - _spike.Damage;
+            }
+            else
+            {
+                _health -= _spike.Damage / _defense;
                 _currentState = _states.Damage();
                 _currentState.EnterState();
             }

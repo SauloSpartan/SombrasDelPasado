@@ -327,7 +327,7 @@ public class ControllerCharacter1 : MonoBehaviour
                 health = health - (Explosion.damage - Explosion.damage);
 
             if (other.gameObject.tag == "Spikes")
-                health = health - (Spiked.damage - Spiked.damage);
+                health = health - (Spiked.Damage - Spiked.Damage);
         }
         else
         {
@@ -347,7 +347,7 @@ public class ControllerCharacter1 : MonoBehaviour
                 health = health - (Explosion.damage / defense);
 
             if (other.gameObject.tag == "Spikes")
-                health = health - (Spiked.damage / defense);
+                health = health - (Spiked.Damage / defense);
 
         }
 

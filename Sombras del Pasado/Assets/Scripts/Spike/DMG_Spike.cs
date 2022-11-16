@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class DMG_Spike : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public int damage;
+    public float Damage;
+    private float _baseDamage;
 
-    void Start()
+    void Awake()
     {
-        
+        _baseDamage = 15;
+        Difficulty();
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Function that changes spikes damage depending on difficulty.
+    /// </summary>
+    private void Difficulty()
     {
-        
+        if (MainMenu.Difficulty == 1) // Easy
+        {
+            Damage = _baseDamage / 2;
+        }
+        else if (MainMenu.Difficulty == 2) // Normal
+        {
+            Damage = _baseDamage;
+        }
+        else if (MainMenu.Difficulty == 3) // Hard
+        {
+            Damage = _baseDamage * 2;
+        }
     }
 }
