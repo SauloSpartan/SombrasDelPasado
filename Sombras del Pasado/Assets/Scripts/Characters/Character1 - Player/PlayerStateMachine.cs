@@ -20,7 +20,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Health and Damage variables
     [Header("Health & Damage")]
     [SerializeField] private float _health = 100f;
-    [SerializeField] private int _damage;
+    [SerializeField] private float _damage;
     private int _attackCombo = 1;
     private float _maxHealth;
     private bool _canMove = true;
@@ -57,6 +57,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     // Enemy variables
     private EnemyStateMachine _enemy;
+    private NewExplosion _barrel;
 
     // Interface variables
     [Header("Interface")]
@@ -81,7 +82,7 @@ public class PlayerStateMachine : MonoBehaviour
     public float WalkSpeed { get { return _walkSpeed; } set { _walkSpeed = value; } }
     public float RotationSpeed { get { return _rotationSpeed; } }
     public Vector3 MoveRotation { get { return _moveRotation; } set { _moveRotation = value; } }
-    public int Damage { get { return _damage; } set { _damage = value; } }
+    public float Damage { get { return _damage; } set { _damage = value; } }
     public int Attack { get { return _attack; } }
     public int AttackCombo { get { return _attackCombo; } }
     public bool CanMove { get { return _canMove; } set { _canMove = value; } }
@@ -340,6 +341,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // For Enemy Swords
         if (other.tag == "Enemy1 Sword" || other.tag == "Enemy2 Sword" || other.tag == "Enemy3 Dagger" || other.tag == "Enemy4 Sword")
         {
             _luck = Random.Range(0, 4);
@@ -362,6 +364,29 @@ public class PlayerStateMachine : MonoBehaviour
             }
         }
 
+        // For Barrel Explsion
+        if (other.tag == "Barrel")
+        {
+            _luck = Random.Range(0, 4);
+            _barrel = other.GetComponentInParent<NewExplosion>();
+            
+            if (_luck == _evasion && _evasion == 1)
+            {
+                _health -= _barrel.Damage - _barrel.Damage;
+            }
+            else if (_isInvulnerable == true)
+            {
+                _health -= _barrel.Damage - _barrel.Damage;
+            }
+            else
+            {
+                _health -= _barrel.Damage / _defense;
+                _currentState = _states.Damage();
+                _currentState.EnterState();
+            }
+        }
+
+        // For Power Ups
         float timer = 30;
         if (other.tag == "PowerUp Defense")
         {

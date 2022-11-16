@@ -4,40 +4,44 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    private ParticleSystem Particle;
-    public GameObject OBJ_Barrel;
-    public Animator Explode;
-    public AudioSource Sound;
+    private ParticleSystem _particle;
+    [SerializeField] private GameObject OBJ_Barrel;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private AudioSource _audio;
 
     // Variable del collider que origina la explosion
-    public CapsuleCollider Trigger;
+    private CapsuleCollider _capsuleCollider;
 
     // Variables para el collider y renderer del barril
-    public MeshRenderer Visual;
-    public MeshCollider Collider;
+    private MeshRenderer _render;
+    private MeshCollider _meshCollider;
 
-    CameraControl cameraShake;
-    // Start is called before the first frame update
+    private CameraControl _camera;
+
     void Start()
     {
-        Particle = GetComponent<ParticleSystem>();
+        _particle = GetComponent<ParticleSystem>();
+        _capsuleCollider = GetComponent<CapsuleCollider>();
+        _render = GetComponentInParent<MeshRenderer>();
+        _meshCollider = GetComponentInParent<MeshCollider>();
 
-        cameraShake = FindObjectOfType<CameraControl>();
+        _camera = FindObjectOfType<CameraControl>();
+
+        _animator.enabled = false;
+        _audio.enabled = false;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player Sword" || other.gameObject.tag == "Enemy1 Sword"
-            || other.gameObject.tag == "Enemy2 Sword" || other.gameObject.tag == "Enemy3 Dagger"
-            || other.gameObject.tag == "Enemy4 Sword")
+        if (other.tag == "Player Sword" || other.tag == "Enemy1 Sword" || other.tag == "Enemy2 Sword" || other.tag == "Enemy3 Dagger" || other.tag == "Enemy4 Sword")
         {
-            StartCoroutine(cameraShake.CameraShake(0.5f, 10f));
-            Trigger.enabled = false;
-            Explode.enabled = true;
-            Sound.enabled = true;
-            Visual.enabled = false;
-            Collider.enabled = false;
-            Particle.Play();
+            StartCoroutine(_camera.CameraShake(0.5f, 10f));
+            _capsuleCollider.enabled = false;
+            _animator.enabled = true;
+            _audio.enabled = true;
+            _render.enabled = false;
+            _meshCollider.enabled = false;
+            _particle.Play();
             Destroy(OBJ_Barrel, 1.5f);
         }
     }
