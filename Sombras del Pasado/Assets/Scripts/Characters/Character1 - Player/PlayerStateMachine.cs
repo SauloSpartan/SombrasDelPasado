@@ -7,7 +7,7 @@ public class PlayerStateMachine : MonoBehaviour
     // Movement and Rotation variables
     [Header("Movement")]
     [SerializeField] private float _walkSpeed;
-    [SerializeField] private float _rotationSpeed = 1080;
+    [SerializeField] private float _rotationSpeed = 3240;
     private float _moveX;
     private float _moveZ;
     private Vector3 _moveDirection;

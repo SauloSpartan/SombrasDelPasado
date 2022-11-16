@@ -70,6 +70,9 @@ public class EnemyStateMachine : MonoBehaviour
     private SpawnEnemy _spawnEnemy;
     private NewNextLevel _nextLevel;
 
+    // Barrel variables
+    private NewExplosion _barrel;
+
     // State variables
     private EnemyBaseState _currentState;
     private EnemyStateFactory _states;
@@ -348,11 +351,21 @@ public class EnemyStateMachine : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player Sword")
+        if (other.tag == "Player Sword")
         {
             _health -= _player.Damage;
             StartCoroutine(HealthTimer());
             _score.ScoreCount++;
+            _currentState = _states.Damage();
+            _currentState.EnterState();
+        }
+
+        if (other.tag == "Barrel")
+        {
+            _barrel = other.GetComponentInParent<NewExplosion>();
+
+            _health -= _barrel.Damage;
+            StartCoroutine(HealthTimer());
             _currentState = _states.Damage();
             _currentState.EnterState();
         }

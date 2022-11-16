@@ -36,6 +36,9 @@ public class NewExplosion : MonoBehaviour
         Difficulty();
     }
 
+    /// <summary>
+    /// Function that changes barrel damage depending on difficulty.
+    /// </summary>
     private void Difficulty()
     {
         if (MainMenu.Difficulty == 1) // Easy
