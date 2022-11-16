@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: b0be742069b37f446b4b60c3d2beef44, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3a92d01f1d9acaa4d85f1cf0b53b9e4e, type: 2}
 --- !u!1001 &1305303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -402,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_Name
       value: House4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -697,6 +701,10 @@ PrefabInstance:
       value: House4
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -932,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_Name
       value: House2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1634,6 +1646,10 @@ PrefabInstance:
       value: House3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2210,6 +2226,10 @@ PrefabInstance:
       value: House3 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2451,6 +2471,10 @@ PrefabInstance:
       value: House5
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 73c42312e9bb5f2488fee0bda052544d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73c42312e9bb5f2488fee0bda052544d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2659,6 +2683,10 @@ PrefabInstance:
       value: House2 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2835,6 +2863,10 @@ PrefabInstance:
       value: House1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -2974,6 +3006,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_Name
       value: House4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3571,6 +3607,10 @@ PrefabInstance:
       value: House4 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -3712,6 +3752,10 @@ PrefabInstance:
       value: House2 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -3848,6 +3892,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_Name
       value: House2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4234,6 +4282,10 @@ PrefabInstance:
       value: House4 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -4373,6 +4425,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_Name
       value: House2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 37cedc633030b334cad8ad011bee1c01, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4769,6 +4825,10 @@ PrefabInstance:
       value: House5 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 73c42312e9bb5f2488fee0bda052544d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73c42312e9bb5f2488fee0bda052544d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -4953,6 +5013,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
       propertyPath: m_Name
       value: House3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd50de03e684fc5438342cffa3881a0f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5311,6 +5375,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_Name
       value: House4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5958,6 +6026,10 @@ PrefabInstance:
       value: House1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -6050,6 +6122,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
       propertyPath: m_Name
       value: House1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 879e12c9e6e41eb4081428d3a4c79b12, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6777,6 +6853,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_Name
       value: House4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2f8936690ba88d4c9ac7c3192123d21, type: 3}
       propertyPath: m_StaticEditorFlags
