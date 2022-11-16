@@ -362,19 +362,20 @@ public class PlayerStateMachine : MonoBehaviour
             }
         }
 
+        float timer = 30;
         if (other.tag == "PowerUp Defense")
         {
-            _powerTimer = 20f;
+            _powerTimer = timer;
             _powerUp = 1;
         }
         if (other.tag == "PowerUp Attack")
         {
-            _powerTimer = 20f;
+            _powerTimer = timer;
             _powerUp = 2;
         }
         if (other.tag == "PowerUp Velocity")
         {
-            _powerTimer = 20f;
+            _powerTimer = timer;
             _powerUp = 3;
         }
     }
