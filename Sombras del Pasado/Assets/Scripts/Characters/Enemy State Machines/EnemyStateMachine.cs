@@ -241,6 +241,11 @@ public class EnemyStateMachine : MonoBehaviour
             ColorUtility.TryParseHtmlString("#731C7D", out _hardColor);
             _enemyColor.color = _hardColor;
         }
+        if (gameObject.tag == "Enemy Boss")
+        {
+            ColorUtility.TryParseHtmlString("#3D1C7D", out _hardColor);
+            _enemyColor.color = _hardColor;
+        }
     }
 
     /// <summary>
