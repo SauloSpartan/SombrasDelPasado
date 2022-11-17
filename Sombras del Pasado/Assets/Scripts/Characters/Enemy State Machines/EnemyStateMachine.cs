@@ -190,6 +190,7 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 30;
             _baseDamage = 4;
             _attackRadius = 1.5f;
+            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Basic";
         }
         if (gameObject.tag == "Enemy Heavy")
@@ -197,6 +198,7 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 50;
             _baseDamage = 10;
             _attackRadius = 2f;
+            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Heavy";
         }
         if (gameObject.tag == "Enemy Fast")
@@ -204,6 +206,7 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 30;
             _baseDamage = 6;
             _attackRadius = 1.2f;
+            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Fast";
         }
         if (gameObject.tag == "Enemy Boss")
@@ -211,6 +214,7 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 150;
             _baseDamage = 15;
             _attackRadius = 1.5f;
+            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Boss";
         }
     }
