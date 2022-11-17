@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 69b4f60598b438940b262e1566c3b563, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1833ddd7c1534f04f8777c4123ff9027, type: 2}
 --- !u!1 &74747113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,7 +1936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1923548973826132763, guid: 5f8a093fc069d8441b54a7792f3f6127, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.35
+      value: 55.29
       objectReference: {fileID: 0}
     - target: {fileID: 1923548973826132763, guid: 5f8a093fc069d8441b54a7792f3f6127, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2083,8 +2083,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!4 &696188585
 Transform:
   m_ObjectHideFlags: 0
@@ -2120,7 +2120,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696188584}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2615,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1923548973826132763, guid: 5f8a093fc069d8441b54a7792f3f6127, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.09
+      value: 19.15
       objectReference: {fileID: 0}
     - target: {fileID: 1923548973826132763, guid: 5f8a093fc069d8441b54a7792f3f6127, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3308,8 +3308,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!4 &971043451
 Transform:
   m_ObjectHideFlags: 0
@@ -3345,7 +3345,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971043450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3405,7 +3405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1923548973826132763, guid: 5f8a093fc069d8441b54a7792f3f6127, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.35
+      value: 55.29
       objectReference: {fileID: 0}
     - target: {fileID: 1923548973826132763, guid: 5f8a093fc069d8441b54a7792f3f6127, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3778,8 +3778,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!4 &1241583584
 Transform:
   m_ObjectHideFlags: 0
@@ -3815,7 +3815,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241583583}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4093,7 +4093,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1360007477
 Transform:
@@ -4196,8 +4196,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!4 &1397390682
 Transform:
   m_ObjectHideFlags: 0
@@ -4233,7 +4233,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397390681}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
