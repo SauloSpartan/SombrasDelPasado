@@ -405,17 +405,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 149282983514768462, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1416211385282947483, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_Name
       value: Barrel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1416211385282947483, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_RootOrder
@@ -460,14 +452,6 @@ PrefabInstance:
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262510232622430359, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2262510233314036273, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
@@ -29464,6 +29448,10 @@ PrefabInstance:
     - target: {fileID: 7763676305215661553, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849330400292730901, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8039087395053985217, guid: 6d0d7294b3fa8eb4a83bf4841fc67d54, type: 3}
       propertyPath: m_AnchorMax.x

@@ -30,9 +30,10 @@ public class LoadingScreen : MonoBehaviour
     /// Start loading de scene and the loading screen
     /// </summary>
     /// <param name="scene">Will load the scene based on the Int</param>
-    public void StartLoading(int scene)
+    public void StartLoading(int scene, int score)
     {
         _screen.SetActive(true);
+        PlayerPrefs.SetInt("TheScore", score);
         StartCoroutine(SceneInt(scene));
     }
 
@@ -47,7 +48,7 @@ public class LoadingScreen : MonoBehaviour
         while (!Load.isDone)
         {
             float Progres = Mathf.Clamp01(Load.progress / 0.9f);
-            _percentage.value = Load.progress;
+            _percentage.value = Progres;
             yield return null;
         }
     }
@@ -63,7 +64,7 @@ public class LoadingScreen : MonoBehaviour
         while (!Load.isDone)
         {
             float Progres = Mathf.Clamp01(Load.progress / 0.9f);
-            _percentage.value = Load.progress;
+            _percentage.value = Progres;
             yield return null;
         }
     }

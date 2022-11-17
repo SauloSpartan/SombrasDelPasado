@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GoMenu : MonoBehaviour
 {
-    LoadingScreen loadingScreen;
+    private LoadingScreen _loadingScreen;
 
     private void Awake()
     {
-        loadingScreen = FindObjectOfType<LoadingScreen>();
+        _loadingScreen = FindObjectOfType<LoadingScreen>();
     }
 
 
     public void ReturnMenu()
     {
-        loadingScreen.StartLoading("Menu");
+        _loadingScreen.StartLoading(0, 0);
     }
 }

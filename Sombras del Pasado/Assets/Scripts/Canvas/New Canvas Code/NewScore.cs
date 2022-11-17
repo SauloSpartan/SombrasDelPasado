@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NewScore : MonoBehaviour
 {
     [SerializeField] private Text _scoreText;
-    private static int _score = 0;
+    public int _score;
     private int _newScore = 0;
     private int _addScore;
     public int ScoreCount;
@@ -19,6 +19,8 @@ public class NewScore : MonoBehaviour
         ScoreCount = 0;
         _oldScoreCount = ScoreCount;
         _timer = 0;
+        _score = PlayerPrefs.GetInt("TheScore", 0);
+        _newScore = PlayerPrefs.GetInt("TheScore", 0);
     }
 
     void Update()

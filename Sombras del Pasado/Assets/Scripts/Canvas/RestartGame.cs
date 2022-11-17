@@ -26,6 +26,6 @@ public class RestartGame : MonoBehaviour
 
     public void RestartScene()
     {
-        loadingScreen.StartLoading(buildIndex);
+        loadingScreen.StartLoading(buildIndex, PlayerPrefs.GetInt("score", 0));
     }
 }

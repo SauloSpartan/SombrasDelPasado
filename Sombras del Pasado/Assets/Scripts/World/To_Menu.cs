@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class To_Menu : MonoBehaviour
 {
-    LoadingScreen loadingScreen;
+    private LoadingScreen _loadingScreen;
     private float fast = 5.0f;
 
     private void Awake()
     {
-        loadingScreen = FindObjectOfType<LoadingScreen>();
+        _loadingScreen = FindObjectOfType<LoadingScreen>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("escape"))
-            loadingScreen.StartLoading("Menu");
+            _loadingScreen.StartLoading(0, 0);
 
         if (Input.GetKeyDown(KeyCode.Space))
             Time.timeScale = fast;

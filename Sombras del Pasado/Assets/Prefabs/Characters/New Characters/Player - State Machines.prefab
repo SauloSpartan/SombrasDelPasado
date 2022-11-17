@@ -2263,6 +2263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreText: {fileID: 2472676874023190355}
+  _score: 0
   ScoreCount: 0
 --- !u!1 &2472676874241452844
 GameObject:
@@ -19737,7 +19738,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5602926237232756174}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.6272727
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -25310,6 +25311,10 @@ PrefabInstance:
     - target: {fileID: 854092735203641675, guid: f75a33b424914ab44ac759b5e5bd32a9, type: 3}
       propertyPath: m_Name
       value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 854092735203641675, guid: f75a33b424914ab44ac759b5e5bd32a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f75a33b424914ab44ac759b5e5bd32a9, type: 3}

@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Dropdown _dropdownQuality;
 
 
-    private Score Score;
+    private NewScore _theScore;
     private LoadingScreen _loadingScreen;
 
     private void Awake()
@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
     {
         buildIndex = SceneManager.GetActiveScene().buildIndex;
 
-        Score = FindObjectOfType<Score>();
+        _theScore = FindObjectOfType<NewScore>();
 
         Time.timeScale = 1.0f;
 
@@ -50,7 +50,7 @@ public class MainMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        _loadingScreen.StartLoading(buildIndex);
+        _loadingScreen.StartLoading(buildIndex, PlayerPrefs.GetInt("TheScore", 0));
         Time.timeScale = 1.0f;
     }
 
@@ -61,29 +61,35 @@ public class MainMenu : MonoBehaviour
 
     public void MenuReturn()
     {
-        _loadingScreen.StartLoading(0);
+        _loadingScreen.StartLoading(0, PlayerPrefs.GetInt("TheScore", 0));
+        PlayerPrefs.SetInt("Saved", SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1.0f;
     }
 
     public void EasyMode()
     {
         Difficulty = 1;
-        _loadingScreen.StartLoading(1);
-        Score.score = 0;
+        _loadingScreen.StartLoading(1, 0);
+        PlayerPrefs.SetInt("Saved", 0);
     }
 
     public void MediumMode()
     {
         Difficulty = 2;
-        _loadingScreen.StartLoading(1);
-        Score.score = 0;
+        _loadingScreen.StartLoading(1, 0);
+        PlayerPrefs.SetInt("Saved", 0);
     }
 
     public void HardMode()
     {
         Difficulty = 3;
-        _loadingScreen.StartLoading(1);
-        Score.score = 0;
+        _loadingScreen.StartLoading(1, 0);
+        PlayerPrefs.SetInt("Saved", 0);
+    }
+
+    public void Continue()
+    {
+        _loadingScreen.StartLoading(PlayerPrefs.GetInt("Saved", 0), PlayerPrefs.GetInt("TheScore", 0));
     }
 
     public void SetGlobalVolume (float volume)
