@@ -2229,6 +2229,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ebbc60718480241bed5040cda3a15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerInterface: {fileID: 2472676875578344189}
+  _mainMenu: {fileID: 2472676874427917339}
+  _deathInterface: {fileID: 2472676875456434350}
+  _pauseMenu: {fileID: 4405025798905278168}
+  _settingsMenu: {fileID: 4405025798925539550}
+  _controlsMenu: {fileID: 4405025798925071227}
+  _pauseButton: {fileID: 4990750941785784448}
+  _continueButton: {fileID: 7555672567970024629}
 --- !u!114 &2472676874134778750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5070,7 +5078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 0, y: 82}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &2842841289384813370
@@ -19729,7 +19737,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5602926237232756174}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.6272727
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

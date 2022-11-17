@@ -17,12 +17,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Dropdown _dropdownQuality;
 
 
-    Score Score;
-    LoadingScreen loadingScreen;
+    private Score Score;
+    private LoadingScreen _loadingScreen;
 
     private void Awake()
     {
-        loadingScreen = FindObjectOfType<LoadingScreen>();
+        _loadingScreen = FindObjectOfType<LoadingScreen>();
     }
 
     void Start()
@@ -50,39 +50,39 @@ public class MainMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        loadingScreen.StartLoading(buildIndex);
+        _loadingScreen.StartLoading(buildIndex);
         Time.timeScale = 1.0f;
     }
 
     public void Credits()
     {
-        loadingScreen.StartLoading("Credits");
+        _loadingScreen.StartLoading("Credits");
     }
 
     public void MenuReturn()
     {
-        loadingScreen.StartLoading(0);
+        _loadingScreen.StartLoading(0);
         Time.timeScale = 1.0f;
     }
 
     public void EasyMode()
     {
         Difficulty = 1;
-        loadingScreen.StartLoading(1);
+        _loadingScreen.StartLoading(1);
         Score.score = 0;
     }
 
     public void MediumMode()
     {
         Difficulty = 2;
-        loadingScreen.StartLoading(1);
+        _loadingScreen.StartLoading(1);
         Score.score = 0;
     }
 
     public void HardMode()
     {
         Difficulty = 3;
-        loadingScreen.StartLoading(1);
+        _loadingScreen.StartLoading(1);
         Score.score = 0;
     }
 

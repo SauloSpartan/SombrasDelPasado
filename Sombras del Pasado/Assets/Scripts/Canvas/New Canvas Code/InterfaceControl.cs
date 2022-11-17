@@ -10,15 +10,19 @@ public class InterfaceControl : MonoBehaviour
     private int _menuState;
     private float _timeScale;
 
-    // Reference variables
-    private GameObject _playerInterface;
-    private GameObject _mainMenu;
-    private GameObject _deathInterface;
-    private GameObject _pauseMenu;
-    private GameObject _settingsMenu;
-    private GameObject _controlsMenu;
-    private Button _pauseButton;
-    private Button _continueButton;
+    // Interface variables
+    [Header("Interfaces")]
+    [SerializeField] private GameObject _playerInterface;
+    [SerializeField] private GameObject _mainMenu;
+    [SerializeField] private GameObject _deathInterface;
+    [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _settingsMenu;
+    [SerializeField] private GameObject _controlsMenu;
+
+    // Button variables
+    [Header("Buttons")]
+    [SerializeField] private Button _pauseButton;
+    [SerializeField] private Button _continueButton;
 
     // Player variables
     private PlayerStateMachine _player;
@@ -27,13 +31,6 @@ public class InterfaceControl : MonoBehaviour
     {
         // Finding objects in Scene
         _playerInterface = GameObject.Find("Player Interface");
-        _mainMenu = GameObject.Find("Main Menu");
-        _deathInterface = GameObject.Find("Death Interface");
-        _pauseMenu = GameObject.Find("Menu");
-        _settingsMenu = GameObject.Find("Settings");
-        _controlsMenu = GameObject.Find("Controls");
-        _pauseButton = GameObject.Find("Pause Button").GetComponent<Button>();
-        _continueButton = GameObject.Find("Continue Button").GetComponent<Button>();
 
         _player = FindObjectOfType<PlayerStateMachine>();
 
