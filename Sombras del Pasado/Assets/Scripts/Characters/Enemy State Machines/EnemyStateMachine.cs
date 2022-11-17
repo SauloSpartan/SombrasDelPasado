@@ -21,11 +21,14 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private float _attackRadius;
     [SerializeField] private float _health;
     [SerializeField] private float _damage;
+    [SerializeField] private Vector3 _attackScale; 
+    private RaycastHit _playerHit;
     private float _generalCooldown;
     private float _maxHealth;
     private float _baseHealth;
     private float _baseDamage;
     private bool _canMove = true;
+    private bool _onAttackRange;
     private string _enemyType;
 
     // Animation variables
@@ -89,6 +92,7 @@ public class EnemyStateMachine : MonoBehaviour
     public float EscapeRadius { get { return _escapeRadius; } }
     public Transform EscapePosition { get { return _escapePosition; } }
     public float AttackRadius { get { return _attackRadius; } }
+    public bool OnAttackRange { get { return _onAttackRange; } }
     public float GeneralCooldown { get { return _generalCooldown; } set { _generalCooldown = value; } }
     public Animator Animator { get { return _animator; } }
     public GameObject TrailSwordOne { get { return _trailSwordOne; } set { _trailSwordOne = value; } }
@@ -127,6 +131,7 @@ public class EnemyStateMachine : MonoBehaviour
 
         _maxHealth = _health;
         _initialSpeed = _navMesh.speed;
+        _navMesh.stoppingDistance = 0;
     }
 
     void Start()
@@ -160,6 +165,7 @@ public class EnemyStateMachine : MonoBehaviour
         {
             _healthBar.HealthBarControl(_health, _maxHealth);
         }
+        AttackRange();
     }
 
     /// <summary>
@@ -190,7 +196,6 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 30;
             _baseDamage = 4;
             _attackRadius = 1.5f;
-            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Basic";
         }
         if (gameObject.tag == "Enemy Heavy")
@@ -198,7 +203,6 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 50;
             _baseDamage = 10;
             _attackRadius = 2f;
-            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Heavy";
         }
         if (gameObject.tag == "Enemy Fast")
@@ -206,7 +210,6 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 30;
             _baseDamage = 6;
             _attackRadius = 1.2f;
-            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Fast";
         }
         if (gameObject.tag == "Enemy Boss")
@@ -214,7 +217,6 @@ public class EnemyStateMachine : MonoBehaviour
             _baseHealth = 150;
             _baseDamage = 15;
             _attackRadius = 1.5f;
-            _navMesh.stoppingDistance = _attackRadius;
             _enemyType = "Enemy Boss";
         }
     }
@@ -271,6 +273,19 @@ public class EnemyStateMachine : MonoBehaviour
             }
         }
     }
+
+    private void AttackRange()
+    {
+        if (Physics.BoxCast(transform.position, _attackScale, transform.forward, out _playerHit, transform.rotation, _attackRadius) && _playerHit.transform.tag == "Player")
+        {
+            _onAttackRange = true;
+        }
+        else
+        {
+            _onAttackRange = false;
+        }
+    }
+
 
     /// <summary>
     /// Coroutine that controls enemy health bar showing up.
@@ -391,5 +406,9 @@ public class EnemyStateMachine : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _attackRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, transform.forward * _playerHit.distance);
+        Gizmos.DrawCube(transform.position + transform.forward * _playerHit.distance, _attackScale);
     }
 }

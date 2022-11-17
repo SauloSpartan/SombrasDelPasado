@@ -31,9 +31,7 @@ public class EnemyProvokeState : EnemyBaseState
 
     public override void CheckSwitchState()
     {
-        float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
-
-        if (distance < _ctx.AttackRadius)
+        if (_ctx.OnAttackRange == true)
         {
             SwitchState(_factory.Attack());
         }
@@ -96,7 +94,7 @@ public class EnemyProvokeState : EnemyBaseState
     private void FacePlayer()
     {
         Vector3 direction = (_ctx.Target.position - _ctx.transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, 0));
         _ctx.transform.rotation = Quaternion.Slerp(_ctx.transform.rotation, lookRotation, Time.deltaTime * 12.5f);
     }
 }

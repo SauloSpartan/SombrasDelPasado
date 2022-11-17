@@ -38,7 +38,7 @@ public class EnemyEscapeState : EnemyBaseState
         {
             SwitchState(_factory.Walk());
         }
-        if (distance < _ctx.AttackRadius)
+        if (_ctx.OnAttackRange == true)
         {
             SwitchState(_factory.Attack());
         }
@@ -67,7 +67,7 @@ public class EnemyEscapeState : EnemyBaseState
     private void FacePlayer()
     {
         Vector3 direction = (_ctx.Target.position - _ctx.transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, 0));
         _ctx.transform.rotation = Quaternion.Slerp(_ctx.transform.rotation, lookRotation, Time.deltaTime * 12.5f);
     }
 }

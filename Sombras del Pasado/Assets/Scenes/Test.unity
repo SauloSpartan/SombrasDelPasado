@@ -20638,7 +20638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3679966278771561998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22096,6 +22096,7 @@ MonoBehaviour:
   _attackRadius: 1.5
   _health: 100
   _damage: 6
+  _attackScale: {x: 0.3, y: 4, z: 0}
   _swordOne: {fileID: 5264683767311129119}
   _swordTwo: {fileID: 0}
   _trailSwordOne: {fileID: 7623864793817639027}
@@ -22235,6 +22236,7 @@ MonoBehaviour:
   _attackRadius: 1.2
   _health: 100
   _damage: 6
+  _attackScale: {x: 0, y: 0, z: 0}
   _swordOne: {fileID: 5362758628304566394}
   _swordTwo: {fileID: 5362758629115614205}
   _trailSwordOne: {fileID: 235659486547827276}
@@ -23392,6 +23394,7 @@ MonoBehaviour:
   _attackRadius: 2
   _health: 100
   _damage: 6
+  _attackScale: {x: 0, y: 0, z: 0}
   _swordOne: {fileID: 5186246660408831713}
   _swordTwo: {fileID: 0}
   _trailSwordOne: {fileID: 4712451378604975003}
@@ -36799,6 +36802,7 @@ MonoBehaviour:
   _attackRadius: 1.5
   _health: 100
   _damage: 6
+  _attackScale: {x: 0, y: 0, z: 0}
   _swordOne: {fileID: 8196692322855390086}
   _swordTwo: {fileID: 0}
   _trailSwordOne: {fileID: 5571503885067864699}

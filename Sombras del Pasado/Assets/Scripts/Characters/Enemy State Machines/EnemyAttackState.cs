@@ -13,7 +13,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         _ctx.Animator.SetFloat("Speed", 1f);
         _ctx.NavMesh.isStopped = true;
-        _ctx.GeneralCooldown = Random.Range(0.3f, 0.7f); // Takes some time before attacking
+        _ctx.GeneralCooldown = Random.Range(0.3f, 0.5f); // Takes some time before attacking
     }
 
     public override void UpdateState()
@@ -31,7 +31,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
 
-        if (distance >= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0.4f)
+        if (_ctx.OnAttackRange == false && _ctx.GeneralCooldown <= 0.4f)
         {
             SwitchState(_factory.Escape());
         }
@@ -46,9 +46,7 @@ public class EnemyAttackState : EnemyBaseState
     /// </summary>
     private void AttackPlayer()
     {
-        float distance = Vector3.Distance(_ctx.Target.position, _ctx.transform.position);
-
-        if (distance <= _ctx.AttackRadius && _ctx.GeneralCooldown <= 0f)
+        if (_ctx.OnAttackRange == true && _ctx.GeneralCooldown <= 0f)
         {
             _ctx.Animator.SetTrigger("Attack1");
 
@@ -104,7 +102,7 @@ public class EnemyAttackState : EnemyBaseState
     private void FacePlayer()
     {
         Vector3 direction = (_ctx.Target.position - _ctx.transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, 0));
         _ctx.transform.rotation = Quaternion.Slerp(_ctx.transform.rotation, lookRotation, Time.deltaTime * 12.5f);
     }
 }

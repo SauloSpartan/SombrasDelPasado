@@ -12293,6 +12293,7 @@ MonoBehaviour:
   _attackRadius: 1.2
   _health: 100
   _damage: 6
+  _attackScale: {x: 0.3, y: 4, z: 0}
   _swordOne: {fileID: 8837324338250565921}
   _swordTwo: {fileID: 8837324336912081574}
   _trailSwordOne: {fileID: 3714651840708979479}
