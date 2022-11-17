@@ -46,7 +46,6 @@ public class LoadingScreen : MonoBehaviour
         
         while (!Load.isDone)
         {
-            Debug.Log("Cargando");
             float Progres = Mathf.Clamp01(Load.progress / 0.9f);
             _percentage.value = Load.progress;
             yield return null;
@@ -63,7 +62,6 @@ public class LoadingScreen : MonoBehaviour
         
         while (!Load.isDone)
         {
-            Debug.Log("Cargando");
             float Progres = Mathf.Clamp01(Load.progress / 0.9f);
             _percentage.value = Load.progress;
             yield return null;
