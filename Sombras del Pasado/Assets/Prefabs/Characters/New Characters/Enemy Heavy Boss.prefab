@@ -1762,8 +1762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c293d3f057fb183418521fb8f62c8d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stopRadius: 3.5
-  _escapeRadius: 5.5
+  _stopRadius: 3
+  _escapeRadius: 5
   _escapePosition: {fileID: 2250156083140991169}
   _attackRadius: 2
   _health: 100
