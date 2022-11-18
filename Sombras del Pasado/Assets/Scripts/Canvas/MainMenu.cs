@@ -33,9 +33,9 @@ public class MainMenu : MonoBehaviour
 
         Time.timeScale = 1.0f;
 
-        _sliderGlobalVolume.value = PlayerPrefs.GetFloat("volumeGlobal", 0.8f);
-        _sliderMusicVolume.value = PlayerPrefs.GetFloat("volumeMusic", 0f);
-        _sliderSoundVolume.value = PlayerPrefs.GetFloat("volumeSound", 0f);
+        _sliderGlobalVolume.value = PlayerPrefs.GetFloat("volumeGlobal", 0.5f);
+        _sliderMusicVolume.value = PlayerPrefs.GetFloat("volumeMusic", -20.0f);
+        _sliderSoundVolume.value = PlayerPrefs.GetFloat("volumeSound", -20.0f);
         AudioListener.volume = _sliderGlobalVolume.value;
         audioMixer.SetFloat("Music", _sliderMusicVolume.value);
         audioMixer.SetFloat("Sound", _sliderSoundVolume.value);
@@ -89,9 +89,6 @@ public class MainMenu : MonoBehaviour
 
     public void Continue()
     {
-        if (PlayerPrefs.GetInt("Saved", 0) == 0)
-            return;
-
         _loadingScreen.StartLoading(PlayerPrefs.GetInt("Saved", 0), PlayerPrefs.GetInt("TheScore", 0));
     }
 
