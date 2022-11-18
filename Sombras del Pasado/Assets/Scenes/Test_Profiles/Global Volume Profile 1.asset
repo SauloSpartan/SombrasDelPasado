@@ -49,7 +49,7 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.65
   color:
     overrideState: 1
     value: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
@@ -112,7 +112,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1.2
+    value: 0.6
   threshold:
     overrideState: 1
     value: 0.9
@@ -124,7 +124,7 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 7
+    value: 4
   anamorphicRatio:
     overrideState: 1
     value: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     value: 1
   gradingMode:
     overrideState: 1
-    value: 1
+    value: 0
   externalLut:
     overrideState: 0
     value: {fileID: 0}
@@ -206,9 +206,9 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 30
+    value: 95
   brightness:
-    overrideState: 0
+    overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
