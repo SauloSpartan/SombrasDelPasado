@@ -13352,7 +13352,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -19832,7 +19832,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5602926237232756174}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.6272727
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
