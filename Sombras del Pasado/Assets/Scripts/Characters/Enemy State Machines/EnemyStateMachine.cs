@@ -202,7 +202,7 @@ public class EnemyStateMachine : MonoBehaviour
         {
             _baseHealth = 50;
             _baseDamage = 10;
-            _attackRadius = 2f;
+            _attackRadius = 1.8f;
             _enemyType = "Enemy Heavy";
         }
         if (gameObject.tag == "Enemy Fast")
