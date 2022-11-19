@@ -214,7 +214,7 @@ public class EnemyStateMachine : MonoBehaviour
         }
         if (gameObject.tag == "Enemy Boss")
         {
-            _baseHealth = 150;
+            _baseHealth = 200;
             _baseDamage = 15;
             _attackRadius = 1.5f;
             _enemyType = "Enemy Boss";
