@@ -14,6 +14,7 @@ public class PlayerAttackState : PlayerBaseState
         _ctx.Animator.SetInteger("AttackCombo", 1);
         _ctx.Damage = 3 * _ctx.Attack;
         _ctx.CanMove = false;
+        _ctx.MoveDirection = Vector3.zero;
     }
 
     public override void UpdateState()

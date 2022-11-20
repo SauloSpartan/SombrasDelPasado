@@ -12,6 +12,7 @@ public class PlayerIdleState : PlayerBaseState
     public override void EnterState()
     {
         _ctx.Animator.SetFloat("Speed", 0);
+        _ctx.MoveDirection = Vector3.zero;
     }
 
     public override void UpdateState()
