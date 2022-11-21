@@ -40,6 +40,11 @@ public class NewExplosion : MonoBehaviour
         NoEmitionMaterial();
     }
 
+    private void Start()
+    {
+        NoEmitionMaterial();
+    }
+
     /// <summary>
     /// Function that changes barrel damage depending on difficulty.
     /// </summary>
@@ -85,7 +90,6 @@ public class NewExplosion : MonoBehaviour
         float timer = 0.55f;
         for (int i = 2; i < 15; i++)
         {
-            Debug.Log(timer);
             foreach (Material Materials in _mainMaterials)
             {
                 Materials.EnableKeyword("_EMISSION");

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 206367436}
-  m_IndirectSpecularColor: {r: 0.07087411, g: 0.12925622, b: 0.16094974, a: 1}
+  m_IndirectSpecularColor: {r: 0.0697686, g: 0.12716445, b: 0.1583696, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 8a619ec8bf713874dbaf7b7c3dc2725c, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 67df26d7c9fb49143be32ae1a854b360, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 8b36055fcafe04347afb6bcfd56ce02f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2478,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.638
+      value: 19.85
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3010,15 +3010,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.427
+      value: 54.9
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.004
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.029
+      value: 6.48
       objectReference: {fileID: 0}
     - target: {fileID: 1796008731525722913, guid: 825d6a5bf9cfdbc4da00ad9b06702dd5, type: 3}
       propertyPath: m_LocalRotation.w
