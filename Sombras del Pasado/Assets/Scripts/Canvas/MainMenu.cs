@@ -27,8 +27,6 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        buildIndex = SceneManager.GetActiveScene().buildIndex;
-
         _theScore = FindObjectOfType<NewScore>();
 
         Time.timeScale = 1.0f;
@@ -50,7 +48,7 @@ public class MainMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        _loadingScreen.StartLoading(buildIndex, PlayerPrefs.GetInt("TheScore", 0));
+        _loadingScreen.StartLoading(SceneManager.GetActiveScene().buildIndex, PlayerPrefs.GetInt("TheScore", 0));
         Time.timeScale = 1.0f;
     }
 
